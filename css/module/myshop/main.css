@@ -1,0 +1,10 @@
+#mypage li a { width: 64%; display: block; margin: 16px 18%; padding: 20px 0; border: 1px solid rgba(0,0,0,.2); border-radius: 5px; text-align: center; }
+#mypage li hr { width:64%; margin: 15px auto 10px; }
+#mypage li a:hover { border: 1px solid rgba(0,0,0,0); background-color: rgba(0,0,0,.2); }
+
+
+@media screen and (max-width: 768px) {
+    #mypage .col-md-4 { padding: 0 10px; }
+    #mypage li a { width: 100%; margin: 10px 0; padding: 10px 0; }
+    #mypage li hr { margin: 7px auto 5px; }
+}

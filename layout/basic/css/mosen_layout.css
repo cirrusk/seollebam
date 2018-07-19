@@ -1,0 +1,74 @@
+@charset "utf-8";
+/* NAVIGATION */
+.navbar { background-color: #d6254a; padding: .6rem 0; height: 48px; }
+.navbar .navbar-logo { width: 120px; }
+.navbar .navbar-cart { width: 20px; }
+.navbar .navbar-user { width: 24px; }
+
+/* FOOTER */
+#bottom { background-color: #F0F0F0; padding: 108px 0;}
+.footerNav ul { margin: 35px 0; font-weight: 700; line-height: 28px; }
+
+/* MAIN */
+.mainWrap { background-color: #333; color: #fff; padding: 128px 0 280px; text-align: center; }
+.mainWrap h1 { color: #fff; padding: 75px; }
+.mainWrap h6 { color: #fff; line-height: 35px; }
+.mainIcon { text-align: center; }
+.mainIcon img { width: 100%; }
+.mainIcon .sideImg { width: 63%; }
+.mainInfo { text-align: center; }
+
+/* BUTTON */
+.btnBasic { background-color: #d6254a; color: #fff; font-size: 16px; }
+.btnBasic:hover { color: #fff; }
+.btn100 { display: block; text-align: center; padding: 10px; }
+.btn1 { padding: 10px 135px; }
+.btn2 { padding: 10px 50px; }
+
+/* TABLE */
+.titleWrap { padding-bottom: 25px; }
+
+.inputWrap input { width: 30px; height: 30px; }
+
+.nodata { border-top: 2px solid #333; border-bottom: 1px solid #8c8c8c; padding: 40px 0; text-align: center; }
+
+/* PAGINATE */
+
+/* MODAL */
+.modal-dialog { margin: 0; }
+.modal-dialog .modal-content { border-radius: 0; border: 0; }
+
+
+/* 공통레이아웃 css*/
+#sub_container { margin-top: 48px; }
+strong { font-weight: 500; color: #d6254a; }
+.black { color: #333; }
+.weak { font-weight: 400; color: #7f7f7f; }
+.p120 { padding-top: 120px; padding-bottom: 120px; }
+.p70 { padding-top: 70px; padding-bottom: 70px; }
+.p45 { padding-top: 45px; padding-bottom: 45px; }
+.m120 { margin-top: 120px; margin-bottom: 120px; }
+.m70 { margin-top: 70px; margin-bottom: 70px; }
+.m45 { margin-top: 45px; margin-bottom: 45px; }
+
+
+@media screen and (max-width: 768px) {
+    /* NAVIGATION */
+    .navbar .navbar-logo { width: 100px; }
+    .navbar .navbar-cart { width: 18px; }
+
+    /* FOOTER */
+    #bottom { background-color: #fff; padding: 40px 0; border-top: 2px solid #f0f0f0; }
+    .footerNav ul { font-weight: 500; line-height: 24px; }
+
+    /* BUTTON */
+    .btn1 { display: block; padding: 10px 0px; }
+
+    /* 공통레이아웃 css*/
+    .p120 { padding-top: 50px; padding-bottom: 50px; }
+    .p70 { padding-top: 30px; padding-bottom: 30px; }
+    .p45 { padding-top: 20px; padding-bottom: 20px; }
+    .m120 { margin-top: 50px; margin-bottom: 50px; }
+    .m70 { margin-top: 30px; margin-bottom: 30px; }
+    .p45 { margin-top: 20px; margin-bottom: 20px; }
+}

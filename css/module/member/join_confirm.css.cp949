@@ -1,0 +1,15 @@
+.xans-member-join .joinConfirm { display:none; position:fixed; top:50%; left:50%; z-index:1000; width:620px; margin:-400px 0 0 -310px; }
+.xans-member-join .joinConfirm h3 { height:35px; padding:0 35px 0 19px; color:#fff; font-size:14px; line-height:35px; background:#495164; }
+.xans-member-join .joinConfirm .close { position:absolute; right:20px; top:10px; }
+.xans-member-join .joinConfirm .close img { cursor:pointer; }
+.xans-member-join .joinConfirm .btnArea { margin:0; padding:9px 0; border:1px solid #757575; border-top:1px solid #d7d5d5; text-align:center; background:#fbfafa; }
+.xans-member-join .joinConfirm .btnArea img:first-child { margin:0 1px 0 0; }
+
+.xans-member-join .joinConfirm .content { overflow-y:auto; padding:17px 20px 18px; max-height:600px; border:1px solid #757575; border-width:0 1px 0 1px; background:#fff; }
+.xans-member-join .joinConfirm .content p { color:#353535; }
+.xans-member-join .joinConfirm .content p strong { color:#008bcc; }
+.xans-member-join .joinConfirm .boardList { margin:10px 0 20px; }
+.xans-member-join .joinConfirm .boardList table { width:100%; table-layout:fixed; border:0; border-collapse:collapse; border-spacing:0; }
+.xans-member-join .joinConfirm .boardList th,
+.xans-member-join .joinConfirm .boardList td { padding:8px 10px 7px; font-size:12px; line-height:1.4; border:1px solid #d7d5d5; word-wrap:break-word; }
+.xans-member-join .joinConfirm .boardList th { font-weight:normal; text-align:left; background-color:#fafafa; }

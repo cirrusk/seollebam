@@ -1,0 +1,19 @@
+.xans-myshop-addrlist .tableWrap { }
+.xans-myshop-addrlist .tableWrap table { }
+.xans-myshop-addrlist .tableWrap table th { text-align: center; }
+.xans-myshop-addrlist .tableWrap table td { text-align: center; vertical-align: middle; }
+.xans-myshop-addrlist .tableWrap table th.chk { width: 8%; }
+.xans-myshop-addrlist .tableWrap table td.chk { width: 8%; }
+.xans-myshop-addrlist .tableWrap table td.empty { padding: 20px 0; }
+.xans-myshop-addrlist .tableWrap table th.chk input[type="checkbox"] { margin: 4px; }
+.xans-myshop-addrlist .tableWrap table td.chk input[type="checkbox"] { margin: 4px; }
+
+
+@media screen and (max-width: 768px) {
+    .xans-myshop-addrlist .tableWrap table th { width: 12%; }
+    .xans-myshop-addrlist .tableWrap table td { width: 12%; }
+    .xans-myshop-addrlist .tableWrap table th.chk { width: 4%; }
+    .xans-myshop-addrlist .tableWrap table td.chk { width: 4%; }
+    .xans-myshop-addrlist .tableWrap table th.address { width: 20%; }
+    .xans-myshop-addrlist .tableWrap table td.address { width: 20%; }
+}

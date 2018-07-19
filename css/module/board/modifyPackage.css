@@ -1,0 +1,17 @@
+/* modify */
+.xans-board-modify .tableWrap th { width: 15%; }
+.xans-board-modify .tableWrap td { width: 85%; }
+.xans-board-modify .tableWrap td input { width: 100%; }
+.xans-board-modify .tableWrap tbody.imgAttach td { font-size: 16px; color: rgba(0,0,0,.4); }
+.xans-board-modify .tableWrap tbody.imgAttach td label { padding: 8px 18px; }
+
+#board_category { width: 25%; }
+#subject { width: 70%; float: right; }
+.seLayout { border: 0px !important; }
+
+#delfile00, #delfile10, #delfile20, #delfile30, #delfile40, #delfile50 { width: 16px; height: 16px; margin: 0 8px; }
+
+
+@media screen and (max-width: 768px) {
+    .xans-board-modify .tableWrap tbody.imgAttach td { font-size: 12px; }
+}

@@ -1,0 +1,89 @@
+.commentArea { background-color: #f9f9f9; padding: 50px 0; }
+.commentArea .commentTitle { font-size: 18px; font-weight: 600; letter-spacing: -0.020em; color: #d6254a; padding-bottom: 20px; }
+
+
+/* 댓글 리스트*/
+.xans-board-commentlist .boardComment li { border: 1px solid rgba(0,0,0,.2); border-radius: 5px; margin: 10px 0; }
+.xans-board-commentlist .boardComment li div.commentTop { position: relative; overflow:hidden; padding:20px 30px; border-bottom: 1px solid rgba(0,0,0,.1); }
+.xans-board-commentlist .boardComment li .topLeft { float: left; }
+.xans-board-commentlist .boardComment li .topRight { }
+.xans-board-commentlist .boardComment li img { width: 48px; margin: 5px 10px 0px; }
+.xans-board-commentlist .boardComment li .name { margin: 5px 0 0 10px; font-size: 16px; font-weight: 600; letter-spacing: -0.020em; color: rgba(0,0,0,.9); }
+.xans-board-commentlist .boardComment li .date { float: right; margin-top: 6px; font-size: 14px; font-weight: 400; letter-spacing: -0.020em; color: rgba(0,0,0,.7); }
+.xans-board-commentlist .boardComment li .comment { clear:both; padding: 0 10px; word-break:break-all; font-size: 14px; font-weight: 400; letter-spacing: -0.020em; color: rgba(0,0,0,.8); }
+.xans-board-commentlist .boardComment li .button { position: absolute; top: 60px; right: 30px; }
+.xans-board-commentlist .boardComment li .button a { padding-left: 5px; font-size: 14px; font-weight: 400; letter-spacing: -0.020em; color: rgba(0,0,0,.4); }
+.xans-board-commentlist .boardComment li .button a:hover { color: rgba(0,0,0,.8); }
+.xans-board-commentlist .boardComment li div.commentBottom { overflow:hidden; padding:15px 0 15px 125px; font-size: 14px; font-weight: 400; letter-spacing: -0.020em; color: rgba(0,0,0,.4); }
+.xans-board-commentlist .boardComment li div.commentBottom span { margin-right: 10px; }
+.xans-board-commentlist .boardComment li div.commentBottom a { text-decoration: none; color: rgba(0,0,0,.4); }
+.xans-board-commentlist .boardComment li div.commentBottom a:hover { color: rgba(0,0,0,.8); }
+
+
+/* 댓글의 댓글 */
+.xans-board-commentlist .boardComment li.replyArea { overflow:hidden; margin:-2px 20px 0; padding:0 0 0 33px; border:1px solid rgba(0,0,0,.1); background:url("http://img.echosting.cafe24.com/skin/admin_ko_KR/board/ico_comment.gif") no-repeat 20px 15px; }
+.xans-board-commentlist .boardComment li.replyArea div.commentTop { border:none; padding-left:5px; }
+.xans-board-commentlist .boardComment li.replyArea div.commentBottom { padding: 0; }
+
+
+/* 댓글 쓰기 */
+.xans-board-commentwrite { }
+.xans-board-commentwrite img { width: 60px; margin-top: 20px; }
+.xans-board-commentwrite p { float: right; font-size: 14px; font-weight: 400; letter-spacing: -0.020em; color: rgba(0,0,0,.4); width: 100%; margin-top: 10px; }
+.xans-board-commentwrite input[type=text], .xans-board-commentwrite input[type=password] { float: right; padding: 4px 8px; border: 1px solid rgba(0,0,0,.2); border-radius: 5px; height: 30px; width: 60%; }
+.xans-board-commentwrite textarea { width: 100%; height: 80px; padding: 4px 8px; margin-top: 10px; border: 1px solid rgba(0,0,0,.2); border-radius: 5px; }
+.xans-board-commentwrite .view { position:relative; }
+.xans-board-commentwrite .view span { width: 40%; font-size: 16px; line-height: 1.8; }
+.xans-board-commentwrite .submit { margin-top: 8px; width: 100%; float: right; }
+
+
+/* 댓글의 댓글 쓰기 */
+.xans-board-commentreply { width: 85%; margin-left: 10%; padding-bottom: 20px; margin-right: 5%; }
+.xans-board-commentreply .crImg { margin-top: 10px !important; }
+.xans-board-commentreply p { float: right; font-size: 14px; font-weight: 400; letter-spacing: -0.020em; color: rgba(0,0,0,.4); width: 100%; margin-top: 10px; }
+.xans-board-commentreply input[type=text], .xans-board-commentreply input[type=password] { float: right; padding: 4px 8px; border: 1px solid rgba(0,0,0,.2); border-radius: 5px; height: 28px; width: 60%; }
+.xans-board-commentreply textarea { width: 100%; height: 60px; padding: 4px 8px; margin-top: 10px; border: 1px solid rgba(0,0,0,.2); border-radius: 5px; }
+.xans-board-commentreply .view { position:relative; }
+.xans-board-commentreply .view span { width: 40%; font-size: 14px; line-height: 2; }
+.xans-board-commentreply .submit { margin-top: 8px; width: 100%; float: right; text-align: center; font-size: 16px; font-weight: 500; letter-spacing: -0.020em; color: rgba(0,0,0,.7); }
+.xans-board-commentreply .submit:hover { color: #d6254a; }
+
+
+/* 댓글 수정 */
+.xans-board-commentform { width: 90%; margin-left: 5%; margin-right: 5%; }
+.xans-board-commentform p { width: 50%; float: left; text-align: left; font-size: 14px; font-weight: 400; letter-spacing: -0.020em; line-height: 2; color: rgba(0,0,0,.4); }
+.xans-board-commentform input[type=text],
+.xans-board-commentform input[type=password] { float: right; padding: 4px 8px; border: 1px solid rgba(0,0,0,.2); border-radius: 5px; height: 30px; width: 60%; }
+.xans-board-commentform textarea { width: 100%; height: 60px; padding: 4px 8px; margin-top: 25px; border: 1px solid rgba(0,0,0,.2); border-radius: 5px; }
+.xans-board-commentform .view { position:relative; }
+.xans-board-commentform .submit { margin-top: 10px; width: 100%; float: right; text-align: right; font-size: 16px; font-weight: 400; letter-spacing: -0.020em; color: rgba(0,0,0,.5); }
+.xans-board-commentform .submit span { margin-left: 25px; line-height: 1.8; cursor: pointer; }
+.xans-board-commentform .submit span:hover { color: #d6254a; }
+
+/* 비밀글 관련 */
+.xans-board-commentformsecret { margin:10px 25px 0 0; padding:10px 15px; border-top:1px solid #e9e9e9;border-bottom:1px solid #e9e9e9; background-color:#fff; color:#353535; }
+.xans-board-commentformsecret input[type=password] { height:20px; padding:2px 2px 2px 4px; border:1px solid #d9d9d9; }
+
+
+
+
+@media screen and (max-width: 768px) {
+    .commentArea { background-color: #f9f9f9; padding: 30px 0; }
+    .commentArea .commentTitle { font-size: 16px; padding-bottom: 0; }
+    .commentArea .titleArea { border-bottom: none; }
+    
+    .xans-board-commentlist .boardComment li div.commentTop { padding: 15px 25px 15px 15px; }
+    .xans-board-commentlist .boardComment li .comment { display: block; padding-top: 10px; }
+    .xans-board-commentlist .boardComment li .name { margin: 0; }
+    .xans-board-commentlist .boardComment li .date { margin-top: 2px; }
+    .xans-board-commentlist .boardComment li .button { top: 45px; }
+    .xans-board-commentlist .boardComment li img { margin: 0; }
+    .xans-board-commentwrite img { display: none; }
+    
+    .xans-board-commentreply { width: 90%; margin-left: 5%; margin-right: 5%; }
+    .xans-board-commentreply textarea { margin-top: 0; }
+    
+    .xans-board-commentform p { width: 100%; }
+    .xans-board-commentform .submit span { line-height: 2.8; }
+    .crImg { display: none; }
+}

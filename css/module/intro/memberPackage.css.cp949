@@ -1,0 +1,23 @@
+.xans-intro-memberpackage { width:528px; margin:50px auto; color:#666; }
+.xans-intro-memberpackage h1 { padding:0 0 11px 3px; border-bottom:3px solid #000; }
+.xans-intro-memberpackage .info { margin:30px 0; text-align:center; font-size:12px; color:#565656; }
+.xans-intro-memberpackage .info strong { display:block; }
+.xans-intro-memberpackage .info p { margin:30px 0 0;}
+
+.xans-member-login { padding:24px 40px 17px 40px; background:#f3f3f3; border-top:1px solid #ddd; border-bottom:3px solid #000; }
+.xans-member-login h2 { padding:0 0 10px; font-size:12px; color:#000; }
+.xans-member-login input { border:1px solid #ccc; border-top:1px solid #6d6d6d; border-left:1px solid #6d6d6d; }
+.xans-member-login .login { position:relative; width:290px; min-height:60px; padding:0 80px 0 0; margin:0 auto; overflow:hidden; zoom:1; }
+.xans-member-login .login .grid { display:block; overflow:hidden; zoom:1; padding:0 0 3px; }
+.xans-member-login .login .grid strong { float:left; width:80px; padding:5px 5px 5px 7px; font-weight:normal; background:url("http://img.echosting.cafe24.com/skin/base/common/ico_square.gif") 0 50% no-repeat; }
+.xans-member-login .login .grid input { width:190px; padding:3px; height:19px; }
+.xans-member-login .login .button { position:absolute; right:0; top:2px; }
+.xans-member-login .security { width:285px; margin:0 auto; padding:5px 0 0 85px; color:#8f8f91; }
+
+.xans-member-login .join { width:370px; margin:20px auto 0; text-align:center; font-size:12px; }
+.xans-member-login .join .find a { padding:0 7px; color:#8f8f91; }
+
+.xans-member-login .snsArea { overflow:hidden; text-align:left; *zoom:1; }
+.xans-member-login .snsArea li { float:left; width:176px; margin:7px 0 0 4px; }
+.xans-member-login .snsArea a,
+.xans-member-login .snsArea a:hover { padding:0; background:none; }

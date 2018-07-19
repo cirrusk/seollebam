@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 20">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #d6254a;
+        font-size: 14px;
+        font-family: NotoSansCJKkr-Medium, Noto Sans CJK KR;
+        font-weight: 500;
+      }
+    </style>
+  </defs>
+  <text id="_" data-name="＋" class="cls-1" transform="translate(7 16)"><tspan x="-7" y="0">＋</tspan></text>
+</svg>

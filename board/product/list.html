@@ -1,0 +1,107 @@
+<!--@layout(/layout/basic/layout.html)-->
+<!--@css(/css/module/board/listPackage.css)-->
+
+<script>
+$(document).ready(function() {
+    $('.selectChange').click(function(){ 
+        $('#board_category').val($(this).data('val')).trigger('change');
+    });
+    
+    $('.reviewA').live('click', function (){
+        var ptUrl = $(this).parent().parent().find('.subjectTd a').attr('href');
+        $(".modal-body").empty();
+        $(".modal-body").load(ptUrl + " #review");
+    });
+});
+</script>
+
+<!-- Modal -->
+<div class="modal fade" id="reviewModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
+            <div class="modal-body">
+                
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //Modal -->
+
+<div class="container" module="Board_ListPackage_4">
+    <div class="p40"></div>
+    <h1 class="titleH1">REVIEW</h1>
+    <div class="p10 mp0"></div>
+    <p class="titleP">설레이는 리뷰를 만나보세요.</p>
+    <div class="p20 mp5"></div>
+    
+    <div class="p20 mp10"></div><div class="p10 mp0"></div>
+    
+    <div class="boardSort displaynone">
+        <span module="board_category_4">{$form.board_category}</span>
+        <span module="board_ReplySort_4">{$reply_sort}</span>
+        
+        <div data-role="controlgroup">
+            <a data-role="button" data-val="" class="selectChange btnNormal btn1">전체 보기</a>
+            <a data-role="button" data-val="1" class="selectChange btnNormal btn1">익스트림 의류</a>
+            <a data-role="button" data-val="2" class="selectChange btnNormal btn1">역할극 의류</a>
+            <a data-role="button" data-val="3" class="selectChange btnNormal btn1">거품 입욕제</a>
+            <a data-role="button" data-val="4" class="selectChange btnNormal btn1">마사지 오일</a>
+            <a data-role="button" data-val="5" class="selectChange btnNormal btn1">캔들</a>
+            <a data-role="button" data-val="6" class="selectChange btnNormal btn1">콘돔</a>
+            <a data-role="button" data-val="7" class="selectChange btnNormal btn1">러브 젤</a>
+            <a data-role="button" data-val="8" class="selectChange btnNormal btn1">기타</a>
+        </div>
+    </div>
+    
+    <div class="boardList table-responsive">
+        <table class="table" border="0" summary="">
+            <tbody module="board_list_4">
+                <!--
+                    $product_name_cut = 30
+                    $login_page_url = /member/login.html
+                    $deny_access_url = /index.html
+                -->
+                <tr class="topTr" style="{$list_bg_color} {$list_char_color}">
+                    <td class="writerTd"><img src="https://i.imgur.com/HSBEQmG.png"><span>{$writer|cut:4,....}</span></td>
+                    <td class="categoryTd {$category_display|display}">{$category_name}<a href="/product/detail.html{$param_product}">{$product_img}</a></td>
+                    <td class="dateTd {$date_display|display}">{$write_date|date:Y. m. d}</td>
+                </tr>
+                <tr class="bottomTr">
+                    <td></td>
+                    <td class="subjectTd">
+                        <a href="/board/product/read.html{$param_read}">{$subject|cut:16,..}</a>
+                    </td>
+                    <td class="moreTd {$spread_display|display}">
+                        <a class="reviewA moreA" data-toggle="modal" data-target="#reviewModal">간편 보기<img src="/svg/down.svg"></a>
+                    </td>
+                </tr>
+                <tr class="separate">
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <div class="boardListEmpty {$empty_display|display}" module="board_empty_4">
+        <p>{$empty_message}</p>
+    </div>
+    <div module="board_ButtonList_4" class="{$write_display|display}">
+        <div class="buttonArea">
+            <a href="/board/product/write.html{$param_write}" class="btnBasic btn3 {$write_display|display}">글 쓰기</a>
+            <div class="p20 mp20"></div>
+        </div>
+    </div>
+</div>
+
+<div class="p20"></div>
+
+<div module="board_paging_4"  class="ec-base-paginate paginate">
+    <p class="left"><a href="{$param_prev}"></a></p>
+    <ol>
+        <li class="ease"><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
+        <li class="ease"><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
+    </ol>
+    <p class="right"><a href="{$param_next}"></a></p>
+</div>
+
+<div class="p80"></div><div class="p20"></div><div class="p10"></div>

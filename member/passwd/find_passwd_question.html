@@ -1,0 +1,31 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div class="path">
+    <span>현재 위치</span>
+    <ol>
+        <li><a href="/">홈</a></li>
+        <li title="현재 위치"><strong>비밀번호 찾기</strong></li>
+    </ol>
+</div>
+
+<div class="titleArea">
+    <h2>FIND PASSWORD</h2>
+</div>
+
+<div module="member_findPasswdQuestion">
+    <!--@css(/css/module/member/find_passwd_question.css)-->
+    <!--
+        $nextURL = /member/passwd/find_passwd_result.html
+    -->
+    <div class="findPw">
+        <h3><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/member/h3_find_pw.gif" alt="비밀번호 찾기" /></h3>
+        <fieldset>
+            <legend>비밀번호 찾기 2단계 힌트답변 입력</legend>
+            <p class="check">{$form.check_method}</p>
+            <p class="question"><strong>질문</strong> <span>{$passwd_question}</span></p>
+            <p class="answer"><label for="passwd_answer">답변</label> {$form.passwd_answer}</p>
+            <p class="button">
+                <a href="#none" onclick="{$action_func_find_passwd}" class="btn_style02 btn_black">확인</a>
+            </p>
+        </fieldset>
+    </div>
+</div>

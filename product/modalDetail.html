@@ -1,0 +1,79 @@
+<div id="modalArea" module="product_detail">
+    <!--
+        $count = 12
+        $basket_result = /product/add_basket.html
+        $basket_option = /product/basket_option.html
+    -->
+    <div class="modalHeader"><button type="button" class="close"><span>×</span></button></div>
+      <div class="modalBody">
+          <div class="p40 mp40"></div><div class="p10 mp10"></div>
+        <h3 class="titleH4">{$name}</h3>
+        <div class="p20"></div><div class="p10"></div>
+        <!-- @@@@@@@@@@@@@@@@ 상품 옵션 @@@@@@@@@@@@@@@@ -->
+        <div class="optionWrap" module="product_option">
+            <div module="product_option">
+                <span class="optionName">{$option_name}</span>
+                {$form.option}
+            </div>
+        </div>
+        <!-- @@@@@@@@@@@@@@@@ //상품 옵션 @@@@@@@@@@@@@@@@ -->
+            
+        <!-- @@@@@@@@@@@@@@@@ 토탈 인포 @@@@@@@@@@@@@@@@ -->
+        <div id="{$total.total_id}" class="{$total.total_display|display}">
+            <table>
+                <tbody class="{$quantity_display|display}">
+                    <tr>
+                        <td>
+                            <div class="quantity row mdQuantity">
+                                <div class="p20"></div>
+                                <div class="col-md-6 col-xs-6 p0"><p class="titleSubP">필요하신 수량을 <br> 입력해주세요.</p></div>
+                                <div class="col-md-6 col-xs-6 p0">{$quantity}<a class="btnSmall">변경</a></div>
+                                <div class="p20"></div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="p20"></div>
+                            <span class="highlight {$total.quantity_price}">￦ {$product_price}</span>
+                            <div class="p20"></div>
+                        </td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <!-- tr>
+                        <td>
+                            <p class="product">
+                                $상품명<br />
+                                <span>$옵션</span>
+                            </p>
+                        </td>
+                        <td>
+                            <span class="quantity">
+                                <a href="#none" class="{$quantity_down_class} qtyA">-</a>
+                                <input type="text" class="quantity_opt" />
+                                <a href="#none" class="{$quantity_up_class} qtyA">+</a>
+                            </span>
+                            <a href="#none"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/product/btn_price_delete.gif" alt="삭제" class="option_box_del" /></a>
+                        </td>
+                        <td class="right">
+                            <span>$가격</span>
+                            <span class="mileage">(<img src="http://img.echosting.cafe24.com/design/skin/admin/ko_KR/product/ico_pay_point.gif" /> <span class="mileage_price">$적립금</span>)</span>
+                        </td>
+                    </tr -->
+                </tbody>
+            </table>
+        </div>
+      </div>
+    <!-- @@@@@@@@@@@@@@@@ //토탈 인포 @@@@@@@@@@@@@@@@ -->
+    
+    <!-- @@@@@@@@@@@@@@@@ 버튼 영역 @@@@@@@@@@@@@@@@ -->
+    <div module="product_action">
+        <div class="modalFooter">
+            <div class="col-md-6 col-xs-6 p0"><a class="close">닫기</a></div>
+            <div class="col-md-6 col-xs-6 p0"><a id="cartAdd" onclick="{$action_basket}">장바구니 담기</a></div>
+            <span class="btnBasic btn5 {$soldout_display|display}">SOLD OUT</span>
+        </div>
+    </div>
+    <!-- @@@@@@@@@@@@@@@@ //버튼 영역 @@@@@@@@@@@@@@@@ -->
+</div>

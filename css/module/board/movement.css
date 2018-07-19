@@ -1,0 +1,14 @@
+.xans-board-movement { }
+
+.xans-board-movement li { font-size: 20px; font-weight: 600; letter-spacing: -0.020em; color: rgba(0,0,0,.8); }
+.xans-board-movement li a { display: block; margin-top: 20px; }
+.xans-board-movement li strong { padding-bottom: 5px; font-size: 16px; font-weight: 400; letter-spacing: -0.020em; color: #d6254a; border-bottom: 2px solid; }
+
+.xans-board-movement li.prev { width: 50%; float: left; }
+.xans-board-movement li.next { width: 50%; float: right; text-align: right; }
+
+
+@media screen and (max-width: 768px) {
+    .xans-board-movement li strong { font-size: 12px; }
+    .xans-board-movement li a { font-size: 16px; }
+}

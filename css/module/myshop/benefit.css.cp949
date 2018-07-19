@@ -1,0 +1,16 @@
+.xans-myshop-asyncbenefit { margin:0 0 20px; }
+.xans-myshop-asyncbenefit .infoWrap { overflow:hidden; padding:10px 10px 10px 90px; border:1px solid #d9d9d9; color:#353535; }
+.xans-myshop-asyncbenefit .myThumb { float:left; margin:0 0 0 -80px; }
+.xans-myshop-asyncbenefit .myThumb img { max-width:70px; }
+.xans-myshop-asyncbenefit .myInfo { padding:8px 0 8px 20px; border-left:1px solid #e8e8e8; }
+.xans-myshop-asyncbenefit .myInfo p { line-height:18px; }
+.xans-myshop-asyncbenefit .myInfo strong { color:#008bcc; }
+.xans-myshop-asyncbenefit .myInfo .name { color:#008bcc; }
+.xans-myshop-asyncbenefit .myInfo .group { color:#353535; }
+.xans-myshop-asyncbenefit .invite { margin-top:-1px; padding:20px 10px 20px 110px; border:1px solid #d9d9d9; background-color:#f6f6f6; }
+.xans-myshop-asyncbenefit .invite > strong { display:block; color:#008bcc; }
+.xans-myshop-asyncbenefit .invite .copy { margin:8px 0 0; }
+.xans-myshop-asyncbenefit .invite p img { cursor:pointer; vertical-align:middle; }
+.xans-myshop-asyncbenefit .invite p input { padding:1px 3px; width:439px; height:20px; border:1px solid #d9d9d9; color:#353535; }
+.xans-myshop-asyncbenefit .invite ul { margin:8px 0 0; font-size:11px; line-height:1.25; color:#757575; }
+.xans-myshop-asyncbenefit .invite ul li { margin:3px 0 0; }

@@ -1,0 +1,11 @@
+.xans-myshop-orderhistoryhead fieldset { margin:20px 0; }
+.xans-myshop-orderhistoryhead fieldset img { vertical-align:middle; }
+.xans-myshop-orderhistoryhead fieldset span { margin:0 16px 0 0; }
+.xans-myshop-orderhistoryhead fieldset span a { padding: 4px 28px; }
+.xans-myshop-orderhistoryhead fieldset .fText { width: 108px; height: 34px; padding: 0 8px; border: 1px solid rgba(0,0,0,.2); border-radius: 5px; font-size: 14px; position: relative; margin: -6px 8px 0; }
+.xans-myshop-orderhistoryhead fieldset button { width:14px; height:14px; margin:0 5px 0 2px; background:none; }
+
+.xans-myshop-orderhistoryhead ul { margin:10px 0 0; color:#939393; line-height:1.5; }
+.xans-myshop-orderhistoryhead ul li { padding:0 0 0 9px; background:url("http://img.echosting.cafe24.com/skin/base_ko_KR/common/ico_info.gif") no-repeat 4px 7px; }
+
+#order_search_btn { width: 54px; padding-bottom: 7px; padding-left: 4px; }

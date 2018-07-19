@@ -1,0 +1,46 @@
+#columns{ column-count: 3; column-gap: 40px; padding: 0 25px; }
+
+#columns figure{ display: inline-block; background-color: #fff; border: 1px solid rgba(0,0,0,.2); border-radius: 5px; margin-top: 40px; padding-bottom: 35px; width: 100%; }
+#columns figure:hover { border: 1px solid #d6254a; }
+#columns figure:hover img { opacity: 0.32; transition: .5s; }
+#columns figure:hover p { color: #d6254a; }
+
+#columns figure a img { width: 100%; height: auto; padding: 15px 13px; }
+#columns figure a.imgLink,
+#columns figure a.imgLink:hover { display:block;margin:0 auto; color:#2e2e2e; font-size: 18px; font-weight: 600; line-height: 1.8;}
+#columns figure .titleH5, #columns figure .titleSubP { margin-left: 25px; }
+#columns figure hr { width: 73px; border-top: 1px solid #d6254a; margin: 20px 25px 15px; }
+
+
+.carouselRow { width:100%; margin:0 auto; display:block; position:relative; }
+.carouselWrap { position:relative; width:100%; overflow:hidden; margin:0 auto; }
+.carouselM { position:relative; overflow:hidden; white-space:nowrap; font-size: 0; }
+
+.carouselM .item { display:inline-block; text-align:center; overflow:hidden; vertical-align:top; opacity:.4; }
+.carouselM .item img { margin: 10px; padding: 15px; border: 2px solid rgba(0,0,0,.2); border-radius: 5px; width: 480px; height: 480px; }
+.carouselM .ic_active { opacity:1; }
+.carouselM .storeH2 { padding: 10px 0; }
+
+.back_btn { padding:8px 4px; position:absolute; left:16%; z-index:999; top:35%; cursor:pointer; font-size: 80px; }
+.next_btn { padding:8px 4px; position:absolute; right:16%; z-index:999; top:35%; cursor:pointer; font-size: 80px; }
+
+.no_select { -moz-user-select:none; -webkit-user-select:none; -ms-user-select:none; user-select:none; color: rgba(0,0,0,.4); }
+.no_select:hover { color: #d6254a; }
+
+
+@media screen and (max-width: 768px) {
+    #columns{ column-count: 1; padding: 0 15px; }
+    #columns figure { margin-top: 25px; padding-bottom: 25px; }
+    #columns figure a p { font-size: 20px; margin: 10px 25px; }
+    #columns figure span { font-size: 12px; }
+    #columns figure hr { width: 100px; }
+        
+    .carouselM .item img { width: 280px; height: 280px; }
+    .carouselM .storeH2 { padding: 4px 0; font-size: 16px; }
+    .carouselM .mainSubP { font-size: 12px; }
+    .xans-board-list-8 .titleHr { margin-top: 10px; margin-bottom: 10px; width: 72px; }
+    
+    
+    .back_btn { padding:8px 4px; position:absolute; left: 4%; z-index:999; top:35%; cursor:pointer; font-size: 32px; }
+    .next_btn { padding:8px 4px; position:absolute; right: 4%; z-index:999; top:35%; cursor:pointer; font-size: 32px; }
+}

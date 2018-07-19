@@ -1,0 +1,7 @@
+.xans-layout-productrecent { border:0px solid #d5d5d5; border-top:0; text-align:center; }
+.xans-layout-productrecent ul { width:152px; margin:0 auto 0px; }
+.xans-layout-productrecent li  { float:left; }
+.xans-layout-productrecent li img { max-width:75px;margin:0px 1px 1px 0; }
+.xans-layout-productrecent li span { display:block; padding:2px 0; line-height:16px; }
+.xans-layout-productrecent .player { overflow:hidden; *zoom:1;background:#fbfbfb; margin:12px 0 0 0;width:100%;}
+.xans-layout-productrecent .player img { float:left; width:50px;}

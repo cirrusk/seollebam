@@ -1,0 +1,8 @@
+.under19Recommend { text-align: center; }
+.under19Recommend img { max-width: 100%; padding: 8px 32px; }
+.under19Recommend p { text-align: center; }
+p { word-break: keep-all; }
+
+@media screen and (max-width: 768px) {
+    .under19Recommend .icon19 { width: 64%; }
+}

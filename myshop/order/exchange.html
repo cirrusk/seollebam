@@ -1,0 +1,28 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div class="container">
+    <div class="p40"></div>
+    <h1 class="titleH1">교환신청</h1>
+    <div class="p20 mp0"></div>
+    <p class="mainP">
+        <div class="tab_myshop_menu" module="myshop_main">
+            <ul>
+                <!--@import(/layout/basic/myshop_menu.html)-->
+            </ul>    
+        </div>
+    </p>
+    <div class="p40"></div><div class="p10"></div>
+    
+    <div module="Myshop_OrderHistoryApplyExchange">
+        <!--@css(/css/module/myshop/orderHistoryApplyExchange.css)-->
+        <!--@import(import_cs.html)+교환-->
+    </div>
+    
+    <div class="tableBtnArea">
+        <div class="p20 mp20"></div>
+        <a href="/myshop/order/list.html" class="btnNormal btn3">이전페이지</a>
+        <a href="#none" class="btnBasic btn3" onclick="OrderApply.apply(); return false;">교환신청</a>
+        <div class="p20 mp20"></div>
+    </div>
+</div>
+
+<div class="p80"></div><div class="p40"></div><div class="p10"></div>

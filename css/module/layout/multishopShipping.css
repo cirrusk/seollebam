@@ -1,0 +1,9 @@
+.xans-layout-multishopshipping {display:none;}
+.xans-layout-multishopshipping .worldshipLayer { position:absolute; top:303px; left:50%; z-index:100; width:448px; margin:0 0 0 -225px; border:1px solid #757575; background:#fff; }
+.xans-layout-multishopshipping .worldshipLayer h2 { height:35px; padding:0 0 0 20px; margin:0; color:#fff; font-size:14px; line-height:35px; background-color:#495164; }
+.xans-layout-multishopshipping .worldshipLayer .content { padding:153px 20px 80px; font-size:12px; line-height:1.8em; background:url("//img.echosting.cafe24.com/skin/base/link/bg_worldship.gif") center 21px no-repeat; }
+.xans-layout-multishopshipping .worldshipLayer .content .desc { display:block; margin:4px 0 14px; }
+.xans-layout-multishopshipping .worldshipLayer .select { margin:10px 0 0; }
+.xans-layout-multishopshipping .worldshipLayer .select select { width:100%; }
+.xans-layout-multishopshipping .worldshipLayer .btnArea { position:absolute; bottom:0; left:0; width:100%; padding:10px 0; border-top:1px solid #d7d5d5; text-align:center; background-color:#fbfafa; }
+.xans-layout-multishopshipping .worldshipLayer .btnClose { position:absolute; top:10px; right:21px; }

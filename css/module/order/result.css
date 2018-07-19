@@ -1,0 +1,10 @@
+.tableWrap { word-break: keep-all; }
+
+.orderListArea .tableWrap th { width: 25%; text-align: center; vertical-align: middle; }
+.orderListArea .xans-order-normalresultlist td { width: 25%; text-align: center; vertical-align: middle; }
+.orderListArea .xans-order-normalresultlist td img { width: 50%; border: 1px solid rgba(0,0,0,.2); border-radius: 5px; }
+.orderListArea .tableWrap tfoot td { padding: 20px 0 25px; text-align: center; }
+
+
+.orderArea .tableWrap th { width: 25%; padding: 10px 0; }
+.orderArea .tableWrap td { width: 75%; padding: 10px 0; }

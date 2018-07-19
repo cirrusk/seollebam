@@ -1,0 +1,53 @@
+/* MAGAZINE DETAIL */
+.mDetail { padding: 0 32px; }
+.mDetail .titleP { font-size: 16px; }
+.mDetail .titleH3, .mDetail .titleP, .mDetail .titleSubP { line-height: 1.6; }
+.mDetail hr { margin: 10px auto; border-top: 1px solid rgba(0,0,0,.2); }
+.mDetail .contentsWrap { text-align: center; }
+.mDetail .contentsWrap img { width: 80%; padding: 15px 0; }
+
+.boardInfo { }
+.boardInfo p { float: left; margin-right: 50px; }
+.boardButton { }
+.boardButton p { float: right; margin-left: 20px; line-height: 1.6; }
+.boardButton img { margin-right: 5px; }
+
+.vote { text-align: center; width: 72px; margin: 0 auto; }
+.voteImg { width: 27px; height: 27px; margin-right: 5px; background-image: url('/svg/heart.svg'); float: left; }
+.vote span { font-size: 18px; font-weight: 600; line-height: 1.6; letter-spacing: -0.020em; cursor: pointer; }
+.vote:hover .voteImg { background-image: url('/svg/heart_h.svg'); transition: .5s; }
+.vote:hover span { color: #d6254a; transition: .5s; }
+
+.boardSns { text-align:center; }
+.boardSns li { display: inline; }
+.boardSns img { width: 27px; margin: 0 8px; opacity: 0.4; }
+.boardSns img:hover { opacity: 1; }
+
+.imgArea { padding: 20px 0; }
+.imgArea img { width: 100%; height: 100%; }
+
+.xans-board-movement-4 ul { overflow: auto; padding: 30px 15px 0; }
+
+@media screen and (max-width: 768px) {
+    .mDetail .titleP { font-size: 12px; line-height: 1.8; }
+    .boardInfo p { float: left; margin-right: 20px; font-size: 14px; }
+    .boardButton { position: absolute; top: 90px; right: 32px; }
+    .boardButton p { float: right; margin-left: 15px; }
+    .boardSns img { margin: 0 6px; }
+	#password { width: 100%; }
+}
+
+
+/* REVIEW DETAIL */
+.xans-board-read-4 .tableWrap th { width: 25%; }
+.xans-board-read-4 .tableWrap td { width: 75%; }
+.xans-board-read-4 .etcArea { border-bottom: 1px solid rgba(0,0,0,.1); }
+.xans-board-read-4 .etcArea td { }
+.xans-board-read-4 .etcArea ul li { display: inline; padding-right: 32px; }
+.xans-board-read-4 .detail img { max-width: 100%; }
+.xans-board-read-4 .attach { border-top: 1px solid rgba(0,0,0,.1); }
+
+@media screen and (max-width: 768px) {
+    .xans-board-read-4 .attach { border-bottom: 0px; }
+    .mDetail .contentsWrap img { width: 100%; padding: 10px 0; }
+}

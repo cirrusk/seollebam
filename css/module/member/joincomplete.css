@@ -1,0 +1,6 @@
+.joinComplete { border-top: 2px solid #d6254a; border-bottom: 2px solid rgba(0,0,0,.2); padding: 5px 10px 15px; float: left; width: 100%; }
+.joinComplete p { width: 50%; float: left; margin-top: 10px; }
+.joinComplete p.mainP { text-align: right; }
+
+.buttonArea { width: 100%; float: left; text-align: right; }
+.buttonArea a { margin-top: 10px; margin-left: 5px; }

@@ -1,0 +1,35 @@
+<!--@layout(/layout/basic/layout.html)-->
+<!--@css(/css/module/member/find_id_result.css)-->
+
+<div class="p80"></div><div class="p10"></div>
+
+<div class="container" module="member_findidresult">
+    <div class="col-md-2"></div>
+    <div class="col-md-8 col-xs-12">
+        <h3 class="subTitle">아이디찾기 결과</h3>
+        <div class="p20"></div>
+        
+        <div class="memberInfo">
+            <p class="mainSubP">회원님의 아이디 찾기가 완료되었습니다.</p>
+            <div class="p10"></div>
+            <p class="mainSubP">다음정보로 가입된 아이디가 총 <span>{$idCnt}</span>개 있습니다.</p>
+            <div class="p20"></div>
+            <div class="leftInfo">
+                <p class="mainSubP">이름</p><p  class="mainP">{$name}</p>
+                <div class="p10"></div>
+                <p class="mainSubP">{$searchType}</p><p  class="mainP">{$searchInfo}</p>
+            </div>
+            <div class="rightInfo">
+                {$searchIds}
+            </div>
+        </div>
+        <div class="buttonArea">
+            <div class="p20"></div>
+            <a href="/index.html" class="btnNomal btn3">돌아가기</a>
+            <a href="/member/login.html" class="btnBasic btn3">로그인</a>
+        </div>
+    </div>
+    <div class="col-md-2"></div>
+</div>
+    
+<div class="p80"></div><div class="p40"></div><div class="p10"></div>

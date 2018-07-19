@@ -1,0 +1,39 @@
+<!--@layout(/layout/basic/intro.html)-->
+<div module="Member_AdultHead">
+    <!--@css(/css/module/member/adultHead.css)-->
+    <h1><span>성인 본인인증</span></h1>
+    <div class="under19">
+        <div class="msg">
+            <h2>
+                성인 본인인증이 필요합니다.<br />
+                <strong>청소년 보호법 규정에 의한 성인 본인인증 안내</strong>
+            </h2>
+
+            <p class="info">
+                로그인 1회 당 최초 1회 성인 본인인증이 필요합니다.<br />
+                비로그인 시에는 성인 콘텐츠(상품/게시물)를 볼 때마다<br />
+                성인 본인인증이 필요합니다.
+            </p>
+            <a href="{$outlink}"><img src="http://img.echosting.cafe24.com/design/skin/default/intro/btn_under19ipin.gif" alt="19세 미만 나가기" /></a>
+        </div>
+    </div>
+    <div class="member" {$display_auth}>
+        <h2><img src="http://img.echosting.cafe24.com/design/skin/default/intro/h2_adult.gif" alt="성인 본인인증" /></h2>
+        <div class="inner">
+            <label id="ipinSelectRadio" {$ipinAuthRadioView} ><input type="radio" name="AuthType" {$ipinAuthChecked} /> 아이핀(i-PIN) 인증</label>
+            <label id="mobileauthSelectRadio" {$mobileauthAuthRadioView}><input type="radio" name="AuthType" {$mobileAuthChecked} /> 휴대폰 인증</label>
+            <p class="ipin" id="ipin" {$ipinAuthRadioView}>
+                <span><a href="#none" onclick="{$ipinpopup}"><img src="http://img.echosting.cafe24.com/design/skin/default/member/btn_check6.gif" alt="아이핀 인증" /></a></span>
+                아이핀이란, 회원님의 개인정보 보호를 위해 <br />
+                웹사이트에 주민등록번호를 제공하지 않고,<br />
+                본인임을 확인하는 인터넷상의 개인식별번호 서비스입니다.<br />
+                아이핀을 통한 가입을 원하시면 아이핀 인증 버튼을 눌러 진행해 주십시오.
+            </p>
+            <p class="ipin" id="mobileauth" {$mobileauthAuthRadioView} {$mobileauthAuthRadioViewDevault}>
+                <span><a href="#none" onclick="{$mobileauthpopup}"><img src="http://img.echosting.cafe24.com/design/skin/default/member/btn_check5.gif" alt="휴대폰 인증" /></a></span>
+                본인 명의의 휴대폰으로 본인인증을 진행합니다.<br>
+                휴대폰 명의자의 나이 정보로 19세 미만 여부를 확인합니다.
+            </p>
+        </div>
+    </div>
+</div>

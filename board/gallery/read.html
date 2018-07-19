@@ -1,0 +1,182 @@
+<!--@layout(/layout/basic/layout.html)-->
+<!--@css(/css/module/board/readPackage.css)-->
+<!--@css(/css/module/board/commentPackage.css)-->
+
+<div module="board_ReadPackage_8">
+    <div module="board_read_8">
+        <!--
+            $delete_success_url = /board/gallery/list.html
+            $login_page_url = /member/login.html
+            $deny_access_url = /board/gallery/list.html
+        -->
+        <div class="container">
+            <div class="p40"></div><div class="p10"></div>
+            <h1 class="pathTitle">MAGAZINE</h1>
+            <div class="p40"></div><div class="p10"></div>
+            <h1 class="titleH2">{$subject}</h1>
+            <div class="p20"></div>
+            <div class="boardInfo">
+                <p class="titleSubP"><strong>by.</strong> SEOLLEBAM.</p>
+                <p class="titleSubP"><strong>date.</strong> <span style="text-transform: uppercase;">{$write_date|date:d. M Y}</span></p>
+            </div>
+            <div class="p40 mp30"></div>
+        </div>
+        
+        <div class="imgArea">{$content_image}</div>
+        
+        <div class="container mDetail">
+            {$content}
+            <div class="p40"></div><div class="p10"></div>
+        </div>
+    </div>
+</div>
+
+<div class="commentArea" module="board_CommentPackage_8">
+    <div class="container" module="board_commentlist_8">
+        <!--
+            $delete_page_url = /board/gallery/comment_del.html
+            $delete_success_url = /board/gallery/read.html
+        -->
+        <h1 class="commentTitle">댓글 {$comment_count}</h1>
+        <div class="p10"></div>
+        <ul class="boardComment">
+            <li class="first {$comment_reply_css}">
+                <div class="commentTop">
+                    <div class="topLeft">
+                        <img src="https://i.imgur.com/jEjor2I.png">
+                    </div>
+                    <div class="topRight">
+                        <strong class="name">{$checkbox}{$member_icon}{$comment_name}</strong>
+                        <span class="date">{$comment_write_date|date:Y. m. d}</span><br>
+                        <div class="p10"></div>
+                        <span class="comment">{$comment_content}</span>
+                    </div>
+                    <span class="button">
+                        <a href="javascript:;" onclick="{$action_comment_update}" >수정</a>
+                        <a href="javascript:;" onclick="{$action_comment_delete}" >삭제</a>
+                    </span>
+                </div>
+                <div class="commentBottom">
+                    <a href="javascript:;" onclick="{$action_comment_reply}" class="{$comment_reply_display|display}"><span class="glyphicon glyphicon-share-alt" aria-hidden="true"></span>답글 달기</a>
+                </div>
+            </li>
+            <li class="first {$comment_reply_css}">
+                <div class="commentTop">
+                    <div class="topLeft">
+                        <img src="https://i.imgur.com/jEjor2I.png">
+                    </div>
+                    <div class="topRight">
+                        <strong class="name">{$checkbox}{$member_icon}{$comment_name}</strong>
+                        <span class="date">{$comment_write_date|date:Y. m. d}</span><br>
+                        <div class="p10"></div>
+                        <span class="comment">{$comment_content}</span>
+                    </div>
+                    <span class="button">
+                        <a href="javascript:;" onclick="{$action_comment_update}" >수정</a>
+                        <a href="javascript:;" onclick="{$action_comment_delete}" >삭제</a>
+                    </span>
+                </div>
+                <div class="commentBottom">
+                    <a href="javascript:;" onclick="{$action_comment_reply}" class="{$comment_reply_display|display}"><span class="glyphicon glyphicon-share-alt" aria-hidden="true"></span>답글 달기</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <!-- 댓글 수정 -->
+    <div module="board_commentform_8">
+        <fieldset>
+            <div class="view">
+                {$form.comment_modify}
+                <span class="submit">
+                    <p>비밀번호 : {$form.comment_password}</p>
+                    <span class="ease" href="#none" onclick="{$action_comment_cancel}" >취소</span>
+                    <span class="ease" href="#none" onclick="{$action_comment_update}" >수정</span>
+                </span>
+            </div>
+            <p class="{$config.comment_size|display}">{$comment_byte} / {$comment_size} byte</p>
+        </fieldset>
+    </div>
+    
+    <div class="p20"></div>
+    
+    <!-- 댓글 쓰기 -->
+    <div class="container" module="board_commentwrite_8">
+        <div class="{$comment_write_display|display}"><!-- 댓글권한 있음 -->
+            <fieldset>
+                <div class="col-md-1"><img src="https://i.imgur.com/jEjor2I.png"></div>
+                <div class="col-md-9 col-xs-12 mp0 view">
+                    {$form.comment}
+                </div>
+                <div class="col-md-2 p0 view">
+                    <p>
+                        <span class="{$comment_input_name|display}">이름 :{$form.comment_name}</span>
+                        <span>비밀번호.</span> {$form.comment_password}
+                    </p>
+                    <a href="#none" onclick="{$action_comment_insert}" class="submit btnNomal {$comment_button|display}">게시</a>
+                </div>
+            </fieldset>
+        </div>
+        <div class="{$comment_write_display_none|display}"><!-- 댓글권한 없음 -->
+            <p>{$comment_auth_name}에게만 댓글 작성 권한이 있습니다.</p>
+        </div>
+    </div>
+    
+    <div class="p20"></div>
+    
+    <!-- 댓글의 댓글 쓰기 -->
+    <div module="board_commentreply_8">
+        <!-- 댓글권한 있음 -->
+        <div class="{$comment_write_display|display}">
+            <fieldset>
+                <div class="col-md-1"><img class="crImg" src="http://i.imgur.com/toIpnJI.jpg"></div>
+                <div class="col-md-9 col-xs-12 mp0 view">
+                    {$form.comment}
+                </div>
+                <div class="col-md-2 p0 view">
+                    <p>
+                        <span class="{$comment_input_name|display}">이름 :{$form.comment_name}</span>
+                        <span>비밀번호.</span> {$form.comment_password}
+                    </p>
+                    <a href="#none" onclick="{$action_comment_insert}" class="submit {$comment_button|display}">게시</a>
+                </div>
+            </fieldset>
+        </div>
+        <!-- 댓글권한 없음 -->
+        <div class="{$comment_write_display_none|display}">
+            <p>{$comment_auth_name}에게만 댓글 작성 권한이 있습니다.</p>
+        </div>
+    </div>
+</div>
+
+<div class="p80"></div>
+<div class="container" module="board_movement_8">
+    <!--@css(/css/module/board/movement.css)-->
+    <ul>
+        <li class="prev {$prev_display|display}">
+            <strong>이전 글 보기</strong>
+            <a href="/board/gallery/read.html{$param_prev}">{$prev_subject}</a>
+        </li>
+        <li class="next {$next_display|display}">
+            <strong>다음 글 보기</strong>
+            <a href="/board/gallery/read.html{$param_next}">{$next_subject}</a>
+        </li>
+    </ul>
+</div>
+<div class="p80"></div>
+
+<!-- 관리자 전용 메뉴 -->
+<div module="board_function_8">
+    <!--@css(/css/module/board/function.css)-->
+    <!--
+        $success_return_url = /board/gallery/list.html
+     -->
+    <p>
+        해당 글 이동 {$form.boardGroup} 으로
+        <a href="#none" onclick="{$action_article_move}">글 이동</a>
+        <a href="#none" onclick="{$action_article_copy}">글 복사</a>
+        * 댓글포함, 답변 불포함
+    </p>
+</div>
+<!-- //관리자 전용 메뉴 -->
+<!--@define(cmc_log)-->

@@ -1,0 +1,95 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div class="container" module="board_ReadPackage_9">
+    <!--@css(/css/module/board/readPackage_9.css)-->
+    <div class="p40"></div>
+    <h1 class="titleH1">1:1 맞춤상담</h1>
+    <div class="p10"></div>
+    <p class="titleP desktopOnly">1:1 맞춤상담 게시판입니다.</p>
+    <div class="p40"></div><div class="p10"></div>
+
+
+    <div module="Board_Read_9">
+        <!--
+            $delete_success_url = /board/consult/list.html
+            $login_page_url = /member/login.html
+        -->
+        <div class="boardView tableWrap">
+            <table border="1" summary="">
+            <caption>1:1 맞춤상담 상세</caption>
+            <tbody>
+                <tr>
+                    <th scope="row">제목</th>
+                    <td>{$subject}</td>
+                </tr>
+                <tr>
+                    <th scope="row">작성자</th>
+                    <td>{$writer} <span class="{$config.display_ip|display}">(ip:{$ip})</span></td>
+                </tr>
+                <tr class="etcArea">
+                    <td colspan="2">
+                        <ul>
+                            <li class="comment">
+                                <strong class="th">답변여부</strong> <span class="td">{$consult}</span>
+                            </li>
+
+                            <li class="date {$config.use_date|display}">
+                                <strong class="th">문의일시</strong> <span class="td">{$write_date}</span>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="view">
+                    <td colspan="2">
+                        <div class="detail">{$content}{$content_image}</div>
+                    </td>
+                </tr>
+                <tr class="attach {$config.use_attach|display}" >
+                    <th>첨부파일</th>
+                    <td>{$attach_file}</td>
+                </tr>
+            </tbody>
+            </table>
+        </div>
+
+        <div class="{$display_consult_reply}">
+            <div class="boardView">
+                <table border="1" summary="">
+                <caption>1:1 맞춤상담 답변</caption>
+                <tbody>
+                    <tr>
+                        <th scope="row">답변자</th>
+                        <td>{$reply_name}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">답변일시</th>
+                        <td>{$reply_date}</td>
+                    </tr>
+                    <tr class="view">
+                        <td colspan="2">
+                            <div class="detail">{$reply_content}</div>
+                        </td>
+                    </tr>
+                </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="{$display_consult_noreply}">
+            <div class="boardWait">
+                <p>빠른시간내에 답변드리겠습니다. 잠시만 기다려 주세요!</p>
+            </div>
+        </div>
+
+
+        <div class="btnArea">
+            <div class="p20"></div>
+            <span class="left"><a href="/board/consult/list.html{$param_list}" class="btnBasic btn3">돌아가기</a></span>
+            <a href="#none" onclick="{$action_delete}" class="btnNormal btn3 {$delete_button_auth|display}">삭제하기</a>
+            <a href="/board/consult/modify.html{$param_modify}" class="btnNormal btn3 {$modify_button_auth|display}">수정하기</a>
+            <a href="/board/consult/reply.html{$param_reply}" class="btnNormal btn3 {$reply_button_auth|display}">답변</a>
+        </div>
+
+    </div>
+</div>
+
+<div class="p40"></div><div class="p10"></div>

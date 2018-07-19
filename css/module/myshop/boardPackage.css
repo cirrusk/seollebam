@@ -1,0 +1,9 @@
+.xans-myshop-boardpackage { }
+.xans-myshop-boardpackage .tableWrap { }
+.xans-myshop-boardpackage .tableWrap th { width: 15%; }
+.xans-myshop-boardpackage .tableWrap .subject { width: 40%; }
+
+.xans-myshop-boardlist .noData { text-align: center; }
+#boardSearchForm .xans-myshop-boardlistsearch { text-align: right; }
+#boardSearchForm .xans-myshop-boardlistsearch input { height: 24px; }
+#boardSearchForm .xans-myshop-boardlistsearch select { height: 24px; width: 60px; }

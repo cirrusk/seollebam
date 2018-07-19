@@ -1,0 +1,5 @@
+#popup { width:450px; }
+.content { padding:20px; min-height:150px; }
+.btnArea { position:fixed; bottom:0; left:0; width:100%; padding:10px 0; border-top:1px solid #d7d5d5; text-align:center; background-color:#fbfafa; }
+.xans-link-bookmark .info { padding:10px 0 20px 0; text-align:center; font-size:12px; line-height:1.8em;  }
+.xans-link-bookmark .info img {max-height:130px;}

@@ -1,0 +1,22 @@
+.xans-myshop-orderhistorytab .subTitle { display: inline; float: left; margin-right: 20px; color: rgba(0,0,0,.4); }
+.xans-myshop-orderhistorytab .subTitle:hover { transition: .5s; color: rgba(0,0,0,.9); }
+.xans-myshop-orderhistorytab .selected .subTitle { color: rgba(0,0,0,.9); }
+
+.xans-myshop-orderhistorylistitem .tableWrap { }
+.xans-myshop-orderhistorylistitem .tableWrap table { }
+.xans-myshop-orderhistorylistitem .tableWrap table th { width: 12%; text-align: center; word-break: keep-all; }
+.xans-myshop-orderhistorylistitem .tableWrap table td { width: 12%; text-align: center; vertical-align: middle; word-break: keep-all; }
+.xans-myshop-orderhistorylistitem .tableWrap table td.number { padding: 10px; }
+.xans-myshop-orderhistorylistitem .tableWrap table td.thumb  { padding: 8px; }
+.xans-myshop-orderhistorylistitem .tableWrap table th.product  { width: 16%; }
+.xans-myshop-orderhistorylistitem .tableWrap table td.product  { width: 16%; font-weight: 500; }
+.xans-myshop-orderhistorylistitem .tableWrap table td.thumb img { width:100%; border: 1px solid rgba(0,0,0,.2); border-radius: 5px; }
+.xans-myshop-orderhistorylistitem .tableWrap table .btnSmall { display: block; margin: 5px 0; }
+
+@media screen and (max-width: 768px) {
+    .xans-myshop-orderhistorylistitem .tableWrap table th { font-size: 11px; }
+    .xans-myshop-orderhistorylistitem .tableWrap table td { font-size: 11px; }
+    .xans-myshop-orderhistorylistitem .tableWrap table td.thumb { padding: 5px 0; }
+    .xans-myshop-orderhistorylistitem .tableWrap table th.quantity { width: 6%; }
+    .xans-myshop-orderhistorylistitem .tableWrap table td.quantity { width: 6%; }
+}

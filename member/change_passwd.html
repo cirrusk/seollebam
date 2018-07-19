@@ -1,0 +1,39 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div class="path">
+    <span>현재 위치</span>
+    <ol>
+        <li><a href="/">홈</a></li>
+        <li title="현재 위치"><strong>비밀번호 변경</strong></li>
+    </ol>
+</div>
+
+<div class="titleArea">
+    <h2>CHANGE PASSWORD</h2>
+</div>
+
+<div module="member_changepasswd">
+    <!--@css(/css/module/member/change_passwd.css)-->
+    {$form.enc_password}
+    {$form.returnUrl}
+    <div class="change_pw">
+        <h3><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/member/h3_change_pw.gif" alt="비밀번호 변경" /></h3>
+        <p class="info">
+             회원님의 개인정보를 안전하게 보호하고, 개인정보 도용으로 인한 피해를 예방하기 위해<br />
+            {$check_period}일 이상 비밀번호를 변경하지 않은 경우 비밀번호 변경을 권장하고 있습니다.
+        </p>
+        <fieldset>
+            <legend>비밀번호 변경</legend>
+            <p><strong>아이디</strong> <span class="id">{$member_id}</span></p>
+            <p><strong>현재 비밀번호</strong> {$form.passwd}</p>
+            <p><strong>새 비밀번호</strong>
+                {$form.new_passwd}
+                <span class="info">{$passwd_type_desc}</span>
+            </p>
+            <p><strong>새 비밀번호 확인</strong> {$form.new_passwd_confirm}</p>
+            <p class="button">
+                <a href="#none" onclick="{$change_password_action}" class="btn_style02 btn_black">비밀번호 변경하기</a>
+                <a href="#none" onclick="{$after_action}" class="btn_style02 btn_white">다음에 변경하기</a>
+            </p>
+        </fieldset>
+    </div>
+</div>

@@ -1,0 +1,31 @@
+<div class="listAjax" module="product_normalpackage">
+    <div module="product_listnormal">
+        <!--
+            $count = 12
+            $basket_result = /product/add_basket.html
+            $basket_option = /product/basket_option.html
+        -->
+        <ul class="row justify-content-center">
+            <li class="item col-md-3 col-12" id="anchorBoxId_{$product_no}">
+                <div class="box">
+                    <a href="/product/detail.html{$param}"><img src="{$image_medium}"><div class="RightInfo">
+                        <h6>{$product_name}</h6>
+                        <p>요즘 부쩍 잠을 못자는 연인을<br>
+                            위해 카모마일로만 허브 오일</p>
+                        <h6 module="product_ListItem">￦ {$item_content|replace:원, }</h6>
+                    </div></a>
+                </div>
+            </li>
+            <li class="item col-md-3 col-12" id="anchorBoxId_{$product_no}">
+                <div class="box">
+                    <a href="/product/detail.html{$param}"><img src="{$image_medium}"><div class="RightInfo">
+                        <h6>{$product_name}</h6>
+                        <p>요즘 부쩍 잠을 못자는 연인을<br>
+                            위해 카모마일로만 허브 오일</p>
+                        <h6 module="product_ListItem">￦ {$item_content|replace:원, }</h6>
+                    </div></a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>

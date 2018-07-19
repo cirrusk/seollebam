@@ -1,0 +1,95 @@
+<!--@layout(/layout/basic/layout.html)-->
+<!--@css(/css/module/board/listPackage_gallary.css)-->
+<!--@js(/js/module/layout/test.js)-->
+
+<div module="board_list_8">
+    <!--
+        $count = 6
+        $login_page_url = /member/login.html
+        $deny_access_url = /index.html
+    -->
+    <div class="container">
+        <div class="p40"></div>
+        <h1 class="titleH1">MAGAZINE</h1>
+        <div class="p10"></div>
+        <p class="titleP">설레밤의 중요 매거진입니다.</p>
+        <div class="p60"></div><div class="mp10"></div>
+    </div>
+    
+    <!--div class="carouselRow">
+        <div class="carouselWrap">
+            <div class="back_btn no_select"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span></div>
+            <div class="next_btn no_select"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></div>
+            <div class="carouselM">
+                <div class="item">
+                    <img src="https://i.imgur.com/4tJw0Yo.png" title="Title 1 ">
+                    <h2 class="storeH2">피가 더운지라 실현에 대한 자신과</h2>
+                    <p class="mainSubP">14. MAY 2017</p>
+                </div>
+                <div class="item">
+                    <img src="https://i.imgur.com/eupC7zs.png" title="Title 2 ">
+                    <h2 class="storeH2">피가 더운지라 실현에 대한 자신과</h2>
+                    <p class="mainSubP">14. MAY 2017</p>
+                </div>
+                <div class="item">
+                    <img src="https://i.imgur.com/ZJrqoea.png" title="Title 3 ">
+                    <h2 class="storeH2">피가 더운지라 실현에 대한 자신과</h2>
+                    <p class="mainSubP">14. MAY 2017</p>
+                </div>
+                <div class="item">
+                    <img src="https://i.imgur.com/k9xDgjE.png" title="Title 4 ">
+                    <h2 class="storeH2">피가 더운지라 실현에 대한 자신과</h2>
+                    <p class="mainSubP">14. MAY 2017</p>
+                </div>
+                <div class="item">
+                    <img src="https://i.imgur.com/RlPl4q6.png" title="Title 5 ">
+                    <h2 class="storeH2">피가 더운지라 실현에 대한 자신과</h2>
+                    <p class="mainSubP">14. MAY 2017</p>
+                </div>
+            </div>
+        </div>
+    </div-->
+   
+    <div class="container"> 
+        <hr class="titleHr">
+        <p class="titleH5 titleWrap">설레밤의 매거진을 즐겨보세요.</p>
+        <div class="p20 mp0"></div>
+        <div id="columns">
+            <figure class="ease">
+                <a href="/board/gallery/read.html{$param_read}" class="imgLink"><img src="{$img_src}" /></a>{$checkbox}
+                <div class="p10"></div>
+                <a href="/board/gallery/read.html{$param_read}" class="imgLink"><h5 class="titleH5">{$subject|cut:16,..} {$comment_count}</h5></a>
+                <hr>
+                <span class="titleSubP">{$write_date|date:Y. m. d}</span>
+            </figure>
+            <figure class="ease">
+                <a href="/board/gallery/read.html{$param_read}" class="imgLink"><img src="{$img_src}" /></a>{$checkbox}
+                <div class="p10"></div>
+                <a href="/board/gallery/read.html{$param_read}" class="imgLink"><h5 class="titleH5">{$subject|cut:16,..} {$comment_count}</h5></a>
+                <hr>
+                <span class="titleSubP">{$write_date|date:Y. m. d}</span>
+            </figure>
+        </div>
+        
+        <div class="boardListEmpty {$empty_display|display}" module="board_empty_8">
+            <p>{$empty_message}</p>
+        </div>
+        
+        <div module="board_ButtonList_8" class="tableBtnArea {$write_display|display}">
+            <a href="/board/gallery/write.html{$param_write}" class="btnBasic btn3 {$write_display|display}">글쓰기</a>
+        </div>
+
+        <div class="p80"></div><div class="mp10"></div>
+        
+        <div module="board_paging_8"  class="ec-base-paginate paginate">
+            <p class="left"><a href="{$param_prev}"></a></p>
+            <ol>
+                <li class="ease"><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
+                <li class="ease"><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
+            </ol>
+            <p class="right"><a href="{$param_next}"></a></p>
+        </div>
+    </div>
+</div>
+
+<div class="p80"></div><div class="p40"></div><div class="p10"></div>

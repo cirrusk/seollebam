@@ -1,0 +1,13 @@
+.main_notice { position:relative; margin:10px auto; max-width:280px; overflow:hidden;border:0px solid #000;height:165px;float:left;}
+
+.main_notice h2 { font-size:11px; padding: 0 0 8px 0;  border-bottom:1px solid #e3e3e3;color:#555;}
+.main_notice h2 span { padding:0 0px 0 0px; }
+
+
+.main_notice thead {visibility:hidden; position:absolute; left:-1000px; top:-1000px; height:0; width:0; }
+.main_notice td {border:none; text-align:right; font-size:12px;border-bottom:1px solid #e3e3e3;padding:10px 0 9px;line-height:14px;width:80px;}
+.main_notice td.title { width:190px; text-align:left; background:url("http://img.echosting.cafe24.com/design/skin/default/layout/ico_board_main.gif") 0 50% no-repeat;}
+.main_notice td.title a {color:#777;}
+.main_notice td.title a:hover { padding:0 0 0 0px;color:#9dc1c1; }
+.main_notice td.date {font-size:10px;color:#a9a8b0;}
+

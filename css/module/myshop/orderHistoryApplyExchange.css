@@ -1,0 +1,13 @@
+.xans-myshop-orderhistoryapplyexchange table { }
+.xans-myshop-orderhistoryapplyexchange table th { width: 12%; text-align: center; }
+.xans-myshop-orderhistoryapplyexchange table td { width: 12%; text-align: center; vertical-align: middle; }
+.xans-myshop-orderhistoryapplyexchange table .thumb  { padding: 8px; }
+.xans-myshop-orderhistoryapplyexchange table th.product  { width: 16%; }
+.xans-myshop-orderhistoryapplyexchange table td.product  { width: 16%; }
+.xans-myshop-orderhistoryapplyexchange table td.empty { padding: 40px 0; }
+.xans-myshop-orderhistoryapplyexchange table td.thumb img { width:100%; border: 1px solid rgba(0,0,0,.2); border-radius: 5px; }
+
+.xans-myshop-orderhistoryapplyexchange .fullTable th { width: 25%; }
+.xans-myshop-orderhistoryapplyexchange .fullTable td { width: 75%; }
+.xans-myshop-orderhistoryapplyexchange .fullTable td select { width: 100%; padding-left: 6px; }
+.xans-myshop-orderhistoryapplyexchange .fullTable td textarea { width: 100%; border: 1px solid rgba(0,0,0,.2); border-radius: 5px; padding: 6px 8px; }

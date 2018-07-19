@@ -1,0 +1,35 @@
+<!--@layout(/layout/basic/layout.html)-->
+<!--@css(/css/module/member/find_passwd.css)-->
+
+<div class="p80"></div><div class="p10"></div>
+
+<div class="container" module="member_findpasswd">
+    <!--
+        $nextURL = /member/passwd/find_passwd_question.html
+     -->
+    <div class="col-md-2"></div>
+    <div class="col-md-8 col-xs-12">
+        <h3 class="subTitle">비밀번호 찾기</h3>
+        <div class="p20"></div>
+        
+        <div class="memberInfo">
+            <fieldset>
+                <p class="check">{$form.check_method}</p>
+                <p class="id"><span class="mainP">아이디</span>{$form.member_id}</p>
+                <p id="name_view" class="name" style="display:none;"><span class="mainP">이름</span>{$form.name}</p>
+                <p id="email_view" class="email" style="display:none;"><span class="mainP">이메일</span>{$form.email}</p>
+                <p id="mobile_view" class="mobile" style="display:none;"><span class="mainP">전화번호</span>{$form.mobile1}{$form.mobile2}{$form.mobile3}</p>
+
+            </fieldset>
+        </div>
+        
+        <div class="buttonArea">
+            <div class="p20"></div>
+            <a href="/member/login.html" class="btnNomal btn3">돌아가기</a>
+            <a href="#none" onclick="{$action_func_find_passwd_question}" class="btnBasic btn3">확인</a>
+        </div>
+    </div>
+    <div class="col-md-2"></div>
+</div>
+    
+<div class="p80"></div><div class="p40"></div><div class="p10"></div>

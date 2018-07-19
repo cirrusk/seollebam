@@ -1,0 +1,51 @@
+@charset "utf-8";
+/* PRODUCT NAV */
+.productNav { width: 100%; height: 48px; position: fixed; top: 48px; background-color: #fff; border-bottom: 1px solid #8c8c8c; text-align: center; z-index: 1; padding: 8px; }
+.productNav img { width: 18px; float: left; margin: 6px 0; }
+
+/* PRODUCT HEADER */
+.detailArea { margin-top: 96px; }
+.detailArea .imgArea img { width: 100%; }
+.totalArea .bgDark { background-color: #f0f0f0; }
+.totalArea #totalProducts { padding: 16px; }
+.totalArea .bgDark table { margin: 30px 0; }
+.totalArea table .quantity { float: right; }
+.totalArea table .quantity img { height: 30px; width: 30px; border: 1px solid #d6d6d6; padding: 5px; }
+.totalArea table #quantity { text-align: center; background-color: #f0f0f0; border: 1px solid #d6d6d6; }
+.totalArea table .quantity_price { color: #333; }
+
+.detailArea .totalArea .moreInfo p { border-bottom: 1px solid #d6d6d6; padding-bottom: 8px; color: #333; font-weight: 500; }
+.detailArea .totalArea .moreInfo th { width: 30%; vertical-align: top; font-weight: 400; line-height: 24px; padding: 10px 0; }
+.detailArea .totalArea .moreInfo td { width: 70%; color: #7f7f7f; line-height: 24px; padding: 10px 0; }
+
+/* PRODUCT AREA */
+#prdDetail { text-align: center; }
+#prdDetail .mDetail { display: none; }
+#prdDetail .fullBG { width: 100%; background-size: cover; background-repeat: no-repeat; }
+#prdQnA { padding-top: 0; }
+
+@media screen and (max-width: 768px) {
+    /* PRODUCT NAV */
+    .productNav { height: 40px; }
+    .productNav img { width: 16px; margin: 4px 0; }
+
+    /* PRODUCT HEADER */
+    .detailArea { display: none; }
+    .totalArea table td { font-size: 12px; }
+    .totalArea table .quantity_price { color: #333; font-size: 18px; font-weight: 700; }
+
+    /* PRODUCT AREA */
+    #prdDetail { margin-top: 88px; }
+    #prdDetail .wDetail { display: none; }
+    #prdDetail .mDetail { display: block; width: 100%; }
+
+    /* MODAL */
+    #totalModal .modal-dialog { position: absolute; bottom: 0; width: 100%; }
+    #totalModal .modal-dialog .modal-body { padding: 0; background-color: #F0F0F0; }
+    #totalModal .totalArea table td { font-size: 12px; }
+    #totalModal .totalArea table .quantity_price { color: #333; font-size: 18px; font-weight: 700; }
+
+
+    /* PRODUCT MODAL */
+    .floatArea { position: fixed; bottom: 0; width: 100%; }
+}

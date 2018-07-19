@@ -1,0 +1,35 @@
+<!--@layout(/layout/basic/layout.html)-->
+<!--@css(/css/module/myshop/main.css)-->
+
+<div module="layout_logincheck">
+<!--
+    $url = /member/login.html
+-->
+</div>
+
+<div class="container" module="myshop_benefit">
+    <div class="p40"></div>
+    <h1 class="titleH1">{$member_name}님의 공간</h1>
+    <div class="p20 mp5"></div>
+    <p class="titleP">환영합니다! {$member_name}님. 회원님은 적립금을 {$dc_price_mileage} 적립 중이십니다.</p>
+    <div class="p20"></div>
+    
+    <div id="mypage" class="tableWrap">
+        <ul class="row">
+            <li class="col-md-4 col-xs-6"><a href="/myshop/order/list.html"><h2 class="titleP">주문내역 보기</h2><div class="infobox titleSubP"><hr>주문하신 상품의<br/>주문내역을 확인</div></a></li>
+            <li class="col-md-4 col-xs-6"><a href="/order/basket.html"><h2 class="titleP">장바구니 보기</h2><div class="infobox titleSubP"><hr>장바구니의 상품을<br/>확인 및 관리</div></a></li>    
+            <li class="col-md-4 col-xs-6"><a href="/myshop/addr/list.html"><h2 class="titleP">주소록 관리</h2><div class="infobox titleSubP"><hr>사용하는 배송지를<br/> 등록하고 관리</div></a></li>
+            <li class="col-md-4 col-xs-6"><a href="/myshop/board_list.html"><h2 class="titleP">나의 게시글</h2><div class="infobox titleSubP"><hr>고객님께서 작성하신<br/> 모든글을 관리</div></a></li>   
+            <li class="col-md-4 col-xs-6"><a href="/board/consult/list.html"><h2 class="titleP">문의 게시판</h2><div class="infobox titleSubP"><hr>운영자와 1:1로<br/> 상담하는 공간</div></a></li>
+            <li class="col-md-4 col-xs-6"><a href="/member/modify.html"><h2 class="titleP">회원정보 수정</h2><div class="infobox titleSubP"><hr>고객님의 개인정보를<br/> 관리하는 공간</div></a></li>
+        </ul>
+    </div>
+    
+    <div class="buttonArea">
+        <div class="p20 mp20"></div>
+        <a href="/index.html" class="btnNormal btn3">돌아가기</a>
+    </div>
+</div>   
+
+<div class="p80"></div><div class="p40"></div><div class="p10"></div>
+

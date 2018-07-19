@@ -1,0 +1,16 @@
+.xans-myshop-addrregister .tableWrap th { width: 25%; }
+.xans-myshop-addrregister .tableWrap td { width: 75%; }
+.xans-myshop-addrregister .tableWrap label { position: relative; top: 2px; left: 6px; }
+
+.xans-myshop-addrregister #address_zip1,
+.xans-myshop-addrregister #postcode2 { width:80px; }
+.xans-myshop-addrregister #address_addr1,
+.xans-myshop-addrregister #address_addr2 { width:280px; margin:10px 0 0; }
+.xans-myshop-addrregister #ma_rcv_mobile_no1 { width:80px; margin:0 7px 0 0; }
+.xans-myshop-addrregister #ma_rcv_mobile_no2,
+.xans-myshop-addrregister #ma_rcv_mobile_no3 { width:80px;   margin: 0 8px; }
+
+@media screen and (max-width: 768px) {
+    .xans-myshop-addrregister #ma_rcv_mobile_no1 { width: 64px; }
+    .xans-myshop-addrregister #address_addr1, .xans-myshop-addrregister #address_addr2 { margin:4px 0 0; }
+}

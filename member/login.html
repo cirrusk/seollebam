@@ -1,0 +1,45 @@
+<!--@layout(/layout/basic/layout.html)-->
+<!--@css(/css/module/member/login.css)-->
+
+<div class="container" module="member_login">
+    <!--
+        $defaultReturnUrl = /index.html
+        $forbidIpUrl = member/adminFail.html
+    -->
+    <div class="p60"></div><div class="p10"></div>
+    
+    <div class="col-md-3"></div>
+    <div class="loginForm col-md-6 col-xs-12">
+        <h3 class="subTitle">회원 로그인</h3>
+        <div class="p20"></div>
+        <div class="basicLogin">
+            <label class="id ease"><span>ID</span>{$form.member_id}</label>
+            <label class="password ease"><span>PASSWORD</span>{$form.member_passwd}</label>
+            <div class="row">
+                <a href="#none" onclick="{$action_func_login}" class="mainA btnBasic" style="margin-top: 15px;">로그인</a>
+                <a href="/member/join.html" class="mainA btnBasic">회원가입</a>
+                <div class="etcLogin">
+                    <a href="/member/id/find_id.html" class="btnNomal col-md-6">SEARCH <b>ID</b></a>
+                    <a href="/member/passwd/find_passwd_info.html" class="btnNomal col-md-6">SEARCH <b>PW</b></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="p40"></div><div class="p10"></div>
+        
+        <h3 class="subTitle">SNS 로그인</h3>
+        <div class="p20"></div>
+        <div class="snsLogin tableWrap">
+            <a href="#none" onclick="{$naver_func_login}" class="nLogin {$display_kakao|display}">NAVER</a>
+            <a href="#none" onclick="{$facebook_func_login}" class="fLogin {$display_naver|display}">FACEBOOK</a>
+            <a href="#none" onclick="{$google_func_login}" class="gLogin {$display_facebook|display}">GOOGLE</a>
+            <a href="#none" onclick="{$kakao_func_login}" class="kLogin {$display_google|display}">KAKAO</a>
+        </div>
+    </div>
+
+    <div class="col-md-3"></div>
+</div>
+
+<div class="p80"></div><div class="p40"></div><div class="p10"></div>
+
+

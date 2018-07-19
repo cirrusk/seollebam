@@ -1,0 +1,185 @@
+<!--@layout(/layout/basic/layout.html)-->
+<!--@css(/css/module/order/result.css)-->
+
+<div class="container" module="Order_result" unroll=1>
+    <div class="p40"></div>
+    <h1 class="titleH1">ORDER RESULT</h1>
+    <div class="p40"></div><div class="p10"></div>
+
+    <!-- 주문완료 -->
+    <div class="orderInfo">
+        <ul>
+            <li>주문번호 : <strong>{$order_id}</strong></li>
+            <li>주문일자 : <span>{$order_date}</span></li>
+        </ul>
+    </div>
+    
+    <div class="p40"></div><div class="p10"></div>
+    
+    <!-- 결제정보 -->
+    <div class="orderArea">
+        <h3 class="titleH5">결제정보</h3>
+        <div class="p20"></div>
+        <div class="tableWrap">
+            <table border="1" summary="">
+            <caption>결제정보</caption>
+            <tbody>
+                <tr>
+                    <th scope="row">최종결제 금액</th>
+                    <td class="price">
+                        {$result_order_price_front_head}<strong>{$result_order_price_front}</strong><strong class="tail">{$result_order_price_front_tail}</strong> <span class="tail {$result_order_ref_display|display}">{$result_order_price_back_head}{$result_order_price_back}{$result_order_price_back_tail}</span>
+                    </td>
+                </tr>
+                <tr style="border-bottom: 0px;">
+                    <th scope="row">결제수단</th>
+                    <td>
+                        <strong>{$paymethod_name}</strong>
+                        <p>
+                            {$paymethod_detail}
+                            <span class="{$paymenturl_display|display}"><a href="#none" id="{$btn_payment_link_id}"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/order/btn_order_payment.gif" alt="결제사이트 바로가기" /></a></span>
+                        </p>
+                        <p class="cashReciept {$cashreceipt_display|display}">
+                            현금영수증 발행 :
+                            <strong class="{$cashreceipt_type_complete_display|display}">신청 <span>({$cashreceipt_identy_type}) {$cashreceipt_identification}</span></strong>
+                            <strong class="{$cashreceipt_type_notapply_display|display}">신청안함</strong>
+                            <strong class="{$cashreceipt_type_fail_display|display}">신청실패<br /><span class="grid">하단의 주문확인하기를 클릭하고 주문상세조회에서 다시 신청하시거나 관리자에게 문의하시기 바랍니다.</span></strong>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="{$eguarantee_display|display}">
+                    <th scope="row">전자보증보험<br/>서비스정보</th>
+                    <td>{$eguarantee_detail}</td>
+                </tr>
+            </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="p40"></div><div class="p10"></div>
+    
+    <!-- 주문 상품 정보 -->
+    <div class="orderListArea">
+        <h3 class="titleH5">배송 정보</h3>
+        <div class="p20"></div>
+        <!-- 기본배송 -->
+        <table border="1" summary="" class="tableWrap {$normal_display|display}" nspace="normal">
+            <caption>기본배송</caption>
+            <thead>
+                <tr>
+                    <th scope="col" class="thumb">이미지</th>
+                    <th scope="col" class="product">상품정보</th>
+                    <th scope="col" class="quantity">수량</th>
+                    <th scope="col" class="price">판매가</th>
+                </tr>
+            </thead>
+            <tfoot>
+                <tr>
+                    <td colspan="4">상품구매금액 <strong>{$normal_total_product_price}<span class="{$normal_total_option_price_display|display}"> ({$normal_total_option_price})</span></strong> + 배송비 {$normal_total_delv_price} = 합계 : <strong class="total">{$normal_total_price_front_head}<span>{$normal_total_price_front}</span>{$normal_total_price_front_tail}</strong> <span class="{$normal_total_price_ref_display|display}">{$normal_total_price_back_head}{$normal_total_price_back}{$normal_total_price_back_tail}</span></td>
+                </tr>
+            </tfoot>
+            <tbody module="Order_normalresultlist">
+                <tr>
+                    <td class="thumb"><a href="/product/detail.html{$param}"><img src="{$product_image}" onerror="this.src='http://img.echosting.cafe24.com/thumb/img_product_small.gif';" alt="" /></a></td>
+                    <td class="product">
+                        <a href="/product/detail.html{$param}"><strong>{$product_name}</strong></a>
+                    </td>
+                    <td class="quantity">{$product_quantity}</td>
+                    <td class="price"><strong>{$product_price_front_head}{$product_price_front}{$product_price_front_tail}</strong><div class="{$product_price_ref_display|display}">{$product_price_back_head}{$product_price_back}{$product_price_back_tail}</div></td>
+                </tr>
+                <tr>
+                    <td class="thumb"><a href="/product/detail.html{$param}"><img src="{$product_image}" onerror="this.src='http://img.echosting.cafe24.com/thumb/img_product_small.gif';" alt="" /></a></td>
+                    <td class="product">
+                        <a href="/product/detail.html{$param}"><strong>{$product_name}</strong></a>
+                    </td>
+                    <td class="quantity">{$product_quantity}</td>
+                    <td class="price"><strong>{$product_price_front_head}{$product_price_front}{$product_price_front_tail}</strong><div class="{$product_price_ref_display|display}">{$product_price_back_head}{$product_price_back}{$product_price_back_tail}</div></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="p40"></div><div class="p10"></div>
+    
+    <!-- 배송지정보 -->
+    <div class="orderArea">
+        <h3 class="titleH5">배송 정보</h3>
+        <div class="p20"></div>
+        <div class="tableWrap">
+            <table border="1" summary="">
+            <caption>배송지 정보</caption>
+            <tbody>
+                <tr>
+                    <th scope="row">받으시는분</th>
+                    <td>{$rname}</td>
+                </tr>
+                <tr class="{$english_name_display|display}">
+                    <th scope="row">영문이름</th>
+                    <td>{$english_name}</td>
+                </tr>
+                <tr class="{$pron_name_display|display}">
+                    <th scope="row">이름(발음기호)</th>
+                    <td>{$pron_name}</td>
+                </tr>
+                <tr class="{$country_name_display|display}">
+                    <th scope="row">국가</th>
+                    <td>{$country_name}</td>
+                </tr>
+                <tr>
+                    <th scope="row">우편번호</th>
+                    <td>{$rzipcode}</td>
+                </tr>
+                <tr>
+                    <th scope="row">주소</th>
+                    <td>{$raddr}</td>
+                </tr>
+                <tr class="{$si_gun_do_display|display}">
+                    <th scope="row">도시</th>
+                    <td>{$si_gun_do}</td>
+                </tr>
+                <tr class="{$ju_do_display|display}">
+                    <th scope="row">주/지방</th>
+                    <td>{$ju_do}</td>
+                </tr>
+                <tr>
+                    <th scope="row">일반전화</th>
+                    <td>{$rphone_1}</td>
+                </tr>
+                <tr>
+                    <th scope="row">휴대전화</th>
+                    <td>{$rphone_2}</td>
+                </tr>
+                <tr style="border-bottom: 0px;">
+                    <th scope="row">배송메시지</th>
+                    <td>{$rmessage}</td>
+                </tr>
+                <tr class="{$hope_date_display|display}">
+                    <th scope="row">희망배송일</th>
+                    <td><strong>{$hope_date}</strong></td>
+                </tr>
+                <tr class="{$hope_time_display|display}">
+                    <th scope="row">희망배송시간</th>
+                    <td><strong>{$hope_time}</strong></td>
+                </tr>
+                <tr class="{$sc_display|display}">
+                    <th scope="row">배송업체</th>
+                    <td>{$sc_name}</td>
+                </tr>
+            </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <div class="tableBtnArea">
+        <div class="p40"></div>
+        <span class="left">
+            <a href="#none" onclick="{$action_print_spec}" class="btn_style02 btn_white {$print_spec_display|display}">거래명세서 인쇄</a>
+            <a href="#none" onclick="{$action_print_pg_card}" class="btn_style02 btn_white {$print_pg_card_display|display}">카드매출전표 인쇄</a>
+        </span>
+        <span class="right">
+            <a href="/" class="btnNormal btn3">쇼핑계속하기</a>
+            <a href="/myshop/order/list.html" class="btnBasic btn3">주문확인하기</a>
+        </span>
+    </div>
+</div>
+
+<div class="p80"></div><div class="p40"></div><div class="p10"></div>

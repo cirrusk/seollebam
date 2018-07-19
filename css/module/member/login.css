@@ -1,0 +1,31 @@
+.loginForm .basicLogin .mainA { width: 98%; margin: 5px 1%; } 
+
+.loginForm .basicLogin { border-top: 2px solid #d6254a; border-bottom: 2px solid rgba(0,0,0,.2); padding: 10px 0; }
+.loginForm .basicLogin .row { margin: 0px; }
+.loginForm .basicLogin label { width: 100%; margin-bottom: 10px; border: 0; padding: 0; }
+.loginForm .basicLogin label:hover { border: 0; background-color: #fff; }
+.loginForm .basicLogin span { margin-left: 5px; font-size: 16px; font-weight: 400; letter-spacing: -0.020em; line-height: 1.6; color: rgba(0,0,0,.6); }
+.loginForm .basicLogin input { float: right; width: 98%; height: 40px; margin: 5px 1%; padding: 4px 8px; background-color: #fff !important; border: 1px solid rgba(0,0,0,.2); border-radius: 5px; }
+.loginForm .basicLogin a { float: left; padding: 2px; } 
+
+.loginForm .snsLogin { overflow: auto; padding: 10px 0; }
+.loginForm .snsLogin a { border: 1px solid rgba(0,0,0,.2); color: #333; border-radius: 5px; text-align: center; padding: 10px; width: 48%; margin: 5px 1%; display: block; float: left; }
+.loginForm .snsLogin a.nLogin:hover { border: 1px solid rgba(45,180,0,1); background-color: rgba(45,180,0,1); color: #fff; }
+.loginForm .snsLogin a.fLogin:hover { border: 1px solid #3b5998; background-color: #3b5998; color: #fff; }
+.loginForm .snsLogin a.gLogin:hover { border: 1px solid #d34836; background-color: #d34836; color: #fff; }
+.loginForm .snsLogin a.kLogin:hover { border: 1px solid rgba(255,235,0,1); background-color: rgba(255,235,0,1); }
+
+
+.loginForm .etcLogin { border-top: 1px solid rgba(0,0,0,.2); padding-top: 10px; }
+.loginForm .etcLogin a { width: 48%; margin: 5px 1%; font-size: 14px; font-weight: 400; letter-spacing: -0.020em;  }
+
+#mCafe24SnsAgree #ifrm_sns .ec-solution-layer { max-height: 320px !important; }
+#mCafe24SnsAgree #ifrm_sns .ec-solution-layer .ec-solution-button { position: absolute; bottom: 0; width: 100%; }
+
+@media screen and (max-width: 768px) {
+    .loginForm .basicLogin a { padding: 0px; } 
+    
+    #mCafe24SnsAgree { top: 0 !important; left: 0 !important; width: 100% !important; height: 100% !important; margin: 0 !important; }
+    #mCafe24SnsAgree #ifrm_sns { width: 100% !important; height: 100% !important; }
+    
+}

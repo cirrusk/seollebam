@@ -1,0 +1,21 @@
+.memberInfo { border-top: 2px solid #d6254a; border-bottom: 2px solid rgba(0,0,0,.2); padding: 20px 10px; float: left; width: 100%; }
+.memberInfo .leftInfo { width: 50%; float: left; }
+.memberInfo .rightInfo { width: 50%; float: right; }
+.memberInfo .leftInfo .mainSubP { width: 50%; float: left; margin-top: 5px; }
+.memberInfo .leftInfo .mainP { width: 50%; float: right; text-align: right; }
+.memberInfo .leftInfo .mainP span { text-align: right; }
+
+.memberInfo label { width: 100%; text-align: right; font-size: 14px; font-weight: 500; letter-spacing: -0.020em; color: rgba(0,0,0,.8); }
+.memberInfo label span.gaip { font-weight: 400; color: rgba(0,0,0,.6); }
+.memberInfo label input { display: none; }
+
+.buttonArea { width: 100%; float: left; text-align: right; }
+.buttonArea a { margin-top: 10px; margin-left: 5px; }
+
+
+@media screen and (max-width: 768px) {
+    .memberInfo .leftInfo { width: 100%; }
+    .memberInfo .rightInfo { width: 100%; margin-top: 10px; }
+    .memberInfo .leftInfo .mainP { text-align: left; }
+    .memberInfo label { text-align: left; }
+}

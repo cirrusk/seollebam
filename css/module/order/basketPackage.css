@@ -1,0 +1,32 @@
+.xans-order-basketpackage .xans-order-empty { text-align: center; }
+
+.xans-order-basketpackage .tableWrap { }
+.xans-order-basketpackage .tableWrap table { }
+.xans-order-basketpackage .tableWrap table th { width: 8%; text-align: center; word-break: keep-all; }
+.xans-order-basketpackage .tableWrap table td { width: 8%; text-align: center; vertical-align: middle; word-break: keep-all; }
+.xans-order-basketpackage .tableWrap table td.thumb { padding: 15px; }
+.xans-order-basketpackage .tableWrap table th.product { width: 12%; }
+.xans-order-basketpackage .tableWrap table td.product { width: 12%; }
+.xans-order-basketpackage .tableWrap table th.quantity { width: 10%; }
+.xans-order-basketpackage .tableWrap table td.quantity input { width: 40px; height: 40px; padding: 0; text-align: center; }
+.xans-order-basketpackage .tableWrap table td.quantity a { display: inline-block; width: 40px; height: 40px; border: 1px solid rgba(0,0,0,.2); border-radius: 5px; color: #d6254a; font-size: 23px; position: relative; }
+.xans-order-basketpackage .tableWrap table td.quantity .plusA { line-height: 37px; top: 5px; }
+.xans-order-basketpackage .tableWrap table td.quantity .minusA { line-height: 30px; font-size: 34px; top: 6px; }
+.xans-order-basketpackage .tableWrap table th.button { width: 12%; }
+.xans-order-basketpackage .tableWrap table td.button { width: 12%; }
+
+.xans-order-basketpackage .tableWrap table th.chk input[type="checkbox"] { margin: 4px; }
+.xans-order-basketpackage .tableWrap table td.chk input[type="checkbox"] { margin: 4px; }
+.xans-order-basketpackage .tableWrap table td.thumb img { width:100%; border: 1px solid rgba(0,0,0,.2); border-radius: 5px; }
+
+@media screen and (max-width: 768px) {
+    .xans-order-basketpackage .tableWrap table .chk { width: 12%; }
+    .xans-order-basketpackage .tableWrap table td.thumb { padding: 5px 0; }
+    .xans-order-basketpackage .tableWrap table td.product {font-size: 11px; font-weight: 500; }
+    .xans-order-basketpackage .tableWrap table td.total {font-size: 11px; font-weight: 500; }
+    
+    .xans-order-basketpackage .tableWrap table td.quantity input { width: 34px; height: 34px; }
+    .xans-order-basketpackage .tableWrap table td.quantity a { width: 34px; height: 34px; font-size: 18px; }
+    .xans-order-basketpackage .tableWrap table td.quantity .plusA { line-height: 30px; top: 0px; }
+    .xans-order-basketpackage .tableWrap table td.quantity .minusA { line-height: 25px; font-size: 28px; top: 0px; }
+}

@@ -1,0 +1,8 @@
+.xans-layout-multishoplist.list > ul { display:none; position:absolute; right:0; top:44px; overflow:auto; width:248px; height:155px; border:1px solid #d5d5d5; background:#fff; }
+.xans-layout-multishoplist.list > ul li { position:relative; height:39px; margin:-1px 0 0; border-top:1px solid #d5d5d5; line-height:39px; }
+.xans-layout-multishoplist.list > ul li a { display:block; overflow:hidden; padding:0 62px 0 48px; color:#353535; white-space:nowrap; text-decoration:none; text-overflow:ellipsis; background:url("http://img.echosting.cafe24.com/skin/base/layout/ico_multishop2.png") no-repeat 100% -24px; }
+.xans-layout-multishoplist.list > ul li.selected a { background:#f3f3f3 url("http://img.echosting.cafe24.com/skin/base/layout/ico_multishop2.png") no-repeat 100% 16px; }
+.xans-layout-multishoplist.list > ul li a img { position:absolute; left:10px; top:9px; }
+.xans-layout-multishoplist.list > ul li a .name strong { font-weight:normal; }
+.xans-layout-multishoplist.list > ul li a .unit { position:absolute; right:38px; top:0; font-size:11px; color:#757575; }
+.xans-layout-multishoplist.list.show > ul { display:block; }

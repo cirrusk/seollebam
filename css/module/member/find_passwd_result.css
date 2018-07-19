@@ -1,0 +1,6 @@
+.memberInfo { border-top: 2px solid #d6254a; border-bottom: 2px solid rgba(0,0,0,.2); padding: 20px 10px; }
+.memberInfo p { width: 100%; }
+.memberInfo span { font-size: 16px; font-weight: 600; letter-spacing: -0.020em;  color: #d6254a; }
+
+.buttonArea { width: 100%; float: left; text-align: right; }
+.buttonArea a { margin-top: 10px; margin-left: 5px; }

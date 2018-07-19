@@ -1,0 +1,69 @@
+/* CATEGORY TAB NAV */
+.chapternav { overflow: hidden; position: fixed; top: 48px; background-color: #fff; text-align: center; width: 100%; height: 100px; z-index: 5; }
+.chapternav .chapternav-wrapper { position: relative; height: 100%; z-index: 1; }
+.chapternav .chapternav-wrapper .nav { display: block; }
+.chapternav .chapternav-items { margin: 0 30px; overflow-x: auto; overflow-y: hidden; -webkit-overflow-scrolling: touch; padding-bottom: 50px; white-space: nowrap; }
+.chapternav .chapternav-item { -webkit-animation: chapternav-slidein 350ms backwards; animation: chapternav-slidein 350ms backwards; display: inline-block; padding: 10px 20px; }
+.chapternav .chapternav-icon { margin-bottom: 5px; opacity: .4; }
+.chapternav .chapternav-label { opacity: .4; }
+.chapternav .chapternav-item .active .chapternav-icon { opacity: 1; }
+.chapternav .chapternav-item .active .chapternav-label { border-bottom: 2px solid #d6254a; padding-bottom: 13px; text-decoration: none; font-weight: 500; opacity: 1; }
+
+/* CATEGORY TAB NAV */
+#myTabContent { margin-top: 148px; }
+#myTabContent .listHeader { height: 480px; background-size: cover; background-repeat: no-repeat; background-position: center; text-align: center; }
+#myTabContent .listHeader h1 { color: #fff; padding: 60px 0; }
+#myTabContent .listHeader h2 { color: #fff; padding: 60px 0; }
+#myTabContent .listHeader h5 { color: #fff; }
+#myTabContent .listHeader img { width: 36px; margin: 0 35px; }
+
+/* CATEGORY TAB PANEL */
+#myTabContent .listWrap { background-color: #F0F0F0; }
+#myTabContent .listWrap .listIntro { text-align: center; padding: 70px 0; font-weight: 700; line-height: 28px; }
+#myTabContent .listWrap .item { padding: 0 10px 40px; }
+#myTabContent .listWrap .box { background-color: #fff; padding: 12px; box-shadow: 5px 5px 3px #CBCBCB; }
+#myTabContent .listWrap .box img { width: 100%;  }
+#myTabContent .listWrap .box .RightInfo h6 { font-weight: 700; color: #333; padding: 25px 0 15px; }
+
+#myTabContent .listFooter { padding-top: 120px; }
+.endPoint { padding: 120px 0; text-align: center;}
+.endPoint h2 { padding-bottom: 75px; }
+
+@media screen and (max-width: 768px) {
+    /* CATEGORY TAB NAV */
+    .chapternav { height: 60px; background-color: #F0F0F0; }
+    .chapternav .chapternav-item { padding: 10px; }
+    .chapternav .chapternav-icon img { height: 24px; }
+    .chapternav .chapternav-label { font-size: 11px; }
+    .chapternav .chapternav-item .active .chapternav-label { padding-bottom: 3px; }
+    .chapternav-paddle { border: 0 solid rgba(255,255,255,0.2); background-color: #fff; position: absolute; top: 0; bottom: 0; width: 35px; -webkit-transition: opacity 150ms ease-out; transition: opacity 150ms ease-out; }
+    .chapternav-paddle img { width: 12px; }
+    .chapternav-paddle-left { background-color: #F0F0F0; border-right-width: 1px; left: 0; }
+    .chapternav-paddle-right { background-color: #F0F0F0; border-left-width: 1px; right: 0; }
+
+    /* CATEGORY TAB NAV */
+    #myTabContent { margin-top: 108px; }
+    #myTabContent .listHeader { height: 280px; }
+    #myTabContent .listHeader h1 { padding: 30px 0 40px; }
+    #myTabContent .listHeader h2 { padding: 25px 0; font-size: 20px; }
+    #myTabContent .listHeader img { width: 16px; margin: 0 10px; }
+
+    /* CATEGORY TAB PANEL */
+    #myTabContent .listWrap { padding-bottom: 45px; }
+    #myTabContent .listWrap .listIntro { padding: 50px 0; font-weight: 400; }
+    #myTabContent .listWrap .item { padding: 0 15px 20px; }
+    #myTabContent .listWrap .box { height: 140px; padding: 8px; }
+    #myTabContent .listWrap .box img { width: 124px; float: left; }
+    #myTabContent .listWrap .box .RightInfo { padding-left: 35px; float: left; }
+    #myTabContent .listWrap .box .RightInfo h6 { padding: 0; }
+    #myTabContent .listWrap .box .RightInfo p { padding: 16px 0 24px; }
+
+    #myTabContent .listFooter { padding: 48px 15px; }
+    #myTabContent .listFooter img { padding: 0; }
+    .endPoint { padding: 48px 0; background-color: #F0F0F0; text-align: center;}
+    .endPoint h2 { padding-bottom: 25px; }
+
+}
+@media screen and (max-width: 350px) {
+    #myTabContent .listWrap .box .RightInfo { padding-left: 10px; } /* iPhone5SE 에서 깨져서 조정 */
+}
