@@ -1,13 +1,16 @@
 @charset "utf-8";
 /* NAVIGATION */
 .navbar { background-color: #d6254a; padding: .6rem 0; height: 48px; }
-.navbar .navbar-logo { width: 120px; }
+.navbar-logo { width: 120px; }
 .navbar .navbar-cart { width: 20px; }
 .navbar .navbar-user { width: 24px; }
 
 /* FOOTER */
-#bottom { background-color: #F0F0F0; padding: 108px 0;}
-.footerNav ul { margin: 35px 0; font-weight: 700; line-height: 28px; }
+#bottom { background-image: url('/img/footerBG.png'); padding: 40px 0;}
+#bottom .footerNav { padding-bottom: 15px; margin-bottom: 30px; color: #fff; border-bottom: 1px solid #8c8c8c; }
+#bottom .footerNav a { padding-right: 80px; }
+#bottom .footerInfo { padding-bottom: 20px; }
+#bottom .footerInfo span { color: #7f7f7f; padding-right: 30px; }
 
 /* MAIN */
 .mainWrap { background-color: #333; color: #fff; padding: 128px 0 280px; text-align: center; }
@@ -27,9 +30,7 @@
 
 /* TABLE */
 .titleWrap { padding-bottom: 25px; }
-
 .inputWrap input { width: 30px; height: 30px; }
-
 .nodata { border-top: 2px solid #333; border-bottom: 1px solid #8c8c8c; padding: 40px 0; text-align: center; }
 
 /* PAGINATE */
@@ -38,12 +39,22 @@
 .modal-dialog { margin: 0; }
 .modal-dialog .modal-content { border-radius: 0; border: 0; }
 
-
 /* 공통레이아웃 css*/
 #sub_container { margin-top: 48px; }
-strong { font-weight: 500; color: #d6254a; }
+
 .black { color: #333; }
-.weak { font-weight: 400; color: #7f7f7f; }
+.gray { color: #7f7f7f; }
+.red { color: #d6254a; }
+
+h1 { font-size: 56px; font-weight: 700; line-height: 1.5; }
+h2 { font-size: 45px; font-weight: 700; line-height: 1.5; }
+h3 { font-size: 34px; font-weight: 500; line-height: 48px; }
+h4 { font-size: 20px; font-weight: 500; line-height: 48px; }
+h5 { font-size: 16px; font-weight: 500; line-height: 28px; }
+h6 { font-size: 14px; font-weight: 500; line-height: 24px; }
+p { font-size: 16px; font-weight: 400; line-height: 24px; }
+span { font-size: 14px; font-weight: 400; line-height: 24px; }
+
 .p120 { padding-top: 120px; padding-bottom: 120px; }
 .p70 { padding-top: 70px; padding-bottom: 70px; }
 .p45 { padding-top: 45px; padding-bottom: 45px; }
@@ -52,19 +63,35 @@ strong { font-weight: 500; color: #d6254a; }
 .m45 { margin-top: 45px; margin-bottom: 45px; }
 
 
+
+
 @media screen and (max-width: 768px) {
     /* NAVIGATION */
-    .navbar .navbar-logo { width: 100px; }
+    .navbar-logo { width: 100px; }
     .navbar .navbar-cart { width: 18px; }
 
     /* FOOTER */
-    #bottom { background-color: #fff; padding: 40px 0; border-top: 2px solid #f0f0f0; }
-    .footerNav ul { font-weight: 500; line-height: 24px; }
+    #bottom { padding: 20px 0;}
+    #bottom .footerNav { padding-left: 15px; padding-bottom: 15px; margin-bottom: 15px;
+        position: relative; display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; -ms-flex-align: center; align-items: center; -ms-flex-pack: justify; justify-content: space-between;
+    }
+    #bottom .footerNav a { font-size: 12px; padding-right: 0; }
+    #bottom .footerInfo { padding: 20px 15px; }
+    #bottom .footerInfo span { padding-right: 15px; }
 
     /* BUTTON */
     .btn1 { display: block; padding: 10px 0px; }
 
     /* 공통레이아웃 css*/
+    h1 { font-size: 40px; }
+    h2 { font-size: 34px; }
+    h3 { font-size: 30px; line-height: 40px; }
+    h4 { font-size: 18px; line-height: 28px; }
+    h5 { font-size: 14px; line-height: 24px; }
+    h6 { font-size: 12px; line-height: 20px; }
+    p { font-size: 14px; line-height: 24px; }
+    span { font-size: 12px; line-height: 20px; }
+
     .p120 { padding-top: 50px; padding-bottom: 50px; }
     .p70 { padding-top: 30px; padding-bottom: 30px; }
     .p45 { padding-top: 20px; padding-bottom: 20px; }
