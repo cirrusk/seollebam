@@ -58,8 +58,7 @@ table { width:100%; border:0; border-spacing:0; border-collapse:collapse; }
 th,td { border:0; vertical-align:middle; padding: 5px 0; }
 input,select,textarea { font:14px 'Noto Sans KR', sans-serif; vertical-align:middle; cursor: pointer; }
 input:-webkit-autofill { background-color: #fff; }
-h1, h2, h3, h4, h5, h6, p, span { color: #333; letter-spacing: -0.020em; }
-p { font-size: 16px; font-weight: 400; line-height: 1.5; color: #7F7F7F; }
+h1, h2, h3, h4, h5, h6, p, span { color: #333; line-height: 1.6; letter-spacing: -0.020em; }
 a { text-decoration:none;
     -webkit-transition-property: width, height, background-color, font-size, left, top, right, bottom, border, color, margin, opacity;
     -webkit-transition-duration:0.5s;

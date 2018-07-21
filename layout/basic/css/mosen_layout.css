@@ -13,8 +13,8 @@
 #bottom .footerInfo span { color: #7f7f7f; padding-right: 30px; }
 
 /* MAIN */
-.mainWrap { background-color: #333; color: #fff; padding: 128px 0 280px; text-align: center; }
-.mainWrap h1 { color: #fff; padding: 75px; }
+.mainWrap { background-color: #333; color: #fff; padding: 30px 0 120px; text-align: center; }
+.mainWrap h1 { color: #fff; padding: 75px 15px; }
 .mainWrap h6 { color: #fff; line-height: 35px; }
 .mainIcon { text-align: center; }
 .mainIcon img { width: 100%; }
@@ -27,6 +27,8 @@
 .btn100 { display: block; text-align: center; padding: 10px; }
 .btn1 { padding: 10px 135px; }
 .btn2 { padding: 10px 50px; }
+
+.btnDetail { border-radius: 50px; font-size: 11px; font-weight: 400; padding: 4px 15px; }
 
 /* TABLE */
 .titleWrap { padding-bottom: 25px; }
@@ -42,18 +44,18 @@
 /* 공통레이아웃 css*/
 #sub_container { margin-top: 48px; }
 
-.black { color: #333; }
-.gray { color: #7f7f7f; }
-.red { color: #d6254a; }
+.textBlack { color: #333; }
+.textGray { color: #7f7f7f; }
+.textRed { color: #d6254a; }
 
-h1 { font-size: 56px; font-weight: 700; line-height: 1.5; }
-h2 { font-size: 45px; font-weight: 700; line-height: 1.5; }
-h3 { font-size: 34px; font-weight: 500; line-height: 48px; }
-h4 { font-size: 20px; font-weight: 500; line-height: 48px; }
-h5 { font-size: 16px; font-weight: 500; line-height: 28px; }
-h6 { font-size: 14px; font-weight: 500; line-height: 24px; }
-p { font-size: 16px; font-weight: 400; line-height: 24px; }
-span { font-size: 14px; font-weight: 400; line-height: 24px; }
+h1 { font-size: 56px; font-weight: 700; }
+h2 { font-size: 45px; font-weight: 700; }
+h3 { font-size: 34px; font-weight: 500; }
+h4 { font-size: 20px; font-weight: 500; }
+h5 { font-size: 16px; font-weight: 500; }
+h6 { font-size: 14px; font-weight: 500; }
+p { font-size: 16px; font-weight: 400; }
+span { font-size: 14px; font-weight: 400; }
 
 .p120 { padding-top: 120px; padding-bottom: 120px; }
 .p70 { padding-top: 70px; padding-bottom: 70px; }
@@ -81,16 +83,17 @@ span { font-size: 14px; font-weight: 400; line-height: 24px; }
 
     /* BUTTON */
     .btn1 { display: block; padding: 10px 0px; }
+    .btnDetail { font-size: 10px; padding: 2px 10px; }
 
     /* 공통레이아웃 css*/
     h1 { font-size: 40px; }
     h2 { font-size: 34px; }
-    h3 { font-size: 30px; line-height: 40px; }
-    h4 { font-size: 18px; line-height: 28px; }
-    h5 { font-size: 14px; line-height: 24px; }
-    h6 { font-size: 12px; line-height: 20px; }
-    p { font-size: 14px; line-height: 24px; }
-    span { font-size: 12px; line-height: 20px; }
+    h3 { font-size: 30px; }
+    h4 { font-size: 18px; }
+    h5 { font-size: 14px; }
+    h6 { font-size: 12px; }
+    p { font-size: 14px; }
+    span { font-size: 12px; }
 
     .p120 { padding-top: 50px; padding-bottom: 50px; }
     .p70 { padding-top: 30px; padding-bottom: 30px; }
