@@ -1,88 +1,91 @@
 <!--@layout(/layout/basic/layout.html)-->
 <!--@css(/css/module/product/detail.css)-->
 
+<script>
+    $(document).ready(function() {
+        function mediaSize() {
+            /* Set the matchMedia */
+            if (window.matchMedia('(min-width: 768px)').matches) {
+                /* Changes when we reach the min-width  */
+                $('.navbar').fadeIn();
+                $('.productNav').css("top","48px")
+            } else {
+                /* Reset for CSS changes – Still need a better way to do this! */
+                $('.navbar').fadeOut();
+                $('.productNav').fadeIn();
+                $('.productNav').css("top","0")
+            }
+        };
+        /* Call the function */
+        mediaSize();
+        /* Attach the function to the resize event listener */
+        window.addEventListener('resize', mediaSize, false);
+
+        $('.xans-product-option select optgroup option').unwrap();
+        $('.xans-product-option select').change(function(){
+            $('.option_product').remove();
+        });
+
+        $('.floatArea .btn1').click(function(event) {
+            event.preventDefault();
+            $( ".totalArea" ).appendTo( "#totalModal .modal-body" );
+        });
+    });
+</script>
+
 <div module="product_detail">
     <div class="productNav">
         <div class="container">
             <a href="/product/customBox.html"><img src="/svg/back.svg"></a>
-            <h5>{$name}</h5>
+            <a href="/order/basket.html"><img class="float-right" src="/svg/cartRed.svg"></a>
+            <h4>{$name}</h4>
         </div>
     </div>
 
-    <div class="detailArea container p120">
+    <div class="detailArea container">
         <div class="row">
             <div class="imgArea col-md-7" module="product_image"><img src="{$big_img}" class="{$big_img_class} {$img_display|display}"/></div>
             <div class="col-md-1"></div>
-            <!-- 총계 영역 -->
-            <div class="totalArea col-md-4">
-                <div class="bgDark">
+            <div class="col-md-4">
+                <div class="totalArea">
+                    <div class="clearfix">
+                        <h3>{$name}</h3>
+                        <span class="textGray float-left">가격</span>
+                        <span class="textGray float-right">수량</span>
+                    </div>
+                    <div module="product_option">
+                        <div module="product_option">
+                            {$option_name}
+                            {$form.option}
+                        </div>
+                    </div>
                     <div id="{$total.total_id}" class="{$total.total_display|display}">
-                        <h5>{$name}</h5>
                         <table border="1" summary="">
                             <tbody class="{$quantity_display|display}">
                                 <tr>
-                                    <td class="weak">가격</td>
-                                    <td class="weak text-right">수량</td>
-                                </tr>
-                                <tr>
-                                    <td><p class="{$total.quantity_price}">{$product_price}원</p></td>
+                                    <td><h4 class="{$total.quantity_price}">{$product_price}원</h4></td>
                                     <td>
                                         <span class="quantity inputWrap">
-                                            <a class="{$quantity_down_class} down" href="#none"><img src="/svg/minus.svg"></a>
                                             {$quantity}
-                                            <a class="{$quantity_up_class} up" href="#none"><img src="/svg/plus.svg"></a>
+                                            <a href="#none"><img src="//img.echosting.cafe24.com/design/skin/default/product/btn_count_up.gif" id="option_box1_up" class="{$quantity_up_class} option_box_up" alt="수량증가"></a>
+                                            <a href="#none"><img src="//img.echosting.cafe24.com/design/skin/default/product/btn_count_down.gif" id="option_box1_down" class="{$quantity_down_class} option_box_down" alt="수량감소"></a>
                                         </span>
                                     </td>
                                 </tr>
                             </tbody>
-                            <!-- 참고 : 옵션선택 또는 세트상품 선택시 상품이 추가되는 영역입니다. 쇼핑몰 화면에는 아래와 같은 마크업구조로 표시됩니다. 삭제시 기능이 정상동작 하지 않습니다.-->
                             <tbody>
-                                <!-- tr>
-                                    <td>
-                                        <p class="product">
-                                            $상품명<br />
-                                            <span>$옵션</span>
-                                        </p>
-                                    </td>
-                                    <td>
-                                        <span class="quantity">
-                                            <input type="text" class="quantity_opt" />
-                                            <a href="#none"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/product/btn_count_up.gif" alt="수량증가" class="up" /></a>
-                                            <a href="#none"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/product/btn_count_down.gif" alt="수량감소" class="down" /></a>
-                                        </span>
-                                        <a href="#none"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/product/btn_price_delete.gif" alt="삭제" class="option_box_del" /></a>
-                                    </td>
-                                    <td class="right">
-                                        <span>$가격</span>
-                                        <span class="mileage">(<img src="http://img.echosting.cafe24.com/design/skin/admin/ko_KR/product/ico_pay_point.gif" /> <span class="mileage_price">$적립금</span>)</span>
-                                    </td>
-                                </tr -->
                             </tbody>
-                            <!-- //참고 -->
                         </table>
-                    </div>
-                    <!-- 상품옵션 영역@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
-                    <div module="product_option" class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-                        <div class="panel" module="product_option">
-                            <div class="panel-heading" role="tab" id="heading1">
-                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse1" aria-expanded="false" aria-controls="collapse1">{$option_name}</a>
-                            </div>
-                            <div id="collapse1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading1">
-                                <div class="panel-body">
-                                    {$form.option}
-                                </div>
-                            </div>
-                        </div>
                     </div>
                     <!-- //상품옵션 영역 -->
                     <div module="product_action">
-                        <a href="#none" class="btnBasic btn100 {$basket_display}" onclick="{$action_basket}">박스에 담기</a>
-                        <span class="btn btn-secondary disabled btn100 {$soldout_display|display}">SOLD OUT</span>
-                    </div>
+                    <a href="#none" class="btnBasic btn100 {$basket_display}" data-dismiss="modal" onclick="{$action_basket}" data-toggle="modal" data-target="#cartModal">박스에 담기</a>
+                    <span class="btn btn-secondary disabled btn100 {$soldout_display|display}">SOLD OUT</span>
+                </div>
                 </div>
                 <table class="moreInfo m45">
                     <tbody>
-                        <tr><td colspan="2"><p>배송 좋아요</p><td></tr>
+                        <tr><td colspan="2"><h5>배송 좋아요</h5><td></tr>
                         <tr>
                             <th>가능해요</th>
                             <td>
@@ -107,7 +110,7 @@
                         </tr>
                     </tbody>
                     <tbody>
-                        <tr><td colspan="2"><p style="padding-top: 20px;">환불 슬퍼요</p><td></tr>
+                        <tr><td colspan="2"><h5 style="padding-top: 20px;">환불 슬퍼요</h5><td></tr>
                         <tr>
                             <th>기간/주소</th>
                             <td>
@@ -133,77 +136,25 @@
                     </tbody>
                 </table>
             </div>
-            <!-- //총계 영역 -->
         </div>
     </div>
 
     <div class="modal" id="totalModal" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
-                <div class="totalArea modal-body">
-                    <div id="{$total.total_id}" class="{$total.total_display|display}">
-                        <h2>{$name}</h2>
-                        <table border="1" summary="">
-                            <tbody class="{$quantity_display|display}">
-                                <tr>
-                                    <td class="weak">가격</td>
-                                    <td class="weak text-right">수량</td>
-                                </tr>
-                                <tr>
-                                    <td><p class="{$total.quantity_price}">{$product_price}원</p></td>
-                                    <td>
-                                        <span class="quantity inputWrap">
-                                            <a class="{$quantity_down_class} down" href="#none"><img src="/svg/minus.svg"></a>
-                                            {$quantity}
-                                            <a class="{$quantity_up_class} up" href="#none"><img src="/svg/plus.svg"></a>
-                                        </span>
-                                    </td>
-                                </tr>
-                            </tbody>
-                            <!-- 참고 : 옵션선택 또는 세트상품 선택시 상품이 추가되는 영역입니다. 쇼핑몰 화면에는 아래와 같은 마크업구조로 표시됩니다. 삭제시 기능이 정상동작 하지 않습니다.-->
-                            <tbody>
-                                <!-- tr>
-                                    <td>
-                                        <p class="product">
-                                            $상품명<br />
-                                            <span>$옵션</span>
-                                        </p>
-                                    </td>
-                                    <td>
-                                        <span class="quantity">
-                                            <input type="text" class="quantity_opt" />
-                                            <a href="#none"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/product/btn_count_up.gif" alt="수량증가" class="up" /></a>
-                                            <a href="#none"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/product/btn_count_down.gif" alt="수량감소" class="down" /></a>
-                                        </span>
-                                        <a href="#none"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/product/btn_price_delete.gif" alt="삭제" class="option_box_del" /></a>
-                                    </td>
-                                    <td class="right">
-                                        <span>$가격</span>
-                                        <span class="mileage">(<img src="http://img.echosting.cafe24.com/design/skin/admin/ko_KR/product/ico_pay_point.gif" /> <span class="mileage_price">$적립금</span>)</span>
-                                    </td>
-                                </tr -->
-                            </tbody>
-                            <!-- //참고 -->
-                        </table>
-                    </div>
-                    <!-- 상품옵션 영역@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
-                    <div module="product_option" class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-                        <div class="panel" module="product_option">
-                            <div class="panel-heading" role="tab" id="heading1">
-                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse1" aria-expanded="false" aria-controls="collapse1">{$option_name}</a>
-                            </div>
-                            <div id="collapse1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading1">
-                                <div class="panel-body">
-                                    {$form.option}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- //상품옵션 영역 -->
-                    <div module="product_action">
-                        <a href="#none" class="btnBasic btn100 {$basket_display}" onclick="{$action_basket}">박스에 담기</a>
-                        <span class="btn btn-secondary disabled btn100 {$soldout_display|display}">SOLD OUT</span>
-                    </div>
+                <div class="modal-body">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="cartModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <a data-dismiss="modal" aria-label="Close"><img class="closeImg" src="/svg/close.svg"></a>
+                    <h4>{$name} 설렘박스에 담겼어요</h4>
+                    <a class="btnLine btn3" href="/order/basket.html">MY BOX 바로가기 <img src="/svg/selectButton.svg"></a>
                 </div>
             </div>
         </div>
@@ -301,6 +252,9 @@
     </div>
 </div>
 
-<div class="floatArea d-block d-sm-none" module="product_action">
+
+
+
+<div class="floatArea d-md-none" module="product_action">
     <a class="btnBasic btn1 text-center" href="#none" data-toggle="modal" data-target="#totalModal">박스에 담기</a>
 </div>

@@ -68,5 +68,5 @@
 
 }
 @media screen and (max-width: 350px) {
-    #myTabContent .listWrap .box .boxInfo { padding-left: 10px; } /* iPhone5SE 에서 깨져서 조정 */
+    #myTabContent .listWrap .box .clearfix .btnDetail { padding: 2px 5px; } /* iPhone5SE 에서 깨져서 조정 */
 }
