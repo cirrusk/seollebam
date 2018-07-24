@@ -38,12 +38,11 @@
                         <a module="Layout_stateLogon" href="/myshop/index.html"><img class="navbar-user" src="/svg/user.svg"></a>
                     </div>
                     <a class="navbar-brand" href="/"><img class="navbar-logo" src="/svg/logoWhite.svg"></a>
-                    <div>
-                        <a href="/order/basket.html"><img class="navbar-cart" src="/svg/cart.svg"></a>
+                    <div module="Layout_orderBasketcount">
+                        <a href="/order/basket.html"><img class="navbar-cart" src="/svg/cart.svg"><span class="basketCount">{$basket_count}</span></a>
                         <a class="d-none d-sm-inline mx-3 px-4" module="Layout_statelogoff" href="/member/login.html"><img class="navbar-user" src="/svg/user.svg"></a>
                         <a class="d-none d-sm-inline mx-3 px-4" module="Layout_stateLogon" href="/myshop/index.html"><img class="navbar-user" src="/svg/user.svg"></a>
                     </div>
-
                 </div>
             </nav>
 

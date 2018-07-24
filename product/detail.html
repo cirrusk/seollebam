@@ -37,7 +37,7 @@
     <div class="productNav">
         <div class="container">
             <a href="/product/customBox.html"><img src="/svg/back.svg"></a>
-            <a href="/order/basket.html"><img class="float-right" src="/svg/cartRed.svg"></a>
+            <!-- <a module="Layout_orderBasketcount" href="/order/basket.html"><img class="float-right d-md-none" src="/svg/cartRed.svg"><span class="basketCount">{$basket_count}</span></a> -->
             <h4>{$name}</h4>
         </div>
     </div>
@@ -79,7 +79,7 @@
                     </div>
                     <!-- //상품옵션 영역 -->
                     <div module="product_action">
-                    <a href="#none" class="btnBasic btn100 {$basket_display}" data-dismiss="modal" onclick="{$action_basket}" data-toggle="modal" data-target="#cartModal">박스에 담기</a>
+                    <a href="#none" class="btnBasic btn100 {$basket_display}" data-dismiss="modal" onclick="{$action_buy}" data-toggle="modal" data-target="#cartModal">박스에 담기</a>
                     <span class="btn btn-secondary disabled btn100 {$soldout_display|display}">SOLD OUT</span>
                 </div>
                 </div>

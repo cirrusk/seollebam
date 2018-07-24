@@ -4,6 +4,7 @@
 .navbar-logo { width: 120px; }
 .navbar .navbar-cart { width: 20px; }
 .navbar .navbar-user { width: 24px; }
+.basketCount { background-color: #fff; color: #d6254a; border-radius: 50%;position: relative; top: -7px; left: -7px; padding: 0 5px; font-size: 10px; font-weight: 500; }
 
 /* FOOTER */
 #bottom { background-image: url('/img/footerBG.png'); padding: 40px 0;}
