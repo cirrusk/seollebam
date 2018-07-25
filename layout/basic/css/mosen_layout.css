@@ -6,12 +6,14 @@
 .navbar .navbar-user { width: 24px; }
 .basketCount { background-color: #fff; color: #d6254a; border-radius: 50%;position: relative; top: -7px; left: -7px; padding: 0 5px; font-size: 10px; font-weight: 500; }
 
+
 /* FOOTER */
 #bottom { background-image: url('/img/footerBG.png'); padding: 40px 0;}
 #bottom .footerNav { padding-bottom: 15px; margin-bottom: 30px; color: #fff; border-bottom: 1px solid #8c8c8c; }
 #bottom .footerNav a { padding-right: 80px; }
 #bottom .footerInfo { padding-bottom: 20px; }
 #bottom .footerInfo span { color: #7f7f7f; padding-right: 30px; }
+
 
 /* MAIN */
 .mainWrap { background-color: #333; color: #fff; padding: 30px 0 120px; text-align: center; }
@@ -22,6 +24,13 @@
 .mainIcon .sideImg { width: 63%; }
 .mainInfo { text-align: center; }
 
+
+/* PRODUCT NAV */
+.productNav { width: 100%; height: 48px; position: fixed; top: 48px; background-color: #fff; border-bottom: 1px solid #8c8c8c; text-align: center; z-index: 1; padding: 8px; }
+.productNav .back { width: 18px; float: left; margin: 6px 0; }
+.productNav .next { width: 18px; margin: 0px 25px 3px; }
+.productNav span { font-size: 16px; }
+
 /* BUTTON */
 .btnBasic { background-color: #d6254a; color: #fff; font-size: 16px; }
 .btnBasic:hover { color: #fff; }
@@ -31,22 +40,44 @@
 .btnLine:hover { border-color: #d6254a; }
 .btn1 { padding: 10px 135px; }
 .btn2 { padding: 10px 60px; }
-.btn3 { padding: 10px 23px; }
+.btn3 { padding: 10px 28px; }
 .btn100 { display: block; text-align: center; padding: 10px; }
 .btnDetail { border-radius: 50px; font-size: 11px; font-weight: 400; padding: 4px 15px; }
 
+
 /* TABLE */
-.titleWrap { padding-bottom: 15px; }
-.titleWrap .btn2 { margin-top: 15px; }
-.inputWrap input { width: 30px; height: 30px; }
 .nodata { border-top: 2px solid #333; border-bottom: 1px solid #8c8c8c; padding: 40px 0; text-align: center; }
 
+.titleWrap { padding-bottom: 15px; }
+.titleWrap .btn2 { margin-top: 15px; }
+
+.tableWrap h4 { padding-bottom: 5px; }
+.tableWrap table { border-top: 2px solid #d6254a; }
+.tableWrap table tr { border-bottom: 1px solid #ccc; }
+
+.quantity { display: flex; justify-content: flex-end; }
+.quantity .option_box_down { opacity: 0; border: 0; position: relative; top: -6px; left: -6px; }
+.quantity .option_box_up { opacity: 0; border: 0; position: relative; top: -6px; left: -6px; }
+.quantity img { height: 30px; width: 30px; border: 1px solid #d6d6d6; padding: 5px; }
+.quantity input { order: 2; width: 30px; height: 30px; text-align: center; border: 1px solid #d6d6d6; }
+.quantity a:nth-child(2) { order: 3; width: 30px; height: 30px; border: 1px solid #d6d6d6; padding: 5px; background-image: url(/svg/plus.svg); background-position: center center; background-repeat: no-repeat; }
+.quantity a:nth-child(3) { order: 1; width: 30px; height: 30px; border: 1px solid #d6d6d6; padding: 5px; background-image: url(/svg/minus.svg); background-position: center center; background-repeat: no-repeat; }
+
+.moreInfo .infoHeader { padding: 10px 0; border-bottom: 1px solid #d6d6d6; }
+.moreInfo .infoHeader a { color: #d6254a; font-size: 16px; font-weight: 400; text-align: right; }
+.moreInfo .infoBody { padding: 5px 0 10px; border-bottom: 1px solid #d6d6d6; }
+.moreInfo .infoBody .row { padding: 10px 0; }
+.moreInfo .infoBody .row span { color: #7f7f7f; }
+
+
 /* PAGINATE */
+
 
 /* 공통레이아웃 css*/
 #sub_container { margin-top: 48px; }
 
 .textBlack { color: #333; }
+.textWhite { color: #fff; }
 .textGray { color: #7f7f7f; }
 .textRed { color: #d6254a; }
 
@@ -67,6 +98,8 @@ span { font-size: 14px; font-weight: 400; }
 .m45 { margin-top: 45px; margin-bottom: 45px; }
 
 
+
+
 @media screen and (max-width: 768px) {
     /* NAVIGATION */
     .navbar-logo { width: 100px; }
@@ -81,6 +114,13 @@ span { font-size: 14px; font-weight: 400; }
     #bottom .footerInfo { padding: 20px 15px; }
     #bottom .footerInfo span { padding-right: 15px; }
 
+    /* PRODUCT NAV */
+    .productNav { height: 40px; }
+    .productNav h4 { line-height: 1.2; }
+    .productNav .back {  width: 16px; margin: 4px 0; }
+    .productNav .next { display: none; }
+    .productNav span { display: none; }
+
     /* BUTTON */
     .btn1 { display: block; padding: 10px 0px; }
     .btn2 { padding: 6px 28px; font-size: 14px; }
@@ -90,6 +130,11 @@ span { font-size: 14px; font-weight: 400; }
     .titleWrap { padding-bottom: 5px; }
     .titleWrap .btn2 { margin-top: 6px; }
     .nodata { padding: 20px 0; }
+
+    .moreInfo .infoHeader { padding: 5px 0; }
+    .moreInfo .infoHeader a { font-size: 14px; }
+    .moreInfo .infoBody { padding: 5px 0; }
+    .moreInfo .infoBody .row { padding: 5px 0; }
 
     /* 공통레이아웃 css*/
     h1 { font-size: 40px; }
