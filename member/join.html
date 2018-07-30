@@ -78,7 +78,7 @@
     }
 </script>
 
-<div class="container" module="member_join">
+<div class="container p70" module="member_join">
     <!--
         $returnUrl = /member/join_result.html
         $checkIdUrl = /member/check_id.html
@@ -89,91 +89,76 @@
         $foreignerSsn2 = 여권번호
         $foreignerSsn3 = 국제운전면허증번호
      -->
-    <div class="p20"></div><div class="p10"></div>
-    <h1 class="titleH1">JOIN PAGE</h1>
-    <div class="p10"></div>
-    <p class="titleP desktopOnly">설레이는 밤에 함께하세요.</p>
-    <div class="p40 mp10"></div><div class="p10 mp10"></div>
+    <div class="row justify-content-center">
+        <div class="col-md-8 myPage">
+            <div class="titleWrap brRed">
+                <h3>설레밤 회원가입</h3>
+            </div>
 
-    <h3 class="subTitle">개인정보 수집 및 이용 동의</h3>
-    <div class="p20"></div>
-    <div class="typeWrite">
-        <table border="1" summary="">
-            <tbody>
-                <tr>
-                    <th scope="row"><div class="ess"></div>아이디</th>
-                    <td>{$form.member_id} <span id="{$idMsg_id}"></span> (영문소문자/숫자, 4자~16자)</td>
-                </tr>
-                <tr>
-                    <th scope="row"><div class="ess"></div>비밀번호</th>
-                    <td>{$form.passwd} <span>{$passwd_type_desc}</span></td>
-                </tr>
-                <tr>
-                    <th scope="row"><div class="ess"></div>비밀번호 확인</th>
-                    <td>{$form.user_passwd_confirm} <span id="{$pwConfirmMsg_id}"></span> </td>
-                </tr>
-                <tr>
-                    <th scope="row" id="{$name_title}"><div class="ess"></div>이름</th>
-                    <td>
-                        <span id="{$name_contents}">{$form.name}</span>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row"><div class="ess"></div>전화번호</th>
-                    <td class="phoneTd">{$form.mobile}</td>
-                </tr>
-                <tr class="{$display_addr|display}">
-                    <th scope="row"><div class="ess"></div>주소</th>
-                    <td>
-                        {$form.postcode1}
-                        <a href="#" onclick="sample3_execDaumPostcode()" class="buttonA">우편번호</a><br />
-                        {$form.addr1} <span>기본주소</span><br />
-                        {$form.addr2} <span>나머지주소 {$address2_desc}</span> 
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row"><div class="ess"></div>이메일</th>
-                    <td>{$form.email} <span id="{$emailMsg_id}"></span></td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-    
-    <div class="p40"></div><div class="p10 mp20"></div>
-    
-    <h3 class="subTitle">개인정보 수집 및 이용 동의</h3>
-    <div class="p20"></div>
-    <div class="agreeArea">
-        <p class="titleP">이용약관 동의</p>
-        <div class="p10"></div>
-        <div class="ec-base-box typeThinBg">
-            <div class="content">
-                {$service_desc}
+            <div class="formWrap">
+                <div class="form-group">
+                    <label>아이디</label>
+                    {$form.member_id}
+                    <span>(영문소문자/숫자, 4자~16자)</span>
+                    <span id="{$idMsg_id}"></span>
+                </div>
+                <div class="form-group">
+                    <label>비밀번호</label>
+                    {$form.passwd}<br>
+                    <span>{$passwd_type_desc}</span>
+                </div>
+                <div class="form-group">
+                    <label>비밀번호 확인</label>
+                    {$form.user_passwd_confirm}<br>
+                    <span id="{$pwConfirmMsg_id}"></span>
+                </div>
+                <div class="form-group">
+                    <label>이름</label>
+                    {$form.name}
+                </div>
+                <div class="form-group">
+                    <label>주소</label>
+                    {$form.postcode1}
+                    <a class="btnGray btn3" href="#" onclick="sample3_execDaumPostcode()">우편번호</a><br>
+                    {$form.addr1}<br>
+                    {$form.addr2}<span>{$address2_desc}</span>
+                </div>
+                <div class="form-group">
+                    <label>이메일</label>
+                    {$form.email}
+                    <span id="{$emailMsg_id}"></span>
+                </div>
+                <div class="form-group">
+                    <label>휴대전화</label>
+                    {$form.mobile}
+                </div>
             </div>
-            <p class="check"><span>이용약관에 동의하십니까?</span> {$form.agree_service_check}</p>
-        </div>
-        
-        <div class="p20"></div><div class="p10"></div>
-    
-        <p class="titleP">개인정보 수집 동의</p>
-        <div class="p10"></div>
-        <div class="ec-base-box typeThinBg">
-            <div class="content">
-                {$privacy_desc}
+
+            <div class="agreeArea">
+                <div class="titleWrap brBlack">
+                    <h3>개인정보 수집 및 이용 동의</h3>
+                </div>
+
+                <div class="agreeWrap">
+                    <h5>이용약관 동의</h5>
+                    <div class="content">{$service_desc}</div>
+                    <p class="check"><span>이용약관에 동의하십니까?</span> {$form.agree_service_check}</p>
+                </div>
+
+                <div class="agreeWrap">
+                    <h5>개인정보 수집 동의</h5>
+                    <div class="content">{$privacy_desc}</div>
+                    <p class="check"><span>개인정보 수집 및 이용에 동의하십니까?</span> {$form.agree_privacy_check}</p>
+                </div>
             </div>
-            <p class="check"><span>개인정보 수집 및 이용에 동의하십니까?</span> {$form.agree_privacy_check}</p>
+
+            <div class="row btnWrap p45">
+                <div class="col-6"><a href="javascript:history.back()" class="btnGray btn100">돌아가기</a></div>
+                <div class="col-6"><a href="#none" onclick="{$action_func_join}" class="btnBasic btn100">회원가입</a></div>
+            </div>
+
+            <!-- 회원 가입 정보 확인 레이어 -->
+            <!--@import(/member/join_confirm.html)-->
         </div>
     </div>
-    
-    <div class="p20 mp20"></div>
-    
-    <div class="btnArea">    
-        <a href="/index.html" class="btnNormal btn3">돌아가기</a>
-        <a href="#none" onclick="{$action_func_join}" class="btnBasic btn3">회원가입</a>
-    </div>
-    
-    <!-- 회원 가입 정보 확인 레이어 -->
-    <!--@import(/member/join_confirm.html)-->
 </div>
-
-<div class="p80"></div><div class="p40"></div><div class="p10"></div>
