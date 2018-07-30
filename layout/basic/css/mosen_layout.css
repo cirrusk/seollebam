@@ -38,13 +38,27 @@
 .xans-myshop-benefit .nav .nav-item .nav-link { font-size: 16px; font-weight: 500; padding: 10px 0 10px 15px; border-bottom: 1px solid #ccc; }
 .xans-myshop-benefit .nav .nav-item .active { background-color: #d6254a; color: #fff; border: 0; }
 
+.myPage .titleWrap { padding-bottom: 10px; }
+.myPage .titleWrap .btn2 { margin-top: 15px; }
+.myPage .titleWrap .float-right { margin-top: 18px; }
+.myPage .titleWrap .float-right a { margin-left: 15px; }
 
-/* TABLE */
-.titleWrap { padding-bottom: 15px; }
-.titleWrap .btn2 { margin-top: 15px; }
+.myPage .tableWrap { margin-top: 30px; }
+.myPage .tableWrap .clearfix { padding: 10px 0; }
+.myPage .tableWrap .clearfix .float-left input { margin-bottom: 5px; margin-right: 10px; }
+.myPage .tableWrap .clearfix .float-left span { font-size: 18px; font-weight: 700; }
+.myPage .tableWrap .clearfix .float-right { font-size: 16px; color: #d6254a; }
+.myPage .tableWrap table { border-top: 2px solid #8c8c8c; }
+.myPage .tableWrap table th { padding: 10px 0; font-size: 16px; font-weight: 500; text-align: left; }
+.myPage .tableWrap table td { padding: 10px 0; text-align: right; }
+.myPage .tableWrap table td span { font-size: 16px; color: #7f7f7f; }
+.myPage .tableWrap table tr:last-child { border-bottom: 1px solid #8c8c8c; }
+
 .brRed { border-bottom: 2px solid #d6254a; }
 .brBlack { border-bottom: 2px solid #333; }
 
+
+/* TABLE */
 .tableWrap h4 { padding-bottom: 5px; }
 .tableWrap table { border-top: 2px solid #d6254a; }
 .tableWrap table tr { border-bottom: 1px solid #ccc; }
@@ -104,10 +118,11 @@ span { font-size: 14px; font-weight: 400; }
 .p120 { padding-top: 120px; padding-bottom: 120px; }
 .p70 { padding-top: 70px; padding-bottom: 70px; }
 .p45 { padding-top: 45px; padding-bottom: 45px; }
+.p25 { padding-top: 25px; padding-bottom: 25px; }
 .m120 { margin-top: 120px; margin-bottom: 120px; }
 .m70 { margin-top: 70px; margin-bottom: 70px; }
 .m45 { margin-top: 45px; margin-bottom: 45px; }
-
+.m25 { margin-top: 25px; margin-bottom: 25px; }
 
 
 
@@ -139,12 +154,18 @@ span { font-size: 14px; font-weight: 400; }
     .xans-myshop-benefit .titleWrap { padding-bottom: 5px; }
     .xans-myshop-benefit .titleWrap h3 span { font-size: 18px; }
 
+    .myPage .titleWrap { margin-top: 30px; padding-bottom: 5px; }
+    .myPage .titleWrap .btn2 { margin-top: 5px; }
+    .myPage .titleWrap h3 { font-size: 18px; }
+
+    .myPage .tableWrap { margin-top: 20px; }
+    .myPage .tableWrap .clearfix .float-right { font-size: 14px; padding-top: 3px; }
+    .myPage .tableWrap table th { font-size: 14px; }
+    .myPage .tableWrap table td span { font-size: 14px; }
+    .myPage .btnWrap { margin-top: 30px; }
+    .myPage .nodata { padding: 20px 0; }
 
     /* TABLE */
-    .titleWrap { padding-bottom: 5px; }
-    .titleWrap .btn2 { margin-top: 6px; }
-    .nodata { padding: 20px 0; }
-
     .moreInfo .infoHeader { padding: 5px 0; }
     .moreInfo .infoHeader a { font-size: 14px; }
     .moreInfo .infoBody { padding: 5px 0; }
@@ -172,7 +193,9 @@ span { font-size: 14px; font-weight: 400; }
     .p120 { padding-top: 50px; padding-bottom: 50px; }
     .p70 { padding-top: 30px; padding-bottom: 30px; }
     .p45 { padding-top: 20px; padding-bottom: 20px; }
+    .p25 { padding-top: 10px; padding-bottom: 10px; }
     .m120 { margin-top: 50px; margin-bottom: 50px; }
     .m70 { margin-top: 30px; margin-bottom: 30px; }
     .m45 { margin-top: 20px; margin-bottom: 20px; }
+    .m25 { margin-top: 10px; margin-bottom: 10px; }
 }

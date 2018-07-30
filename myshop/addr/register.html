@@ -41,7 +41,7 @@
 
                 // 우편번호와 주소 정보를 해당 필드에 넣는다.
                 document.getElementById('address_zip1').value = data.zonecode; //5자리 새우편번호 사용
-                document.getElementById('address_addr1').value = fullRoadAddr;
+                document.getElementById('address_addr1').value = fullAddr;
                 document.getElementById('address_addr2').value = data.jibunAddress;
 
                 // iframe을 넣은 element를 안보이게 한다.
@@ -111,9 +111,13 @@
                     <th scope="row">휴대전화</th>
                     <td>{$form.ma_rcv_mobile_no}</td>
                 </tr>
+                <tr>
+                    <th scope="row">일반전화</th>
+                    <td>{$form.ma_rcv_phone}</td>
+                </tr>
             </table>
         </div>
-        
+
         <div class="tableBtnArea">
             <div class="p20"></div>
             <a href="list.html" class="btnNormal btn3">취소하기</a>

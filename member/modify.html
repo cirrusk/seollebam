@@ -92,9 +92,9 @@
     </div>
 </div>
 
-<div class="container" module="myshop_benefit">
+<div class="container">
     <div class="row p120">
-        <div id="sideNav" class="col-md-4 d-none d-sm-block">
+        <div id="sideNav" class="col-md-4 d-none d-sm-block"  module="myshop_benefit">
             <div class="titleWrap clearfix brRed">
                 <h3 class="float-left">{$member_name}님</h3>
                 <a module="Layout_stateLogon" class="btnGray btnSmall float-right" href="{$action_logout}">로그아웃</a>
@@ -105,9 +105,9 @@
             </p>
             <ul class="nav flex-column">
                 <li class="nav-item"><a class="nav-link" href="/myshop/order/list.html">주문내역 보기</a></li>
-                <li class="nav-item"><a class="nav-link" href="/myshop/addr/list.html">주소록 관리</a></li>
                 <li class="nav-item"><a class="nav-link" href="/myshop/board_list.html">나의 게시글</a></li>
                 <li class="nav-item"><a class="nav-link" href="/board/consult/list.html">문의 게시판</a></li>
+                <li class="nav-item"><a class="nav-link" href="/myshop/addr/list.html">주소록 관리</a></li>
                 <li class="nav-item"><a class="nav-link active" href="/member/modify.html">회원정보 수정</a></li>
             </ul>
         </div>
@@ -124,42 +124,44 @@
                     </div>
                 </div>
 
-                <div class="form-group">
-                    <label>아이디</label>
-                    {$form.member_id}
-                </div>
-                <div class="form-group">
-                    <label>새로운 {$display_passwd_title}</label>
-                    {$form.passwd}<br>
-                    <span>{$passwd_type_desc}</span>
-                </div>
-                <div class="form-group">
-                    <label>새로운 비밀번호 확인</label>
-                    {$form.user_passwd_confirm}<br>
-                    <span id="{$pwConfirmMsg_id}"></span>
-                </div>
-                <div class="form-group">
-                    <label>이름</label>
-                    {$form.name}
-                </div>
-                <div class="form-group">
-                    <label>주소</label>
-                    {$form.postcode1}
-                    <a class="btnGray btn3" href="#" onclick="sample4_execDaumPostcode()">우편번호</a><br>
-                    {$form.addr1}<br>
-                    {$form.addr2}
-                </div>
-                <div class="form-group">
-                    <label>이메일</label>
-                    {$form.email}
-                    <span id="{$emailMsg_id}"></span>
-                </div>
-                <div class="form-group">
-                    <label>휴대전화</label>
-                    {$form.mobile}
+                <div class="formWrap">
+                    <div class="form-group">
+                        <label>아이디</label>
+                        {$form.member_id}
+                    </div>
+                    <div class="form-group">
+                        <label>새로운 {$display_passwd_title}</label>
+                        {$form.passwd}<br>
+                        <span>{$passwd_type_desc}</span>
+                    </div>
+                    <div class="form-group">
+                        <label>새로운 비밀번호 확인</label>
+                        {$form.user_passwd_confirm}<br>
+                        <span id="{$pwConfirmMsg_id}"></span>
+                    </div>
+                    <div class="form-group">
+                        <label>이름</label>
+                        {$form.name}
+                    </div>
+                    <div class="form-group">
+                        <label>주소</label>
+                        {$form.postcode1}
+                        <a class="btnGray btn3" href="#" onclick="sample4_execDaumPostcode()">우편번호</a><br>
+                        {$form.addr1}<br>
+                        {$form.addr2}
+                    </div>
+                    <div class="form-group">
+                        <label>이메일</label>
+                        {$form.email}
+                        <span id="{$emailMsg_id}"></span>
+                    </div>
+                    <div class="form-group">
+                        <label>휴대전화</label>
+                        {$form.mobile}
+                    </div>
                 </div>
 
-                <div class="row p70 d-md-none">
+                <div class="row btnWrap p70 d-md-none">
                     <div class="col-6"><a href="#none" onclick="{$action_func_del}"  class="btnGray btn100">회원탈퇴</a></div>
                     <div class="col-6"><a href="#none" onclick="{$action_func_join}" class="btnBasic btn100">회원정보수정</a></div>
                 </div>
