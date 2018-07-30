@@ -42,7 +42,7 @@
 
                 // 우편번호와 주소 정보를 해당 필드에 넣는다.
                 document.getElementById('postcode1').value = data.zonecode; //5자리 새우편번호 사용
-                document.getElementById('addr1').value = fullRoadAddr;
+                document.getElementById('addr1').value = fullAddr;
                 document.getElementById('addr2').value = data.jibunAddress;
 
                 // iframe을 넣은 element를 안보이게 한다.
@@ -77,194 +77,93 @@
         element_layer.style.left = (((window.innerWidth || document.documentElement.clientWidth) - width)/2 - borderWidth) + 'px';
         element_layer.style.top = (((window.innerHeight || document.documentElement.clientHeight) - height)/2 - borderWidth) + 'px';
     }
+
+    $(document).ready(function() {
+        $('.xans-member-edit input').addClass('form-control');
+        $('#addr1').attr("placeholder","기본 주소");
+        $('#addr2').attr("placeholder","나머지 주소");
+    });
 </script>
 
-<div class="container">
-    <div class="p40"></div>
-    <h1 class="titleH1">회원정보 수정</h1>
-    <div class="p20 mp0"></div>
-    <div class="tab_myshop_menu" module="myshop_main">
-        <ul>
-            <!--@import(/layout/basic/myshop_menu.html)-->
-        </ul>    
+<div class="subNav">
+    <div class="container">
+        <a href="/product/customBox.html"><img class="back" src="/svg/back.svg"></a>
+        <h4>My Page</h4>
     </div>
-    <div class="p40"></div>
+</div>
 
-<div module="member_edit">
-    <div class="tableWrap">
-        <table>
-            <tbody>
-                <tr>
-                    <th scope="row"><div class="ess"></div>아이디</th>
-                    <td>
-                        {$form.member_id}
-                        {$form.user_id_dupl} (영문소문자/숫자, 4~16자)
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row"><div class="ess"></div>새로운 <span class="textDivider"></span>{$display_passwd_title}</th>
-                    <td>{$form.passwd} {$passwd_type_desc}</td>
-                </tr>
-                <tr class="{$display_is_none_certification|display}">
-                    <th scope="row"><div class="ess"></div>새로운 <span class="textDivider"></span>비밀번호 확인</th>
-                    <td>{$form.user_passwd_confirm} <span id="{$pwConfirmMsg_id}"></span></td>
-                </tr>
-                <tr style="display:{$display_name}">
-                    <th scope="row" id="{$name_title}"><div class="ess"></div>이름</th>
-                    <td>{$form.name}</td>
-                </tr>
-                <tr class="{$display_addr|display}">
-                    <th scope="row"><div class="ess"></div>주소</th>
-                    <td>
-                        {$form.postcode1}
-                        <a href="#" onclick="sample4_execDaumPostcode()" class="buttonA"><label>우편번호</label></a><br />
-                        {$form.addr1} 기본주소<br />
-                        {$form.addr2} 나머지주소 {$address2_desc}
-                    </td>
-                </tr>
-                <tr class="{$display_mobile|display}">
-                    <th scope="row"><div class="ess"></div>휴대전화</th>
-                    <td>{$form.mobile}</td>
-                </tr>
-                <tr>
-                    <th scope="row"><div class="ess"></div>이메일</th>
-                        <td>
-                            {$form.email} <span id="{$emailMsg_id}"></span>
-                            <p class="{$display_is_email_auth_info|display}">이메일 주소 변경 시 로그아웃 후 재인증을 하셔야만 로그인이 가능합니다.<br />인증 메일은 24시간 동안 유효하며, 유효 시간이 만료된 후에는 가입 정보로 로그인 하셔서 재발송 요청을 해주시기 바랍니다.</p>
-                        </td>
-                    </tr>
-                    <tr class="{$display_is_news_mail|display}">
-                        <th scope="row">이메일 수신여부</th>
-                        <td>{$form.is_news_mail}<p>쇼핑몰에서 제공하는 유익한 이벤트 소식을 이메일로 받으실 수 있습니다.</p></td>
-                    </tr>
-                </tbody>
-            </table>
+<div class="container" module="myshop_benefit">
+    <div class="row p120">
+        <div id="sideNav" class="col-md-4 d-none d-sm-block">
+            <div class="titleWrap clearfix brRed">
+                <h3 class="float-left">{$member_name}님</h3>
+                <a module="Layout_stateLogon" class="btnGray btnSmall float-right" href="{$action_logout}">로그아웃</a>
+            </div>
+            <p class="p45">
+                환영합니다! {$member_name}님.<br>
+                회원님은 적립금을 {$dc_price_mileage} 적립 중이십니다.
+            </p>
+            <ul class="nav flex-column">
+                <li class="nav-item"><a class="nav-link" href="/myshop/order/list.html">주문내역 보기</a></li>
+                <li class="nav-item"><a class="nav-link" href="/myshop/addr/list.html">주소록 관리</a></li>
+                <li class="nav-item"><a class="nav-link" href="/myshop/board_list.html">나의 게시글</a></li>
+                <li class="nav-item"><a class="nav-link" href="/board/consult/list.html">문의 게시판</a></li>
+                <li class="nav-item"><a class="nav-link active" href="/member/modify.html">회원정보 수정</a></li>
+            </ul>
         </div>
 
-        <div module="member_editInformation">
-            <h3>제3자 정보제공 동의현황</h3>
-            <div class="ec-base-table typeList">
-                <table border="1" summary="">
-                    <caption>제3자 정보제공 동의현황</caption>
-                    <colgroup>
-                        <col style="width:auto;" />
-                        <col style="width:15%;" />
-                        <col style="width:25%;" />
-                        <col style="width:15%;" />
-                        <col style="width:12%;" />
-                        <col style="width:12%;" />
-                        <col style="width:12%;" />
-                    </colgroup>
-                    <thead>
-                        <tr>
-                            <th scope="col">제공서비스</th>
-                            <th scope="col">제공받는 자</th>
-                            <th scope="col">개인정보 이용 목적</th>
-                            <th scope="col">제공하는<br />개인정보 항목</th>
-                            <th scope="col">보유기간</th>
-                            <th scope="col">동의여부</th>
-                            <th scope="col">동의/철회</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>{$app_name}<br /><span class="line">({$sa_av_version})</span></td>
-                            <td>{$perinfo_offer}</td>
-                            <td>{$perinfo_purpose}</td>
-                            <td>{$perinfo_item}</td>
-                            <td class="center">{$perinfo_retain}</td>
-                            <td class="center">{$perinfo_status}</td>
-                            <td class="center">{$perinfo_button}</td>
-                        </tr>
-                        <tr>
-                            <td>{$app_name}<br /><span class="line">({$sa_av_version})</span></td>
-                            <td>{$perinfo_offer}</td>
-                            <td>{$perinfo_purpose}</td>
-                            <td>{$perinfo_item}</td>
-                            <td class="center">{$perinfo_retain}</td>
-                            <td class="center">{$perinfo_status}</td>
-                            <td class="center">{$perinfo_button}</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <p class="info">- 정보제공에 대한 동의여부를 변경할 수 있으며, 철회 시 일부 서비스 사용이 불가할 수 있습니다.</p>
-        </div>
-    
-        <div module="member_editConsignment">
-            <h3>처리위탁 동의현황</h3>
-            <div class="ec-base-table typeList">
-                <table border="1" summary="">
-                    <caption>처리위탁 동의현황</caption>
-                    <colgroup>
-                        <col style="width:auto;" />
-                        <col style="width:20%;" />
-                        <col style="width:30%;" />
-                        <col style="width:12%;" />
-                        <col style="width:12%;" />
-                        <col style="width:12%;" />
-                    </colgroup>
-                    <thead>
-                        <tr>
-                            <th scope="col">제공서비스</th>
-                            <th scope="col">위탁받은 자</th>
-                            <th scope="col">위탁업무의 내용</th>
-                            <th scope="col">보유기간</th>
-                            <th scope="col">동의여부</th>
-                            <th scope="col">동의/철회</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>{$app_name}<br /><span class="line">({$sa_av_version})</span></td>
-                            <td>{$trust_target}</td>
-                            <td>{$trust_work}</td>
-                            <td class="center">{$trust_retain}</td>
-                            <td class="center">{$trust_status}</td>
-                            <td class="center">{$trust_button}</td>
-                        </tr>
-                        <tr>
-                            <td>{$app_name}<br /><span class="line">({$sa_av_version})</span></td>
-                            <td>{$trust_target}</td>
-                            <td>{$trust_work}</td>
-                            <td class="center">{$trust_retain}</td>
-                            <td class="center">{$trust_status}</td>
-                            <td class="center">{$trust_button}</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <p class="info">- 처리위탁에 대한 동의여부를 변경할 수 있으며, 철회 시 일부 서비스 사용이 불가할 수 있습니다.</p>
-        </div>
-    
-        <div class="{$display_information|display}">
-            <h3>개인정보 제3자 제공 동의(선택)</h3>
-            <div class="ec-base-box typeThinBg agreeArea">
-                <div class="content">
-                    {$information_desc}
+        <div class="col-md-1"></div>
+
+        <div class="col-md-7">
+            <div module="member_edit">
+                <div class="titleWrap clearfix brBlack">
+                    <h3 class="float-left">회원정보 수정</h3>
+                    <div class="float-right d-none d-sm-block">
+                        <a href="#none" onclick="{$action_func_del}"  class="btnGray btnSmall">회원탈퇴</a>
+                        <a href="#none" onclick="{$action_func_join}" class="btnBasic btnSmall">회원정보수정</a>
+                    </div>
                 </div>
-                <p class="check"><span>개인정보 제3자 제공에 동의하십니까?</span> {$form.agree_information_check}</p>
-            </div>
-        </div>
-    
-        <div class="{$display_consignment|display}">
-            <h3>개인정보 처리 위탁 동의(선택)</h3>
-            <div class="ec-base-box typeThinBg agreeArea">
-                <div class="content">
-                    {$consignment_desc}
+
+                <div class="form-group">
+                    <label>아이디</label>
+                    {$form.member_id}
                 </div>
-                <p class="check"><span>개인정보 처리 위탁에 동의하십니까?</span> {$form.agree_consignment_check}</p>
+                <div class="form-group">
+                    <label>새로운 {$display_passwd_title}</label>
+                    {$form.passwd}<br>
+                    <span>{$passwd_type_desc}</span>
+                </div>
+                <div class="form-group">
+                    <label>새로운 비밀번호 확인</label>
+                    {$form.user_passwd_confirm}<br>
+                    <span id="{$pwConfirmMsg_id}"></span>
+                </div>
+                <div class="form-group">
+                    <label>이름</label>
+                    {$form.name}
+                </div>
+                <div class="form-group">
+                    <label>주소</label>
+                    {$form.postcode1}
+                    <a class="btnGray btn3" href="#" onclick="sample4_execDaumPostcode()">우편번호</a><br>
+                    {$form.addr1}<br>
+                    {$form.addr2}
+                </div>
+                <div class="form-group">
+                    <label>이메일</label>
+                    {$form.email}
+                    <span id="{$emailMsg_id}"></span>
+                </div>
+                <div class="form-group">
+                    <label>휴대전화</label>
+                    {$form.mobile}
+                </div>
+
+                <div class="row p70 d-md-none">
+                    <div class="col-6"><a href="#none" onclick="{$action_func_del}"  class="btnGray btn100">회원탈퇴</a></div>
+                    <div class="col-6"><a href="#none" onclick="{$action_func_join}" class="btnBasic btn100">회원정보수정</a></div>
+                </div>
             </div>
-        </div>
-        
-        <div class="p20"></div>
-    
-        <div class="tableBtnArea">
-            <a href="#none" onclick="{$action_func_del}"  class="btnNormal btn3">회원탈퇴</a>
-            <a href="#none" onclick="{$action_func_join}" class="btnBasic btn3">회원정보수정</a>
-            
         </div>
     </div>
-</div>   
-
-<div class="p80"></div><div class="p40"></div><div class="p10"></div>
+</div>

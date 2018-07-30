@@ -1,45 +1,52 @@
-.xans-member-edit .tableWrap th { width: 25%; }
-.xans-member-edit .tableWrap td { width: 75%; }
-.xans-member-edit .tableWrap label { position: relative; top: 2px; left: 6px; }
+.xans-member-edit .titleWrap { margin-bottom: 30px; }
+.xans-member-edit .titleWrap .float-right { margin-top: 18px; }
+.xans-member-edit .titleWrap .float-right a { margin-left: 15px; }
+
+.xans-member-edit .form-group { margin-bottom: 20px; }
+.xans-member-edit .form-group label { width: 100%; display: block; margin-bottom: 5px; font-weight: 500; }
+.xans-member-edit .form-group input { height: 44px; width: 280px; display: inline; border-radius: 0; }
+.xans-member-edit .form-group select { height: 44px; border: 1px solid #ccc; padding: 0.5em 2.5em 0.5em 0.5em; background-position: calc(100% - 20px) calc(1em + 5px),calc(100% - 16px) calc(1em + 5px),calc(100% - 2.5em) 0.8em; }
+.xans-member-edit .form-group select:focus { background-position: calc(100% - 15px) 1em, calc(100% - 20px) 1em, calc(100% - 2.5em) 0.8em !important; }
+.xans-member-edit .form-group span { color: #7f7f7f; font-size: 12px; line-height: 28px; }
+.xans-member-edit .form-group .btnGray { position: relative; top: 3px; left: 7px; }
 
 .xans-member-edit #postcode1,
-.xans-member-edit #postcode2 { width:80px; text-align:center; }
+.xans-member-edit #postcode2 { width: 80px; text-align: center; }
 .xans-member-edit #addr1,
-.xans-member-edit #addr2 { width:280px; margin:10px 0 0; }
+.xans-member-edit #addr2 { width: 280px; margin: 10px 0 0; }
 .xans-member-edit #phone1,
-.xans-member-edit #mobile1 { width:80px; margin:0 5px 0 0; }
+.xans-member-edit #mobile1 { width: 80px; margin: 0 5px 0 0; }
 .xans-member-edit #phone2,
 .xans-member-edit #phone3,
 .xans-member-edit #mobile2,
-.xans-member-edit #mobile3 { width:80px;   margin: 0 8px; }
+.xans-member-edit #mobile3 { width: 80px;   margin: 0 8px; }
 .xans-member-edit #email1 { margin-right: 5px; width: 128px; }
-.xans-member-edit #email2 { margin:0 5px; width: 128px;}
-.xans-member-edit #email3 { margin-left: 5px; width: 128px; }
+.xans-member-edit #email2 { margin: 0 5px; width: 128px; }
+.xans-member-edit #email3 { margin-left: 5px; width: 128px; background-position: calc(100% - 20px) calc(1em + 5px),calc(100% - 17px) calc(1em + 5px),calc(100% - 2.5em) 0.8em; }
 
 @media screen and (max-width: 768px) {
-    .xans-member-edit .tableWrap input { width: 100%; }
-    .xans-member-edit .typeWrite { padding: 5px; }
-    .xans-member-edit .typeWrite table { font-size: 12px; }
-    .xans-member-edit .typeWrite tr { border-bottom: 1px solid rgba(0,0,0,.1); }
-    .xans-member-edit .typeWrite tr:last-child { border-bottom: none; }
-    .xans-member-edit .typeWrite td { padding: 10px 0; }
-    .xans-member-edit .typeWrite .phoneTd { color: #fff; }
-    .xans-member-edit .typeWrite .ess { display: none; }
-    .xans-member-edit .typeWrite input { height: 42px; width: 100%; }
-    .xans-member-edit .agreeArea .check { padding-right: 0.5%; }
-    .xans-member-edit .btnArea a { margin: 0; } 
-    
+    .xans-member-edit .titleWrap { margin-top: 30px; margin-bottom: 20px; }
+    .xans-member-edit .titleWrap h3 { font-size: 18px; }
+
+    .xans-member-edit .form-group { color: #fff; }
+    .xans-member-edit .form-group label { font-size: 12px; color: #333; }
+    .xans-member-edit .form-group input { width: 100%; height: 36px; font-size: 12px; }
+    .xans-member-edit .form-group select { height: 36px; background-position: calc(100% - 20px) calc(1em + 1px),calc(100% - 15px) calc(1em + 1px),calc(100% - 2.5em) 0.5em; }
+    .xans-member-edit .form-group select:focus { background-position: calc(100% - 15px) 1em, calc(100% - 20px) 1em, calc(100% - 2.5em) 0.5em !important; }
+    .xans-member-edit .form-group span { font-size: 11px; }
+    .xans-member-edit .form-group .btnGray { top: 2px; }
+
     .xans-member-edit #postcode1,
-    .xans-member-edit #postcode2 { width: 50%; }
+    .xans-member-edit #postcode2 { width: 32%; }
     .xans-member-edit #addr1,
     .xans-member-edit #addr2 { width: 100%; }
     .xans-member-edit #phone1,
-    .xans-member-edit #mobile1 { width: 100%; margin-bottom: 5px; color: #333; }
+    .xans-member-edit #mobile1 { width: 25%; margin-bottom: 0px; color: #333; }
     .xans-member-edit #phone2,
     .xans-member-edit #phone3,
     .xans-member-edit #mobile2,
-    .xans-member-edit #mobile3 { width: 100%; margin: 5px 0; color: #333; }
-    .xans-member-edit #email1 { width: 100%; }
+    .xans-member-edit #mobile3 { width: 32%; margin: 0; margin-right: 5px; }
+    .xans-member-edit #email1 { width: 45%; }
     .xans-member-edit #email2,
-    .xans-member-edit #email3 { width: 100%;  margin: 5px 0; }
+    .xans-member-edit #email3 { width: 45%;  margin: 5px 0; background-position: calc(100% - 20px) calc(1em + 1px),calc(100% - 15px) calc(1em + 1px),calc(100% - 2.5em) 0.5em; }
 }

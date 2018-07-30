@@ -8,12 +8,12 @@
             if (window.matchMedia('(min-width: 768px)').matches) {
                 /* Changes when we reach the min-width  */
                 $('.navbar').fadeIn();
-                $('.productNav').css("top","48px")
+                $('.subNav').css("top","48px")
             } else {
                 /* Reset for CSS changes – Still need a better way to do this! */
                 $('.navbar').fadeOut();
-                $('.productNav').fadeIn();
-                $('.productNav').css("top","0")
+                $('.subNav').fadeIn();
+                $('.subNav').css("top","0")
             }
         };
         /* Call the function */
@@ -34,7 +34,7 @@
 </script>
 
 <div module="product_detail">
-    <div class="productNav">
+    <div class="subNav">
         <div class="container">
             <a href="/product/customBox.html"><img class="back" src="/svg/back.svg"></a>
             <!-- <a module="Layout_orderBasketcount" href="/order/basket.html"><img class="float-right d-md-none" src="/svg/cartRed.svg"><span class="basketCount">{$basket_count}</span></a> -->
