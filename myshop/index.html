@@ -8,14 +8,14 @@
 
 <div class="subNav">
     <div class="container">
-        <a href="/product/customBox.html"><img class="back" src="/svg/back.svg"></a>
+        <a href="javascript:history.back()"><img class="back" src="/svg/back.svg"></a>
         <h4>My Page</h4>
     </div>
 </div>
 
 <div class="container" module="myshop_benefit">
     <div class="row p120">
-        <div id="sideNav" class="col-4">
+        <div id="sideNav" class="col-md-4 d-none d-sm-block">
             <div class="titleWrap clearfix brRed">
                 <h3 class="float-left">{$member_name}님</h3>
                 <a module="Layout_stateLogon" class="btnGray btnSmall float-right" href="{$action_logout}">로그아웃</a>
@@ -33,9 +33,9 @@
             </ul>
         </div>
 
-        <div class="col-1"></div>
+        <div class="col-md-1"></div>
 
-        <div class="orderListWrap col-7">
+        <div class="col-md-7 orderListWrap myPage">
 
         </div>
     </div>
