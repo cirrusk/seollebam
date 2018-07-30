@@ -2,10 +2,7 @@
 
 <script>
     $(document).ready(function() {
-        $('#fackDel').click(function(event) {
-            event.preventDefault();
-            $('#trueDel').click();
-        });
+        $('.myPage .titleWrap .float-right').append('<a href="#none" onclick="myshopAddr.deleteAddress(); return false;" class="btnGray btnSmall">선택주소 삭제</a><a href="register.html" class="btnBasic btnSmall">배송지 등록</a>');
     });
 </script>
 
@@ -43,8 +40,7 @@
                 <div class="titleWrap clearfix brBlack">
                     <h3 class="float-left">배송주소록 관리</h3>
                     <div class="float-right d-none d-sm-block">
-                        <a href="#none" id="fakeDel" class="btnGray btnSmall">선택 주소록 삭제</a>
-                        <a href="register.html" class="btnBasic btnSmall">배송지 등록</a>
+
                     </div>
                 </div>
 
@@ -77,7 +73,7 @@
                     </div>
                 </div>
 
-                <div class="{$nodata_display|display}">
+                <div class="{$nodata_display|display} nodata">
                     등록된 주소가 없습니다.
                 </div>
 

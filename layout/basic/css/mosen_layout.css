@@ -77,7 +77,7 @@
 .moreInfo .infoBody .row { padding: 10px 0; }
 .moreInfo .infoBody .row span { color: #7f7f7f; }
 
-.nodata { border-top: 2px solid #333; border-bottom: 1px solid #8c8c8c; padding: 40px 0; text-align: center; }
+.nodata { border-bottom: 1px solid #8c8c8c; padding: 40px 0; text-align: center; }
 
 
 /* PAGINATE */
@@ -126,6 +126,7 @@ span { font-size: 14px; font-weight: 400; }
 
 
 
+
 @media screen and (max-width: 768px) {
     /* NAVIGATION */
     .navbar-logo { width: 100px; }
@@ -163,13 +164,15 @@ span { font-size: 14px; font-weight: 400; }
     .myPage .tableWrap table th { font-size: 14px; }
     .myPage .tableWrap table td span { font-size: 14px; }
     .myPage .btnWrap { margin-top: 30px; }
-    .myPage .nodata { padding: 20px 0; }
+
 
     /* TABLE */
     .moreInfo .infoHeader { padding: 5px 0; }
     .moreInfo .infoHeader a { font-size: 14px; }
     .moreInfo .infoBody { padding: 5px 0; }
     .moreInfo .infoBody .row { padding: 5px 0; }
+
+    .nodata { padding: 20px 0; }
 
 
     /* BUTTON */
