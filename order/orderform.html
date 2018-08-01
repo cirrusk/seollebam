@@ -3,7 +3,7 @@
 
 <!-- iOS에서는 position:fixed 버그가 있음, 적용하는 사이트에 맞게 position:absolute 등을 이용하여 top,left값 조정 필요 -->
 <div id="layer" style="display:none;position:fixed;overflow:hidden;z-index:1;-webkit-overflow-scrolling:touch;background-color:#fff;">
-<img src="//t1.daumcdn.net/localimg/localimages/07/postcode/320/close.png" id="btnCloseLayer" style="cursor:pointer;position:absolute;right:-3px;top:-3px;z-index:1" onclick="closeDaumPostcode()" alt="닫기 버튼">
+    <img src="//t1.daumcdn.net/localimg/localimages/07/postcode/320/close.png" id="btnCloseLayer" style="cursor:pointer;position:absolute;right:-3px;top:-3px;z-index:1" onclick="closeDaumPostcode()" alt="닫기 버튼">
 </div>
 
 <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
@@ -42,7 +42,7 @@
 
                 // 우편번호와 주소 정보를 해당 필드에 넣는다.
                 document.getElementById('rzipcode1').value = data.zonecode; //5자리 새우편번호 사용
-                document.getElementById('raddr1').value = fullRoadAddr;
+                document.getElementById('raddr1').value = fullAddr;
                 document.getElementById('raddr2').value = data.jibunAddress;
 
                 // iframe을 넣은 element를 안보이게 한다.
@@ -78,145 +78,128 @@
         element_layer.style.top = (((window.innerHeight || document.documentElement.clientHeight) - height)/2 - borderWidth) + 'px';
     }
 </script>
+
 <script>
 $(document).ready(function(){
-    $('.payArea .method label').click(function(){
-        $('.payArea .method label').css({'color':'rgba(0,0,0,.8)','background-color':'#fff'});
-        $(this).css({'color':'#fff','background-color':'#d6254a'});
+    $('.form-group input').addClass('form-control');
+    $('.selectLabel label').addClass('btnLine btnSmall');
+    $('.selectLabel label').click(function(){
+        $('.selectLabel label').css({'color':'#7f7f7f','background-color':'#fff','border':'1px solid #d6d6d6'});
+        $(this).css({'color':'#fff','background-color':'#d6254a','border':'1px solid #d6254a'});
     });
+    $('.selectLabel label:nth-child(2)').click();
+
+    $('.method label').addClass('btnLine btnSmall');
+    $('.method label').click(function(){
+        $('.method label').css({'color':'#7f7f7f','background-color':'#fff','border':'1px solid #d6d6d6'});
+        $(this).css({'color':'#fff','background-color':'#d6254a','border':'1px solid #d6254a'});
+    });
+    $('.method .ec-base-label:nth-child(1) label').click();
 });
 </script>
 
-<div class="container" module="Order_form" unroll=1>
-    <div class="p40"></div>
-    <h1 class="titleH1">ORDER / PAYMENT</h1>
-    <div class="p40"></div><div class="p10"></div>
+<div class="subNav">
+    <div class="container">
+        <a href="javascript:history.back()"><img class="back" src="/svg/back.svg"></a>
+        <!-- <a module="Layout_orderBasketcount" href="/order/basket.html"><img class="float-right d-md-none" src="/svg/cartRed.svg"><span class="basketCount">{$basket_count}</span></a> -->
+        <h4><span class="textGray">MY BOX</span><img class="next" src="/svg/next.svg"> 주문서 작성 <img class="next" src="/svg/next.svg"><span class="textGray">주문 완료</span></h4>
+    </div>
+</div>
+
+<div class="container p120" module="Order_form">
     <!-- 이값은 지우면 안되는 값입니다. ($move_order_after 주문완료페이지 주소 / $move_basket 장바구니페이지 주소)
         $move_order_after=/order/order_result.html
         $move_basket=/order/basket.html
     -->
-    <!-- 국내배송상품 주문내역 -->
+    <div class="row">
+        <div class="col-md-7 col-12">
+            <div class="titleWrap brRed">
+                <h4>주문하는 사람!</h4>
+            </div>
+            <div class="formWrap" class="{$address_form} {$address_korean_display|display}">
+                <div class="form-group">
+                    <label>주문하시는 분</label>
+                    {$form.oname}
+                </div>
+                <div class="form-group">
+                    <label>휴대전화</label>
+                    {$form.ophone2_}
+                </div>
+                <div class="form-group">
+                    <label>이메일</label>
+                    {$form.oemail}
+                </div>
+            </div>
 
-    <div class="col-md-7 p0">
-        <h3 class="subTitle">주문자 정보</h3>
-        <div class="p20"></div>
-        <div class="orderArea">
-            <div class="tableWrap">
-                <table border="1" summary="">
-                <!-- 국문 쇼핑몰 -->
-                <tbody class="{$address_form} {$address_korean_display|display}">
-                    <tr>
-                        <th scope="row">주문하시는 분</th>
-                        <td>{$form.oname}</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">휴대전화</th>
-                        <td>{$form.ophone2_}</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">이메일</th>
-                        <td>{$form.oemail}</td>
-                    </tr>
-                </tbody>
-                </table>
+            <div class="p45">
+                <div class="titleWrap brRed">
+                    <h4>배송받는 사람!</h4>
+                </div>
+                <div class="formWrap" class="{$r_info_display|display}">
+                <div class="form-group">
+                    <label>받으시는 분</label>
+                    {$form.rname}
+                </div>
+                <div class="form-group">
+                    <label>배송지 선택</label>
+                    <div class="selectLabel">
+                        {$form.sameaddr}
+                        <a href="#none" id="{$btn_shipp_addr_id}" class="btnLine btnSmall {$btn_address_display|display}">주소록 보기</a>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>주소</label>
+                    {$form.rzipcode1}{$form.rzipcode2}
+                    <a class="btnGray btn3" href="#" onclick="sample4_execDaumPostcode()">우편번호</a><br>
+                    {$form.raddr1}<br />
+                    {$form.raddr2}<span>{$address2_desc}</span>
+                </div>
+                <div class="form-group">
+                    <label>휴대전화</label>
+                    {$form.rphone2_}
+                </div>
+                <div class="form-group {$use_delivery_message_display}">
+                    <label>배송메시지</label>
+                    {$form.omessage}
+                </div>
             </div>
-        </div>
-        
-        <div class="p40"></div><div class="p10"></div>
-        
-        <h3 class="subTitle">배송지 정보</h3>
-        <div class="p20"></div>
-        <div class="orderArea {$r_info_display|display}">
-            <div class="tableWrap">
-                <table border="1" summary="">
-                <tbody>
-                    <tr>
-                        <th scope="row">배송지 선택</th>
-                        <td>
-                            <div class="address">
-                                {$form.sameaddr}
-                                <label style="position: relative;"><a href="#none" id="{$btn_shipp_addr_id}" class="{$btn_address_display|display}">주소록 보기</a></label>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row">받으시는 분</th>
-                        <td>{$form.rname}</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">주소</th>
-                        <td>
-                            {$form.rzipcode1}{$form.rzipcode2}
-                            <label class="addrLabel"><a href="#" onclick="sample4_execDaumPostcode()">우편번호</a></label><br />
-                            {$form.raddr1}<br />
-                            {$form.raddr2}
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row">휴대전화</th>
-                        <td>{$form.rphone2_}</td>
-                    </tr>
-                    <tr class="{$use_delivery_message_display}">
-                        <th scope="row">배송메시지</th>
-                        <td>{$form.omessage}</td>
-                    </tr>
-                </tbody>
-                </table>
             </div>
-        </div>
-        
-        <div class="p40"></div><div class="p10"></div>
-        
-        <h3 class="subTitle">결제수단</h3>
-        <div class="p20"></div>
-        <div class="payArea tableWrap">
-            <div class="payment">
-                <div class="method">{$form.addr_paymethod}</div>
-                <div class="p10 mp0"></div>
+
+            <div class="titleWrap brRed">
+                <h4>결제 확인!</h4>
+            </div>
+            <div class="payment formWrap">
+                <div class="method mb-3">{$form.addr_paymethod}</div>
                 <div class="info">
-                    <!-- 무통장입금 -->
-                    <table border="1" summary="" id="{$payment_input_cash}" style="display:none;">
-                    <caption>무통장입금</caption>
-                    <tbody>
-                        <tr>
-                            <th scope="row">입금자명</th>
-                            <td>{$form.pname}</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">입금은행</th>
-                            <td>
-                                {$form.bankaccount}
-                            </td>
-                        </tr>
-                    </tbody>
-                    </table>
-                    <!-- 실시간 계좌이체 -->
-                    <table border="1" summary="" id="{$payment_input_tcash}" style="display:none;">
-                    <caption>실시간 계좌이체</caption>
-                    <tbody>
-                        <tr>
-                            <th scope="row">입금자명</th>
-                            <td>{$form.allat_account_nm}</td>
-                        </tr>
-                    </tbody>
-                    </table>
-                    <!-- 에스크로(가상계좌) -->
-                    <table border="1" summary="" id="{$payment_input_icash}" style="display:none;">
-                    <caption>에스크로(가상계좌)</caption>
-                    <tbody>
-                        <tr>
-                            <th scope="row">에스크로</th>
-                            <td>{$form.flagEscrowIcashUse}<label for="flagEscrowIcashUse0">에스크로(구매안전)서비스를 적용합니다.</label></td>
-                        </tr>
-                    </tbody>
+                    <div id="{$payment_input_cash}" style="display:none;"><!-- 무통장입금 -->
+                        <div class="form-group">
+                            <label>입금자명</label>
+                            {$form.pname}
+                        </div>
+                        <div class="form-group">
+                            <label>입금은행</label>
+                            {$form.bankaccount}
+                        </div>
+                    </div>
+                    <div id="{$payment_input_tcash}" style="display:none;"><!-- 실시간 계좌이체 -->
+                        <div class="form-group">
+                            <label>입금자명</label>
+                            {$form.allat_account_nm}
+                        </div>
+                    </div>
+                    <table border="1" summary="" id="{$payment_input_icash}" style="display:none;"><!-- 에스크로(가상계좌) -->
+                        <tbody>
+                            <tr>
+                                <th scope="row">에스크로</th>
+                                <td>{$form.flagEscrowIcashUse}<label for="flagEscrowIcashUse0">에스크로(구매안전)서비스를 적용합니다.</label></td>
+                            </tr>
+                        </tbody>
                     </table>
                     <!-- 무통장입금, 카드결제, 휴대폰결제, 실시간계좌이체 -->
                     <div id="{$pg_paymethod_info}" class="payHelp">
                         <p id="{$pg_paymethod_info_pg}">소액 결제의 경우 PG사 정책에 따라 결제 금액 제한이 있을 수 있습니다.</p>
                         <p id="{$pg_paymethod_info_shipfee}">최소 결제 가능 금액은 결제금액에서 배송비를 제외한 금액입니다.</p>
-                        
                     </div>
-                    
                     <!-- 케이페이 도움말 -->
                     <div id="{$kpay_info}" class="payHelp">
                         <p>휴대폰에 설치된 케이페이 앱에서 비밀번호 입력만으로 빠르고 안전하게 결제가 가능한 서비스 입니다.</p>
@@ -237,131 +220,128 @@ $(document).ready(function(){
                 </div>
                 <div class="agree">
                     <table border="1" summary="">
-                    <caption>결제관련동의</caption>
-                    <!-- 현금영수증 발행 -->
-                    <tbody id="{$cashreceipt_display_area}" class="cashReceipt {$cashreceipt_display|display}">
-                        <tr>
-                            <th scope="row">현금영수증<br />발행</th>
-                            <td>
-                                {$form.cashreceipt_user_type}
-                                <div class="mobile" id="{$cashreceipt_mobile_display_area}">
-                                    <strong>휴대전화 : </strong>
-                                    {$form.cashreceipt_user_mobile}
-                                </div>
-                                <div class="regno" id="{$cashreceipt_regno_display_area}">
-                                    <strong>사업자등록번호 : </strong>
-                                    {$form.cashreceipt_reg_no}
-                                    <p class="grid">입력 시 '-' 없이 숫자만 입력하세요.</p>
-                                </div>
-                            </td>
-                        </tr>
-                    </tbody>
-                    <!-- 청약철회방침 -->
-                    <tbody class="{$subscription_display|display}">
-                        <tr>
-                            <th scope="row">청약철회방침</th>
-                            <td>
-                                <div class="textArea">
-                                    {$form.subscription_terms}
-                                    <a href="#none" onclick="{$subscription_script}"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/order/btn_more.gif" alt="전체보기" /></a>
-                                </div>
-                                <p>{$form.subscription_agreement_chk}<label for="subscription_agreement_chk0"><strong>동의함</strong></label></p>
-                            </td>
-                        </tr>
-                    </tbody>
-                    <!-- 전자보증보험-->
-                    <tbody class="guarantee {$eguarantee_display|display}">
-                        <tr>
-                            <th scope="row">전자보증보험</th>
-                            <td>
-                                <div>
-                                    <p>전자보증보험 발급 여부 : {$form.eguarantee_flag}</p>
-                                    <p>전자보증보험 안내(100% 매매보호 안전결제) <a href="/common/usafe_notice.php" target="_blank" onclick="window.open(this.href,'new','height=500 width=550 toolbar=no location=no directory=no status=no resizable=no'); return false;">[자세히보기]</a></p>
-                                    <p>물품대금결제시 구매자의 피해보호를 위해 '(주)서울보증보험'의 보증보험증권이 발급됩니다.</p>
-                                    <p>증권이 발급되는 것의 의미는, 물품대금 결제시에 소비자에게 서울보증보험의 쇼핑몰보증보험 계약체결서를 인터넷상으로 자동 발급하여, 피해발생시 쇼핑몰보증보험으로써 완벽하게 보호받을 수 있습니다.</p>
-                                    <p>또한, 입력하신 개인정보는 증권발급을 위해 필요한 정보이며 다른 용도로 사용되지 않습니다. </p>
-                                    <p>전자보증보험 발생시 별도의 수수료가 부과되지 않습니다.</p>
-                                </div>
-                                <div id="{$eguarantee_personal_id}">
-                                    <p>생년월일 : {$form.eguarantee_year} 년 {$form.eguarantee_month} 월 {$form.eguarantee_day} 일</p>
-                                    <p>성별 : {$form.eguarantee_user_gender}</p>
-                                    <p>개인정보 이용동의 : {$form.eguarantee_personal_agreement}</p>
-                                </div>
-                            </td>
-                        </tr>
-                    </tbody>
+                        <!-- 현금영수증 발행 -->
+                        <tbody id="{$cashreceipt_display_area}" class="cashReceipt {$cashreceipt_display|display}">
+                            <tr>
+                                <th scope="row">현금영수증<br />발행</th>
+                                <td>
+                                    {$form.cashreceipt_user_type}
+                                    <div class="mobile" id="{$cashreceipt_mobile_display_area}">
+                                        <strong>휴대전화 : </strong>
+                                        {$form.cashreceipt_user_mobile}
+                                    </div>
+                                    <div class="regno" id="{$cashreceipt_regno_display_area}">
+                                        <strong>사업자등록번호 : </strong>
+                                        {$form.cashreceipt_reg_no}
+                                        <p class="grid">입력 시 '-' 없이 숫자만 입력하세요.</p>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <!-- 청약철회방침 -->
+                        <tbody class="{$subscription_display|display}">
+                            <tr>
+                                <th scope="row">청약철회방침</th>
+                                <td>
+                                    <div class="textArea">
+                                        {$form.subscription_terms}
+                                        <a href="#none" onclick="{$subscription_script}"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/order/btn_more.gif" alt="전체보기" /></a>
+                                    </div>
+                                    <p>{$form.subscription_agreement_chk}<label for="subscription_agreement_chk0"><strong>동의함</strong></label></p>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <!-- 전자보증보험-->
+                        <tbody class="guarantee {$eguarantee_display|display}">
+                            <tr>
+                                <th scope="row">전자보증보험</th>
+                                <td>
+                                    <div>
+                                        <p>전자보증보험 발급 여부 : {$form.eguarantee_flag}</p>
+                                        <p>전자보증보험 안내(100% 매매보호 안전결제) <a href="/common/usafe_notice.php" target="_blank" onclick="window.open(this.href,'new','height=500 width=550 toolbar=no location=no directory=no status=no resizable=no'); return false;">[자세히보기]</a></p>
+                                        <p>물품대금결제시 구매자의 피해보호를 위해 '(주)서울보증보험'의 보증보험증권이 발급됩니다.</p>
+                                        <p>증권이 발급되는 것의 의미는, 물품대금 결제시에 소비자에게 서울보증보험의 쇼핑몰보증보험 계약체결서를 인터넷상으로 자동 발급하여, 피해발생시 쇼핑몰보증보험으로써 완벽하게 보호받을 수 있습니다.</p>
+                                        <p>또한, 입력하신 개인정보는 증권발급을 위해 필요한 정보이며 다른 용도로 사용되지 않습니다. </p>
+                                        <p>전자보증보험 발생시 별도의 수수료가 부과되지 않습니다.</p>
+                                    </div>
+                                    <div id="{$eguarantee_personal_id}">
+                                        <p>생년월일 : {$form.eguarantee_year} 년 {$form.eguarantee_month} 월 {$form.eguarantee_day} 일</p>
+                                        <p>성별 : {$form.eguarantee_user_gender}</p>
+                                        <p>개인정보 이용동의 : {$form.eguarantee_personal_agreement}</p>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
                     </table>
                 </div>
             </div>
         </div>
-    </div>
-    
-    <div class="col-md-1"></div>
-    
-    <div class="col-md-4 p0">
-        <div class="mp30"></div>
-        <h3 class="subTitle">기본배송 정보</h3>
-        <div class="p20"></div>
-        <div class="orderListArea {$default_display|display}">
-            <div class="tableWrap {$normal_display|display}">
-                <table border="1" summary="">
-                    <tfoot>
-                        <tr>
-                            <td><div class="p10"></div>총 상품금액</td>
-                            <td></td>
-                            <td><div class="p10"></div>￦ {$normal_total_product_price}</td>
-                        </tr>
-                        <tr>
-                            <td>배송비</td>
-                            <td></td>
-                            <td>￦ <span id="{$domestic_ship_fee}">{$normal_total_delv_price}{$price_unit_tail}</span></td>
-                        </tr>
-                        <tr>
-                            <td>최종금액</td>
-                            <td></td>
-                            <td class="highlight">￦ <span id="{$domestic_ship_fee_sum}">{$normal_total_price}{$price_unit_tail}</span></td>
-                        </tr>
-                    </tfoot>
-                    <tbody module="Order_normallist">
-                        <tr>
-                            <td class="thumb"><img src="{$product_image}" onerror="this.src='http://img.echosting.cafe24.com/thumb/img_product_small.gif';"/></td>
-                            <td class="product"><strong>{$product_name}</strong><div class="option {$option_display|display}">{$option_str}</div></td>
-                            <td class="quantity">{$product_quantity_text} EA</td>
-                        </tr>
-                        <tr>
-                            <td class="thumb"><img src="{$product_image}" onerror="this.src='http://img.echosting.cafe24.com/thumb/img_product_small.gif';"/></td>
-                            <td class="product"><strong>{$product_name}</strong><div class="option {$option_display|display}">{$option_str}</div></td>
-                            <td class="quantity">{$product_quantity_text} EA</td>
-                        </tr>
-                    </tbody>
-                </table>
+
+        <div class="col-md-1 p70"></div>
+
+        <div class="col-md-4 col-12">
+            <div class="orderListArea {$default_display|display}">
+                <div class="titleWrap">
+                    <h4>주문상품 확인</h4>
+                </div>
+                <div class="tableWrap xans-order-totalsummary {$normal_display|display}">
+                    <table border="1" summary="">
+                        <tbody module="Order_normallist">
+                            <tr>
+                                <th class="thumb"><img src="{$product_image}" onerror="this.src='http://img.echosting.cafe24.com/thumb/img_product_small.gif';"/></th>
+                                <td class="product text-left">
+                                    <h6>{$product_name}</h6>
+                                    <h6 class="textGray pb-2"><span class="textGray">{$product_price}원</span> / 1EA</h6></span>
+                                    <span class="option textGray {$option_display|display}">{$option_str|replace:], } 사이즈]</span>
+                                </td>
+                                <td><h6 class="textGray">{$product_quantity_text}EA</h6></td>
+                            </tr>
+                            <tr>
+                                <th class="thumb"><img src="{$product_image}" onerror="this.src='http://img.echosting.cafe24.com/thumb/img_product_small.gif';"/></th>
+                                <td class="product text-left">
+                                    <h6>{$product_name}</h6>
+                                    <h6 class="textGray pb-2"><span class="textGray">{$product_price}원</span> / 1EA</h6>
+                                    <span class="option textGray {$option_display|display}">{$option_str|replace:], } 사이즈]</span>
+                                </td>
+                                <td><h6 class="textGray">{$product_quantity_text}EA</h6></td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr><td><td/><td><td/><td><td/></tr>
+                            <tr><td><td/><td><td/><td><td/></tr>
+                            <tr><td><td/><td><td/><td><td/></tr>
+                            <tr>
+                                <th><p>총 주문금액</p></th>
+                                <td colspan="2"><h5>{$normal_total_product_price}원</h5></td>
+                            </tr>
+                            <tr>
+                                <th><p>배송비</p></th>
+                                <td colspan="2"><h5>{$normal_total_delv_price}원</h5><span class="textGray">30,000원 이상 배송비 무료</span></td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th><p>최종 결제금액</p></th>
+                                <td></td>
+                                <td><h5 class="textRed"><strong>{$normal_total_price}원</strong></h5></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+
+            <div class="total">
+                <div class="btnArea">
+                    <a id="{$btn_payment_id}" class="btnBasic btn100" href="#none">결제하기</a>
+                </div>
+                <p class="paymentAgree" id="{$chk_purchase_agreement}">{$form.chk_purchase_agreement}</p>
             </div>
         </div>
-        
-        <div class="p10"></div>
-        
-        
-        <!-- 최종결제금액 -->
-        <div class="total">
-            <div class="displaynone">
-                <h4><strong id="{$current_pay_name}">{$current_pay_name_default}</strong> <span>최종결제 금액</span></h4>
-                <p class="price"><span>{$price_unit_head}</span>{$form.total_price}<span>{$price_unit_tail}</span></p>
-            </div>
-            <p class="paymentAgree" id="{$chk_purchase_agreement}">{$form.chk_purchase_agreement}</p>
-            <div class="btnArea">
-                <div class="p10"></div>
-                <a class="btnNormal btn4" onClick="history.go(-1)">돌아가기</a>
-                <div class="p10"></div>
-                <a id="{$btn_payment_id}" class="btnBasic btn4" href="#none">결제하기</a>
-            </div>
-        </div>
     </div>
-    
+
     <!-- 안심번호 팝업 레이어 -->
     <div id="{$safe_phone_popup_layer}"></div>
     <!-- 결제진행바 -->
     <iframe id="{$payment_proc_id}" name="h_payment" width="0" height="0" frameborder="0" src=""></iframe>
     <!-- //결제진행바 -->
 </div>
-
-<div class="p80"></div><div class="p40"></div><div class="p10"></div>

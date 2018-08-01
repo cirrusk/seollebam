@@ -3,7 +3,7 @@
 
 <div class="subNav">
     <div class="container">
-        <a href="/product/customBox.html"><img class="back" src="/svg/back.svg"></a>
+        <a href="javascript:history.back()"><img class="back" src="/svg/back.svg"></a>
         <!-- <a module="Layout_orderBasketcount" href="/order/basket.html"><img class="float-right d-md-none" src="/svg/cartRed.svg"><span class="basketCount">{$basket_count}</span></a> -->
         <h4>MY BOX<img class="next" src="/svg/next.svg"><span class="textGray">주문서 작성</span></h4>
     </div>
@@ -22,52 +22,56 @@
     </div>
 
     <div class="row p120">
-        <div class="col-md-7 tableWrap" module="Order_NormNormal">
-            <h4>담긴 설렘용품</h4>
-            <table>
-                <tbody module="Order_list">
-                    <tr>
-                        <td class="chk"><input type="checkbox" id="{$chk_id}" name="{$chk_name}" checked/></td>
-                        <td class="thumb"><img src="{$img}" onerror="this.src='http://img.echosting.cafe24.com/thumb/img_product_small.gif';" alt="{$name_alt}" /></td>
-                        <td class="product">
-                            <h5>{$name}</h5>
-                            <p class="textGray">{$product_price_front}원</p>
-                            <ul class="option" module="Order_optionAll">
-                                <li>{$option_detail_str|replace:=, }</li>
-                                <li>{$option_detail_str|replace:=, }</li>
-                            </ul>
-                        </td>
-                        <td>
-                            <div class="remove"><a href="javascript:;" onclick="{$action_move_item}"><img src="/svg/close.svg"></a></div>
-                            <div class="quantity">
-                                {$form.quantity}
-                                <a href="#none"><img src="//img.echosting.cafe24.com/design/skin/default/product/btn_count_up.gif" id="option_box1_up" class="{$quantity_up_class} option_box_up" onclick="{$add_shortcut}" alt="수량증가"></a>
-                                <a href="#none"><img src="//img.echosting.cafe24.com/design/skin/default/product/btn_count_down.gif" id="option_box1_down" class="{$quantity_down_class} option_box_down" onclick="{$out_shortcut}" alt="수량감소"></a>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="chk"><input type="checkbox" id="{$chk_id}" name="{$chk_name}" checked/></td>
-                        <td class="thumb"><img src="{$img}" onerror="this.src='http://img.echosting.cafe24.com/thumb/img_product_small.gif';" alt="{$name_alt}" /></td>
-                        <td class="product">
-                            <h5>{$name}</h5>
-                            <p class="textGray">{$product_price_front}원</p>
-                            <ul class="option" module="Order_optionAll">
-                                <li>{$option_detail_str|replace:=, }</li>
-                                <li>{$option_detail_str|replace:=, }</li>
-                            </ul>
-                        </td>
-                        <td>
-                            <div class="remove"><a href="javascript:;" onclick="{$action_move_item}"><img src="/svg/close.svg"></a></div>
-                            <div class="quantity">
-                                {$form.quantity}
-                                <a href="#none"><img src="//img.echosting.cafe24.com/design/skin/default/product/btn_count_up.gif" id="option_box1_up" class="{$quantity_up_class} option_box_up" onclick="{$add_shortcut}" alt="수량증가"></a>
-                                <a href="#none"><img src="//img.echosting.cafe24.com/design/skin/default/product/btn_count_down.gif" id="option_box1_down" class="{$quantity_down_class} option_box_down" onclick="{$out_shortcut}" alt="수량감소"></a>
-                            </div>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+        <div class="col-md-7" module="Order_NormNormal">
+            <div class="titleWrap">
+                <h4>담긴 설렘용품</h4>
+            </div>
+            <div class="tableWrap">
+                <table>
+                    <tbody module="Order_list">
+                        <tr>
+                            <td class="chk"><input type="checkbox" id="{$chk_id}" name="{$chk_name}" checked/></td>
+                            <td class="thumb"><img src="{$img}" onerror="this.src='http://img.echosting.cafe24.com/thumb/img_product_small.gif';" alt="{$name_alt}" /></td>
+                            <td class="product">
+                                <h5>{$name}</h5>
+                                <p class="textGray">{$product_price_front}원</p>
+                                <ul class="option" module="Order_optionAll">
+                                    <li>{$option_detail_str|replace:=, }</li>
+                                    <li>{$option_detail_str|replace:=, }</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <div class="remove"><a href="javascript:;" onclick="{$action_move_item}"><img src="/svg/close.svg"></a></div>
+                                <div class="quantity">
+                                    {$form.quantity}
+                                    <a href="#none"><img src="//img.echosting.cafe24.com/design/skin/default/product/btn_count_up.gif" id="option_box1_up" class="{$quantity_up_class} option_box_up" onclick="{$add_shortcut}" alt="수량증가"></a>
+                                    <a href="#none"><img src="//img.echosting.cafe24.com/design/skin/default/product/btn_count_down.gif" id="option_box1_down" class="{$quantity_down_class} option_box_down" onclick="{$out_shortcut}" alt="수량감소"></a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="chk"><input type="checkbox" id="{$chk_id}" name="{$chk_name}" checked/></td>
+                            <td class="thumb"><img src="{$img}" onerror="this.src='http://img.echosting.cafe24.com/thumb/img_product_small.gif';" alt="{$name_alt}" /></td>
+                            <td class="product">
+                                <h5>{$name}</h5>
+                                <p class="textGray">{$product_price_front}원</p>
+                                <ul class="option" module="Order_optionAll">
+                                    <li>{$option_detail_str|replace:=, }</li>
+                                    <li>{$option_detail_str|replace:=, }</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <div class="remove"><a href="javascript:;" onclick="{$action_move_item}"><img src="/svg/close.svg"></a></div>
+                                <div class="quantity">
+                                    {$form.quantity}
+                                    <a href="#none"><img src="//img.echosting.cafe24.com/design/skin/default/product/btn_count_up.gif" id="option_box1_up" class="{$quantity_up_class} option_box_up" onclick="{$add_shortcut}" alt="수량증가"></a>
+                                    <a href="#none"><img src="//img.echosting.cafe24.com/design/skin/default/product/btn_count_down.gif" id="option_box1_down" class="{$quantity_down_class} option_box_down" onclick="{$out_shortcut}" alt="수량감소"></a>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
 
         <div class="col-md-1"></div>

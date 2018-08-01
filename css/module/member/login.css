@@ -14,7 +14,7 @@
     min-height: 100%; /* Scale up to fill container height */
     -ms-interpolation-mode: bicubic; /* Scaled images look a bit better in IE now */
 }
-
+h5 .btnLine { border: 2px solid #ccc; }
 
 @media screen and (max-width: 768px) {
     h2 { padding: 30px 0; }

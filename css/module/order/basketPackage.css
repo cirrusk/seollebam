@@ -19,7 +19,7 @@
 
 
 @media screen and (max-width: 768px) {
-    .xans-order-basketpackage { margin-top: 70px; }
+    .xans-order-basketpackage { margin-top: 50px; }
 
     .xans-order-totalorder { margin-bottom: 0; }
     .xans-order-totalsummary { display: flex; flex-direction: column; padding: 30px 0 0; }

@@ -1,12 +1,3 @@
-.xans-member-edit .formWrap { margin-top: 30px; }
-.xans-member-edit .form-group { margin-bottom: 20px; }
-.xans-member-edit .form-group label { width: 100%; display: block; margin-bottom: 5px; font-weight: 500; }
-.xans-member-edit .form-group input { height: 44px; width: 64%; display: inline; border-radius: 0; }
-.xans-member-edit .form-group select { height: 44px; border: 1px solid #ccc; padding: 0.5em 2.5em 0.5em 0.5em; background-position: calc(100% - 20px) calc(1em + 5px),calc(100% - 16px) calc(1em + 5px),calc(100% - 2.5em) 0.8em; }
-.xans-member-edit .form-group select:focus { background-position: calc(100% - 15px) 1em, calc(100% - 20px) 1em, calc(100% - 2.5em) 0.8em !important; }
-.xans-member-edit .form-group span { color: #7f7f7f; font-size: 12px; line-height: 28px; }
-.xans-member-edit .form-group .btnGray { position: relative; top: 3px; left: 7px; }
-
 .xans-member-edit #postcode1,
 .xans-member-edit #postcode2 { width: 128px; text-align: center; }
 .xans-member-edit #addr1,
