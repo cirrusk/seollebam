@@ -45,7 +45,7 @@
     #prdDetail .wDetail { display: none; }
     #prdDetail .mDetail { display: block; width: 100%; }
     .xans-product-additional .titleWrap h2 { font-size: 28px; }
-    .xans-product-additional .titleWrap .btn2 { border: 1px solid #d6254a; background: #fff; color: #333; font-weight: 500; }
+    .xans-product-additional .titleWrap .btn2 { border: 1px solid #d6254a; padding: 6px 28px; background: #fff; color: #333; font-weight: 500; }
 
     /* MODAL */
     .modal-dialog { margin: 0; }
@@ -61,4 +61,5 @@
 
     /* PRODUCT MODAL */
     .floatArea { position: fixed; bottom: 0; width: 100%; z-index: 1; }
+    .floatArea .btn1 { display: block; padding: 8px 0px; font-size: 14px; }
 }

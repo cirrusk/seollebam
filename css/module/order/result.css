@@ -1,10 +1,34 @@
-.tableWrap { word-break: keep-all; }
+.headerH3 { margin-top: 100px; padding: 35px 0; }
 
-.orderListArea .tableWrap th { width: 25%; text-align: center; vertical-align: middle; }
-.orderListArea .xans-order-normalresultlist td { width: 25%; text-align: center; vertical-align: middle; }
-.orderListArea .xans-order-normalresultlist td img { width: 50%; border: 1px solid rgba(0,0,0,.2); border-radius: 5px; }
-.orderListArea .tableWrap tfoot td { padding: 20px 0 25px; text-align: center; }
+.xans-order-result .orderInfo { padding: 20px 0 30px;}
+.xans-order-result .orderInfo h5 { display: inline; }
+.xans-order-result .orderInfo p { display: inline; padding-left: 40px; }
+
+.xans-order-result table tr { border-bottom: 1px solid #d6d6d6; }
+.xans-order-result table tr:last-child { border-bottom: 2px solid #d6d6d6; }
+.xans-order-result table th { padding: 8px 0; }
+.xans-order-result table td { padding: 8px 0; text-align: right; color: #7f7f7f; }
+.xans-order-result table td span { color: #7f7f7f; }
+.xans-order-result table td img { width: 80px; }
+.xans-order-result table .thumb { width: 80px; }
+.xans-order-result table .product { width: 50%; padding: 8px 0 8px 20px; vertical-align: top; text-align: left; }
+.xans-order-result table .option { padding-top: 5px; }
+
+.xans-order-result .tableWrap { padding: 8px 0; border-bottom: 2px solid #d6d6d6; }
+.xans-order-result .xans-order-normalresultlist tr { border-bottom: 0px; }
+.xans-order-result .xans-order-normalresultlist tr:last-child { border-bottom: 0; }
+
+.btnArea { text-align: center; margin: 70px 0 120px; }
 
 
-.orderArea .tableWrap th { width: 25%; padding: 10px 0; }
-.orderArea .tableWrap td { width: 75%; padding: 10px 0; }
+@media screen and (max-width: 768px) {
+    .headerH3 { margin-top: 120px; padding: 15px 0; }
+    .xans-order-result .orderInfo { padding: 20px 0 15px;}
+    .xans-order-result table th { padding: 5px 0; width: 25%; }
+    .xans-order-result table td { padding: 5px 0; width: 75%; }
+    .xans-order-result .tableWrap h6 { font-size: 14px; }
+    .xans-order-result .tableWrap span { font-size: 14px; }
+    .xans-order-result .tableWrap .option { font-size: 12px; }
+
+    .btnArea { margin: 45px 0 70px; }
+}

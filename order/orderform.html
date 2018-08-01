@@ -288,19 +288,19 @@ $(document).ready(function(){
                     <table border="1" summary="">
                         <tbody module="Order_normallist">
                             <tr>
-                                <th class="thumb"><img src="{$product_image}" onerror="this.src='http://img.echosting.cafe24.com/thumb/img_product_small.gif';"/></th>
+                                <td class="thumb"><img src="{$product_image}" onerror="this.src='http://img.echosting.cafe24.com/thumb/img_product_small.gif';"/></td>
                                 <td class="product text-left">
                                     <h6>{$product_name}</h6>
-                                    <h6 class="textGray pb-2"><span class="textGray">{$product_price}원</span> / 1EA</h6></span>
+                                    <h6 class="textGray pt-1 pb-2"><span class="textGray">{$product_price}원</span> / 1EA</h6></span>
                                     <span class="option textGray {$option_display|display}">{$option_str|replace:], } 사이즈]</span>
                                 </td>
                                 <td><h6 class="textGray">{$product_quantity_text}EA</h6></td>
                             </tr>
                             <tr>
-                                <th class="thumb"><img src="{$product_image}" onerror="this.src='http://img.echosting.cafe24.com/thumb/img_product_small.gif';"/></th>
+                                <td class="thumb"><img src="{$product_image}" onerror="this.src='http://img.echosting.cafe24.com/thumb/img_product_small.gif';"/></td>
                                 <td class="product text-left">
                                     <h6>{$product_name}</h6>
-                                    <h6 class="textGray pb-2"><span class="textGray">{$product_price}원</span> / 1EA</h6>
+                                    <h6 class="textGray pt-1 pb-2"><span class="textGray">{$product_price}원</span> / 1EA</h6>
                                     <span class="option textGray {$option_display|display}">{$option_str|replace:], } 사이즈]</span>
                                 </td>
                                 <td><h6 class="textGray">{$product_quantity_text}EA</h6></td>
@@ -331,6 +331,10 @@ $(document).ready(function(){
             </div>
 
             <div class="total">
+                <div class="displaynone">
+                    <h4><strong id="{$current_pay_name}">{$current_pay_name_default}</strong> <span>최종결제 금액</span></h4>
+                    <p class="price"><span>{$price_unit_head}</span>{$form.total_price}<span>{$price_unit_tail}</span></p>
+                </div>
                 <div class="btnArea">
                     <a id="{$btn_payment_id}" class="btnBasic btn100" href="#none">결제하기</a>
                 </div>

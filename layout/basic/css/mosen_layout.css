@@ -1,6 +1,7 @@
 @charset "utf-8";
 /* NAVIGATION */
 .navbar { background-color: #d6254a; padding: .6rem 0; height: 48px; }
+.navbar-brand { margin: 0; }
 .navbar-logo { width: 120px; }
 .navbar .navbar-cart { width: 20px; }
 .navbar .navbar-user { width: 24px; }
@@ -203,7 +204,7 @@ span { font-size: 14px; font-weight: 400; }
 
     /* BUTTON */
     .btn1 { display: block; padding: 10px 0px; }
-    .btn2 { padding: 6px 28px; font-size: 14px; }
+    .btn2 { padding: 8px 28px; font-size: 14px; }
     .btn3 { padding: 8px 18px; font-size: 14px; }
     .btn100 { padding: 8px; font-size: 14px; }
     .btnSmall { font-size: 12px; padding: 6px 11px; }

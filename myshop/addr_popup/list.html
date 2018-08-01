@@ -1,0 +1,52 @@
+<!--@css(/layout/basic/css/common.css)-->
+<!--@css(/layout/basic/css/mosen_layout.css)-->
+<!--@css(/css/module/myshop/addrList_pop.css)-->
+
+<div module="myshop_AddrList">
+    <!--
+        $return_url = /myshop/addr_popup/list.html
+    -->
+    <div class="titleWrap">
+        <h4>배송 주소록 관리</h4>
+    </div>
+
+    <div class="tableWrap">
+        <table border="1" summary="">
+            <thead>
+                <tr>
+                    <th scope="col" class="delivery">배송지명</th>
+                    <th scope="col" class="recipient">수령인</th>
+                    <th scope="col" class="mobile">휴대전화</th>
+                    <th scope="col" class="address">주소</th>
+                    <th scope="col" class="set">배송지관리</th>
+                </tr>
+            </thead>
+            <tbody class="{$list_display|display}">
+                <tr>
+                    <td>{$ma_rcv_title}</td>
+                    <td>{$ma_rcv_name}</td>
+                    <td>{$ma_rcv_mobile_no}</td>
+                    <td class="address">{$ma_rcv_addr1}<br>{$ma_rcv_addr2}</td>
+                    <td>
+                        <a class="btnBasic btnSmall" href="#none" onclick="{$action_order}">선택</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>{$ma_rcv_title}</td>
+                    <td>{$ma_rcv_name}</td>
+                    <td>{$ma_rcv_phone}</td>
+                    <td>{$ma_rcv_mobile_no}</td>
+                    <td class="address">{$ma_rcv_addr1}<br>{$ma_rcv_addr2}</td>
+                    <td>
+                        <a class="btnBasic btnSmall" href="#none" onclick="{$action_order}">선택</a>
+                    </td>
+                </tr>
+            </tbody>
+            <tbody class="{$nodata_display|display}">
+                <tr>
+                    <td colspan="8" class="empty nodata">등록된 주소가 없습니다.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
