@@ -99,6 +99,23 @@ a:hover { text-decoration:none;
     cursor: pointer;
     color: #333;
 }
+.ease {
+    -webkit-transition-property: width, height, background-color, font-size, left, top, right, bottom, border, color, margin, opacity;
+    -webkit-transition-duration:0.5s;
+    -webkit-transition-timing-function: ease;
+    -ms-transition-property:  width, height, background-color, font-size, left, top, right, bottom, border, color, margin, opacity;
+    -ms-transition-duration:0.5s;
+    -ms-transition-timing-function: ease;
+    -ms-transition-property:  width, height, background-color, font-size, left, top, right, bottom, border, color, margin, opacity;
+    -ms-transition-duration:0.5s;
+    -ms-transition-timing-function: ease;
+    -o-transition-property: width, height, background-color, font-size, left, top, right, bottom, border, color, margin, opacity;
+    -o-transition-duration:0.5s;
+    -o-transition-timing-function: ease;
+    transition-property: width, height, background-color, font-size, left, top, right, bottom, border, color, margin, opacity;
+    transition-duration:0.5s;
+    transition-timing-function: ease;
+}
 p { word-break: keep-all; }
 :focus { text-decoration: none; outline: none; }
 a:active { text-decoration: none; outline: none; }

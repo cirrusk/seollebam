@@ -1,72 +1,29 @@
-.mainWrap { background-image: url('https://i.imgur.com/5IQDoUt.png?1'); background-position: center right; background-repeat: no-repeat; background-size: contain; padding: 15px 0; }
-.mainWrap .titleH1 { line-height: 1.5; }
-.mainWrap .titleP { line-height: 1.8; }
-.mainWrap .btn3 { margin-right: 5px; }
+#wraper .navbar { background-color: rgba(255,255,255,0); -webkit-transition: background-color 0.5s; transition: background-color 0.5s; }
+#wraper .navbar.scroll { background-color: #d6254a; -webkit-transition: background-color 0.5s; transition: background-color 0.5s; }
+#wraper #sub_container { margin-top: 0; }
 
-.itemWrap { border: 1px solid rgba(0,0,0,.2); margin-bottom: 50px; }
-.itemWrap .imgWrap { border-radius: 0; border: 0px; }
-.itemWrap .imgWrap img { width: 100%; }
-.itemWrap .textWrap { padding: 25px 0; text-align: center; }
-.itemWrap .textWrap .titleP { font-size: 14px; }
 
-.usIntro { background-color: rgba(0,0,0,.96); background-image: url('https://i.imgur.com/WYKYSoC.png'); background-position: center center; background-size: cover; background-repeat: no-repeat; text-align: center; }
-.usIntro .titleH1, .usIntro .titleH3, .usIntro .titleH6 { color: #fff; }
+.mainWrap { background-image: url("/img/mainBG.png"); color: #fff; padding-bottom: 150px; text-align: center; }
+.mainWrap h2 { padding-top: 270px; color: #fff; }
+.mainWrap h4 { padding: 70px 0 90px; color: #fff; font-size: 24px; line-height: 34px; }
+.mainWrap .btnLine { border: 4px solid #fff; color: #fff; font-size: 20px; }
 
-.usIcon { text-align: center; word-break: keep-all; }
-.usIcon img { width: 100%; }
-.usIcon .sideImg { padding: 0 18.5%; }
+.mainIntro { text-align: center; }
+.mainIntro h4 { padding: 20px 0; }
+.mainIntro img { width: 24px; }
 
-.usItem { text-align: center; word-break: keep-all; }
-.usItem img { width: 216px; height: 216px; border: 1px solid rgba(0,0,0,.2); }
+.mainInfo { background-image: url("/img/mainBG2.png"); }
+.mainInfo h2.titleHr { color: #fff; display: table; white-space: nowrap; }
+.mainInfo h2.titleHr:after { border-top: 2px solid #fff; content: ''; display: table-cell; position: relative; top: 36px; width: 45%; }
+.mainInfo h2.titleHr:after { left: 3%; }
 
-.usInfo { background-color: rgba(0,0,0,.96); background-image: url('https://i.imgur.com/bjuagiv.jpg'); background-position: center center; background-size: cover; text-align: center; }
-.usInfo .titleH3 { text-align: center; color: #fff; }
-.usInfo .usInfoArea { background-color: rgba(255,255,255,.64); padding: 65px 0 75px 60px; }
-.usInfo .usInfoArea .titleH6, .usInfo .usInfoArea .titleP { text-align: left; line-height: 1.6; word-break: keep-all; }
+.mainIcon { background-image: url("/img/mainBG3.png"); }
+.mainIcon h2.titleHr { color: #333; display: table; white-space: nowrap; }
+.mainIcon h2.titleHr:after { border-top: 2px solid #333; content: ''; display: table-cell; position: relative; top: 36px; width: 45%; }
+.mainIcon h2.titleHr:after { left: 3%; }
+.mainIcon img { width: 100%; }
 
-.companyInfo { background-image: url('/svg/logoWhite.svg'); background-position: center center; background-repeat: no-repeat; text-align: center; border-bottom: 1px solid rgba(0,0,0,.2); }
-.companyInfo .mainH1 { color: #d6254a; }
-
-.mapInfo { overflow: auto; }
-.mapInfo iframe { width: 100%; height: 400px; }
-.mapInfo .leftBorder { border-left: 1px solid rgba(0,0,0,.2); }
-.mapInfo .titleP { color: rgba(0,0,0,.6); padding: 0px 20px; }
-
-.container .titleWrap .col-xs-4 { padding: 0 5px; }
-.titleWrap .col-md-4 .titleP { word-break: keep-all; }
 
 @media screen and (max-width: 768px) {
-    .carousel-control.left, .carousel-control.right { background-image: none; color: #000; }
-    .carousel-inner .item { padding: 15px 10%; }
-    .carousel-indicators { bottom: 15px; }
-    .carousel-indicators .active { border: 1px solid #333; background-color: #333;  margin: 6px 7px; padding: 8px; }
-    .carousel-indicators li { border: 1px solid #888; margin: 7px; padding: 7px; }
-    
-    .mainWrap {  background-image: url('https://i.imgur.com/SWDKuLV.png'); background-position: center center; background-size: cover; }
-    .mainWrap .col-xs-12 { padding: 0; text-align: center; }
-    .mainWrap .titleH1 { color: #fff; font-size: 34px; }
-    .mainWrap .titleP { color: #fff; font-size: 16px; }
-    .mainWrap .btn3 { background-color: rgba(255,255,255,.0); border-radius: 0px; border: 2px solid; margin: 0 5px; padding: 8px 34px; font-size: 16px; font-weight: 500; }
-    
-    .mainItem { background-color: #f8f8f8; }
-    .itemWrap .textWrap { background-color: #fff; }
-    .itemWrap .textWrap .titleP { font-size: 12px; letter-spacing: -0.5px; }
-    
-    .usIcon .sideImg { padding: 0; }
-    .usIcon .lastImg { width: 50%; }
-    
-    .usItem img { width: 108px; height: 108px; }
-    
-    .usInfo .usInfoArea { background-color: rgba(255,255,255,.8); padding: 40px 15px 45px 25px; text-align: left; }
-    .usInfo .usInfoArea .titleH6 { font-weight: 600; display: inline; }
-    .usInfo .usInfoArea .titleP { display: inline; word-break: keep-all; }
-    
-    .companyInfo { border-bottom: 0px; }
-    .companyInfo .titleP { display: inline; }
-    
-    .mapInfo iframe { width: 100%; height: 200px; }
-    .mapInfo .leftBorder { border: 0px solid; }
-    .mapInfo .titleP { display: inline; padding: 0px 5px; }
-    
-    .titleWrap .col-md-4 .titleP { padding: 0; }
+
 }

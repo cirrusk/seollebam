@@ -7,7 +7,7 @@
 .navbar .navbar-user { width: 24px; }
 .basketCount { background-color: #fff; color: #d6254a; border-radius: 50%;position: relative; top: -7px; left: -7px; padding: 0 5px; font-size: 10px; font-weight: 500; }
 
-.subNav { width: 100%; height: 48px; position: fixed; top: 48px; background-color: #fff; border-bottom: 1px solid #8c8c8c; text-align: center; z-index: 1; padding: 8px; }
+.subNav { width: 100%; height: 48px; position: fixed; top: 48px; background-color: #fff; border-bottom: 1px solid #8c8c8c; text-align: center; z-index: 1; padding: 8px; z-index: 1050; }
 .subNav .back { width: 18px; float: left; margin: 6px 0; }
 .subNav .next { width: 18px; margin: 0px 25px 3px; }
 .subNav span { font-size: 16px; }
@@ -19,16 +19,6 @@
 #bottom .footerNav a { padding-right: 80px; }
 #bottom .footerInfo { padding-bottom: 20px; }
 #bottom .footerInfo span { color: #7f7f7f; padding-right: 30px; }
-
-
-/* MAIN */
-.mainWrap { background-color: #333; color: #fff; padding: 30px 0 120px; text-align: center; }
-.mainWrap h1 { color: #fff; padding: 75px 15px; }
-.mainWrap h6 { color: #fff; line-height: 35px; }
-.mainIcon { text-align: center; }
-.mainIcon img { width: 100%; }
-.mainIcon .sideImg { width: 63%; }
-.mainInfo { text-align: center; }
 
 
 /* MY PAGE */
@@ -106,8 +96,8 @@
 .btnBasic:hover { color: #fff; }
 .btnGray { background-color: #707070; color: #fff; font-size: 16px; }
 .btnGray:hover { color: #fff; }
-.btnLine { background-color: #fff; border: 1px solid #d6d6d6; color: #7f7f7f; font-size: 16px; font-weight: 500; }
-.btnLine:hover { border-color: #d6254a; }
+.btnLine { border: 1px solid #d6d6d6; color: #7f7f7f; font-size: 16px; font-weight: 500; }
+.btnLine:hover { border-color: #d6254a; color: #d6254a; }
 .btn1 { padding: 10px 135px; }
 .btn2 { padding: 10px 60px; }
 .btn3 { padding: 10px 28px; }

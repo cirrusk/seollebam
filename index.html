@@ -1,33 +1,95 @@
 <!--@layout(/layout/basic/layout.html)-->
+<!--@css(/css/module/mall/company.css)-->
+
+<script>
+    var myNav = document.getElementById("nav");
+
+    window.onscroll = function() {
+        "use strict";
+        if (document.body.scrollTop >= 280 || document.documentElement.scrollTop >= 280) {
+            myNav.classList.add("scroll");
+        } else {
+            myNav.classList.remove("scroll");
+        }
+    };
+</script>
+
+
 
 <div class="mainWrap">
-    <h1>은근한 야함이 좋다. 설렘용품 박스!</h1>
-    <h6>설레밤은 설레이는 밤을 위한 아이템 박스 서비스에요</h6>
-    <h6>부담스러운 성인용품이 아닌 설렘용품 어때요?</h6>
+    <h2>설레는 밤이 필요할 때. 설렘용품 박스!</h2>
+    <h4>
+        내가 야한 거 좋아하는 건<br>
+        전부 DNA 때문이다
+    </h4>
+    <a class="btnLine btn2" href="/product/customBox.html">설렘박스 만들기</a>
 </div>
 
-<div class="text-center py-5 my-5">
-    <a class="btnBasic btn1" href="/product/customBox.html">설렘박스 만들기</a>
+<div class="mainIntro p120">
+    <svg width="24" height="25" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 14.8">
+        <defs><style>.cls-1 { fill: #d6254a; }</style></defs>
+        <path class="cls-1" d="M5.9,8.4v6.4H0V9.7a13.251,13.251,0,0,1,1-6A8.275,8.275,0,0,1,5.1,0L6.5,2.2A5.253,5.253,0,0,0,4,4.3a7.555,7.555,0,0,0-.9,4.1Zm9.6,0v6.4H9.6V9.7c0-2.8.3-4.7,1-6A8.275,8.275,0,0,1,14.7,0L16,2.2a5.253,5.253,0,0,0-2.5,2.1,9.975,9.975,0,0,0-.9,4.1Z" transform="translate(0 0)"/>
+    </svg>
+    <h4>
+        음식도 영화도 데이트 코스도 매번 새로운데<br>
+        침실 레퍼토리는 왜 매번 똑같기만 하나요?
+    </h4>
+    <svg width="24" height="25" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 14.8">
+        <defs><style>.cls-1 { fill: #d6254a; }</style></defs>
+        <path class="cls-1" d="M5.9,8.4v6.4H0V9.7a13.251,13.251,0,0,1,1-6A8.275,8.275,0,0,1,5.1,0L6.5,2.2A5.253,5.253,0,0,0,4,4.3a7.555,7.555,0,0,0-.9,4.1Zm9.6,0v6.4H9.6V9.7c0-2.8.3-4.7,1-6A8.275,8.275,0,0,1,14.7,0L16,2.2a5.253,5.253,0,0,0-2.5,2.1,9.975,9.975,0,0,0-.9,4.1Z" transform="translate(16 14.8) rotate(180)"/>
+    </svg>
 </div>
 
-<div class="mainIcon container py-5 my-5">
-    <hr class="titleHr">
-    <h3 class="titleH4">왜 설레밤 박스를 선택하나요?</h3>
-    <div class="row justify-content-center">
-        <div class="col-md-2 col-5">
-            <img src="http://i.imgur.com/D0Tsaii.png"><p class="titleP">섹스 레퍼토리에<br>변화가 필요해</p>
+<div class="mainInfo p120">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-10 col-12">
+                <h2 class="titleHr">설렘용품이에요. 성인용품 아니에요!</h2>
+                <div class="p45"></div>
+                <h5 class="textWhite">
+                    새로운 시도는 해보고 싶은데 방법도 떠오르지 않고<br>
+                    성인용품은 과하고 부담스러워 선뜻 사용하기 어렵죠!
+                </h5>
+                <div class="p45"></div>
+                <h5 class="textWhite">
+                    그래서 깨끗하고 라이트한 어른들의 설렘용품을 만들었어요.<br>
+                    원하는 건 약간의 배려와 센스. 연인과의 교감이 아닐까요?
+                </h5>
+            </div>
         </div>
-        <div class="col-md-2 col-5">
-            <img src="http://i.imgur.com/s3Adj1c.png"><p class="titleP">기억에 남는 밤을<br>보내고 싶은 기념일</p>
+    </div>
+</div>
+
+<div class="mainIcon p120">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-10 col-12">
+                <h2 class="titleHr">설레밤은 집요하고 성실하게 야한 생각 중</h2>
+                <div class="p45"></div>
+                <h5>
+                    설레밤은 야한 핑계와 설렘용품을 고민할께요!<br>
+                    센스있는 선택과 므흣한 밤은 당신에게 맡길께요!
+                </h5>
+                <div class="p45"></div>
+
+            </div>
         </div>
-        <div class="col-md-2 col-5">
-            <img src="http://i.imgur.com/uL0w84D.png"><p class="titleP">새로운 섹스라이프에<br>도전하는 모험 정신 충만</p>
-        </div>
-        <div class="col-md-2 col-5">
-            <img src="http://i.imgur.com/DASJinz.png"><p class="titleP">야한 생각은 있는데<br>핑계가 필요했어</p>
-        </div>
-        <div class="col-md-2 col-5">
-            <img src="http://i.imgur.com/1DoXdHH.png"><p class="titleP">준비한 티 팍팍나는 포장<br>꺼낼 때 어색하지 않아</p>
+        <div class="row justify-content-center">
+            <div class="col-md-2 col-6">
+                <img src="http://i.imgur.com/D0Tsaii.png"><p class="text-center">섹스 레퍼토리에<br>변화가 필요해</p>
+            </div>
+            <div class="col-md-2 col-6">
+                <img src="http://i.imgur.com/s3Adj1c.png"><p class="text-center">기억에 남는 밤을<br>보내고 싶은 기념일</p>
+            </div>
+            <div class="col-md-2 col-6">
+                <img src="http://i.imgur.com/uL0w84D.png"><p class="text-center">새로운 섹스라이프에<br>도전하는 모험 정신 충만</p>
+            </div>
+            <div class="col-md-2 col-6">
+                <img src="http://i.imgur.com/DASJinz.png"><p class="text-center">야한 생각은 있는데<br>핑계가 필요했어</p>
+            </div>
+            <div class="col-md-2 col-6">
+                <img src="http://i.imgur.com/1DoXdHH.png"><p class="text-center">준비한 티 팍팍나는 포장<br>꺼낼 때 어색하지 않아</p>
+            </div>
         </div>
     </div>
 </div>
