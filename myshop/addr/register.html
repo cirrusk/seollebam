@@ -1,4 +1,5 @@
 <!--@layout(/layout/basic/layout.html)-->
+<!--@css(/css/module/myshop/addrRegister.css)-->
 
 <!-- iOS에서는 position:fixed 버그가 있음, 적용하는 사이트에 맞게 position:absolute 등을 이용하여 top,left값 조정 필요 -->
 <div id="layer" style="display:none;position:fixed;overflow:hidden;z-index:1;-webkit-overflow-scrolling:touch;background-color:#fff;">
@@ -78,52 +79,54 @@
     }
 </script>
 
-<div class="container">
-    <div class="p60"></div><div class="p10"></div>
-    <h3 class="subTitle">배송주소록 등록</h3>
-    <div class="p20"></div>
-
-    <div module="myshop_AddrRegister">
-        <!--@css(/css/module/myshop/addrRegister.css)-->
-        <!--
-            $return_url = /myshop/addr/list.html
-        -->
-        <div class="tableWrap">
-            <table border="1" summary="">
-                <tr>
-                    <th scope="row">배송지명</th>
-                    <td>{$form.ma_rcv_title}</td>
-                </tr>
-                <tr>
-                    <th scope="row">성명</th>
-                    <td>{$form.ma_rcv_name}</td>
-                </tr>
-                <tr>
-                    <th scope="row">주소</th>
-                    <td>
-                        {$form.address_zip1} {$form.address_zip2}
-                        <a href="#" onclick="sample4_execDaumPostcode()"><label>우편번호</label></a><br />
-                        {$form.address_addr1}<br />
-                        {$form.address_addr2}
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">휴대전화</th>
-                    <td>{$form.ma_rcv_mobile_no}</td>
-                </tr>
-                <tr>
-                    <th scope="row">일반전화</th>
-                    <td>{$form.ma_rcv_phone}</td>
-                </tr>
-            </table>
-        </div>
-
-        <div class="tableBtnArea">
-            <div class="p20"></div>
-            <a href="list.html" class="btnNormal btn3">취소하기</a>
-            <a href="#none" onclick="{$action_check}" class="btnBasic btn3">등록하기</a>
-        </div>
+<div class="subNav">
+    <div class="container">
+        <a href="javascript:history.back()"><img class="back" src="/svg/back.svg"></a>
+        <h4><span class="textGray">주소록 관리</span><img class="next" src="/svg/next.svg">주소록 등록</h4>
     </div>
 </div>
 
-<div class="p80"></div><div class="p40"></div><div class="p10"></div>
+<div class="container p120">
+    <div class="row justify-content-center" module="myshop_AddrRegister">
+    <!--
+        $return_url = /myshop/addr/list.html
+    -->
+    <div class="formWrap col-md-6">
+        <div class="titleWrap brBlack clearfix mb-4">
+            <h3 class="float-left">배송지 정보</h3>
+            <div class="float-right d-none d-sm-block">
+
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>배송지명</label>
+            {$form.ma_rcv_title}
+        </div>
+        <div class="form-group">
+            <label>성명</label>
+            {$form.ma_rcv_name}
+        </div>
+        <div class="form-group">
+            <label>주소</label>
+
+            {$form.address_zip1} {$form.address_zip2}
+            <a class="btnGray btn3" href="#" onclick="sample4_execDaumPostcode()">우편번호</a>
+            {$form.address_addr1}<br />
+            {$form.address_addr2}
+        </div>
+        <div class="form-group">
+            <label>휴대전화</label>
+            {$form.ma_rcv_mobile_no}
+        </div>
+        <div class="form-group">
+            <label>일반전화</label>
+            {$form.ma_rcv_phone}
+        </div>
+
+        <div class="btnWrap row mt-5">
+            <div class="col-6"><a href="list.html" class="btnGray btn100">취소하기</a></div>
+            <div class="col-6"><a href="#none" onclick="{$action_check}" class="btnBasic btn100">등록하기</a></div>
+        </div>
+    </div>
+</div>

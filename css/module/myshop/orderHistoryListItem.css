@@ -1,22 +1,13 @@
-.xans-myshop-orderhistorytab .subTitle { display: inline; float: left; color: rgba(0,0,0,.4); }
-.xans-myshop-orderhistorytab .subTitle:hover { transition: .5s; color: rgba(0,0,0,.9); }
-.xans-myshop-orderhistorytab .selected .subTitle { color: rgba(0,0,0,.9); }
+.xans-myshop-orderhistorytab .subTitle { color: #7f7f7f; }
+.xans-myshop-orderhistorytab .subTitle:hover { transition: .5s; color: #333; }
+.xans-myshop-orderhistorytab .selected .subTitle { color: #333; }
 
-.tableWrap { }
-.tableWrap table { }
-.tableWrap table th { width: 12%; text-align: center; word-break: keep-all; }
-.tableWrap table td { width: 12%; text-align: center; vertical-align: middle; word-break: keep-all; }
-.tableWrap table td.number { padding: 10px; }
-.tableWrap table td.thumb  { padding: 8px; }
-.tableWrap table th.product  { width: 16%; }
-.tableWrap table td.product  { width: 16%; font-weight: 500; }
-.tableWrap table td.thumb img { width:100%; border: 1px solid rgba(0,0,0,.2); border-radius: 5px; }
-.tableWrap table .btnSmall { display: block; margin: 5px 0; }
+.xans-myshop-orderhistorylistitem .tableWrap { margin-top: 70px; border-top: 0; }
+.xans-myshop-orderhistorylistitem .tableWrap table tr th { padding: 25px 0; }
+.xans-myshop-orderhistorylistitem .tableWrap table tr td { padding: 16px 0; }
+
 
 @media screen and (max-width: 768px) {
-    .xans-myshop-orderhistorylistitem .tableWrap table th { font-size: 11px; }
-    .xans-myshop-orderhistorylistitem .tableWrap table td { font-size: 11px; }
-    .xans-myshop-orderhistorylistitem .tableWrap table td.thumb { padding: 5px 0; }
-    .xans-myshop-orderhistorylistitem .tableWrap table th.quantity { width: 6%; }
-    .xans-myshop-orderhistorylistitem .tableWrap table td.quantity { width: 6%; }
+    .xans-myshop-orderhistorylistitem .tableWrap { margin-top: 50px; }
+
 }

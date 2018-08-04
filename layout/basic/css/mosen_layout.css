@@ -44,10 +44,14 @@
 .myPage .tableWrap .clearfix .float-left span { font-size: 18px; font-weight: 700; }
 .myPage .tableWrap .clearfix .float-right { font-size: 16px; color: #d6254a; }
 .myPage .tableWrap table { border-top: 2px solid #8c8c8c; }
-.myPage .tableWrap table th { padding: 10px 0; font-size: 16px; font-weight: 500; text-align: left; }
-.myPage .tableWrap table td { padding: 10px 0; text-align: right; }
+.myPage .tableWrap table th { padding: 10px 0; font-size: 16px; font-weight: 500; }
+.myPage .tableWrap table td { padding: 10px 0; }
 .myPage .tableWrap table td span { font-size: 16px; color: #7f7f7f; }
 .myPage .tableWrap table tr:last-child { border-bottom: 1px solid #8c8c8c; }
+
+.myPage .tableWrap .thumb { width: 100px; }
+.myPage .tableWrap .thumb img { width: 80px; }
+.myPage .tableWrap .product { vertical-align: top; }
 
 
 /* TITLE */
@@ -75,7 +79,7 @@
 .tableWrap { border-top: 2px solid #d6254a; }
 .tableWrap h4 { padding-bottom: 5px; }
 .tableWrap img { width: 100%; }
-.tableWrap table tr { border-bottom: 1px solid #ccc; }
+.tableWrap table tr { border-bottom: 1px solid #d6d6d6; }
 
 .quantity { display: flex; justify-content: flex-end; }
 .quantity .option_box_down { opacity: 0; border: 0; position: relative; top: -6px; left: -6px; }
