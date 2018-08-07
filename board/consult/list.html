@@ -4,7 +4,7 @@
 <div class="subNav">
     <div class="container">
         <a href="javascript:history.back()"><img class="back" src="/svg/back.svg"></a>
-        <h4>문의 내역</h4>
+        <h4>1:1 문의</h4>
     </div>
 </div>
 
@@ -21,8 +21,9 @@
             </p>
             <ul class="nav flex-column">
                 <li class="nav-item"><a class="nav-link" href="/myshop/order/list.html">주문내역 보기</a></li>
-                <li class="nav-item"><a class="nav-link" href="/myshop/board_list.html">나의 후기</a></li>
-                <li class="nav-item"><a class="nav-link active" href="/board/consult/list.html">문의 게시판</a></li>
+                <li class="nav-item"><a class="nav-link" href="/myshop/board_review.html">나의 후기</a></li>
+                <li class="nav-item"><a class="nav-link" href="/myshop/board_qna.html">상품 QnA</a></li>
+                <li class="nav-item"><a class="nav-link active" href="/board/consult/list.html">1:1 문의내역</a></li>
                 <li class="nav-item"><a class="nav-link" href="/myshop/addr/list.html">주소록 관리</a></li>
                 <li class="nav-item"><a class="nav-link" href="/member/modify.html">회원정보 수정</a></li>
             </ul>
@@ -38,27 +39,38 @@
                 </div>
             </div>
 
-            <table border="1" summary="">
-                <tbody module="board_list_9">
-                    <!--
-                        $login_page_url = /member/login.html
-                     -->
-                    <tr style="{$list_bg_color} {$list_char_color}">
-                        <td class="{$category_display|display}">{$category_name}</td>
-                        <td>{$member_icon}{$writer}</td>
-                        <td class="subject"><a href="/board/consult/read.html{$param_read}" style="{$link_color}">{$subject}</a> {$icon_new}{$icon_hit}{$icon_file}</td>
-                        <td class="txtLess {$date_display|display}" >{$write_date}</td>
-                        <td class="txtLess">{$consult}</td>
-                    </tr>
-                    <tr style="{$list_bg_color} {$list_char_color}">
-                        <td class="{$category_display|display}">{$category_name}</td>
-                        <td>{$member_icon}{$writer}</td>
-                        <td class="subject"><a href="/board/consult/read.html{$param_read}" style="{$link_color}">{$subject}</a> {$icon_new}{$icon_hit}{$icon_file}</td>
-                        <td class="txtLess {$date_display|display}" >{$write_date}</td>
-                        <td class="txtLess">{$consult}</td>
-                    </tr>
-                </tbody>
-            </table>
+            <p class="p45 textGray">
+                · 연락처 : seollebam@gmail.com<br>
+                · 고객센터 : 070-4212-5244<br>
+                · 상담시간 : 평일 10:00~17:00 (주말/공휴일 휴무)
+            </p>
+
+            <div class="tableWrap">
+                <table border="1" summary="">
+                    <tbody module="board_list_9">
+                        <tr>
+                            <td><a href="/product/detail.html{$param_product}" class="thumb">{$product_img}<span>{$product_name}</span></a></td>
+                            <td class="{$category_display|display}">{$category_name}</td>
+                            <td>
+                                <a href="#none" onclick="{$action_content_spread}">자세히 보기</a>
+                                <a href="/board/product/read.html{$param_read}">{$subject}</a>
+                            </td>
+                            <td>{$writer}</td>
+                            <td class="{$date_display|display}">{$write_date}</td>
+                        </tr>
+                        <tr>
+                            <td><a href="/product/detail.html{$param_product}" class="thumb">{$product_img}<span>{$product_name}</span></a></td>
+                            <td class="{$category_display|display}">{$category_name}</td>
+                            <td>
+                                <a href="#none" onclick="{$action_content_spread}">자세히 보기</a>
+                                <a href="/board/product/read.html{$param_read}">{$subject}</a>
+                            </td>
+                            <td>{$writer}</td>
+                            <td class="{$date_display|display}">{$write_date}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
             <div class="nodata {$empty_display|display}" module="board_empty_9">
                 {$empty_message}

@@ -21,8 +21,9 @@
             </p>
             <ul class="nav flex-column">
                 <li class="nav-item"><a class="nav-link active" href="/myshop/order/list.html">주문내역 보기</a></li>
-                <li class="nav-item"><a class="nav-link" href="/myshop/board_list.html">나의 후기</a></li>
-                <li class="nav-item"><a class="nav-link" href="/board/consult/list.html">문의 게시판</a></li>
+                <li class="nav-item"><a class="nav-link" href="/myshop/board_review.html">나의 후기</a></li>
+                <li class="nav-item"><a class="nav-link" href="/myshop/board_qna.html">상품 QnA</a></li>
+                <li class="nav-item"><a class="nav-link" href="/board/consult/list.html">1:1 문의내역</a></li>
                 <li class="nav-item"><a class="nav-link" href="/myshop/addr/list.html">주소록 관리</a></li>
                 <li class="nav-item"><a class="nav-link" href="/member/modify.html">회원정보 수정</a></li>
             </ul>
@@ -33,8 +34,8 @@
         <div class="col-md-7 myPage">
             <div class="container orderList">
                 <ul class="titleWrap brBlack row m-0" module="Myshop_OrderHistoryTab">
-                    <li class="{$tab_class} col-6 p-0"><a href="/myshop/order/list.html{$param}"><h3 class="subTitle">주문내역 정보</h3></a></li>
-                    <li class="{$tab_class_cs} col-6 p-0"><a href="/myshop/order/list.html{$param_cs}"><h3 class="subTitle text-right">취소/반품내역 정보</h3></a></li>
+                    <li class="{$tab_class} col-6 p-0"><a href="/myshop/order/list.html{$param}"><h4>전체내역 보기</h4></a></li>
+                    <li class="{$tab_class_cs} col-6 p-0"><a href="/myshop/order/list.html{$param_cs}"><h4>취소/반품만 보기</h4></a></li>
                 </ul>
 
                 <div class="tableWrap" module="Myshop_OrderHistoryListitem">

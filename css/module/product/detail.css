@@ -3,7 +3,7 @@
 .detailArea { margin-top: 96px; padding: 120px 0; }
 .detailArea .imgArea img { width: 100%; margin-top: 15px; }
 
-.totalArea { display: flex; flex-direction: column; }
+.totalArea { display: flex; flex-direction: column; margin-bottom: 50px; }
 .totalArea .clearfix { order: 1; }
 .totalArea #totalProducts { order: 2; margin-bottom: 15px; }
 .totalArea .xans-product-option { color: #7f7f7f; order: 3; margin-bottom: 15px; }

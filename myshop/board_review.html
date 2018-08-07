@@ -1,0 +1,90 @@
+<!--@layout(/layout/basic/layout.html)-->
+<!--@css(/css/module/myshop/boardPackage.css)-->
+
+<div class="subNav">
+    <div class="container">
+        <a href="javascript:history.back()"><img class="back" src="/svg/back.svg"></a>
+        <h4>상품 후기</h4>
+    </div>
+</div>
+
+<div class="container" module="myshop_benefit">
+    <div class="row p120">
+        <div id="sideNav" class="col-md-4 d-none d-sm-block">
+            <div class="titleWrap clearfix brRed">
+                <h3 class="float-left">{$member_name}님</h3>
+                <a module="Layout_stateLogon" class="btnGray btnSmall float-right" href="{$action_logout}">로그아웃</a>
+            </div>
+            <p class="p45">
+                환영합니다! {$member_name}님.<br>
+                회원님은 적립금을 {$dc_price_mileage} 적립 중이십니다.
+            </p>
+            <ul class="nav flex-column">
+                <li class="nav-item"><a class="nav-link" href="/myshop/order/list.html">주문내역 보기</a></li>
+                <li class="nav-item"><a class="nav-link active" href="/myshop/board_review.html">나의 후기</a></li>
+                <li class="nav-item"><a class="nav-link" href="/myshop/board_qna.html">상품 QnA</a></li>
+                <li class="nav-item"><a class="nav-link" href="/board/consult/list.html">1:1 문의내역</a></li>
+                <li class="nav-item"><a class="nav-link" href="/myshop/addr/list.html">주소록 관리</a></li>
+                <li class="nav-item"><a class="nav-link" href="/member/modify.html">회원정보 수정</a></li>
+            </ul>
+        </div>
+
+        <div class="col-md-1"></div>
+
+        <div class="col-md-7 myPage" module="myshop_BoardPackage">
+            <div module="myshop_boardListHead">
+                <p>분류 선택 {$board_sort}</p>
+            </div>
+            <div class="boardList" module="myshop_boardList">
+                <!--
+                    $count = 10
+                    $relation_post = yes
+                -->
+                <table border="1" summary="">
+                <caption>게시물 관리 목록</caption>
+                <colgroup module="board_listheader_1002">
+                    <col style="width:70px;" />
+                    <col style="width:135px;" />
+                    <col style="width:auto;" />
+                    <col style="width:84px;" />
+                    <col style="width:80px;" />
+                    <col style="width:55px;" />
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th scope="col">번호</th>
+                        <th scope="col">분류</th>
+                        <th scope="col">제목</th>
+                        <th scope="col">작성자</th>
+                        <th scope="col">작성일</th>
+                        <th scope="col">조회</th>
+                    </tr>
+                </thead>
+                <tbody class="{$nodata_display|display}">
+                    <tr>
+                        <td colspan="6" class="noData">게시물이 없습니다.</td>
+                    </tr>
+                </tbody>
+                <tbody class="{$list_display|display}">
+                    <tr>
+                        <td>{$no}</td>
+                        <td class="category"><a href="{$board_list_url}">{$board_category}</a></td>
+                        <td class="subject">{$icon_re}{$icon_lock} <a href="{$board_read_url}">{$subject}</a> {$icon_new}{$icon_file}{$comment_count}</td>
+                        <td>{$writer}</td>
+                        <td class="txtLess">{$write_date}</td>
+                        <td class="txtLess">{$hit_count}</td>
+                    </tr>
+                    <tr>
+                        <td>{$no}</td>
+                        <td class="category"><a href="{$board_list_url}">{$board_category}</a></td>
+                        <td class="subject">{$icon_re}{$icon_lock} <a href="{$board_read_url}">{$subject}</a> {$icon_new}{$icon_file}{$comment_count}</td>
+                        <td>{$writer}</td>
+                        <td class="txtLess">{$write_date}</td>
+                        <td class="txtLess">{$hit_count}</td>
+                    </tr>
+                </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

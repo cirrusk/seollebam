@@ -86,9 +86,9 @@
                 <div class="moreInfo">
                     <div class="clearfix infoHeader">
                         <h5 class="float-left">배송 좋아요</h5>
-                        <a class="float-right" data-toggle="collapse" data-target="#collapse2">펼쳐보기</a>
+                        <a class="float-right" data-toggle="collapse" data-target="#collapse1">펼쳐보기</a>
                     </div>
-                    <div id="collapse2" class="collapse infoBody">
+                    <div id="collapse1" class="collapse infoBody">
                         <div class="row">
                             <div class="col-3"><h6>가능해요</h6></div>
                             <div class="col-9">
@@ -171,35 +171,28 @@
     <div module="product_additional">
         <!--@js(/js/module/product/review.js)-->
         <!--@js(/js/module/product/qna.js)-->
-        <!-- 상품상세정보 -->
-        <div id="prdDetail">
+        <!--@css(/css/module/board/listPackage.css)-->
+
+        <div id="prdDetail"><!-- 상품상세정보 -->
             {$product_detail}
-        </div>
-        <!-- //상품상세정보 -->
-        <!-- 상품사용후기 -->
-        <div id="prdReview" class="container p120">
+        </div><!-- //상품상세정보 -->
+
+
+        <div id="prdReview" class="container p120"><!-- 상품사용후기 -->
             <div class="titleWrap brBlack clearfix">
                 <h2 class="float-left">상품 후기</h2>
                 <a class="btnBasic btn2 float-right" href="{$review_write}">후기쓰기</a>
             </div>
-            <div module="product_review">
+            <div class="boardWrap" module="product_review">
                 <table border="1" class="board {$list_display|display}">
                     <tbody>
                         <tr>
-                            <td>{$no}</td>
-                            <td class="subject">{$icon_re}{$icon_lock} <a href="/product/provider/review_read.xml{$param_read}">{$subject}</a> {$icon_new}{$icon_hit}{$icon_file}{$comment_count}</td>
-                            <td>{$member_icon} {$writer}</td>
-                            <td class="txtLess">{$write_date|date:Y-m-d}</td>
-                            <td class="txtLess">{$hit_count}</td>
-                            <td class="{$use_point_display|display}"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/board/ico_point{$point_count}.gif" alt="{$point_count}점"></td>
+                            <td class="subject"><a href="/product/provider/review_read.xml{$param_read}">{$writer}</a></td>
+                            <td class="starTd {$use_point_display|display}"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/board/ico_point{$point_count}.gif" alt="{$point_count}점"></td>
                         </tr>
                         <tr>
-                            <td>{$no}</td>
-                            <td class="subject">{$icon_re}{$icon_lock} <a href="/product/provider/review_read.xml{$param_read}">{$subject}</a> {$icon_new}{$icon_hit}{$icon_file}{$comment_count}</td>
-                            <td>{$member_icon} {$writer}</td>
-                            <td class="txtLess">{$write_date|date:Y-m-d}</td>
-                            <td class="txtLess">{$hit_count}</td>
-                            <td class="{$use_point_display|display}"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/board/ico_point{$point_count}.gif" alt="{$point_count}점"></td>
+                            <td class="subject"><a href="/product/provider/review_read.xml{$param_read}">{$writer}</a></td>
+                            <td class="starTd {$use_point_display|display}"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/board/ico_point{$point_count}.gif" alt="{$point_count}점"></td>
                         </tr>
                     </tbody>
                 </table>
@@ -215,10 +208,10 @@
                 </ol>
                 <p class="right"><a href="{$param_next}"></a></p>
             </div>
-        </div>
-        <!-- //상품사용후기 -->
-        <!-- 상품 Q&A -->
-        <div id="prdQnA" class="container p120">
+        </div><!-- //상품사용후기 -->
+
+
+        <div id="prdQnA" class="container p120"><!-- 상품 Q&A -->
             <div class="titleWrap brBlack clearfix">
                 <h2 class="float-left">상품 문의</h2>
                 <a class="btnBasic btn2 float-right" href="{$qna_write}">문의하기</a>
