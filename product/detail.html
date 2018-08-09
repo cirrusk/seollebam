@@ -187,27 +187,27 @@
                 <table border="1" class="board {$list_display|display}">
                     <tbody>
                         <tr>
-                            <td class="subject"><a href="/product/provider/review_read.xml{$param_read}">{$writer}</a></td>
+                            <td class="subject"><a href="/product/provider/review_read.xml{$param_read}">{$writer|cut:2,****}</a></td>
                             <td class="starTd {$use_point_display|display}"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/board/ico_point{$point_count}.gif" alt="{$point_count}점"></td>
                         </tr>
                         <tr>
-                            <td class="subject"><a href="/product/provider/review_read.xml{$param_read}">{$writer}</a></td>
+                            <td class="subject"><a href="/product/provider/review_read.xml{$param_read}">{$writer|cut:2,****}</a></td>
                             <td class="starTd {$use_point_display|display}"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/board/ico_point{$point_count}.gif" alt="{$point_count}점"></td>
                         </tr>
                     </tbody>
                 </table>
             </div>
-            <div module="product_reviewpaging" class="paginate">
-                <p class="left"><a href="{$param_before}"></a></p>
-                <ol>
-                    <li><a href="{$param}"class="{$param_class}">{$no}</a></li>
-                    <li><a href="{$param}"class="{$param_class}">{$no}</a></li>
-                    <li><a href="{$param}"class="{$param_class}">{$no}</a></li>
-                    <li><a href="{$param}"class="{$param_class}">{$no}</a></li>
-                    <li><a href="{$param}"class="{$param_class}">{$no}</a></li>
-                </ol>
-                <p class="right"><a href="{$param_next}"></a></p>
-            </div>
+            <nav module="product_reviewpaging">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item"><a class="page-link" href="{$param_before}">&laquo;</a></li>
+                    <li class="page-item"><a href="{$param}" class="page-link {$param_class}">{$no}</a></li>
+                    <li class="page-item"><a href="{$param}" class="page-link {$param_class}">{$no}</a></li>
+                    <li class="page-item"><a href="{$param}" class="page-link {$param_class}">{$no}</a></li>
+                    <li class="page-item"><a href="{$param}" class="page-link {$param_class}">{$no}</a></li>
+                    <li class="page-item"><a href="{$param}" class="page-link {$param_class}">{$no}</a></li>
+                    <li class="page-item"><a class="page-link" href="{$param_next}">&raquo;</a></li>
+                </ul>
+            </nav>
         </div><!-- //상품사용후기 -->
 
 
@@ -238,17 +238,17 @@
                     </tbody>
                 </table>
             </div>
-            <div module="product_qnapaging" class="paginate">
-                <p class="left"><a href="{$param_before}"></a></p>
-                <ol>
-                    <li><a href="{$param}"class="{$param_class}">{$no}</a></li>
-                    <li><a href="{$param}"class="{$param_class}">{$no}</a></li>
-                    <li><a href="{$param}"class="{$param_class}">{$no}</a></li>
-                    <li><a href="{$param}"class="{$param_class}">{$no}</a></li>
-                    <li><a href="{$param}"class="{$param_class}">{$no}</a></li>
-                </ol>
-                <p class="right"><a href="{$param_next}"></a></p>
-            </div>
+            <nav module="product_qnapaging">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item"><a class="page-link" href="{$param_before}">&laquo;</a></li>
+                    <li class="page-item"><a href="{$param}" class="page-link {$param_class}">{$no}</a></li>
+                    <li class="page-item"><a href="{$param}" class="page-link {$param_class}">{$no}</a></li>
+                    <li class="page-item"><a href="{$param}" class="page-link {$param_class}">{$no}</a></li>
+                    <li class="page-item"><a href="{$param}" class="page-link {$param_class}">{$no}</a></li>
+                    <li class="page-item"><a href="{$param}" class="page-link {$param_class}">{$no}</a></li>
+                    <li class="page-item"><a class="page-link" href="{$param_next}">&raquo;</a></li>
+                </ul>
+            </nav>
         </div><!-- //상품Q&A -->
     </div>
 </div>

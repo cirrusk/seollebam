@@ -1,10 +1,10 @@
-.boardWrap table tr td { text-align: center; }
+.boardWrap table tr.xans-record- th { padding: 15px 0; }
+.boardWrap table tr.xans-record- td { padding: 15px 0; border-top: 1px solid #d6d6d6; border-bottom: 1px solid #d6d6d6; }
 .boardWrap table tr td.subject { text-align: left; font-size: 16px; font-weight: 500; }
 .boardWrap table tr td.starTd { text-align: right; }
 .boardWrap table tr td.starTd img { width: auto; }
-.boardWrap table tr td .view { padding: 30px 0; border-bottom: 1px solid #d6d6d6; }
-.boardWrap table tr td .view img { width: 150px; padding: 15px 0; }
-.boardWrap table tr td .view .btnArea { display: none; }
+.boardWrap table tr td .view { padding: 15px 0; text-align: center; }
+.boardWrap table tr td .view img { padding: 15px 0; }
 
 @media screen and (max-width: 768px) {
     .boardWrap table tr td.subject { width: 50%; float: left; font-size: 14px; }
