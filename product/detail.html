@@ -1,5 +1,6 @@
 <!--@layout(/layout/basic/layout.html)-->
 <!--@css(/css/module/product/detail.css)-->
+<!--@css(/layout/basic/css/board.css)-->
 
 <script>
     $(document).ready(function() {
@@ -184,15 +185,17 @@
                 <a class="btnBasic btn2 float-right" href="{$review_write}">후기쓰기</a>
             </div>
             <div class="boardWrap" module="product_review">
-                <table border="1" class="board {$list_display|display}">
+                <table border="1" class="{$list_display}">
                     <tbody>
                         <tr>
-                            <td class="subject"><a href="/product/provider/review_read.xml{$param_read}">{$writer|cut:2,****}</a></td>
-                            <td class="starTd {$use_point_display|display}"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/board/ico_point{$point_count}.gif" alt="{$point_count}점"></td>
+                            <td class="subject"><a href="/product/provider/review_read.xml{$param_read}"><h5>{$writer|cut:2,****}</h5></a></td>
+                            <td></td>
+                            <td class="text-right {$use_point_display|display}"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/board/ico_point{$point_count}.gif" alt="{$point_count}점"></td>
                         </tr>
                         <tr>
-                            <td class="subject"><a href="/product/provider/review_read.xml{$param_read}">{$writer|cut:2,****}</a></td>
-                            <td class="starTd {$use_point_display|display}"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/board/ico_point{$point_count}.gif" alt="{$point_count}점"></td>
+                            <td class="subject"><a href="/product/provider/review_read.xml{$param_read}"><h5>{$writer|cut:2,****}</h5></a></td>
+                            <td></td>
+                            <td class="text-right {$use_point_display|display}"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/board/ico_point{$point_count}.gif" alt="{$point_count}점"></td>
                         </tr>
                     </tbody>
                 </table>
@@ -216,24 +219,18 @@
                 <h2 class="float-left">상품 문의</h2>
                 <a class="btnBasic btn2 float-right" href="{$qna_write}">문의하기</a>
             </div>
-            <div module="product_qna">
-                <table border="1" summary="" class="board {$list_display|display}">
+            <div class="boardWrap" module="product_qna">
+                <table border="1" summary="" class="{$list_display|display}">
                     <tbody>
                         <tr>
-                            <td>{$no}</td>
-                            <td>{$category_name}</td>
-                            <td class="subject">{$icon_re}{$icon_lock} <a href="/product/provider/review_read.xml{$param_read}">{$subject}</a> {$icon_new}{$icon_hit}{$icon_file}{$comment_count}</td>
-                            <td>{$member_icon} {$writer}</td>
-                            <td class="txtLess">{$write_date|date:Y-m-d}</td>
-                            <td class="txtLess">{$hit_count}</td>
+                            <td class="textGray" style="width: 20%;">{$category_name}</td>
+                            <td class="subject"><a href="/product/provider/review_read.xml{$param_read}"><h5>{$writer|cut:2,****}</h5></a></td>
+                            <td class="text-right">{$write_date|date:Y-m-d}</td>
                         </tr>
                         <tr>
-                            <td>{$no}</td>
-                            <td>{$category_name}</td>
-                            <td class="subject">{$icon_re}{$icon_lock} <a href="/product/provider/review_read.xml{$param_read}">{$subject}</a> {$icon_new}{$icon_hit}{$icon_file}{$comment_count}</td>
-                            <td>{$member_icon} {$writer}</td>
-                            <td class="txtLess">{$write_date|date:Y-m-d}</td>
-                            <td class="txtLess">{$hit_count}</td>
+                            <td class="textGray" style="width: 20%;">{$category_name}</td>
+                            <td class="subject"><a href="/product/provider/review_read.xml{$param_read}"><h5>{$writer|cut:2,****}</h5></a></td>
+                            <td class="text-right">{$write_date|date:Y-m-d}</td>
                         </tr>
                     </tbody>
                 </table>

@@ -1,5 +1,5 @@
 <!--@layout(/layout/basic/layout.html)-->
-<!--@css(/css/module/board/writePackage.css)-->
+<!--@css(/layout/basic/css/board.css)-->
 
 <script>
     $(document).ready(function(){
@@ -14,13 +14,17 @@
 
             $(this).siblings('.upload-name').val(filename);
         });
+
+        if ($('.form-group').is(':empty')){
+            $('.reviewOnly').removeClass('displaynone');
+        }
     });
 </script>
 
 <div class="subNav">
     <div class="container">
         <a href="javascript:history.back()"><img class="back" src="/svg/back.svg"></a>
-        <h4>후기 작성</h4>
+        <h4>게시물 작성</h4>
     </div>
 </div>
 
@@ -35,20 +39,22 @@
         -->
         <div class="col-md-10">
             <div class="titleWrap brBlack">
-                <h2>후기 작성하기</h2>
+                <h2>게시물 작성하기</h2>
             </div>
 
-            <span class="m45 textGray d-block">
-                구매하신 상품에 대해 후기를 남겨주세요.<br>
-                상품후기의 작성은 결제완료 하신 후 부터 가능합니다.<br>
-                사진과 함께 후기를 남겨주시면 2,000원을 적립해드립니다.<br>
-                사진없이 20자 이상 후기를 남겨주시면 1,000원을 적립해드립니다.<br>
-                주문취소/환불한 상품의 후기와 적립금은 자동 삭제됩니다.
-            </span>
+            <div class="p25">
+                <span class="textGray reviewOnly {$config.use_attach|display}">
+                    구매하신 상품에 대해 후기를 남겨주세요.<br>
+                    상품후기의 작성은 결제완료 하신 후 부터 가능합니다.<br>
+                    사진과 함께 후기를 남겨주시면 2,000원을 적립해드립니다.<br>
+                    사진없이 20자 이상 후기를 남겨주시면 1,000원을 적립해드립니다.<br>
+                    주문취소/환불한 상품의 후기와 적립금은 자동 삭제됩니다.
+                </span>
+            </div>
 
             <div class="boardWrap">
                 <table border="1" summary="">
-                    <tbody>
+                    <tbody class="reviewOnly {$config.use_attach|display}">
                         <tr class="{$config.is_use_point|display}">
                             <th scope="row">평점</th>
                             <td class="starTd">
@@ -88,9 +94,11 @@
                                 <input type="file" id="ex_filename3" class="upload-hidden" name="attach_file[]">
                             </td>
                         </tr>
+                    <tbody>
+                    </tbody>
                         <tr>
                             <th scope="row">상품평</th>
-                            <td class="content">{$form.content}</td>
+                            <td class="content"><div class="form-group">{$form.board_category}</div>{$form.content}</td>
                         </tr>
                         <tr>
                             <th scope="row">비밀번호</th>
