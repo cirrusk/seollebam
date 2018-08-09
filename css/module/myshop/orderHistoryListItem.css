@@ -1,13 +1,32 @@
-.xans-myshop-orderhistorytab .subTitle { color: #7f7f7f; }
-.xans-myshop-orderhistorytab .subTitle:hover { transition: .5s; color: #333; }
-.xans-myshop-orderhistorytab .selected .subTitle { color: #333; }
+.xans-myshop-benefit .orderList .xans-myshop-orderhistorytab .nav-item { width: auto; background-color: #f0f0f0; color: #8c8c8c; border: 0 !important; border-radius: 0; padding: 5px 0; font-size: 16px; font-weight: 500; }
+.xans-myshop-benefit .orderList .xans-myshop-orderhistorytab .nav-item.selected { background-color: #fff; color: #333; }
 
-.xans-myshop-orderhistorylistitem .tableWrap { margin-top: 70px; border-top: 0; }
-.xans-myshop-orderhistorylistitem .tableWrap table tr th { padding: 25px 0; }
-.xans-myshop-orderhistorylistitem .tableWrap table tr td { padding: 16px 0; }
-
+.orderWrap tr:first-child { border-top: 1px solid #8c8c8c; }
+.orderWrap tr { border-bottom: 1px solid #d6d6d6; }
+.orderWrap tr:last-child { border-bottom: 1px solid #8c8c8c; }
+.orderWrap tr th { display: block; width: 100%; padding-top: 50px; padding-bottom: 0; border-top: 1px solid #8c8c8c; }
+.orderWrap tr th .clearfix { padding: 10px 0; }
+.orderWrap tr th .clearfix span { margin-top: 5px; }
+.orderWrap tr th .borderDiv { padding: 25px 0; border-top: 2px solid #8c8c8c; border-bottom: 1px solid #d6d6d6; }
+.orderWrap tr th .borderDiv .float-right a { color: #d6254a; padding-left: 5px; font-weight: 400; }
+.orderWrap tr th .borderDiv .float-right a:hover { font-weight: 500; }
+.orderWrap tr td { display: block; width: 100%; }
+.orderWrap tr td.product .thumb { padding: 10px 30px 10px 0; }
+.orderWrap tr td.product .thumb img { width: 80px; }
+.orderWrap tr td.product .info { padding: 5px 0; }
+.orderWrap tr td.product .info h6 { margin-bottom: 5px; }
+.orderWrap tr td.product .info .option { font-size: 12px; margin-top: 10px; }
+.orderWrap tr td.product .float-right svg { margin-top: 35px; }
 
 @media screen and (max-width: 768px) {
-    .xans-myshop-orderhistorylistitem .tableWrap { margin-top: 50px; }
+    .myPage .titleWrap h3 { font-size: 28px !important; font-weight: 700; }
+    .xans-myshop-benefit .orderList .xans-myshop-orderhistorytab .nav-item .nav-link { font-size: 12px; padding: 5px 0; }
 
+    .orderWrap tr th .clearfix { padding: 5px 0; }
+    .orderWrap tr th .clearfix span { margin-top: 5px; }
+    .orderWrap tr th .borderDiv { padding: 15px 0; }
+    .orderWrap tr td.product .info { padding: 10px 0; }
+    .orderWrap tr td.product .info h6 { font-size: 14px; }
+
+    .orderWrap tr th .borderDiv .float-right a { font-size: 12px; }
 }
