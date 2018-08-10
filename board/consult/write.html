@@ -11,10 +11,11 @@
 <div class="container p120" module="board_writePackage_9">
     <div class="row justify-content-center" module="board_write_9">
         <div class="col-md-6" >
-            <div class="boardWrap">
-                <div class="titleWrap brBlack mb-4">
-                    <h3>1:1 문의 등록하기</h3>
-                </div>
+            <div class="titleWrap brBlack d-none d-sm-block">
+                <h3>1:1 문의 등록하기</h3>
+            </div>
+
+            <div class="boardWrap mt-3">
                 <!--
                     $write_success_url = /board/consult/list.html
                     $login_page_url = /member/login.html
@@ -25,28 +26,6 @@
                         <tr><td>{$form.board_category} {$form.subject} {$form.notice} {$form.is_post}</td></tr>
                         <tr><th>내용</th></tr>
                         <tr><td>{$form.content}</td></tr>
-                    </tbody>
-                    <tbody class="{$config.use_attach|display}">
-                        <tr>
-                            <th scope="row">첨부파일1</th>
-                            <td>{$form.attach_file}</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">첨부파일2</th>
-                            <td>{$form.attach_file}</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">첨부파일3</th>
-                            <td>{$form.attach_file}</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">첨부파일4</th>
-                            <td>{$form.attach_file}</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">첨부파일5</th>
-                            <td>{$form.attach_file}</td>
-                        </tr>
                     </tbody>
                 </table>
             </div>
