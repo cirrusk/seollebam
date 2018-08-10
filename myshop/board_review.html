@@ -32,57 +32,31 @@
         <div class="col-md-1"></div>
 
         <div class="col-md-7 myPage" module="myshop_BoardPackage">
-            <div module="myshop_boardListHead">
-                <p>분류 선택 {$board_sort}</p>
-            </div>
-            <div class="boardList" module="myshop_boardList">
+            <div class="boardWrap" module="myshop_boardList">
                 <!--
                     $count = 10
                     $relation_post = yes
                 -->
                 <table border="1" summary="">
-                <caption>게시물 관리 목록</caption>
-                <colgroup module="board_listheader_1002">
-                    <col style="width:70px;" />
-                    <col style="width:135px;" />
-                    <col style="width:auto;" />
-                    <col style="width:84px;" />
-                    <col style="width:80px;" />
-                    <col style="width:55px;" />
-                </colgroup>
-                <thead>
-                    <tr>
-                        <th scope="col">번호</th>
-                        <th scope="col">분류</th>
-                        <th scope="col">제목</th>
-                        <th scope="col">작성자</th>
-                        <th scope="col">작성일</th>
-                        <th scope="col">조회</th>
-                    </tr>
-                </thead>
-                <tbody class="{$nodata_display|display}">
-                    <tr>
-                        <td colspan="6" class="noData">게시물이 없습니다.</td>
-                    </tr>
-                </tbody>
-                <tbody class="{$list_display|display}">
-                    <tr>
-                        <td>{$no}</td>
-                        <td class="category"><a href="{$board_list_url}">{$board_category}</a></td>
-                        <td class="subject">{$icon_re}{$icon_lock} <a href="{$board_read_url}">{$subject}</a> {$icon_new}{$icon_file}{$comment_count}</td>
-                        <td>{$writer}</td>
-                        <td class="txtLess">{$write_date}</td>
-                        <td class="txtLess">{$hit_count}</td>
-                    </tr>
-                    <tr>
-                        <td>{$no}</td>
-                        <td class="category"><a href="{$board_list_url}">{$board_category}</a></td>
-                        <td class="subject">{$icon_re}{$icon_lock} <a href="{$board_read_url}">{$subject}</a> {$icon_new}{$icon_file}{$comment_count}</td>
-                        <td>{$writer}</td>
-                        <td class="txtLess">{$write_date}</td>
-                        <td class="txtLess">{$hit_count}</td>
-                    </tr>
-                </tbody>
+                    <tbody class="{$list_display|display}">
+                        <tr>
+                            <td class="category"><a href="{$board_list_url}">{$board_category}</a></td>
+                            <td class="subject">{$icon_re}{$icon_lock} <a href="{$board_read_url}">{$subject}</a> {$icon_new}{$icon_file}{$comment_count}</td>
+                            <td>{$writer}</td>
+                            <td class="txtLess">{$write_date}</td>
+                        </tr>
+                        <tr>
+                            <td class="category"><a href="{$board_list_url}">{$board_category}</a></td>
+                            <td class="subject">{$icon_re}{$icon_lock} <a href="{$board_read_url}">{$subject}</a> {$icon_new}{$icon_file}{$comment_count}</td>
+                            <td>{$writer}</td>
+                            <td class="txtLess">{$write_date}</td>
+                        </tr>
+                    </tbody>
+                    <tbody class="{$nodata_display|display}">
+                        <tr>
+                            <td colspan="6" class="nodata">게시물이 없습니다.</td>
+                        </tr>
+                    </tbody>
                 </table>
             </div>
         </div>

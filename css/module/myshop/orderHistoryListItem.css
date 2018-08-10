@@ -1,32 +1,40 @@
 .xans-myshop-benefit .orderList .xans-myshop-orderhistorytab .nav-item { width: auto; background-color: #f0f0f0; color: #8c8c8c; border: 0 !important; border-radius: 0; padding: 5px 0; font-size: 16px; font-weight: 500; }
 .xans-myshop-benefit .orderList .xans-myshop-orderhistorytab .nav-item.selected { background-color: #fff; color: #333; }
 
-.orderWrap tr:first-child { border-top: 1px solid #8c8c8c; }
-.orderWrap tr { border-bottom: 1px solid #d6d6d6; }
-.orderWrap tr:last-child { border-bottom: 1px solid #8c8c8c; }
-.orderWrap tr th { display: block; width: 100%; padding-top: 50px; padding-bottom: 0; border-top: 1px solid #8c8c8c; }
-.orderWrap tr th .clearfix { padding: 10px 0; }
-.orderWrap tr th .clearfix span { margin-top: 5px; }
-.orderWrap tr th .borderDiv { padding: 25px 0; border-top: 2px solid #8c8c8c; border-bottom: 1px solid #d6d6d6; }
-.orderWrap tr th .borderDiv .float-right a { color: #d6254a; padding-left: 5px; font-weight: 400; }
-.orderWrap tr th .borderDiv .float-right a:hover { font-weight: 500; }
-.orderWrap tr td { display: block; width: 100%; }
-.orderWrap tr td.product .thumb { padding: 10px 30px 10px 0; }
-.orderWrap tr td.product .thumb img { width: 80px; }
-.orderWrap tr td.product .info { padding: 5px 0; }
-.orderWrap tr td.product .info h6 { margin-bottom: 5px; }
-.orderWrap tr td.product .info .option { font-size: 12px; margin-top: 10px; }
-.orderWrap tr td.product .float-right svg { margin-top: 35px; }
+.blockWrap { border-top: 2px solid #8c8c8c; border-bottom: 1px solid #8c8c8c; }
+.blockWrap tr { border-bottom: 1px solid #d6d6d6; }
+.blockWrap tr th { display: block; width: 100%; padding-top: 50px; padding-bottom: 0; }
+.blockWrap tr th .clearfix { padding: 10px 0; }
+.blockWrap tr th .clearfix h4 { font-weight: 700; }
+.blockWrap tr th .clearfix span { margin-top: 5px; }
+.blockWrap tr th .borderDiv { padding: 25px 0; border-top: 2px solid #8c8c8c; border-bottom: 1px solid #d6d6d6; }
+.blockWrap tr th .borderDiv .float-right a { color: #d6254a; padding-left: 5px; font-weight: 400; }
+.blockWrap tr th .borderDiv .float-right a:hover { font-weight: 500; }
+.blockWrap tr td { display: block; width: 100%; }
+.blockWrap tr td.product .thumb { padding: 10px 30px 10px 0; }
+.blockWrap tr td.product .thumb img { width: 80px; }
+.blockWrap tr td.product .info { padding: 5px 0; }
+.blockWrap tr td.product .info h6 { margin-bottom: 5px; }
+.blockWrap tr td.product .info .option { font-size: 12px; margin-top: 10px; }
+.blockWrap tr td.product .float-right svg { margin-top: 35px; }
+
+
+.blockWrap tr#content_view td { padding: 30px 15px; background-color: #f0f0f0; border-bottom: 1px solid #d6d6d6; }
+.blockWrap tr#content_view td p { color: #7f7f7f; }
+
+
+
 
 @media screen and (max-width: 768px) {
     .myPage .titleWrap h3 { font-size: 28px !important; font-weight: 700; }
+    .xans-myshop-orderhistorytab { margin-top: 25px; }
     .xans-myshop-benefit .orderList .xans-myshop-orderhistorytab .nav-item .nav-link { font-size: 12px; padding: 5px 0; }
 
-    .orderWrap tr th .clearfix { padding: 5px 0; }
-    .orderWrap tr th .clearfix span { margin-top: 5px; }
-    .orderWrap tr th .borderDiv { padding: 15px 0; }
-    .orderWrap tr td.product .info { padding: 10px 0; }
-    .orderWrap tr td.product .info h6 { font-size: 14px; }
+    .blockWrap tr th .clearfix { padding: 5px 0; }
+    .blockWrap tr th .clearfix span { margin-top: 5px; }
+    .blockWrap tr th .borderDiv { padding: 15px 0; }
+    .blockWrap tr td.product .info { padding: 10px 0; }
+    .blockWrap tr td.product .info h6 { font-size: 14px; }
 
-    .orderWrap tr th .borderDiv .float-right a { font-size: 12px; }
+    .blockWrap tr th .borderDiv .float-right a { font-size: 12px; }
 }

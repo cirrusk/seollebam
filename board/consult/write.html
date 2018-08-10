@@ -1,71 +1,60 @@
 <!--@layout(/layout/basic/layout.html)-->
-<div class="container" module="board_writePackage_9">
-    <!--@css(/css/module/board/writePackage_9.css)-->
-    <div class="p40"></div>
-    <h1 class="titleH1">1:1 맞춤상담</h1>
-    <div class="p10"></div>
-    <p class="titleP desktopOnly">1:1 맞춤상담 게시판입니다.</p>
-    <div class="p40"></div><div class="p10"></div>
+<!--@css(/layout/basic/css/board.css)-->
 
-    <div module="board_write_9">
-        <!--
-            $write_success_url = /board/consult/list.html
-            $login_page_url = /member/login.html
-        -->
-        <div class="boardWrite tableWrap">
-            <table border="1" summary="">
-            <caption>1:1 맞춤상담 글쓰기 폼</caption>
-
-            <tbody>
-                <tr class="first">
-                    <th scope="row">제목</th>
-                    <td>{$form.board_category} {$form.subject} {$form.notice} {$form.is_post}</td>
-                </tr>
-                <tr>
-                    <td colspan="2" class="write">
-                        {$form.content}
-                    </td>
-                </tr>
-                <tr class="captcha {$config.use_captcha_write|display}">
-                    <th scope="row">자동발송금지<br />보안문자</th>
-                    <td>
-                        {$captcha_image}
-                        <p>{$form.captcha} <img src="http://img.echosting.cafe24.com/skin/base_ko_KR/board/ico_warning.gif" alt="" /> 영문, 숫자 조합을 공백없이 입력하세요(대소문자구분)</p>
-                    </td>
-                </tr>
-            </tbody>
-
-            <tbody class="{$config.use_attach|display}">
-                <tr>
-                    <th scope="row">첨부파일1</th>
-                    <td>{$form.attach_file}</td>
-                </tr>
-                <tr>
-                    <th scope="row">첨부파일2</th>
-                    <td>{$form.attach_file}</td>
-                </tr>
-                <tr>
-                    <th scope="row">첨부파일3</th>
-                    <td>{$form.attach_file}</td>
-                </tr>
-                <tr>
-                    <th scope="row">첨부파일4</th>
-                    <td>{$form.attach_file}</td>
-                </tr>
-                <tr>
-                    <th scope="row">첨부파일5</th>
-                    <td>{$form.attach_file}</td>
-                </tr>
-            </tbody>
-            </table>
-        </div>
-        <div class="btnArea">
-            <div class="p20"></div>
-            <span class="left {$config.is_admin|display}"><a href="#none" class="btn_style01 btn_white" onclick="{$action_comment_admin}">관리자답변보기</a></span>
-            <a href="/board/consult/list.html{$param_list}" class="btnNormal btn3">취소</a>
-            <a href="#none" onclick="{$action_write}" class="btnBasic btn3">등록</a>
-        </div>
+<div class="subNav">
+    <div class="container">
+        <a href="javascript:history.back()"><img class="back" src="/svg/back.svg"></a>
+        <h4><span class="textGray">1:1 문의</span><img class="next" src="/svg/next.svg">문의 등록</h4>
     </div>
 </div>
 
-<div class="p80"></div><div class="p40"></div><div class="p10"></div>
+<div class="container p120" module="board_writePackage_9">
+    <div class="row justify-content-center" module="board_write_9">
+        <div class="col-md-6" >
+            <div class="boardWrap">
+                <div class="titleWrap brBlack mb-4">
+                    <h3>1:1 문의 등록하기</h3>
+                </div>
+                <!--
+                    $write_success_url = /board/consult/list.html
+                    $login_page_url = /member/login.html
+                -->
+                <table border="1" summary="">
+                    <tbody>
+                        <tr><th>제목</th></tr>
+                        <tr><td>{$form.board_category} {$form.subject} {$form.notice} {$form.is_post}</td></tr>
+                        <tr><th>내용</th></tr>
+                        <tr><td>{$form.content}</td></tr>
+                    </tbody>
+                    <tbody class="{$config.use_attach|display}">
+                        <tr>
+                            <th scope="row">첨부파일1</th>
+                            <td>{$form.attach_file}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">첨부파일2</th>
+                            <td>{$form.attach_file}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">첨부파일3</th>
+                            <td>{$form.attach_file}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">첨부파일4</th>
+                            <td>{$form.attach_file}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">첨부파일5</th>
+                            <td>{$form.attach_file}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="btnWrap text-right my-4">
+                <a href="/board/consult/list.html{$param_list}" class="btnGray btn2">돌아가기</a>
+                <a href="#none" onclick="{$action_write}" class="btnBasic btn2 ml-3">등록하기</a>
+            </div>
+        </div>
+    </div>
+</div>

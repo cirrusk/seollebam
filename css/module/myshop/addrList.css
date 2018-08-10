@@ -5,5 +5,6 @@
     .myPage .xans-myshop-addrlist .tableWrap { margin-top: 50px;  }
     .xans-myshop-addrlist .tableWrap table tr td span { font-size: 12px; }
     .container .p120 { padding: 0; }
+    .nodata { margin-top: 75px; border-top: 2px solid #8c8c8c; }
     .btnWrap { margin: 30px 0; }
 }

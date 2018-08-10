@@ -33,7 +33,7 @@
 
         <div class="col-md-7 myPage">
             <div class="orderList">
-                <div class="titleWrap brBlack">
+                <div class="titleWrap brBlack d-none d-sm-block">
                     <h3>주문내역 보기</h3>
                 </div>
 
@@ -55,7 +55,7 @@
                     <!--
                         $login_url = /member/login.html
                     -->
-                    <table class="orderWrap" border="1" summary="">
+                    <table class="blockWrap" border="1" summary="">
                         <tbody class="{$list_display|display}">
                             <tr>
                                 <th class="{$display_column|display}">
@@ -144,7 +144,7 @@
                         </tbody>
                         <tbody class="{$empty_display|display}">
                             <tr>
-                                <td colspan="7" class="empty"><div class="p20"></div>주문 내역이 없습니다<div class="p20"></div></td>
+                                <td class="nodata" style="border-top: 1px solid #8c8c8c;">주문 내역이 없습니다</td>
                             </tr>
                         </tbody>
                     </table>

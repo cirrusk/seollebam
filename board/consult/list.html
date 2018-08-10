@@ -1,5 +1,20 @@
 <!--@layout(/layout/basic/layout.html)-->
-<!--@css(/css/module/board/listPackage.css)-->
+<!--@css(/css/module/myshop/orderHistoryListItem.css)-->
+
+<script>
+    $(document).ready(function() {
+        $('.detailA').click();
+
+        $('.consult').each(function(){
+            var result = $(this).text();
+            if (result == 'X'){
+                $(this).text('답변 대기 중');
+            } else {
+                $(this).text('답변 완료');
+            }
+        });
+    });
+</script>
 
 <div class="subNav">
     <div class="container">
@@ -33,51 +48,59 @@
 
         <div class="col-md-7 myPage" module="Board_ListPackage_9">
             <div class="titleWrap clearfix brBlack d-none d-sm-block" module="board_ButtonList_9">
-                <h3 class="float-left">문의 게시판</h3>
+                <h3 class="float-left">1:1 문의내역</h3>
                 <div class="float-right d-none d-sm-block">
-                    <a href="/board/consult/write.html{$param_write}" onclick="{$action_func_join}" class="btnBasic btnSmall {$write_display|display}">문의 작성하기</a>
+                    <a href="/board/consult/write.html{$param_write}" onclick="{$action_func_join}" class="btnBasic btnSmall {$write_display|display}">문의 작성</a>
                 </div>
             </div>
 
-            <p class="p45 textGray">
-                · 연락처 : seollebam@gmail.com<br>
-                · 고객센터 : 070-4212-5244<br>
-                · 상담시간 : 평일 10:00~17:00 (주말/공휴일 휴무)
-            </p>
+            <div class="p45">
+                <span class="textGray">
+                    · 연락처 : seollebam@gmail.com<br>
+                    · 고객센터 : 070-4212-5244<br>
+                    · 상담시간 : 평일 10:00~17:00 (주말/공휴일 휴무)
+                </span>
+            </div>
 
-            <div class="tableWrap">
-                <table border="1" summary="">
+            <div class="boardWrap">
+                <table class="blockWrap" style="border: 0;">
                     <tbody module="board_list_9">
                         <tr>
-                            <td><a href="/product/detail.html{$param_product}" class="thumb">{$product_img}<span>{$product_name}</span></a></td>
-                            <td class="{$category_display|display}">{$category_name}</td>
-                            <td>
-                                <a href="#none" onclick="{$action_content_spread}">자세히 보기</a>
-                                <a href="/board/product/read.html{$param_read}">{$subject}</a>
-                            </td>
-                            <td>{$writer}</td>
-                            <td class="{$date_display|display}">{$write_date}</td>
+                            <th style="padding-top: 15px;">
+                                <div class="clearfix">
+                                    <h4 class="float-left"><a href="/board/product/read.html{$param_read}">{$subject}</a></h4>
+                                    <span class="float-right textGray consult">{$consult}</span>
+                                </div>
+                                <div class="borderDiv clearfix py-2">
+                                    <p class="float-left">{$writer}</p>
+                                    <span class="float-right textGray m-0">{$write_date}</span>
+                                </div>
+                                <a href="#none" onclick="{$action_content_spread}" class="displaynone detailA">펼치기</a>
+                            </th>
                         </tr>
                         <tr>
-                            <td><a href="/product/detail.html{$param_product}" class="thumb">{$product_img}<span>{$product_name}</span></a></td>
-                            <td class="{$category_display|display}">{$category_name}</td>
-                            <td>
-                                <a href="#none" onclick="{$action_content_spread}">자세히 보기</a>
-                                <a href="/board/product/read.html{$param_read}">{$subject}</a>
-                            </td>
-                            <td>{$writer}</td>
-                            <td class="{$date_display|display}">{$write_date}</td>
+                            <th>
+                                <div class="clearfix">
+                                    <h4 class="float-left"><a href="/board/product/read.html{$param_read}">{$subject}</a></h4>
+                                    <span class="float-right textGray consult">{$consult}</span>
+                                </div>
+                                <div class="borderDiv clearfix py-2">
+                                    <p class="float-left">{$writer}</p>
+                                    <span class="float-right textGray m-0">{$write_date}</span>
+                                </div>
+                                <a href="#none" onclick="{$action_content_spread}" class="displaynone detailA">펼치기</a>
+                            </th>
                         </tr>
                     </tbody>
                 </table>
             </div>
 
-            <div class="nodata {$empty_display|display}" module="board_empty_9">
+            <div class="nodata {$empty_display|display}" module="board_empty_9" style="border-top: 2px solid #8c8c8c;">
                 {$empty_message}
             </div>
 
-            <div module="board_ButtonList_9" class="btnWrap d-md-none {$write_display|display}">
-                <a href="/board/consult/write.html{$param_write}" class="btnBasic btn100 {$write_display|display}">글쓰기</a>
+            <div module="board_ButtonList_9" class="btnWrap d-md-none my-5 {$write_display|display}">
+                <a href="/board/consult/write.html{$param_write}" class="btnBasic btn100 {$write_display|display}">문의 작성하기</a>
             </div>
         </div>
     </div>
