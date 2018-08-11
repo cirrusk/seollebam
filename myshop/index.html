@@ -1,9 +1,7 @@
 <!--@layout(/layout/basic/layout.html)-->
-<!--@css(/css/module/myshop/orderHistoryListItem.css)-->
 
 <script>
     $(document).ready(function() {
-        $(".orderListWrap").load("/myshop/order/list.html .orderList");
     });
 </script>
 
@@ -16,17 +14,19 @@
 
 <div class="container" module="myshop_benefit">
     <div class="row p120">
-        <div id="sideNav" class="col-md-4 d-none d-sm-block">
+        <div id="sideNav" class="col-md-4">
             <div class="titleWrap clearfix brRed">
                 <h3 class="float-left">{$member_name}님</h3>
                 <a module="Layout_stateLogon" class="btnGray btnSmall float-right" href="{$action_logout}">로그아웃</a>
             </div>
+
             <p class="p45">
                 환영합니다! {$member_name}님.<br>
                 회원님은 적립금을 {$dc_price_mileage} 적립 중이십니다.
             </p>
+            
             <ul class="nav flex-column">
-                <li class="nav-item"><a class="nav-link active" href="/myshop/order/list.html">주문내역 보기</a></li>
+                <li class="nav-item"><a class="nav-link" href="/myshop/order/list.html">주문내역 보기</a></li>
                 <li class="nav-item"><a class="nav-link" href="/myshop/board_review.html">나의 후기</a></li>
                 <li class="nav-item"><a class="nav-link" href="/myshop/board_qna.html">상품 QnA</a></li>
                 <li class="nav-item"><a class="nav-link" href="/board/consult/list.html">1:1 문의내역</a></li>
@@ -37,8 +37,19 @@
 
         <div class="col-md-1"></div>
 
-        <div class="col-md-7 orderListWrap myPage">
+        <div class="col-md-7 myPage">
+            <div class="titleWrap brBlack">
+                <h3>고객 센터</h3>
+            </div>
 
+            <div class="row p45">
+                <h6 class="col-3 py-1">문의시간</h6><span class="col-9 py-1 textGray">AM 10:00 ~ PM 05:00 (월요일~금요일)</span>
+                <h6 class="col-3 py-1">전화번호</h6><span class="col-9 py-1 textGray">070-4214-5244</span>
+                <h6 class="col-3 py-1">E-MAIL</h6><span class="col-9 py-1 textGray">seollebam@gmail.com</span>
+                <h6 class="col-3 py-1">주소지</h6><span class="col-9 py-1 textGray">서울시 관악구 봉천동 41-207, 301호</span>
+            </div>
+
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3165.885933771333!2d126.95110397342572!3d37.48701803645315!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c9f87450ea3dd%3A0xd7ee3e94242cc725!2z7ISc7Jq47Yq567OE7IucIOq0gOyVheq1rCDrtInsspzrj5kgNDEtMjA3!5e0!3m2!1sko!2skr!4v1534024183389" frameborder="0" allowfullscreen></iframe>
         </div>
     </div>
 </div>

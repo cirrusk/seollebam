@@ -41,6 +41,7 @@
     .detailArea { display: none; }
 
     /* PRODUCT AREA */
+    .totalArea { margin-bottom: 0px; }
     #prdDetail { margin-top: 0px; }
     #prdDetail .wDetail { display: none; }
     #prdDetail .mDetail { display: block; width: 100%; }
