@@ -34,6 +34,7 @@
 .boardWrap table tr td .seLayout #content_toolbar_container,
 .boardWrap table tr td .seLayout #content_seResize { display: none; }
 
+
 /* BOARD PAGINATE */
 .pagination { padding-top: 50px; }
 .pagination .page-item .page-link { color: #333; }

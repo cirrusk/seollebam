@@ -1,6 +1,22 @@
 <!--@layout(/layout/basic/layout.html)-->
 <!--@css(/layout/basic/css/board.css)-->
 
+<script>
+    $(document).ready(function(){
+        var fileTarget = $('.fileTd .upload-hidden');
+
+        fileTarget.change(function(){
+            if(window.FileReader){
+                var filename = $(this)[0].files[0].name;
+            } else {
+                var filename = $(this).val();
+            }
+
+            $(this).siblings('.upload-name').val(filename);
+        });
+    });
+</script>
+
 <div class="subNav">
     <div class="container">
         <a href="javascript:history.back()"><img class="back" src="/svg/back.svg"></a>
@@ -21,11 +37,43 @@
                     $login_page_url = /member/login.html
                 -->
                 <table border="1" summary="">
+                    <tbody class="{$config.use_attach|display}">
+                        <tr>
+                            <th scope="row">사진 올리기 1</th>
+                            <td class="fileTd">
+                                <input class="upload-name" value="파일선택" disabled="disabled">
+                                <label class="btnGray btn3" for="ex_filename1">업로드</label>
+                                <input type="file" id="ex_filename1" class="upload-hidden" name="attach_file[]">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">사진 올리기 2</th>
+                            <td class="fileTd">
+                                <input class="upload-name" value="파일선택" disabled="disabled">
+
+                                <label class="btnGray btn3" for="ex_filename2">업로드</label>
+                                <input type="file" id="ex_filename2" class="upload-hidden" name="attach_file[]">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">사진 올리기 3</th>
+                            <td class="fileTd">
+                                <input class="upload-name" value="파일선택" disabled="disabled">
+
+                                <label class="btnGray btn3" for="ex_filename3">업로드</label>
+                                <input type="file" id="ex_filename3" class="upload-hidden" name="attach_file[]">
+                            </td>
+                        </tr>
+                    </tbody>
                     <tbody>
-                        <tr><th>제목</th></tr>
-                        <tr><td>{$form.board_category} {$form.subject} {$form.notice} {$form.is_post}</td></tr>
-                        <tr><th>내용</th></tr>
-                        <tr><td>{$form.content}</td></tr>
+                        <tr>
+                            <th>제목</th>
+                            <td>{$form.board_category} {$form.subject} {$form.notice} {$form.is_post}</td>
+                        </tr>
+                        <tr>
+                            <th>내용</th>
+                            <td>{$form.content}</td></tr>
+                        </tr>
                     </tbody>
                 </table>
             </div>
