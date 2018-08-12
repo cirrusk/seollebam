@@ -61,7 +61,17 @@
                                 <th class="{$display_column|display}">
                                     <div class="clearfix">
                                         <a href="detail.html{$param_detail}" class="float-left"><h4>주문번호: {$order_id}</h4></a>
-                                        <span class="float-right textGray">{$status}</span>
+                                        <div class="float-right mt-1">
+                                            <a href="detail.html{$param_detail}">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 20 20">
+                                                    <defs><style>.cls-1 { fill: #d6254a; }.cls-2 { fill: none; }</style></defs>
+                                                    <g id="그룹_1099" data-name="그룹 1099" transform="translate(-867.5 -146)">
+                                                        <path id="패스_36" data-name="패스 36" class="cls-1" d="M8,10.383l-8-8L2.383,0,8,5.617,13.617,0,16,2.383Z" transform="translate(872.5 164) rotate(-90)"/>
+                                                        <rect id="사각형_1465" data-name="사각형 1465" class="cls-2" width="20" height="20" transform="translate(867.5 146)"/>
+                                                    </g>
+                                                </svg>
+                                            </a>
+                                        </div>
                                     </div>
                                     <div class="borderDiv clearfix">
                                         <h5 class="textGray float-left">주문일자: {$order_date}</h5>
@@ -70,10 +80,6 @@
                                             <a href="cancel.html{$param_apply}" class="{$apply_cancel_display|display}">취소신청</a>
                                             <a href="exchange.html{$param_apply}" class="{$apply_exchange_display|display}">교환신청</a>
                                             <a href="return.html{$param_apply}" class="{$apply_return_display|display}">반품신청</a>
-                                            <a href="/board/product/write.html{$param_postscript}" class="{$postscript_display|display}">구매후기</a>
-                                            <a href="#none" class="{$withdraw_cancel_display|display}" onclick="{$action_withdraw_cancel}">취소철회</a>
-                                            <a href="#none" class="{$withdraw_exchange_display|display}" onclick="{$action_withdraw_exchange}">교환철회</a>
-                                            <a href="#none" class="{$withdraw_return_display|display}" onclick="{$action_withdraw_return}">반품철회</a>
                                         </div>
                                     </div>
                                 </th>
@@ -86,24 +92,29 @@
                                         <span class="textGray">{$product_price} / {$quantity}EA</span><br>
                                         <p class="option textGray {$option_display|display}">{$option_str}</p>
                                     </div>
-                                    <div class="float-right">
-                                        <a href="/product/detail.html{$param}">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 20 20">
-                                                <defs><style>.cls-1 { fill: #d6254a; }.cls-2 { fill: none; }</style></defs>
-                                                <g id="그룹_1099" data-name="그룹 1099" transform="translate(-867.5 -146)">
-                                                    <path id="패스_36" data-name="패스 36" class="cls-1" d="M8,10.383l-8-8L2.383,0,8,5.617,13.617,0,16,2.383Z" transform="translate(872.5 164) rotate(-90)"/>
-                                                    <rect id="사각형_1465" data-name="사각형 1465" class="cls-2" width="20" height="20" transform="translate(867.5 146)"/>
-                                                </g>
-                                            </svg>
-                                        </a>
-                                    </div>
+                                    <span class="float-right textGray my-3 py-3">
+                                        {$status}<br>
+                                        <a href="#none" class="textRed {$withdraw_cancel_display|display}" onclick="{$action_withdraw_cancel}">취소철회</a>
+                                        <a href="#none" class="textRed {$withdraw_exchange_display|display}" onclick="{$action_withdraw_exchange}">교환철회</a>
+                                        <a href="#none" class="textRed {$withdraw_return_display|display}" onclick="{$action_withdraw_return}">반품철회</a>
+                                    </span>
                                 </td>
                             </tr>
                             <tr>
                                 <th class="{$display_column|display}">
                                     <div class="clearfix">
                                         <a href="detail.html{$param_detail}" class="float-left"><h4>주문번호: {$order_id}</h4></a>
-                                        <span class="float-right textGray">{$status}</span>
+                                        <div class="float-right mt-1">
+                                            <a href="detail.html{$param_detail}">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 20 20">
+                                                    <defs><style>.cls-1 { fill: #d6254a; }.cls-2 { fill: none; }</style></defs>
+                                                    <g id="그룹_1099" data-name="그룹 1099" transform="translate(-867.5 -146)">
+                                                        <path id="패스_36" data-name="패스 36" class="cls-1" d="M8,10.383l-8-8L2.383,0,8,5.617,13.617,0,16,2.383Z" transform="translate(872.5 164) rotate(-90)"/>
+                                                        <rect id="사각형_1465" data-name="사각형 1465" class="cls-2" width="20" height="20" transform="translate(867.5 146)"/>
+                                                    </g>
+                                                </svg>
+                                            </a>
+                                        </div>
                                     </div>
                                     <div class="borderDiv clearfix">
                                         <h5 class="textGray float-left">주문일자: {$order_date}</h5>
@@ -112,10 +123,6 @@
                                             <a href="cancel.html{$param_apply}" class="{$apply_cancel_display|display}">취소신청</a>
                                             <a href="exchange.html{$param_apply}" class="{$apply_exchange_display|display}">교환신청</a>
                                             <a href="return.html{$param_apply}" class="{$apply_return_display|display}">반품신청</a>
-                                            <a href="/board/product/write.html{$param_postscript}" class="{$postscript_display|display}">구매후기</a>
-                                            <a href="#none" class="{$withdraw_cancel_display|display}" onclick="{$action_withdraw_cancel}">취소철회</a>
-                                            <a href="#none" class="{$withdraw_exchange_display|display}" onclick="{$action_withdraw_exchange}">교환철회</a>
-                                            <a href="#none" class="{$withdraw_return_display|display}" onclick="{$action_withdraw_return}">반품철회</a>
                                         </div>
                                     </div>
                                 </th>
@@ -128,17 +135,12 @@
                                         <span class="textGray">{$product_price} / {$quantity}EA</span><br>
                                         <p class="option textGray {$option_display|display}">{$option_str}</p>
                                     </div>
-                                    <div class="float-right">
-                                        <a href="/product/detail.html{$param}">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 20 20">
-                                                <defs><style>.cls-1 { fill: #d6254a; }.cls-2 { fill: none; }</style></defs>
-                                                <g id="그룹_1099" data-name="그룹 1099" transform="translate(-867.5 -146)">
-                                                    <path id="패스_36" data-name="패스 36" class="cls-1" d="M8,10.383l-8-8L2.383,0,8,5.617,13.617,0,16,2.383Z" transform="translate(872.5 164) rotate(-90)"/>
-                                                    <rect id="사각형_1465" data-name="사각형 1465" class="cls-2" width="20" height="20" transform="translate(867.5 146)"/>
-                                                </g>
-                                            </svg>
-                                        </a>
-                                    </div>
+                                    <span class="float-right textGray my-3 py-3">
+                                        {$status}<br>
+                                        <a href="#none" class="textRed {$withdraw_cancel_display|display}" onclick="{$action_withdraw_cancel}">취소철회</a>
+                                        <a href="#none" class="textRed {$withdraw_exchange_display|display}" onclick="{$action_withdraw_exchange}">교환철회</a>
+                                        <a href="#none" class="textRed {$withdraw_return_display|display}" onclick="{$action_withdraw_return}">반품철회</a>
+                                    </span>
                                 </td>
                             </tr>
                         </tbody>

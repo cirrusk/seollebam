@@ -1,28 +1,26 @@
 <!--@layout(/layout/basic/layout.html)-->
-<div class="path">
-    <span>현재 위치</span>
-    <ol>
-        <li><a href="/">홈</a></li>
-        <li><a href="/myshop/index.html">마이쇼핑</a></li>
-        <li title="현재 위치"><strong>반품신청</strong></li>
-    </ol>
+<!--@css(/css/module/myshop/orderHistoryApply.css)-->
+
+<div class="subNav">
+    <div class="container">
+        <a href="javascript:history.back()"><img class="back" src="/svg/back.svg"></a>
+        <h4><span class="textGray">주문 내역</span><img class="next" src="/svg/next.svg">반품 신청</h4>
+    </div>
 </div>
 
-<div class="titleArea">
-    <h2>반품신청</h2>
-</div>
-<div class="tab_myshop_menu" module="myshop_main">
-    <ul>
-        <!--@import(/layout/basic/myshop_menu.html)-->
-    </ul>    
-</div>
-<div module="Myshop_OrderHistoryApplyReturn">
-    <!--@css(/css/module/myshop/orderHistoryApplyReturn.css)-->
+<div class="container p120">
+    <div class="row justify-content-center" module="Myshop_OrderHistoryApplyReturn">
+        <div class="col-md-8">
+            <div class="titleWrap brBlack mb-3">
+                <h3>반품 신청</h3>
+            </div>
 
-    <!--@import(import_cs.html)+반품-->
+            <!--@import(import_cs.html)+반품-->
 
-    <div class="btnArea">
-        <a href="#none" onclick="OrderApply.apply(); return false;"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/myshop/btn_order_return2.gif" alt="반품신청" /></a>
-        <a href="/myshop/order/list.html"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/myshop/btn_order_prev.gif" alt="이전페이지" /></a>
+            <div class="btnWrap text-right my-4">
+                <a href="/myshop/order/list.html" class="btnGray btn2">돌아가기</a>
+                <a href="#none" onclick="OrderApply.apply(); return false;" class="btnBasic btn2 ml-3">반품 신청</a>
+            </div>
+        </div>
     </div>
 </div>

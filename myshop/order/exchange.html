@@ -1,28 +1,26 @@
 <!--@layout(/layout/basic/layout.html)-->
-<div class="container">
-    <div class="p40"></div>
-    <h1 class="titleH1">교환신청</h1>
-    <div class="p20 mp0"></div>
-    <p class="mainP">
-        <div class="tab_myshop_menu" module="myshop_main">
-            <ul>
-                <!--@import(/layout/basic/myshop_menu.html)-->
-            </ul>    
-        </div>
-    </p>
-    <div class="p40"></div><div class="p10"></div>
-    
-    <div module="Myshop_OrderHistoryApplyExchange">
-        <!--@css(/css/module/myshop/orderHistoryApplyExchange.css)-->
-        <!--@import(import_cs.html)+교환-->
-    </div>
-    
-    <div class="tableBtnArea">
-        <div class="p20 mp20"></div>
-        <a href="/myshop/order/list.html" class="btnNormal btn3">이전페이지</a>
-        <a href="#none" class="btnBasic btn3" onclick="OrderApply.apply(); return false;">교환신청</a>
-        <div class="p20 mp20"></div>
+<!--@css(/css/module/myshop/orderHistoryApply.css)-->
+
+<div class="subNav">
+    <div class="container">
+        <a href="javascript:history.back()"><img class="back" src="/svg/back.svg"></a>
+        <h4><span class="textGray">주문 내역</span><img class="next" src="/svg/next.svg">교환 신청</h4>
     </div>
 </div>
 
-<div class="p80"></div><div class="p40"></div><div class="p10"></div>
+<div class="container p120">
+    <div class="row justify-content-center" module="Myshop_OrderHistoryApplyExchange">
+        <div class="col-md-8">
+            <div class="titleWrap brBlack mb-3">
+                <h3>교환 신청</h3>
+            </div>
+
+            <!--@import(import_cs.html)+교환-->
+
+            <div class="btnWrap text-right my-4">
+                <a href="/myshop/order/list.html" class="btnGray btn2">돌아가기</a>
+                <a href="#none" onclick="OrderApply.apply(); return false;" class="btnBasic btn2 ml-3">교환 신청</a>
+            </div>
+        </div>
+    </div>
+</div>

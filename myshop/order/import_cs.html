@@ -1,77 +1,35 @@
-<div class="title">
-    <h3 class="subTitle">상품정보</h3>
-    <div class="p20"></div>
+<div class="titleWrap mt-5">
+    <h4>상품 정보</h4>
 </div>
 <div class="tableWrap">
     <table border="1" summary="">
-        <thead>
-            <tr>
-                <th scope="col" class="number">주문일자<br />[주문번호]</th>
-                <th scope="col" class="thumb desktopOnly">상품사진</th>
-                <th scope="col" class="product">상품정보</th>
-                <th scope="col" class="quantity">수량</th>
-                <th scope="col" class="price">상품구매<span class="textDivider"></span>금액</th>
-                <th scope="col" class="state">주문처리<span class="textDivider"></span>상태</th>
-            </tr>
-        </thead>
         <tbody module="Myshop_products">
             <tr>
-                <td {$rowspan} class="number {$display_column|display}">
-                    {$order_date_ymd}
-                    <p><a href="detail.html{$param_detail}" class="line">[{$order_id}]</a></p>
-                </td>
-                <td class="thumb desktopOnly">
-                    <a href="/product/detail.html{$param_product}"><img src="{$product_image}" onerror="this.src='http://img.echosting.cafe24.com/thumb/img_product_small.gif';" alt="" /></a>
-                </td>
+                <td>{$form.checkbox}</td>
+                <td class="thumb"><img src="{$product_image}" /></td>
                 <td class="product">
-                    <p><a href="/product/detail.html{$param_product}"><strong>{$product_name}</strong></a></p>
+                    <h6>{$product_name}</h6>
+                    <div class="pt-1 pb-2">{$item_price_raw_front} / {$quantity}EA</div>
                     <div class="option {$option_display|display}">{$option_str}</div>
-                    <ul class="option" module="Myshop_optionSet">
-                        <li><strong>{$product_name}</strong>{$option_str} ({$qty}개)</li>
-                        <li><strong>{$product_name}</strong>{$option_str} ({$qty}개)</li>
-                    </ul>
-                    <p class="free {$card_installment_display|display}">무이자할부 상품</p>
                 </td>
-                <td class="quantity">{$quantity}</td>
-                <td class="price">
-                    <strong>{$item_price_raw_front_head}{$item_price_raw_front}</strong>{$item_price_raw_front_tail}
-                    <p class="{$item_price_ref_display|display}">{$item_price_ref}</p>
-                </td>
-                <td class="state">{$cur_state}</td>
+                <td class="state text-right">{$cur_state}</td>
             </tr>
             <tr>
-                <td {$rowspan} class="number {$display_column|display}">
-                    {$order_date_ymd}
-                    <p><a href="detail.html{$param_detail}" class="line">[{$order_id}]</a></p>
-                </td>
-                <td class="thumb desktopOnly">
-                    <a href="/product/detail.html{$param_product}"><img src="{$product_image}" onerror="this.src='http://img.echosting.cafe24.com/thumb/img_product_small.gif';" alt="" /></a>
-                </td>
+                <td>{$form.checkbox}</td>
+                <td class="thumb"><img src="{$product_image}" /></td>
                 <td class="product">
-                    <p><a href="/product/detail.html{$param_product}"><strong>{$product_name}</strong></a></p>
+                    <h6>{$product_name}</h6>
+                    <div class="pt-1 pb-2">{$item_price_raw_front} / {$quantity}EA</div>
                     <div class="option {$option_display|display}">{$option_str}</div>
-                    <ul class="option" module="Myshop_optionSet">
-                        <li><strong>{$product_name}</strong>{$option_str} ({$qty}개)</li>
-                        <li><strong>{$product_name}</strong>{$option_str} ({$qty}개)</li>
-                    </ul>
-                    <p class="free {$card_installment_display|display}">무이자할부 상품</p>
                 </td>
-                <td class="quantity">{$quantity}</td>
-                <td class="price">
-                    <strong>{$item_price_raw_front_head}{$item_price_raw_front}</strong>{$item_price_raw_front_tail}
-                    <p class="{$item_price_ref_display|display}">{$item_price_ref}</p>
-                </td>
-                <td class="state">{$cur_state}</td>
+                <td class="state text-right">{$cur_state}</td>
             </tr>
         </tbody>
     </table>
 </div>
 
-<div class="p40 mp40"></div>
-
-<div class="title">
-    <h3 class="subTitle">{$1}사유</h3>
-    <div class="p20"></div>
+<div class="titleWrap mt-5">
+    <h4>{$1} 사유</h4>
 </div>
 <div class="tableWrap">
     <table border="1" summary="" class="fullTable">
@@ -79,9 +37,9 @@
             <tr class="{$refund_account_display|display}">
                 <th scope="row">환불계좌</th>
                 <td>
-                    <span id="{$id_acc_full_str}" class="{$acc_full_str_display|display}">{$acc_full_str}</span>
-                    <span id="{$id_acc_reg_disp}" class="{$acc_reg_display|display}"><a href="#none" onclick="OrderApply.popupAccount('./account.html');"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/myshop/btn_order_account2.gif" alt="환불계좌등록" /></a></span>
-                    <span id="{$id_acc_mod_disp}" class="{$acc_mod_display|display}"><a href="#none" onclick="OrderApply.popupAccount('./account.html');"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/myshop/btn_order_account.gif" alt="환불계좌변경" /></a></span>
+                    <p id="{$id_acc_full_str}" class="{$acc_full_str_display|display}">{$acc_full_str}</p>
+                    <p id="{$id_acc_reg_disp}" class="{$acc_reg_display|display} my-2"><a href="#none" onclick="OrderApply.popupAccount('./account.html');" class="btnBasic btnSmall">환불계좌 등록</a></p>
+                    <p id="{$id_acc_mod_disp}" class="{$acc_mod_display|display} my-2"><a href="#none" onclick="OrderApply.popupAccount('./account.html');" class="btnBasic btnSmall">환불계좌 변경</a></p>
                 </td>
             </tr>
             <tr>
