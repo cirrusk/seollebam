@@ -70,7 +70,7 @@
 /* TABLE */
 .tableWrap { border-top: 2px solid #d6254a; }
 .tableWrap h4 { padding-bottom: 5px; }
-.tableWrap img { width: 100%; }
+.tableWrap img { max-width: 100%; }
 .tableWrap table tr { border-bottom: 1px solid #d6d6d6; }
 
 .quantity { display: flex; justify-content: flex-end; }

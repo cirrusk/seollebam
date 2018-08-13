@@ -1,0 +1,92 @@
+<!--@layout(/layout/basic/layout.html)-->
+<!--@css(/css/module/myshop/boardPackage.css)-->
+
+<script>
+    $(document).ready(function() {
+
+        $('.writer').each(function(){
+            var result = $(this).text();
+            if (result == '설레밤'){
+                $(this).parent().hide();
+            }
+        });
+    });
+</script>
+<div class="subNav">
+    <div class="container">
+        <a href="javascript:history.back()"><img class="back" src="/svg/back.svg"></a>
+        <h4>게시글 관리</h4>
+    </div>
+</div>
+
+<div class="container" module="myshop_benefit">
+    <div class="row p120">
+        <div id="sideNav" class="col-md-4 d-none d-sm-block">
+            <div class="titleWrap clearfix brRed">
+                <h3 class="float-left">{$member_name}님</h3>
+                <a module="Layout_stateLogon" class="btnGray btnSmall float-right" href="{$action_logout}">로그아웃</a>
+            </div>
+            <p class="p45">
+                환영합니다! {$member_name}님.<br>
+                회원님은 적립금을 {$dc_price_mileage} 적립 중이십니다.
+            </p>
+            <ul class="nav flex-column">
+                <li class="nav-item"><a class="nav-link" href="/myshop/order/list.html">주문내역 보기</a></li>
+                <li class="nav-item"><a class="nav-link" href="/board/consult/list.html">1:1 문의내역</a></li>
+                <li class="nav-item"><a class="nav-link active" href="/myshop/board.html">게시글 관리</a></li>
+                <li class="nav-item"><a class="nav-link" href="/myshop/addr/list.html">주소록 관리</a></li>
+                <li class="nav-item"><a class="nav-link" href="/member/modify.html">회원정보 수정</a></li>
+            </ul>
+        </div>
+
+        <div class="col-md-1"></div>
+
+        <div class="col-md-7 myPage" module="myshop_BoardPackage">
+            <div class="boardWrap" module="myshop_boardList">
+                <!--
+                    $count = 10
+                    $relation_post = yes
+                -->
+                <div class="titleWrap clearfix brBlack d-none d-sm-block">
+                    <h3 class="float-left">나의 게시글 관리</h3>
+                    <div class="float-right d-none d-sm-block">
+
+                    </div>
+                </div>
+
+                <div class="p45">
+                    <span class="textGray">
+                        · 상품 페이지에서 작성하신 후기와 문의하신 내용을 보실 수 있습니다.<br>
+                        · 후기 작성은 상품 페이지나 [주문/취소/환불] 게시판 에서 가능합니다.<br>
+                        · 추가 상품 관련 문의는 개별 상품페이지에서 문의 가능합니다.<br>
+                        · 서비스 문의는 [1:1 문의 내역] 게시판을 이용하여 주시기 바랍니다.
+                    </span>
+                </div>
+
+                <div class="tableWrap" style="border: 0;">
+                    <table>
+                        <tbody class="{$list_display|display}">
+                            <tr>
+                                <td class="displaynone writer">{$writer}</td>
+                                <td class="thumb">{$board_category}</td>
+                                <td class="subject"><a href="{$board_read_url}">상세 보기</a></td>
+                                <td class="txtLess text-right textGray">{$write_date}</td>
+                            </tr>
+                            <tr>
+                                <td class="displaynone writer">{$writer}</td>
+                                <td class="thumb">{$board_category}</td>
+                                <td class="subject"><a href="{$board_read_url}">상세 보기</a></td>
+                                <td class="txtLess text-right textGray">{$write_date}</td>
+                            </tr>
+                        </tbody>
+                        <tbody class="{$nodata_display|display}">
+                            <tr>
+                                <td colspan="3" class="nodata">게시물이 없습니다.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

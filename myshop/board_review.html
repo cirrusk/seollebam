@@ -37,27 +37,40 @@
                     $count = 10
                     $relation_post = yes
                 -->
-                <table border="1" summary="">
-                    <tbody class="{$list_display|display}">
-                        <tr>
-                            <td class="category"><a href="{$board_list_url}">{$board_category}</a></td>
-                            <td class="subject">{$icon_re}{$icon_lock} <a href="{$board_read_url}">{$subject}</a> {$icon_new}{$icon_file}{$comment_count}</td>
-                            <td>{$writer}</td>
-                            <td class="txtLess">{$write_date}</td>
-                        </tr>
-                        <tr>
-                            <td class="category"><a href="{$board_list_url}">{$board_category}</a></td>
-                            <td class="subject">{$icon_re}{$icon_lock} <a href="{$board_read_url}">{$subject}</a> {$icon_new}{$icon_file}{$comment_count}</td>
-                            <td>{$writer}</td>
-                            <td class="txtLess">{$write_date}</td>
-                        </tr>
-                    </tbody>
-                    <tbody class="{$nodata_display|display}">
-                        <tr>
-                            <td colspan="6" class="nodata">게시물이 없습니다.</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="titleWrap clearfix brBlack d-none d-sm-block">
+                    <h3 class="float-left">나의 후기</h3>
+                    <div class="float-right d-none d-sm-block">
+
+                    </div>
+                </div>
+
+                <div class="p45">
+                    <span class="textGray">
+                        · 구매하신 상품에 대해 후기를 남겨주세요.<br>
+                        · 상품후기 작성은 개별 상품페이지 또는 [주문/취소/환불]게시판 에서 가능합니다.<br>
+                        · [나의 후기]게시판에서는 기존 작성 된 후기의 수정/삭제만 가능합니다.
+                    </span>
+                </div>
+
+                <div class="tableWrap">
+                    <table>
+                        <tbody class="{$list_display|display}">
+                            <tr>
+                                <td class="subject">{$board_category}<a href="{$board_read_url}">{$writer}</a></td>
+                                <td class="txtLess text-right textGray">{$write_date}</td>
+                            </tr>
+                            <tr>
+                                <td class="subject">{$board_category}<a href="{$board_read_url}">{$writer}</a></td>
+                                <td class="txtLess text-right textGray">{$write_date}</td>
+                            </tr>
+                        </tbody>
+                        <tbody class="{$nodata_display|display}">
+                            <tr>
+                                <td colspan="6" class="nodata">게시물이 없습니다.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     </div>
