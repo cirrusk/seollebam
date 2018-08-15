@@ -17,10 +17,7 @@
         });
 
         $(".eListArea").load("/product/list.html?cate_no=24 .listAjax");
-        $(".cBunny").load("/product/list.html?cate_no=50 .listAjax");
-        $(".cMaid").load("/product/list.html?cate_no=51 .listAjax");
-        $(".cNurse").load("/product/list.html?cate_no=52 .listAjax");
-        $(".cUniform").load("/product/list.html?cate_no=53 .listAjax");
+        $(".cListArea").load("/product/list.html?cate_no=29 .listAjax");
         $(".mListArea").load("/product/list.html?cate_no=45 .listAjax");
         $(".bListArea").load("/product/list.html?cate_no=47 .listAjax");
         $(".jscListArea").load("/product/list.html?cate_no=48 .listAjax");
@@ -59,9 +56,6 @@
             <li class="chapternav-item"><a class="chapternav-link" href="#jellList" data-toggle="tab">
                     <figure class="chapternav-icon"><img src="/svg/category/jell.svg"></figure><span class="chapternav-label">러브 젤</span>
             </a></li>
-            <li class="chapternav-item"><a class="chapternav-link" href="#etcList" data-toggle="tab">
-                    <figure class="chapternav-icon"><img src="/svg/category/etc.svg"></figure><span class="chapternav-label">기타</span>
-            </a></li>
         </ul>
         <div class="chapternav-paddles">
             <button class="chapternav-paddle chapternav-paddle-left"><img src="/svg/left.svg"></button>
@@ -73,136 +67,149 @@
 <!-- Tab panes -->
 <div id="myTabContent" class="tab-content">
     <div class="tab-pane active" id="mList">
-        <div class="listHeader" style="background-image: url('/img/custom/bathBGW.png');">
+        <div class="listHeader" style="background-image: url('/img/custom/oilBG.png');">
             <h1>마사지 오일</h1>
             <h4>마사지는 핑계일 뿐</h4>
             <h4>사실 찾고 싶은거야</h4>
             <h3><img src="/svg/dqLeft.svg">둘만 아는 야한 곳을<img src="/svg/dqRight.svg"></h3>
         </div>
         <div class="listWrap">
-            <h6 class="listIntro">숙면 / 피부보습 / 진정 / 스트레스 완화<br>
-            4가지 오일 중 연인에게 필요한 것을 고르세요</h6>
+            <h6 class="listIntro">숙면 / 피부보습 / 진정 / 스트레스 완화<br>4가지 오일 중 연인에게 필요한 것을 고르세요.</h6>
             <div class="mListArea container"></div>
         </div>
         <div class="listFooter container">
-            <div class="row justify-content-center"><img class="col-md-10 col-12 d-none d-sm-block" src="/img/oil/mInfoW.png"><img class="col-md-10 col-12 d-md-none" src="/img/oil/mInfoM.png"></div>
+            <div class="row justify-content-center">
+                <div class="col-md-10 col-12 p-0">
+                    <img class="d-none d-sm-block" src="/img/custom/oilFooterW.png">
+                    <img class="d-md-none" src="/img/custom/oilFooterM.png">
+                </div>
+            </div>
         </div>
     </div>
+
     <div role="tabpanel" class="tab-pane" id="bList">
-        <div class="listHeader" style="background-image: url('/img/custom/bathBGW.png');">
-            <h1>마사지 오일</h1>
-            <h4>마사지는 핑계일 뿐</h4>
-            <h4>사실 찾고 싶은거야</h4>
-            <h3><img src="/svg/dqLeft.svg">둘만 아는 야한 곳을<img src="/svg/dqRight.svg"></h3>
+        <div class="listHeader" style="background-image: url('/img/custom/bathBG.png');">
+            <h1>거품 입욕제</h1>
+            <h4>침대가 말했다</h4>
+            <h4>욕조에서도 할게 많다고</h4>
+            <h3><img src="/svg/dqLeft.svg">침대야 잠깐 쉬렴<img src="/svg/dqRight.svg"></h3>
         </div>
         <div class="listWrap">
-            <h6 class="listIntro">숙면 / 피부보습 / 진정 / 스트레스 완화<br>
-            4가지 오일 중 연인에게 필요한 것을 고르세요</h6>
+            <h6 class="listIntro">욕조에서 둘 만의 거품 데이트를 해보세요.<br>4가지의 키스 방법에 맞는 입욕제를 고르세요.</h6>
             <div class="bListArea container"></div>
         </div>
         <div class="listFooter container">
-            <div class="row justify-content-center"><img class="col-md-10 col-12 d-none d-sm-block" src="/img/oil/mInfoW.png"><img class="col-md-10 col-12 d-md-none" src="/img/oil/mInfoM.png"></div>
-        </div>
-    </div>
-    <div role="tabpanel" class="tab-pane" id="cList">
-        <div class="listHeader" style="background-image: url('/img/custom/bathBGW.png');">
-            <h1>마사지 오일</h1>
-            <h4>마사지는 핑계일 뿐</h4>
-            <h4>사실 찾고 싶은거야</h4>
-            <h3><img src="/svg/dqLeft.svg">둘만 아는 야한 곳을<img src="/svg/dqRight.svg"></h3>
-        </div>
-        <div class="listWrap">
-            <h6 class="listIntro">숙면 / 피부보습 / 진정 / 스트레스 완화<br>
-            4가지 오일 중 연인에게 필요한 것을 고르세요</h6>
-            <div class="cListArea container">
-                <div class="cBunny"></div>
-                <div class="cMaid"></div>
-                <div class="cNurse"></div>
-                <div class="cUniform"></div>
+            <div class="row justify-content-center">
+                <div class="col-md-10 col-12 p-0">
+                    <img class="d-none d-sm-block" src="/img/custom/bathFooterW.png">
+                    <img class="d-md-none" src="/img/custom/bathFooterM.png">
+                </div>
             </div>
         </div>
-        <div class="listFooter container">
-            <div class="row justify-content-center"><img class="col-md-10 col-12 d-none d-sm-block" src="/img/oil/mInfoW.png"><img class="col-md-10 col-12 d-md-none" src="/img/oil/mInfoM.png"></div>
-        </div>
     </div>
-    <div role="tabpanel" class="tab-pane" id="eList">
-        <div class="listHeader" style="background-image: url('/img/custom/bathBGW.png');">
-            <h1>마사지 오일</h1>
-            <h4>마사지는 핑계일 뿐</h4>
-            <h4>사실 찾고 싶은거야</h4>
-            <h3><img src="/svg/dqLeft.svg">둘만 아는 야한 곳을<img src="/svg/dqRight.svg"></h3>
+
+    <div role="tabpanel" class="tab-pane" id="cList">
+        <div class="listHeader" style="background-image: url('/img/custom/costumeBG.png');">
+            <h1>섹시 코스튬</h1>
+            <h4>상상력을 자극하는 설레임이 필요한 날</h4>
+            <h4>섹시한 상황극에 도전해보아요</h4>
+            <h3><img src="/svg/dqLeft.svg">어른들의 소꿉놀이<img src="/svg/dqRight.svg"></h3>
         </div>
         <div class="listWrap">
-            <h6 class="listIntro">숙면 / 피부보습 / 진정 / 스트레스 완화<br>
-            4가지 오일 중 연인에게 필요한 것을 고르세요</h6>
+            <h6 class="listIntro">서로의 판타지를 자극하는 이벤트를 준비해보세요.<br>마치 오늘은 다른 사람인 것 처럼 소꿉놀이를 해요.</h6>
+            <div class="cListArea container"></div>
+        </div>
+        <div class="listFooter container">
+            <div class="row justify-content-center">
+                <div class="col-md-10 col-12 p-0">
+                    <img class="d-none d-sm-block" src="/img/custom/costumeFooterW.png">
+                    <img class="d-md-none" src="/img/custom/costumeFooterM.png">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div role="tabpanel" class="tab-pane" id="eList">
+        <div class="listHeader" style="background-image: url('/img/custom/eventBG.png');">
+            <h1>이벤트 의류</h1>
+            <h4>유독 섹시해 보이고 싶은 날</h4>
+            <h4>조금만 용기를 내어보자</h4>
+            <h3><img src="/svg/dqLeft.svg">평소에 입는 속옷 아니에요<img src="/svg/dqRight.svg"></h3>
+        </div>
+        <div class="listWrap">
+            <h6 class="listIntro">가장 효과적이고 본능적인 이벤트를 원한다면<br>입기 편하고 부담 없는 가격의 이벤트 의류에 도전하세요.</h6>
             <div class="eListArea container"></div>
         </div>
         <div class="listFooter container">
-            <div class="row justify-content-center"><img class="col-md-10 col-12 d-none d-sm-block" src="/img/oil/mInfoW.png"><img class="col-md-10 col-12 d-md-none" src="/img/oil/mInfoM.png"></div>
+            <div class="row justify-content-center">
+                <div class="col-md-10 col-12 p-0">
+                    <img class="d-none d-sm-block" src="/img/custom/eventFooterW.png">
+                    <img class="d-md-none" src="/img/custom/eventFooterM.png">
+                </div>
+            </div>
         </div>
     </div>
+
     <div role="tabpanel" class="tab-pane" id="jscList">
-        <div class="listHeader" style="background-image: url('/img/custom/bathBGW.png');">
-            <h1>마사지 오일</h1>
-            <h4>마사지는 핑계일 뿐</h4>
-            <h4>사실 찾고 싶은거야</h4>
-            <h3><img src="/svg/dqLeft.svg">둘만 아는 야한 곳을<img src="/svg/dqRight.svg"></h3>
+        <div class="listHeader" style="background-image: url('/img/custom/candleBG.png');">
+            <h1>로맨틱 캔들</h1>
+            <h4>불 끄고 할까</h4>
+            <h4>불 켜고 할까</h4>
+            <h3><img src="/svg/dqLeft.svg">조명으로 실랑이 말아요<img src="/svg/dqRight.svg"></h3>
         </div>
         <div class="listWrap">
-            <h6 class="listIntro">숙면 / 피부보습 / 진정 / 스트레스 완화<br>
-            4가지 오일 중 연인에게 필요한 것을 고르세요</h6>
+            <h6 class="listIntro">부먹? 찍먹? 불 끄고? 불 켜고? 실랑이 마세요.<br>캔들로 분위기도 야함도 전부 해결해 드릴께요.</h6>
             <div class="jscListArea container"></div>
         </div>
         <div class="listFooter container">
-            <div class="row justify-content-center"><img class="col-md-10 col-12 d-none d-sm-block" src="/img/oil/mInfoW.png"><img class="col-md-10 col-12 d-md-none" src="/img/oil/mInfoM.png"></div>
+            <div class="row justify-content-center">
+                <div class="col-md-10 col-12 p-0">
+                    <img class="d-none d-sm-block" src="/img/custom/candleFooterW.png">
+                    <img class="d-md-none" src="/img/custom/candleFooterM.png">
+                </div>
+            </div>
         </div>
     </div>
+
     <div role="tabpanel" class="tab-pane" id="cdjList">
-        <div class="listHeader" style="background-image: url('/img/custom/bathBGW.png');">
-            <h1>마사지 오일</h1>
-            <h4>마사지는 핑계일 뿐</h4>
-            <h4>사실 찾고 싶은거야</h4>
-            <h3><img src="/svg/dqLeft.svg">둘만 아는 야한 곳을<img src="/svg/dqRight.svg"></h3>
+        <div class="listHeader" style="background-image: url('/img/custom/condomBG.png');">
+            <h1>콘돔</h1>
+            <h4>주머니에서 주섬주섬 꺼내지 말아요</h4>
+            <h4>옷 고르는 것처럼 신중하게 골라요</h4>
+            <h3><img src="/svg/dqLeft.svg">종류별로 써 봐야 알아<img src="/svg/dqRight.svg"></h3>
         </div>
         <div class="listWrap">
-            <h6 class="listIntro">숙면 / 피부보습 / 진정 / 스트레스 완화<br>
-            4가지 오일 중 연인에게 필요한 것을 고르세요</h6>
+            <h6 class="listIntro">관계에 있어 가장 중요한 센스 용품인 콘돔!<br>종류별로 낱개로 구매해서 맞는 콘돔을 찾아보세요.</h6>
             <div class="cdjListArea container"></div>
         </div>
         <div class="listFooter container">
-            <div class="row justify-content-center"><img class="col-md-10 col-12 d-none d-sm-block" src="/img/oil/mInfoW.png"><img class="col-md-10 col-12 d-md-none" src="/img/oil/mInfoM.png"></div>
+            <div class="row justify-content-center">
+                <div class="col-md-10 col-12 p-0">
+                    <img class="d-none d-sm-block" src="/img/custom/condomFooterW.png">
+                    <img class="d-md-none" src="/img/custom/condomFooterM.png">
+                </div>
+            </div>
         </div>
     </div>
+
     <div role="tabpanel" class="tab-pane" id="jellList">
-        <div class="listHeader" style="background-image: url('/img/custom/bathBGW.png');">
-            <h1>마사지 오일</h1>
-            <h4>마사지는 핑계일 뿐</h4>
-            <h4>사실 찾고 싶은거야</h4>
-            <h3><img src="/svg/dqLeft.svg">둘만 아는 야한 곳을<img src="/svg/dqRight.svg"></h3>
+        <div class="listHeader" style="background-image: url('/img/custom/jellBG.png');">
+            <h1>러브 젤</h1>
+            <h4>개인에 따라 컨디션에 따라 건조하기도 해요</h4>
+            <h4>민감한 부위에 인증 받은 오일을 사용하세요</h4>
+            <h3><img src="/svg/dqLeft.svg">촉촉하게 사랑 나누기<img src="/svg/dqRight.svg"></h3>
         </div>
         <div class="listWrap">
-            <h6 class="listIntro">숙면 / 피부보습 / 진정 / 스트레스 완화<br>
-            4가지 오일 중 연인에게 필요한 것을 고르세요</h6>
+            <h6 class="listIntro">인증 받은 안전한 윤활제를 사용하세요.<br>연인들의 필수 아이템으로 부드러운 사랑 나누기.</h6>
             <div class="jellListArea container"></div>
         </div>
         <div class="listFooter container">
-            <div class="row justify-content-center"><img class="col-md-10 col-12 d-none d-sm-block" src="/img/oil/mInfoW.png"><img class="col-md-10 col-12 d-md-none" src="/img/oil/mInfoM.png"></div>
-        </div>
-    </div>
-    <div role="tabpanel" class="tab-pane" id="etcList">
-        <div class="listHeader" style="background-image: url('/img/custom/bathBGW.png');">
-            <h1>마사지 오일</h1>
-            <h4>마사지는 핑계일 뿐</h4>
-            <h4>사실 찾고 싶은거야</h4>
-            <h3><img src="/svg/dqLeft.svg">둘만 아는 야한 곳을<img src="/svg/dqRight.svg"></h3>
-        </div>
-        <div class="listWrap">
-            <h6 class="listIntro">숙면 / 피부보습 / 진정 / 스트레스 완화<br>
-            4가지 오일 중 연인에게 필요한 것을 고르세요</h6>
-            <div class="etcListArea container"></div>
-        </div>
-        <div class="listFooter container">
-            <div class="row justify-content-center"><img class="col-md-10 col-12 d-none d-sm-block" src="/img/oil/mInfoW.png"><img class="col-md-10 col-12 d-md-none" src="/img/oil/mInfoM.png"></div>
+            <div class="row justify-content-center">
+                <div class="col-md-10 col-12 p-0">
+                    <img class="d-none d-sm-block" src="/img/custom/jellFooterW.png">
+                    <img class="d-md-none" src="/img/custom/jellFooterM.png">
+                </div>
+            </div>
         </div>
     </div>
 </div>

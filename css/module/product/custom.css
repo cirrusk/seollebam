@@ -17,6 +17,7 @@
 #myTabContent .listHeader h3 { color: #fff; padding: 50px 0; }
 #myTabContent .listHeader h4 { color: #fff; }
 #myTabContent .listHeader img { width: 36px; margin: 0 40px; }
+#myTabContent .listFooter img { width: 100%; }
 
 /* CATEGORY TAB PANEL */
 #myTabContent .listWrap { background-color: #F0F0F0; padding-bottom: 70px; margin-bottom: 120px; }
