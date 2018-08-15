@@ -51,9 +51,9 @@
             </div>
 
             <div class="btnWrap text-right my-4">
-                <span class="left"><a href="/board/consult/list.html{$param_list}" class="btnGray btn3">돌아가기</a></span>
-                <a href="#none" onclick="{$action_delete}" class="btnGray btn3 mx-2 {$delete_button_auth|display}">삭제하기</a>
-                <a href="/board/consult/modify.html{$param_modify}" class="btnBasic btn3 {$modify_button_auth|display}">수정하기</a>
+                <div class="float-left"><a href="#none" onclick="{$action_delete}" class="btnGray btn3 {$delete_button_auth|display}">삭제하기</a></div>
+                <a href="/board/consult/list.html{$param_list}" class="btnGray btn3 ml-3">돌아가기</a>
+                <a href="/board/consult/modify.html{$param_modify}" class="btnBasic btn3 ml-3 {$modify_button_auth|display}">수정하기</a>
             </div>
         </div>
     </div>
