@@ -108,6 +108,7 @@
 
 /* 공통레이아웃 css*/
 #sub_container { margin-top: 48px; }
+.imgWrap img { width: 100%; }
 
 .textBlack { color: #333; }
 .textWhite { color: #fff; }
