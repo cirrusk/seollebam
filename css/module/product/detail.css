@@ -39,7 +39,8 @@
 @media screen and (max-width: 768px) {
     /* PRODUCT HEADER */
     .detailArea { display: none; }
-
+    .subNav img { width: 18px; margin-top: 3px; }
+    .subNav .basketCount { float: right; background-color: #d6254a; color: #fff; top: -3px; left: 28px; padding-bottom: 2px; }
     /* PRODUCT AREA */
     .totalArea { margin-bottom: 0px; }
     #prdDetail { margin-top: 0px; }
