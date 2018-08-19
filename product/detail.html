@@ -29,7 +29,7 @@
 
         $('.floatArea .btn1').click(function(event) {
             event.preventDefault();
-            $( ".totalArea" ).appendTo( "#totalModal .modal-body" );
+            $( ".totalArea" ).appendTo( "#totalModal .modal-body");
         });
     });
 </script>
@@ -80,7 +80,7 @@
                     </div>
                     <!-- //상품옵션 영역 -->
                     <div module="product_action">
-                    <a href="#none" class="btnBasic btn100 {$basket_display}" data-dismiss="modal" onclick="{$action_buy}" data-toggle="modal" data-target="#cartModal">박스에 담기</a>
+                    <a href="#none" class="btnBasic btn100 buyA {$basket_display}" data-dismiss="modal" onclick="{$action_basket}">박스에 담기</a>
                     <span class="btn btn-secondary disabled btn100 {$soldout_display|display}">SOLD OUT</span>
                 </div>
                 </div>
@@ -152,18 +152,6 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-body">
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade" id="cartModal" tabindex="-1" role="dialog">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <a data-dismiss="modal" aria-label="Close"><img class="closeImg" src="/svg/close.svg"></a>
-                    <h4>{$name} 설렘박스에 담겼어요</h4>
-                    <a class="btnLine btn3" href="/order/basket.html">MY BOX 바로가기 <img src="/svg/selectButton.svg"></a>
                 </div>
             </div>
         </div>

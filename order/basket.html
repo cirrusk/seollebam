@@ -118,9 +118,9 @@
                     <tbody module="Order_list">
                         <tr>
                             <td class="chk"><input type="checkbox" id="{$chk_id}" name="{$chk_name}" checked/></td>
-                            <td class="thumb"><img src="{$img}" onerror="this.src='http://img.echosting.cafe24.com/thumb/img_product_small.gif';" alt="{$name_alt}" /></td>
+                            <td class="thumb"><a href="/product/detail.html{$param}"><img src="{$img}" /></a></td>
                             <td class="product">
-                                <h5>{$name}</h5>
+                                <h5><a href="/product/detail.html{$param}">{$name}</a></h5>
                                 <p class="textGray">{$product_price_front}원</p>
                                 <ul class="option" module="Order_optionAll">
                                     <li>{$option_detail_str|replace:=, }</li>
@@ -138,9 +138,9 @@
                         </tr>
                         <tr>
                             <td class="chk"><input type="checkbox" id="{$chk_id}" name="{$chk_name}" checked/></td>
-                            <td class="thumb"><img src="{$img}" onerror="this.src='http://img.echosting.cafe24.com/thumb/img_product_small.gif';" alt="{$name_alt}" /></td>
+                            <td class="thumb"><a href="/product/detail.html{$param}"><img src="{$img}" /></a></td>
                             <td class="product">
-                                <h5>{$name}</h5>
+                                <h5><a href="/product/detail.html{$param}">{$name}</a></h5>
                                 <p class="textGray">{$product_price_front}원</p>
                                 <ul class="option" module="Order_optionAll">
                                     <li>{$option_detail_str|replace:=, }</li>
