@@ -10,13 +10,14 @@
 .xans-order-list .quantity { padding-top: 70px; }
 .xans-order-list .quantity div { position: absolute; }
 
-.xans-order-totalsummary { padding-top: 30px; padding-bottom: 150px; }
 .xans-order-totalsummary th { padding: 5px 0; }
 .xans-order-totalsummary th p { color: #7f7f7f; }
 .xans-order-totalsummary td { text-align: right; padding: 5px 0; }
 .xans-order-totalsummary tfoot th, .xans-order-totalsummary tfoot td { border-top: 1px solid #ccc; padding: 20px 0; }
 .xans-order-totalorder { margin-bottom: 30px; }
 
+.totalWrap { padding-top: 30px; }
+.totalWrapEmpty td { text-align: right; }
 
 @media screen and (max-width: 768px) {
     .xans-order-basketpackage { margin-top: 50px; }

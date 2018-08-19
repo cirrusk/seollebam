@@ -13,16 +13,103 @@
     <div class="row p120" module="Order_Empty">
         <div class="col-md-7">
             <img src="http://i.imgur.com/1DoXdHH.png">
-            <h3>박스가 비어있어요!</h3>
-            <a class="btnBasic btn3" href="/product/customBox.html"><span class="textWhite">설렘용품 보러가기</span></a>
+            <h3 class="pb-3 mb-3">박스가 비어있어요!</h3>
+            <a class="btnBasic btn3" href="/product/customBox.html">설렘용품 보러가기</a>
         </div>
-        <div class="col-md-5">
-
+        <div class="col-md-1"></div>
+        <div class="col-md-4 xans-order-totalsummary d-none d-sm-block">
+            <div class="totalWrap">
+                <table border="1" summary="">
+                    <tbody>
+                        <tr>
+                            <th><p>주문 상품수</p></th>
+                            <td module="Layout_orderBasketcount"><h5>총 {$basket_count}개</h5></td>
+                        </tr>
+                        <tr>
+                            <th><p>총 주문금액</p></th>
+                            <td><h5>{$total_product_price_display_front}원</h5></td>
+                        </tr>
+                        <tr>
+                            <th><p>배송비</p></th>
+                            <td class="option"><h5>{$total_delv_price_front}원</h5><span class="textGray">30,000원 이상 배송비 무료</span></td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th><p>최종 결제금액</p></th>
+                            <td class="total"><h5 class="textRed"><strong>{$total_order_price_front}원</strong></h5></td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+            <div module="Order_TotalOrder">
+                <a href="#none" onclick="{$action_order_select}" class="btnBasic btn100 {$buy_display|display}" link-order="/order/orderform.html{$param}" link-login="/member/login.html">박스 주문하기</a>
+            </div>
+            <div class="moreInfo">
+                <div class="clearfix infoHeader">
+                    <h5 class="float-left">배송 좋아요</h5>
+                    <a class="float-right" data-toggle="collapse" data-target="#collapse1">펼쳐보기</a>
+                </div>
+                <div id="collapse1" class="collapse infoBody">
+                    <div class="row">
+                        <div class="col-3"><h6>가능해요</h6></div>
+                        <div class="col-9">
+                            <span>전국택배 가능 지역<br>
+                            영업일 기준 2~3일 소요<br>
+                            매일 오후 4시 결제 기준 배송</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-3"><h6>배송비</h6></div>
+                        <div class="col-9">
+                            <span>3,000원<br>
+                            3만원 이상 구매 시 무료 배송</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-3"><h6>문의시간</h6></div>
+                        <div class="col-9">
+                            <span>070-4214-5244<br>
+                            AM 10:00 ~ PM 05:00 (월요일~금요일)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="moreInfo">
+                <div class="clearfix infoHeader">
+                    <h5 class="float-left">환불 슬퍼요</h5>
+                    <a class="float-right" data-toggle="collapse" data-target="#collapse2">펼쳐보기</a>
+                </div>
+                <div id="collapse2" class="collapse infoBody">
+                    <div class="row">
+                        <div class="col-3"><h6>기간/주소</h6></div>
+                        <div class="col-9">
+                            <span>상품 발송일 포함 10일 이내<br>
+                            서울시 관악구 봉천동 41-207, 301호</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-3"><h6>가능해요</h6></div>
+                        <div class="col-9">
+                            <span>다른 상품이 배송 된 경우<br>
+                            상품이 불량이어서 사용 불가한 경우<br>
+                            문제 상품을 찍어 고객센터로 문의주세요</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-3"><h6>불가능해요</h6></div>
+                        <div class="col-9">
+                            <span>고객님의 사유로 상품의 일부가 훼손 된 경우<br>
+                            제품을 일부 사용하여 판매가 불가능한 경우</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
-    <div class="row p120">
-        <div class="col-md-7" module="Order_NormNormal">
+    <div class="row">
+        <div class="col-md-7 p120" module="Order_NormNormal">
             <div class="titleWrap">
                 <h4>담긴 설렘용품</h4>
             </div>
@@ -76,7 +163,7 @@
 
         <div class="col-md-1"></div>
 
-        <div class="{$area_delv_info_display|display} col-md-4" module="Order_TotalSummary">
+        <div class="{$area_delv_info_display|display} col-md-4 p120" module="Order_TotalSummary">
             <div class="totalWrap">
                 <table border="1" summary="">
                     <tbody>
