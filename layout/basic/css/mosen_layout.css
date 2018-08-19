@@ -14,7 +14,8 @@
 
 
 /* FOOTER */
-#bottom { width: 100%; background-image: url('/img/footerBG.png'); padding: 40px 0;}
+#wraper { min-height: calc(100vh - 260px); }
+#bottom { width: 100%; background-image: url('/img/footerBG.png'); background-size: cover; padding: 40px 0;}
 #bottom .footerNav { padding-bottom: 15px; margin-bottom: 30px; color: #fff; border-bottom: 1px solid #8c8c8c; }
 #bottom .footerNav a { padding-right: 80px; }
 #bottom .footerInfo { padding-bottom: 20px; }
