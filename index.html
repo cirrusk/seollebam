@@ -2,94 +2,243 @@
 <!--@css(/css/module/mall/company.css)-->
 
 <script>
-    var myNav = document.getElementById("nav");
+    $(document).ready(function() {
+        var myNav = document.getElementById("nav");
 
-    window.onscroll = function() {
-        "use strict";
-        if (document.body.scrollTop >= 280 || document.documentElement.scrollTop >= 280) {
-            myNav.classList.add("scroll");
-        } else {
-            myNav.classList.remove("scroll");
-        }
-    };
+        window.onscroll = function() {
+            if (document.body.scrollTop >= 280 || document.documentElement.scrollTop >= 280) {
+                myNav.classList.add("scroll");
+            } else {
+                myNav.classList.remove("scroll");
+            }
+        };
+
+        $(".bListArea").load("/product/list.html?cate_no=47 .listAjax .row .box");
+        $(".jscListArea").load("/product/list.html?cate_no=48 .listAjax .row .box");
+        $(".cListArea").load("/product/list.html?cate_no=29 .listAjax .row .box");
+        $(".mListArea").load("/product/list.html?cate_no=45 .listAjax .row .box");
+    });
 </script>
 
-
-
 <div class="mainWrap">
-    <h2>설레는 밤이 필요할 때. 설렘용품 박스!</h2>
+    <h2>설레는 밤이 필요할 때<span></span> 설렘용품 박스!</h2>
     <h4>
-        내가 야한 거 좋아하는 건<br>
-        전부 DNA 때문이다
+        야한 일을 꾸미신다면<br>
+        설레밤이 좋은 핑계가 될께요
     </h4>
     <a class="btnLine btn2" href="/product/customBox.html">설렘박스 만들기</a>
 </div>
 
 <div class="mainIntro p120">
-    <svg width="24" height="25" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 14.8">
-        <defs><style>.cls-1 { fill: #d6254a; }</style></defs>
-        <path class="cls-1" d="M5.9,8.4v6.4H0V9.7a13.251,13.251,0,0,1,1-6A8.275,8.275,0,0,1,5.1,0L6.5,2.2A5.253,5.253,0,0,0,4,4.3a7.555,7.555,0,0,0-.9,4.1Zm9.6,0v6.4H9.6V9.7c0-2.8.3-4.7,1-6A8.275,8.275,0,0,1,14.7,0L16,2.2a5.253,5.253,0,0,0-2.5,2.1,9.975,9.975,0,0,0-.9,4.1Z" transform="translate(0 0)"/>
-    </svg>
-    <h4>
-        음식도 영화도 데이트 코스도 매번 새로운데<br>
-        침실 레퍼토리는 왜 매번 똑같기만 하나요?
-    </h4>
-    <svg width="24" height="25" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 14.8">
-        <defs><style>.cls-1 { fill: #d6254a; }</style></defs>
-        <path class="cls-1" d="M5.9,8.4v6.4H0V9.7a13.251,13.251,0,0,1,1-6A8.275,8.275,0,0,1,5.1,0L6.5,2.2A5.253,5.253,0,0,0,4,4.3a7.555,7.555,0,0,0-.9,4.1Zm9.6,0v6.4H9.6V9.7c0-2.8.3-4.7,1-6A8.275,8.275,0,0,1,14.7,0L16,2.2a5.253,5.253,0,0,0-2.5,2.1,9.975,9.975,0,0,0-.9,4.1Z" transform="translate(16 14.8) rotate(180)"/>
-    </svg>
+    <div class="p70">
+        <svg width="24" height="25" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 14.8">
+            <defs><style>.cls-1 { fill: #d6254a; }</style></defs>
+            <path class="cls-1" d="M5.9,8.4v6.4H0V9.7a13.251,13.251,0,0,1,1-6A8.275,8.275,0,0,1,5.1,0L6.5,2.2A5.253,5.253,0,0,0,4,4.3a7.555,7.555,0,0,0-.9,4.1Zm9.6,0v6.4H9.6V9.7c0-2.8.3-4.7,1-6A8.275,8.275,0,0,1,14.7,0L16,2.2a5.253,5.253,0,0,0-2.5,2.1,9.975,9.975,0,0,0-.9,4.1Z" transform="translate(16 14.8) rotate(180)"/>
+        </svg>
+        <h4>
+            음식도 영화도 데이트 코스도 매번 새로운데<br>
+            침실 레퍼토리는 왜 매번 똑같기만 하나요?
+        </h4>
+        <svg width="24" height="25" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 14.8">
+            <defs><style>.cls-1 { fill: #d6254a; }</style></defs>
+            <path class="cls-1" d="M5.9,8.4v6.4H0V9.7a13.251,13.251,0,0,1,1-6A8.275,8.275,0,0,1,5.1,0L6.5,2.2A5.253,5.253,0,0,0,4,4.3a7.555,7.555,0,0,0-.9,4.1Zm9.6,0v6.4H9.6V9.7c0-2.8.3-4.7,1-6A8.275,8.275,0,0,1,14.7,0L16,2.2a5.253,5.253,0,0,0-2.5,2.1,9.975,9.975,0,0,0-.9,4.1Z" transform="translate(16 14.8) rotate(180)"/>
+        </svg>
+    </div>
 </div>
 
-<div class="mainInfo p120">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-10 col-12">
-                <h2 class="titleHr">설렘용품이에요. 성인용품 아니에요!</h2>
-                <div class="p45"></div>
-                <h5 class="textWhite">
-                    새로운 시도는 해보고 싶은데 방법도 떠오르지 않고<br>
-                    성인용품은 과하고 부담스러워 선뜻 사용하기 어렵죠!
-                </h5>
-                <div class="p45"></div>
-                <h5 class="textWhite">
-                    그래서 깨끗하고 라이트한 어른들의 설렘용품을 만들었어요.<br>
-                    원하는 건 약간의 배려와 센스. 연인과의 교감이 아닐까요?
-                </h5>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-10 col-12">
+            <div class="mainTitle">
+                <h2>설레밤이 궁금해</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-12">
+                    <div class="floatWrap">
+                        <h2>설렘용품이에요.</h2>
+                        <h2>성인용품 아니에요!</h2>
+                        <hr class="mainHr">
+                        <p class="p45">
+                            새로운 시도는 해보고 싶은데<br>
+                            방법도 떠오르지 않고 성인용품은<br>
+                            과하고 부담스러워 걱정이죠!
+                        </p>
+                        <p class="p25">
+                            그래서 깨끗하고 라이트한<br>
+                            어른들의 설렘용품을 만들었어요.<br>
+                            원하는 건 약간의 배려와 센스.<br>
+                            <e class="textRed d-inline">설레이는 밤</e>을 만들어보아요!
+                        </p>
+                        <div class="clearfix"><a href="/product/customBox.html" class="btnBasic btn3 mt-3 py-3 float-right">설렘박스 만들기</a></div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
-<div class="mainIcon p120">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-10 col-12">
-                <h2 class="titleHr">설레밤은 집요하고 성실하게 야한 생각 중</h2>
-                <div class="p45"></div>
-                <h5>
-                    설레밤은 야한 핑계와 설렘용품을 고민할께요!<br>
-                    센스있는 선택과 므흣한 밤은 당신에게 맡길께요!
-                </h5>
-                <div class="p45"></div>
+<div class="slideWrap">
+    <div class="innerWrap">
+        <div class="bListArea"></div>
+        <div class="jscListArea"></div>
+        <div class="eListArea"></div>
+        <div class="cListArea"></div>
+        <div class="mListArea"></div>
+    </div>
+</div>
 
+<div class="p25"></div>
+
+<div class="container mt-5 p120">
+    <div class="row justify-content-center">
+        <div class="col-md-10 col-12">
+            <div class="mainTitle mb-3">
+                <h2>진행 중인 EVENT</h2>
             </div>
-        </div>
-        <div class="row justify-content-center">
-            <div class="col-md-2 col-6">
-                <img src="http://i.imgur.com/D0Tsaii.png"><p class="text-center">섹스 레퍼토리에<br>변화가 필요해</p>
-            </div>
-            <div class="col-md-2 col-6">
-                <img src="http://i.imgur.com/s3Adj1c.png"><p class="text-center">기억에 남는 밤을<br>보내고 싶은 기념일</p>
-            </div>
-            <div class="col-md-2 col-6">
-                <img src="http://i.imgur.com/uL0w84D.png"><p class="text-center">새로운 섹스라이프에<br>도전하는 모험 정신 충만</p>
-            </div>
-            <div class="col-md-2 col-6">
-                <img src="http://i.imgur.com/DASJinz.png"><p class="text-center">야한 생각은 있는데<br>핑계가 필요했어</p>
-            </div>
-            <div class="col-md-2 col-6">
-                <img src="http://i.imgur.com/1DoXdHH.png"><p class="text-center">준비한 티 팍팍나는 포장<br>꺼낼 때 어색하지 않아</p>
+            <h4 class="mb-5 p25 text-center"><e class="textRed d-inline">3개</e>의 이벤트가 진행중이에요</h4>
+
+            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <a href="/event/eventBath.html">
+                            <div class="imgWrap"><img src="/img/event1.png"></div>
+                            <div class="infoWrap p-3">
+                                <h4>거품입욕제 <e class="textRed d-inline">2개를 사면 2개 더</e> 드려요!</h4>
+                                <div class="clearfix">
+                                    <span class="float-left textGray">2018.07.01 ~ 2018.12.31</span>
+                                    <h3 class="float-right">D - 148</h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="/event/eventCondom.html">
+                            <div class="imgWrap"><img src="/img/event2.png"></div>
+                            <div class="infoWrap p-3">
+                                <h4>안 써본 콘돔이 없도록. <e class="textRed d-inline">콘돔 7개! 7,000원!</e></h4>
+                                <div class="clearfix">
+                                    <span class="float-left textGray">2018.07.01 ~ 2018.12.31</span>
+                                    <h3 class="float-right">D - 148</h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="/event/eventEvent.html">
+                            <div class="imgWrap"><img src="/img/event3.png"></div>
+                            <div class="infoWrap p-3">
+                                <h4>더우니까 속옷만. <e class="textRed d-inline">이벤트 속옷 50%</e> 할인</h4>
+                                <div class="clearfix">
+                                    <span class="float-left textGray">2018.07.01 ~ 2018.12.31</span>
+                                    <h3 class="float-right">D - 148</h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="/event/eventReview.html">
+                            <div class="imgWrap"><img src="/img/event4.png"></div>
+                            <div class="infoWrap p-3">
+                                <h4>사진 후기를 남기면 <e class="textRed d-inline">2,000P</e>를 드려요!</h4>
+                                <div class="clearfix">
+                                    <span class="float-left textGray">2018.07.01 ~ </span>
+                                    <h3 class="float-right">상시</h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                    <svg xmlns="http://www.w3.org/2000/svg"  width="24" height="24" viewBox="0 0 48 48">
+                        <defs><style>.cls-1 { fill: #d6254a; }.cls-2 { fill: none; }</style></defs>
+                        <g id="그룹_1231" data-name="그룹 1231" transform="translate(1658 1680) rotate(180)">
+                            <path id="패스_36" data-name="패스 36" class="cls-1" d="M19.286,25.03,0,5.745,5.745,0,19.286,13.541,32.827,0l5.745,5.745Z" transform="translate(1621 1674.571) rotate(-90)"/>
+                            <rect id="사각형_1465" data-name="사각형 1465" class="cls-2" width="48" height="48" transform="translate(1610 1632)"/>
+                      </g>
+                    </svg>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 20 20">
+                        <defs><style>.cls-1 { fill: #d6254a; }.cls-2 { fill: none; }</style></defs>
+                        <g id="그룹_1099" data-name="그룹 1099" transform="translate(-867.5 -146)">
+                            <path id="패스_36" data-name="패스 36" class="cls-1" d="M8,10.383l-8-8L2.383,0,8,5.617,13.617,0,16,2.383Z" transform="translate(872.5 164) rotate(-90)"></path>
+                            <rect id="사각형_1465" data-name="사각형 1465" class="cls-2" width="20" height="20" transform="translate(867.5 146)"></rect>
+                        </g>
+                    </svg>
+                </a>
             </div>
         </div>
     </div>
+</div>
+
+
+<div class="container mb-5 p120">
+    <div class="row justify-content-center">
+        <div class="col-md-10 col-12">
+            <div class="mainTitle mb-3">
+                <h2>설레밤이 좋은 이유</h2>
+            </div>
+            <h4 class="p25 text-center">설레밤은 집요하고 성실하게 <e class="textRed d-inline">야한 생각</e> 중</h4>
+            <div class="p45"></div>
+            <h5>
+                설레밤은 야한 핑계와 설렘용품을 고민할께요!<br>
+                센스있는 선택과 므흣한 밤은 당신에게 맡길께요!
+            </h5>
+            <div class="p45"></div>
+        </div>
+    </div>
+    <div class="row justify-content-center text-center imgWrap">
+        <div class="col-md-2 col-6">
+            <img src="http://i.imgur.com/D0Tsaii.png"><p class="text-center textGray pt-3">섹스 레퍼토리에<br>변화가 필요해</p>
+        </div>
+        <div class="col-md-2 col-6">
+            <img src="http://i.imgur.com/s3Adj1c.png"><p class="text-center textGray pt-3">기억에 남는 밤을<br>보내고 싶은 기념일</p>
+        </div>
+        <div class="col-md-2 col-6">
+            <img src="http://i.imgur.com/uL0w84D.png"><p class="text-center textGray pt-3">새로운 섹스라이프에<br>도전하는 모험 정신 충만</p>
+        </div>
+        <div class="col-md-2 col-6">
+            <img src="http://i.imgur.com/DASJinz.png"><p class="text-center textGray pt-3">야한 생각은 있는데<br>핑계가 필요했어</p>
+        </div>
+        <div class="col-md-2 col-6">
+            <img src="http://i.imgur.com/1DoXdHH.png"><p class="text-center textGray pt-3">준비한 티 팍팍나는 포장<br>꺼낼 때 어색하지 않아</p>
+        </div>
+    </div>
+</div>
+
+<div class="p25"></div>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-10 col-12">
+            <div class="mainTitle">
+                <h2>고민하지 말아요</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-12">
+                    <div class="floatWrap" style="top: 120px;">
+                        <h2>야한게 좋다고</h2>
+                        <h2>왜 말을 못해</h2>
+                        <hr class="mainHr">
+                        <p class="p45">
+                            설레밤은 변태가 아니에요.<br>
+                            설레는 밤을 지켜주고 싶은<br>
+                            책임감 충만한 사랑의 파수꾼들!
+                        </p>
+                        <p class="p25">
+                            건강한 성생활을 위해<br>
+                            야한게 좋다고 말하세요.<br>
+                            해보고 싶은 것이 있다고 말하세요.<br>
+                            <e class="textRed d-inline">설레밤</e>이 시켜서 샀다고 하세요.
+                        </p>
+                        <div class="clearfix"><a href="/product/customBox.html" class="btnBasic btn3 mt-3 py-3 float-right">설렘박스 만들기</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="footerBG">
+
 </div>
