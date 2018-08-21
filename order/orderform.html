@@ -133,36 +133,66 @@ $(document).ready(function(){
 
             <div class="p45">
                 <div class="titleWrap brRed">
+                    <h4>비회원 주문정보!</h4>
+                </div>
+                <div class="noMember {$nm_display|display}">
+                    <div class="form-group">
+                        <label>주문조회 비밀번호</label>
+                        {$form.order_password}<br>
+                        <span class="textGray">주문조회시 필요합니다. 4자에서 12자 영문 또는 숫자 대소문자 구분</span>
+                    </div>
+                    <div class="form-group">
+                        <label>주문조회 비밀번호 확인</label>
+                        {$form.order_password_confirm}
+                    </div>
+                    <div class="agreeArea">
+                        <div class="agreeWrap">
+                            <h5>이용약관 동의</h5>
+                            <div class="content">{$form.mall_agreement}</div>
+                            <p class="check"><span>이용약관에 동의하십니까?</span> {$form.mall_agreement_radio}</p>
+                        </div>
+
+                        <div class="agreeWrap">
+                            <h5>비회원 개인정보 수집 동의</h5>
+                            <div class="content">{$form.nm_terms}</div>
+                            <p class="check"><span>비회원 구매시 개인정보 수집 및 이용에 동의하십니까?</span> {$form.nm_agreement}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p45">
+                <div class="titleWrap brRed">
                     <h4>배송받는 사람!</h4>
                 </div>
                 <div class="formWrap" class="{$r_info_display|display}">
-                <div class="form-group">
-                    <label>받으시는 분</label>
-                    {$form.rname}
-                </div>
-                <div class="form-group">
-                    <label>배송지 선택</label>
-                    <div class="selectLabel">
-                        {$form.sameaddr}
-                        <a href="#none" id="{$btn_shipp_addr_id}" class="btnLine btnSmall d-none d-sm-inline {$btn_address_display|display}">주소록 보기</a>
+                    <div class="form-group">
+                        <label>받으시는 분</label>
+                        {$form.rname}
+                    </div>
+                    <div class="form-group">
+                        <label>배송지 선택</label>
+                        <div class="selectLabel">
+                            {$form.sameaddr}
+                            <a href="#none" id="{$btn_shipp_addr_id}" class="btnLine btnSmall d-none d-sm-inline {$btn_address_display|display}">주소록 보기</a>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>주소</label>
+                        {$form.rzipcode1}{$form.rzipcode2}
+                        <a class="btnGray btn3" href="#" onclick="sample4_execDaumPostcode()">우편번호</a><br>
+                        {$form.raddr1}<br />
+                        {$form.raddr2}<span>{$address2_desc}</span>
+                    </div>
+                    <div class="form-group">
+                        <label>휴대전화</label>
+                        {$form.rphone2_}
+                    </div>
+                    <div class="form-group {$use_delivery_message_display}">
+                        <label>배송메시지</label>
+                        {$form.omessage}
                     </div>
                 </div>
-                <div class="form-group">
-                    <label>주소</label>
-                    {$form.rzipcode1}{$form.rzipcode2}
-                    <a class="btnGray btn3" href="#" onclick="sample4_execDaumPostcode()">우편번호</a><br>
-                    {$form.raddr1}<br />
-                    {$form.raddr2}<span>{$address2_desc}</span>
-                </div>
-                <div class="form-group">
-                    <label>휴대전화</label>
-                    {$form.rphone2_}
-                </div>
-                <div class="form-group {$use_delivery_message_display}">
-                    <label>배송메시지</label>
-                    {$form.omessage}
-                </div>
-            </div>
             </div>
 
             <div class="titleWrap brRed">
