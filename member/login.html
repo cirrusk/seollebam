@@ -3,86 +3,51 @@
 
 <script>
     $(document).ready(function() {
-        $('#member_id').addClass('form-control')
-        $('#member_id').attr('placeholder','아이디')
-        $('#member_passwd').addClass('form-control')
-        $('#member_passwd').attr('placeholder','비밀번호')
+        $('input').addClass('form-control')
     });
 </script>
 
-<div module="member_login" class="container">
+<div class="container">
     <!--
         $defaultReturnUrl = /index.html
-        $forbidIpUrl = member/adminFail.html
     -->
     <div class="row justify-content-center">
         <div class="col-md-5 p45">
             <h2 class="p70 text-center">LOGIN</h2>
             <ul class="nav nav-pills nav-fill" id="pills-tab" role="tablist">
-                <li class="nav-item"><a class="nav-link active" id="pills-login-tab" data-toggle="pill" href="#pills-login" role="tab" aria-controls="pills-login" aria-selected="true">회원</a></li>
-                <li class="nav-item"><a class="nav-link" id="pills-nologin-tab" data-toggle="pill" href="#pills-nologin" role="tab" aria-controls="pills-nologin" aria-selected="false">비회원</a></li>
+                <li class="nav-item"><a class="nav-link" href="/member/memberLogin.html">회원</a></li>
+                <li class="nav-item"><a class="nav-link active">비회원</a></li>
             </ul>
-            <div class="tab-content" id="pills-tabContent">
-                <div class="tab-pane fade show active" id="pills-login" role="tabpanel" aria-labelledby="pills-login-tab">
-                    {$form.member_id}
-                    {$form.member_passwd}
-                    <div class="btnWrap">
-                        <a href="#none" onclick="{$action_func_login}" class="btnBasic btn100">로그인</a>
-                        <ul class="row">
-                            <li class="col-6"><a href="/member/id/find_id.html" class="btnGray btn100">아이디찾기</a></li>
-                            <li class="col-6"><a href="/member/passwd/find_passwd_info.html" class="btnGray btn100">비밀번호찾기</a></li>
-                        </ul>
+            <div class="tab-content">
+                <div class="tab-pane active" id="pills-login">
+                    <div module="MyShop_OrderHistoryNologin" >
+                        <!--
+                            $orderDetailUrl = /myshop/order/detail.html
+                        -->
+                        <div class="form-group">
+                            <label>{$form_label.order_name}</label>
+                            {$form.order_name}
+                        </div>
+                        <div class="form-group" style="margin-bottom: 20px;">
+                            <label>{$form_label.order_id}</label>
+                            {$form.order_id}
+                        </div>
+                        <div class="form-group">
+                            <label>{$form_label.order_password}</label>
+                            {$form.order_password}
+                        </div>
+                        <button class="btnBasic btn100 w-100 mt-3 mb-4" type="submit"><h5 class="textWhite">주문 조회하기</h5></button>
                     </div>
 
-                    <ul class="snsLogin row">
-                        <li class="{$display_naver|display} col-6">
-                            <a href="#none" onclick="{$naver_func_login}"><figure><img src="//img.echosting.cafe24.com/skin/base_ko_KR/member/btn_naver_login.gif"/></figure>NAVER 로그인</a>
-                        </li>
-                        <li class="{$display_facebook|display} col-6">
-                            <a href="#none" onclick="{$facebook_func_login}"><figure><img src="//img.echosting.cafe24.com/skin/base_ko_KR/member/btn_facebook_login.gif"/></figure>FACEBOOK 로그인</a>
-                        </li>
-                        <li class="{$display_google|display} col-6">
-                            <a href="#none" onclick="{$google_func_login}"><figure><img src="//img.echosting.cafe24.com/skin/base_ko_KR/member/btn_google_login.gif"/></figure>GOOGLE 로그인</a>
-                        </li>
-                        <li class="{$display_kakao|display} col-6">
-                            <a href="#none" onclick="{$kakao_func_login}"><figure><img src="//img.echosting.cafe24.com/skin/base_ko_KR/member/btn_kakao_login.gif"/></figure>KAKAO 로그인</a>
-                        </li>
-                    </ul>
+                    <div class="text-center" module="member_login">
+                        <h5 class="{$display_nomember|display}">비회원님도 상품구매가 가능하나 <br> 다양한 회원혜택에서 제외됩니다.</h5>
+                        <a class="btnLine btn100 mt-3 mb-4 {$display_nomember|display}" href="{$returnUrl}" onclick="{$action_nomember_order}">비회원구매</a>
+                    </div>
 
                     <h5 class="text-center p45">
                         아직 설레밤의 회원이 아니신가요?
                         <a href="/member/join.html" class="btnLine btn100 mt-3">회원 가입하기</a>
                     </h5>
-                    <p class="link {$display_nomember|display}" id="noMemberWrap">
-                        비회원님도 상품구매가 가능하나 다양한<br />회원혜택에서 제외됩니다.
-                        <a href="{$returnUrl}" onclick="{$action_nomember_order}"><img src="//img.echosting.cafe24.com/skin/base_ko_KR/member/btn_nomember.gif" alt="비회원구매" /></a>
-                    </p>
-                </div>
-                <div class="tab-pane fade" id="pills-nologin" role="tabpanel" aria-labelledby="pills-nologin-tab">
-                    <h2>NO LOGIN BUT NOTHITNG SHOWING</h2>
-                    <p>maybe you should download basic design and compare the file</p>
-                    <div module="MyShop_OrderHistoryNologin" >
-                        <!--@css(/css/module/myshop/orderHistoryNologin.css)-->
-                        <!--
-                            $orderDetailUrl = /myshop/order/detail.html
-                        -->
-                        <h3 class="txtTitle20B">비회원 로그인</h3>
-                        <p class="gTriple">비회원의 경우, 주문시의 주문번호로 주문조회가 가능합니다.</p>
-                        <fieldset class="memberArea">
-                            <legend>비밀번호 찾기 2단계 힌트답변 입력</legend>
-                            <dl class="desc">
-                                <dt><span class="icoDot"></span> {$form_label.order_name}</dt>
-                                <dd>{$form.order_name}</dd>
-                                <dt><span class="icoDot"></span> {$form_label.order_id}</dt>
-                                <dd>{$form.order_id}</dd>
-                                <dt><span class="icoDot"></span> {$form_label.order_password}</dt>
-                                <dd>{$form.order_password}</dd>
-                            </dl>
-                            <p class="buttonArea">
-                                <span class="gRight"><button type="submit" class="btnNormal">조회</button></span>
-                            </p>
-                        </fieldset>
-                    </div>
                 </div>
             </div>
         </div>

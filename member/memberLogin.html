@@ -1,0 +1,79 @@
+<!--@layout(/layout/basic/layout.html)-->
+<!--@css(/css/module/member/login.css)-->
+
+<script>
+    $(document).ready(function() {
+        $('#member_id').addClass('form-control')
+        $('#member_id').attr('placeholder','아이디')
+        $('#member_passwd').addClass('form-control')
+        $('#member_passwd').attr('placeholder','비밀번호')
+
+        if ( $('.loginCheck').children().length > 0 ) {
+            window.location.replace("/myshop/index.html");
+        }
+    });
+</script>
+
+<div module="Layout_login" class="container">
+    <!--
+        $defaultReturnUrl = /index.html
+    -->
+    <div class="row justify-content-center">
+        <div class="col-md-5 p45">
+            <h2 class="p70 text-center">LOGIN</h2>
+            <ul class="nav nav-pills nav-fill" id="pills-tab" role="tablist">
+                <li class="nav-item"><a class="nav-link active">회원</a></li>
+                <li class="nav-item"><a class="nav-link" href="/myshop/order/list.html">비회원</a></li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane active" id="pills-login">
+                    {$form.member_id}
+                    {$form.member_passwd}
+                    <div class="btnWrap">
+                        <a href="#" onclick="{$action_func_login}" class="btnBasic btn100">로그인</a>
+                        <ul class="row">
+                            <li class="col-6"><a href="/member/id/find_id.html" class="btnGray btn100">아이디찾기</a></li>
+                            <li class="col-6"><a href="/member/passwd/find_passwd_info.html" class="btnGray btn100">비밀번호찾기</a></li>
+                        </ul>
+                    </div>
+
+                    <ul class="snsLogin row">
+                        <li class="{$display_naver|display} col-6">
+                            <a href="#none" onclick="{$naver_func_login}"><figure><img src="//img.echosting.cafe24.com/skin/base_ko_KR/member/btn_naver_login.gif"/></figure>NAVER 로그인</a>
+                        </li>
+                        <li class="{$display_facebook|display} col-6">
+                            <a href="#none" onclick="{$facebook_func_login}"><figure><img src="//img.echosting.cafe24.com/skin/base_ko_KR/member/btn_facebook_login.gif"/></figure>FACEBOOK 로그인</a>
+                        </li>
+                        <li class="{$display_google|display} col-6">
+                            <a href="#none" onclick="{$google_func_login}"><figure><img src="//img.echosting.cafe24.com/skin/base_ko_KR/member/btn_google_login.gif"/></figure>GOOGLE 로그인</a>
+                        </li>
+                        <li class="{$display_kakao|display} col-6">
+                            <a href="#none" onclick="{$kakao_func_login}"><figure><img src="//img.echosting.cafe24.com/skin/base_ko_KR/member/btn_kakao_login.gif"/></figure>KAKAO 로그인</a>
+                        </li>
+                    </ul>
+
+                    <h5 class="text-center p45">
+                        아직 설레밤의 회원이 아니신가요?
+                        <a href="/member/join.html" class="btnLine btn100 mt-3">회원 가입하기</a>
+                    </h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="loginCheck container text-center displaynone" module="Layout_stateLogon">
+    <div class="p120"></div>
+    <h2>설레는 밤이 필요할 때<br> 설렘용품 박스!</h2>
+    <div class="p25"></div>
+    <h5>
+        야한 일을 꾸미신다면<br>
+        설레밤이 좋은 핑계가 될께요
+    </h5>
+    <div class="p45"></div>
+    <div class="row justify-content-center">
+        <div class="col-md-3 col-12"><a href="/member/join.html" class="btnBasic btn100">설렘용품 보러가기</a></div>
+        <div class="col-md-3 col-12"><a href="/myshop/index.html" class="btnBasic btn100">My Page 가기</a></div>
+        <div class="p45"></div>
+    </div>
+</div>

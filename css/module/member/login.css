@@ -2,7 +2,7 @@
 .nav-pills .nav-link { background-color: #f0f0f0; color: #8c8c8c; border-radius: 0; padding: 10px 0; font-size: 16px; font-weight: 500; }
 .nav-pills .nav-link.active { background-color: #fff; color: #333; }
 
-#pills-login input { height: 44px; margin-bottom: 20px; border-radius: 0; }
+#pills-login input { height: 44px; margin-bottom: 20px; border-radius: 0; width: 100%; }
 #pills-login .btnWrap { padding: 15px 0; }
 #pills-login .btnWrap .row { margin-top: 20px; }
 
@@ -14,7 +14,13 @@
     min-height: 100%; /* Scale up to fill container height */
     -ms-interpolation-mode: bicubic; /* Scaled images look a bit better in IE now */
 }
-h5 .btnLine { border: 2px solid #ccc; }
+
+#pills-login .btnLine { border: 2px solid #ccc; }
+#pills-login .form-group { margin-bottom: 0; }
+#pills-login input#order_id1 { width: calc(50% - 7px); margin-bottom: 0; margin-right: 5px; }
+#pills-login input#order_id2 { width: calc(50% - 8px); margin-bottom: 0; margin-left: 5px; }
+#pills-login button.w-100 { border: 1px solid #d6254a; cursor: pointer; }
+
 
 @media screen and (max-width: 768px) {
     h2 { padding: 30px 0; }
@@ -33,6 +39,4 @@ h5 .btnLine { border: 2px solid #ccc; }
     #pills-login .snsLogin { margin: 30px 0; }
     #pills-login .snsLogin .col-6 { padding: 0; }
     #pills-login .snsLogin .col-6:nth-child(2n) { padding-left: 15px; }
-
-    #pills-login h5 { margin-bottom: 30px; }
 }
