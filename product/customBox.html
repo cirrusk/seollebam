@@ -16,17 +16,15 @@
             }, "fast");
         });
 
-        $(".eListArea").load("/product/list.html?cate_no=24 .listAjax");
+        $(".eListArea").load("/product/list.html?cate_no=24 .listAjax", function () {
+            $('.eListArea #span_product_tax_type_text').parent().addClass('priceCut');
+        });
         $(".cListArea").load("/product/list.html?cate_no=29 .listAjax");
         $(".mListArea").load("/product/list.html?cate_no=45 .listAjax");
         $(".bListArea").load("/product/list.html?cate_no=47 .listAjax");
         $(".jscListArea").load("/product/list.html?cate_no=48 .listAjax");
-        $(".cdjListArea").load("/product/list.html?cate_no=57 .listAjax", function () {
-            $('.cdjListArea .listPrice').append('<span class"ea">1EA</span>');
-        });
-        $(".jellListArea").load("/product/list.html?cate_no=58 .listAjax", function () {
-            $('#anchorBoxId_83 .listPrice').append('<span class"ea">1EA</span>');
-        });
+        $(".cdjListArea").load("/product/list.html?cate_no=57 .listAjax");
+        $(".jellListArea").load("/product/list.html?cate_no=58 .listAjax");
         $(".etcListArea").load("/product/list.html?cate_no=56 .listAjax");
     });
 </script>

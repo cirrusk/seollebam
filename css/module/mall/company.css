@@ -26,7 +26,7 @@
 .mainIcon img { width: 100%; }
 
 .floatWrap { width: 100%; padding: 30px; position: absolute; top: 75px; border: 10px solid #333; background-color: #fff; z-index: 1; }
-.floatWrap .mainHr { width: 32%; margin: 30px 0; border: 2px solid #333; }
+.floatWrap .mainHr { width: 32%; margin: 30px 0; border: 2px solid #333; text-align: left; }
 
 .slideWrap { padding: 150px 0; overflow:hidden; }
 .slideWrap .innerWrap { width: 6000px; display:block; position:relative; animation: scroll 120s linear infinite; opacity: .64; }

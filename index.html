@@ -13,6 +13,30 @@
             }
         };
 
+        var ddaytimer = setInterval (dayGap, 1000)
+        function dayGap () {
+            var nowday = new Date();//현재
+            nowday = nowday.getTime();//밀리세컨드 단위변환
+
+            var dday = new Date("December 31, 2018 00:00:00");//디데이
+            var ddayChange = dday.getTime();//밀리세컨드 단위변환
+            var distance = ddayChange - nowday;//디데이에서 현재까지 뺀다.
+            var d = Math.floor(distance / (1000 * 60 * 60 * 24));//일
+
+            var ddayE = new Date("October 31, 2018 00:00:00");//디데이
+            var ddayChangeE = ddayE.getTime();//밀리세컨드 단위변환
+            var distanceE = ddayChangeE - nowday;//디데이에서 현재까지 뺀다.
+
+            var dE = Math.floor(distanceE / (1000 * 60 * 60 * 24));//일
+
+            if (distance <= 0) {//당일넘어섰을때, dday로 변경
+                document.getElementById("dday-timer").innerHTML = "DAY";
+            } else {
+                $('.dDay').html(d);
+                $('.dDayE').html(dE);
+            }
+        }
+
         $(".bListArea").load("/product/list.html?cate_no=47 .listAjax .row .box");
         $(".jscListArea").load("/product/list.html?cate_no=48 .listAjax .row .box");
         $(".cListArea").load("/product/list.html?cate_no=29 .listAjax .row .box");
@@ -53,7 +77,7 @@
                 <h2>설레밤이 궁금해</h2>
             </div>
             <div class="row">
-                <div class="col-md-6 col-12">
+                <div class="col-lg-7 col-md-10 col-12">
                     <div class="floatWrap">
                         <h2>설렘용품이에요.</h2>
                         <h2>성인용품 아니에요!</h2>
@@ -106,7 +130,9 @@
                                 <h4>거품입욕제 <e class="textRed d-inline">2개를 사면 2개 더</e> 드려요!</h4>
                                 <div class="clearfix">
                                     <span class="float-left textGray">2018.07.01 ~ 2018.12.31</span>
-                                    <h3 class="float-right">D - 148</h3>
+                                    <h3 class="float-right">
+                                        D - <e class="dDay"></e>
+                                    </h3>
                                 </div>
                             </div>
                         </a>
@@ -118,7 +144,9 @@
                                 <h4>안 써본 콘돔이 없도록. <e class="textRed d-inline">콘돔 7개! 7,000원!</e></h4>
                                 <div class="clearfix">
                                     <span class="float-left textGray">2018.07.01 ~ 2018.12.31</span>
-                                    <h3 class="float-right">D - 148</h3>
+                                    <h3 class="float-right">
+                                        D - <e class="dDay"></e>
+                                    </h3>
                                 </div>
                             </div>
                         </a>
@@ -129,8 +157,10 @@
                             <div class="infoWrap p-3">
                                 <h4>더우니까 속옷만. <e class="textRed d-inline">이벤트 속옷 50%</e> 할인</h4>
                                 <div class="clearfix">
-                                    <span class="float-left textGray">2018.07.01 ~ 2018.12.31</span>
-                                    <h3 class="float-right">D - 148</h3>
+                                    <span class="float-left textGray">2018.07.01 ~ 2018.10.31</span>
+                                    <h3 class="float-right">
+                                        D - <e class="dDayE"></e>
+                                    </h3>
                                 </div>
                             </div>
                         </a>
@@ -215,7 +245,7 @@
                 <h2>고민하지 말아요</h2>
             </div>
             <div class="row">
-                <div class="col-md-6 col-12">
+                <div class="col-lg-7 col-md-10 col-12">
                     <div class="floatWrap" style="top: 120px;">
                         <h2>야한게 좋다고</h2>
                         <h2>왜 말을 못해</h2>

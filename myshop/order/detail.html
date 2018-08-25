@@ -17,323 +17,326 @@
         $issue_cash_url = /myshop/order/issue/cash.html
         $select_gift_url = /order/gift_select.html
      -->
+    <div class="row justify-content-center">
+        <div class="col-lg-8 col-md-10 col-12">
+            <div class="orderArea"><!-- 주문정보 -->
+                <div class="titleWrap">
+                    <h4>주문정보</h4>
+                </div>
+                <div class="tableWrap">
+                    <table border="1" summary="">
+                        <tbody>
+                            <tr>
+                                <th scope="row">주문번호</th>
+                                <td>{$order.order_id}</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">주문일자</th>
+                                <td>{$order.date}</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">주문자</th>
+                                <td>{$order.name}</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">주문처리상태</th>
+                                <td class="state">
+                                    <p class="d-inline">{$order.state}</p>
+                                    <input type="image" src="http://img.echosting.cafe24.com/skin/base_ko_KR/myshop/btn_order_cancel.gif" alt="주문취소" class="ml-2 {$cancel_display|display}" />
+                                    <span class="{$escrow_display|display}">
+                                        <a href="#none" onclick="{$action_escrow_confirm}" class="textRed">구매확인</a>
+                                        <a href="#none" onclick="{$action_escrow_reject}" class="textRed">환불요청</a>
+                                    </span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
 
-    <div class="orderArea"><!-- 주문정보 -->
-        <div class="titleWrap">
-            <h4>주문정보</h4>
-        </div>
-        <div class="tableWrap">
-            <table border="1" summary="">
-                <tbody>
-                    <tr>
-                        <th scope="row">주문번호</th>
-                        <td>{$order.order_id}</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">주문일자</th>
-                        <td>{$order.date}</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">주문자</th>
-                        <td>{$order.name}</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">주문처리상태</th>
-                        <td class="state">
-                            <p class="d-inline">{$order.state}</p>
-                            <input type="image" src="http://img.echosting.cafe24.com/skin/base_ko_KR/myshop/btn_order_cancel.gif" alt="주문취소" class="ml-2 {$cancel_display|display}" />
-                            <span class="{$escrow_display|display}">
-                                <a href="#none" onclick="{$action_escrow_confirm}" class="textRed">구매확인</a>
-                                <a href="#none" onclick="{$action_escrow_reject}" class="textRed">환불요청</a>
-                            </span>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
+            <div class="orderArea"><!-- 결제정보 -->
+                <div class="titleWrap">
+                    <h4>결제정보</h4>
+                </div>
+                <div class="tableWrap">
+                    <table border="1" summary="">
+                        <tbody>
+                            <tr class="total first">
+                                <th scope="row">총 주문금액</th>
+                                <td>
+                                    {$total.total_order_price_front}원
+                                </td>
+                            </tr>
+                            <tr class="total first">
+                                <th scope="row">총 결제금액</th>
+                                <td>
+                                    {$payment.price_front}원
+                                </td>
+                            </tr>
+                            <tr class="{$payment.paymethod_display|display}">
+                                <th scope="row">결제수단</th>
+                                <td>
+                                    {$payment.paymethod}<br>
+                                    {$payment.paymethod_detail}
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
 
-    <div class="orderArea"><!-- 결제정보 -->
-        <div class="titleWrap">
-            <h4>결제정보</h4>
-        </div>
-        <div class="tableWrap">
-            <table border="1" summary="">
-                <tbody>
-                    <tr class="total first">
-                        <th scope="row">총 주문금액</th>
-                        <td>
-                            {$total.total_order_price_front}원
-                        </td>
-                    </tr>
-                    <tr class="total first">
-                        <th scope="row">총 결제금액</th>
-                        <td>
-                            {$payment.price_front}원
-                        </td>
-                    </tr>
-                    <tr class="{$payment.paymethod_display|display}">
-                        <th scope="row">결제수단</th>
-                        <td>
-                            {$payment.paymethod}<br>
-                            {$payment.paymethod_detail}
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
+            <div class="orderArea"><!-- 배송지정보 -->
+                <div class="titleWrap">
+                    <h4>배송지정보</h4>
+                </div>
+                <div class="tableWrap">
+                    <table border="1" summary="">
+                        <tbody>
+                            <tr>
+                                <th scope="row">받으시는분</th>
+                                <td>{$delivery.name}</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">주소</th>
+                                <td>{$delivery.raddr}</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">일반전화</th>
+                                <td>{$delivery.rphone_1}</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">휴대전화</th>
+                                <td>{$delivery.rphone_2}</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">배송메시지</th>
+                                <td>{$delivery.message}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
 
-    <div class="orderArea"><!-- 배송지정보 -->
-        <div class="titleWrap">
-            <h4>배송지정보</h4>
-        </div>
-        <div class="tableWrap">
-            <table border="1" summary="">
-                <tbody>
-                    <tr>
-                        <th scope="row">받으시는분</th>
-                        <td>{$delivery.name}</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">주소</th>
-                        <td>{$delivery.raddr}</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">일반전화</th>
-                        <td>{$delivery.rphone_1}</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">휴대전화</th>
-                        <td>{$delivery.rphone_2}</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">배송메시지</th>
-                        <td>{$delivery.message}</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
+            <div class="orderArea"><!-- 주문 상품 정보 -->
+                <div class="titleWrap">
+                    <h4>주문 상품 정보</h4>
+                </div>
+                <div class="tableWrap">
+                    <table class="{$basic_display|display}">
+                        <tbody module="Myshop_OrderHistoryDetailBasic">
+                            <tr>
+                                <th class="thumb"><a href="/product/detail.html{$param_product}"><img src="{$thumbnail}"/></a></th>
+                                <td class="product">
+                                    <a href="/product/detail.html{$param_product}"><h6>{$product_name}</h6></a>
+                                    <p class="pt-1 pb-2">{$product_price_front} / {$quantity}EA</p>
+                                    <div class="option {$option_display|display}">{$option_str}</div>
+                                </td>
+                                <td class="state">
+                                    <p>{$status}</p>
+                                    <a href="#none" class="textRed {$withdraw_cancel_display|display}" onclick="{$action_withdraw_cancel}">취소철회</a>
+                                    <a href="#none" class="textRed {$withdraw_exchange_display|display}" onclick="{$action_withdraw_exchange}">교환철회</a>
+                                    <a href="#none" class="textRed {$withdraw_return_display|display}" onclick="{$action_withdraw_return}">반품철회</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="thumb"><a href="/product/detail.html{$param_product}"><img src="{$thumbnail}"/></a></th>
+                                <td class="product">
+                                    <a href="/product/detail.html{$param_product}"><h6>{$product_name}</h6></a>
+                                    <p class="pt-1 pb-2">{$product_price_front} / {$quantity}EA</p>
+                                    <div class="option {$option_display|display}">{$option_str}</div>
+                                </td>
+                                <td class="state">
+                                    <p>{$status}</p>
+                                    <a href="#none" class="textRed {$withdraw_cancel_display|display}" onclick="{$action_withdraw_cancel}">취소철회</a>
+                                    <a href="#none" class="textRed {$withdraw_exchange_display|display}" onclick="{$action_withdraw_exchange}">교환철회</a>
+                                    <a href="#none" class="textRed {$withdraw_return_display|display}" onclick="{$action_withdraw_return}">반품철회</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
 
-    <div class="orderArea"><!-- 주문 상품 정보 -->
-        <div class="titleWrap">
-            <h4>주문 상품 정보</h4>
-        </div>
-        <div class="tableWrap">
-            <table class="{$basic_display|display}">
-                <tbody module="Myshop_OrderHistoryDetailBasic">
-                    <tr>
-                        <th class="thumb"><a href="/product/detail.html{$param_product}"><img src="{$thumbnail}"/></a></th>
-                        <td class="product">
-                            <a href="/product/detail.html{$param_product}"><h6>{$product_name}</h6></a>
-                            <p class="pt-1 pb-2">{$product_price_front} / {$quantity}EA</p>
-                            <div class="option {$option_display|display}">{$option_str}</div>
-                        </td>
-                        <td class="state">
-                            <p>{$status}</p>
-                            <a href="#none" class="textRed {$withdraw_cancel_display|display}" onclick="{$action_withdraw_cancel}">취소철회</a>
-                            <a href="#none" class="textRed {$withdraw_exchange_display|display}" onclick="{$action_withdraw_exchange}">교환철회</a>
-                            <a href="#none" class="textRed {$withdraw_return_display|display}" onclick="{$action_withdraw_return}">반품철회</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th class="thumb"><a href="/product/detail.html{$param_product}"><img src="{$thumbnail}"/></a></th>
-                        <td class="product">
-                            <a href="/product/detail.html{$param_product}"><h6>{$product_name}</h6></a>
-                            <p class="pt-1 pb-2">{$product_price_front} / {$quantity}EA</p>
-                            <div class="option {$option_display|display}">{$option_str}</div>
-                        </td>
-                        <td class="state">
-                            <p>{$status}</p>
-                            <a href="#none" class="textRed {$withdraw_cancel_display|display}" onclick="{$action_withdraw_cancel}">취소철회</a>
-                            <a href="#none" class="textRed {$withdraw_exchange_display|display}" onclick="{$action_withdraw_exchange}">교환철회</a>
-                            <a href="#none" class="textRed {$withdraw_return_display|display}" onclick="{$action_withdraw_return}">반품철회</a>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
+            <!-- 최종 결제 정보 -->
+            <div class="orderArea {$final_payed_display|display}">
+                <div class="title">
+                    <h3>최종 결제 정보</h3>
+                </div>
+                <div class="boardTotal summaryTop">
+                    <table border="1" summary="">
+                    <caption>최종 결제 정보</caption>
+                    <tbody>
+                        <tr class="total first">
+                            <th scope="row">총 결제금액</th>
+                            <td>
+                                {$total.price_unit_head}<strong>{$total.final_payed_order_price}</strong>{$total.price_unit_tail}
+                                <span class="{$total.final_payed_order_price_ref_display|display}">{$total.final_payed_order_price_ref}</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                    </table>
+                </div>
+                <div class="boardTotal">
+                    <table border="1" summary="">
+                    <caption>최종 결제 정보</caption>
+                    <tbody module="Myshop_OrderHistoryDetailPaymentFinal">
+                        <tr>
+                            <th scope="row">{$title}</th>
+                            <td>
+                                <strong>{$price_unit_head}{$price}{$price_unit_tail}</strong>
+                                <p>{$detail}</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">{$title}</th>
+                            <td>
+                                <strong>{$price_unit_head}{$price}{$price_unit_tail}</strong>
+                                <p>{$detail}</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                    </table>
+                </div>
+            </div>
 
-    <!-- 최종 결제 정보 -->
-    <div class="orderArea {$final_payed_display|display}">
-        <div class="title">
-            <h3>최종 결제 정보</h3>
-        </div>
-        <div class="boardTotal summaryTop">
-            <table border="1" summary="">
-            <caption>최종 결제 정보</caption>
-            <tbody>
-                <tr class="total first">
-                    <th scope="row">총 결제금액</th>
-                    <td>
-                        {$total.price_unit_head}<strong>{$total.final_payed_order_price}</strong>{$total.price_unit_tail}
-                        <span class="{$total.final_payed_order_price_ref_display|display}">{$total.final_payed_order_price_ref}</span>
-                    </td>
-                </tr>
-            </tbody>
-            </table>
-        </div>
-        <div class="boardTotal">
-            <table border="1" summary="">
-            <caption>최종 결제 정보</caption>
-            <tbody module="Myshop_OrderHistoryDetailPaymentFinal">
-                <tr>
-                    <th scope="row">{$title}</th>
-                    <td>
-                        <strong>{$price_unit_head}{$price}{$price_unit_tail}</strong>
-                        <p>{$detail}</p>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">{$title}</th>
-                    <td>
-                        <strong>{$price_unit_head}{$price}{$price_unit_tail}</strong>
-                        <p>{$detail}</p>
-                    </td>
-                </tr>
-            </tbody>
-            </table>
-        </div>
-    </div>
-
-    <!-- 환불정보 -->
-    <div class="orderArea" module="Myshop_OrderHistoryDetailRefundNew">
-        <div class="title">
-            <h3>환불정보</h3>
-        </div>
-        <div class="boardPay">
-            <table border="1" summary="">
-            <caption>환불정보</caption>
-            <tbody>
-                <tr>
-                    <th scope="row">상품정보</th>
-                    <td class="product">
-                        <ul module="Myshop_cancelProduct">
-                            <li>
-                                <strong>{$product_name}</strong> <span class="option">{$option_str}</span>
-                                <ul class="option" module="Myshop_optionSet">
-                                    <li><strong>{$product_name}</strong>{$option_str}</li>
-                                    <li><strong>{$product_name}</strong>{$option_str}</li>
+            <!-- 환불정보 -->
+            <div class="orderArea" module="Myshop_OrderHistoryDetailRefundNew">
+                <div class="title">
+                    <h3>환불정보</h3>
+                </div>
+                <div class="boardPay">
+                    <table border="1" summary="">
+                    <caption>환불정보</caption>
+                    <tbody>
+                        <tr>
+                            <th scope="row">상품정보</th>
+                            <td class="product">
+                                <ul module="Myshop_cancelProduct">
+                                    <li>
+                                        <strong>{$product_name}</strong> <span class="option">{$option_str}</span>
+                                        <ul class="option" module="Myshop_optionSet">
+                                            <li><strong>{$product_name}</strong>{$option_str}</li>
+                                            <li><strong>{$product_name}</strong>{$option_str}</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <strong>{$product_name}</strong> <span class="option">{$option_str}</span>
+                                        <ul class="option" module="Myshop_optionSet">
+                                            <li><strong>{$product_name}</strong>{$option_str}</li>
+                                            <li><strong>{$product_name}</strong>{$option_str}</li>
+                                        </ul>
+                                    </li>
                                 </ul>
-                            </li>
-                            <li>
-                                <strong>{$product_name}</strong> <span class="option">{$option_str}</span>
-                                <ul class="option" module="Myshop_optionSet">
-                                    <li><strong>{$product_name}</strong>{$option_str}</li>
-                                    <li><strong>{$product_name}</strong>{$option_str}</li>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">{$display_date_title} (처리상태)</th>
+                            <td>{$display_date} <strong>({$status})</strong></td>
+                        </tr>
+                        <tr class="{$cancel_form_display|display}">
+                            <th scope="row">{$refund_amount_title}</th>
+                            <td class="total">상품금액 {$product_amount_org} {$additional_amount} = 합계 : <strong>{$payment_amount_front_head}{$payment_amount_front}{$payment_amount_front_tail}<span class="{$payment_amount_ref_display|display}">{$payment_amount_back_head}{$payment_amount_back}{$payment_amount_back_tail}</span></strong></td>
+                        </tr>
+                        <tr class="{$hold_show_ord_detail|display}">
+                            <th scope="row">보류 사유</th>
+                            <td>{$hold_reason_customer_display|nl2br}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">환불수단</th>
+                            <td>{$refund_paymethod}</td>
+                        </tr>
+                        <tr class="{$bank_display|display}">
+                            <th scope="row">환불계좌</th>
+                            <td>
+                                [{$bank_name}] {$bank_acc_no} 예금주 : {$bank_acc_owner}
+                                <a href="#none" onclick="{$action_bank_acc_change}" class="{$bank_acc_change_display|display}"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/myshop/btn_order_account.gif" alt="환불계좌변경" /></a>
+                            </td>
+                        </tr>
+                        <tr class="{$additional_display|display}">
+                            <th scope="row">할인 및 부가결제<br />복원 내역</th>
+                            <td>
+                                <ul class="coupon">
+                                    <li class="{$coupon_display|display}">쿠폰 복원 금액 : {$total.price_unit_head}<strong>{$coupon_price}</strong>{$total.price_unit_tail}</li>
+                                    <li class="{$addsale_display|display}">할인 복원 금액 : {$total.price_unit_head}<strong>{$addsale_price}</strong>{$total.price_unit_tail}</li>
+                                    <li class="{$mileage_display|display}">적립금 복원 : {$total.price_unit_head}<strong>{$mileage_price}</strong>{$total.price_unit_tail}</li>
+                                    <li class="{$deposit_display|display}">예치금 복원 : {$total.price_unit_head}<strong>{$deposit_price}</strong>{$total.price_unit_tail}</li>
+                                    <li class="{$navermileage_display|display}">네이버마일리지 &amp; 캐시 복원 : {$total.price_unit_head}<strong>{$navermileage_price}</strong>{$total.price_unit_tail} ({$navermieage_detail})</li>
                                 </ul>
-                            </li>
-                        </ul>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">{$display_date_title} (처리상태)</th>
-                    <td>{$display_date} <strong>({$status})</strong></td>
-                </tr>
-                <tr class="{$cancel_form_display|display}">
-                    <th scope="row">{$refund_amount_title}</th>
-                    <td class="total">상품금액 {$product_amount_org} {$additional_amount} = 합계 : <strong>{$payment_amount_front_head}{$payment_amount_front}{$payment_amount_front_tail}<span class="{$payment_amount_ref_display|display}">{$payment_amount_back_head}{$payment_amount_back}{$payment_amount_back_tail}</span></strong></td>
-                </tr>
-                <tr class="{$hold_show_ord_detail|display}">
-                    <th scope="row">보류 사유</th>
-                    <td>{$hold_reason_customer_display|nl2br}</td>
-                </tr>
-                <tr>
-                    <th scope="row">환불수단</th>
-                    <td>{$refund_paymethod}</td>
-                </tr>
-                <tr class="{$bank_display|display}">
-                    <th scope="row">환불계좌</th>
-                    <td>
-                        [{$bank_name}] {$bank_acc_no} 예금주 : {$bank_acc_owner}
-                        <a href="#none" onclick="{$action_bank_acc_change}" class="{$bank_acc_change_display|display}"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/myshop/btn_order_account.gif" alt="환불계좌변경" /></a>
-                    </td>
-                </tr>
-                <tr class="{$additional_display|display}">
-                    <th scope="row">할인 및 부가결제<br />복원 내역</th>
-                    <td>
-                        <ul class="coupon">
-                            <li class="{$coupon_display|display}">쿠폰 복원 금액 : {$total.price_unit_head}<strong>{$coupon_price}</strong>{$total.price_unit_tail}</li>
-                            <li class="{$addsale_display|display}">할인 복원 금액 : {$total.price_unit_head}<strong>{$addsale_price}</strong>{$total.price_unit_tail}</li>
-                            <li class="{$mileage_display|display}">적립금 복원 : {$total.price_unit_head}<strong>{$mileage_price}</strong>{$total.price_unit_tail}</li>
-                            <li class="{$deposit_display|display}">예치금 복원 : {$total.price_unit_head}<strong>{$deposit_price}</strong>{$total.price_unit_tail}</li>
-                            <li class="{$navermileage_display|display}">네이버마일리지 &amp; 캐시 복원 : {$total.price_unit_head}<strong>{$navermileage_price}</strong>{$total.price_unit_tail} ({$navermieage_detail})</li>
-                        </ul>
-                    </td>
-                </tr>
-            </tbody>
-            <tbody>
-                <tr>
-                    <th scope="row">상품정보</th>
-                    <td class="product">
-                        <ul module="Myshop_cancelProduct">
-                            <li>
-                                <strong>{$product_name}</strong> <span class="option">{$option_str}</span>
-                                <ul class="option" module="Myshop_optionSet">
-                                    <li><strong>{$product_name}</strong>{$option_str}</li>
-                                    <li><strong>{$product_name}</strong>{$option_str}</li>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <th scope="row">상품정보</th>
+                            <td class="product">
+                                <ul module="Myshop_cancelProduct">
+                                    <li>
+                                        <strong>{$product_name}</strong> <span class="option">{$option_str}</span>
+                                        <ul class="option" module="Myshop_optionSet">
+                                            <li><strong>{$product_name}</strong>{$option_str}</li>
+                                            <li><strong>{$product_name}</strong>{$option_str}</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <strong>{$product_name}</strong> <span class="option">{$option_str}</span>
+                                        <ul class="option" module="Myshop_optionSet">
+                                            <li><strong>{$product_name}</strong>{$option_str}</li>
+                                            <li><strong>{$product_name}</strong>{$option_str}</li>
+                                        </ul>
+                                    </li>
                                 </ul>
-                            </li>
-                            <li>
-                                <strong>{$product_name}</strong> <span class="option">{$option_str}</span>
-                                <ul class="option" module="Myshop_optionSet">
-                                    <li><strong>{$product_name}</strong>{$option_str}</li>
-                                    <li><strong>{$product_name}</strong>{$option_str}</li>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">{$display_date_title} (처리상태)</th>
+                            <td>{$display_date} <strong>({$status})</strong></td>
+                        </tr>
+                        <tr class="{$cancel_form_display|display}">
+                            <th scope="row">{$refund_amount_title}</th>
+                            <td class="total">상품금액 {$product_amount_org} {$additional_amount} = 합계 : <strong>{$payment_amount_front_head}{$payment_amount_front}{$payment_amount_front_tail}<span class="{$payment_amount_ref_display|display}">{$payment_amount_back_head}{$payment_amount_back}{$payment_amount_back_tail}</span></strong></td>
+                        </tr>
+                        <tr class="{$hold_show_ord_detail|display}">
+                            <th scope="row">보류 사유</th>
+                            <td>{$hold_reason_customer_display|nl2br}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">환불수단</th>
+                            <td>{$refund_paymethod}</td>
+                        </tr>
+                        <tr class="{$bank_display|display}">
+                            <th scope="row">환불계좌</th>
+                            <td>
+                                [{$bank_name}] {$bank_acc_no} 예금주 : {$bank_acc_owner}
+                                <a href="#none" onclick="{$action_bank_acc_change}" class="{$bank_acc_change_display|display}"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/myshop/btn_order_account.gif" alt="환불계좌변경" /></a>
+                            </td>
+                        </tr>
+                        <tr class="{$additional_display|display}">
+                            <th scope="row">할인 및 부가결제<br />복원 내역</th>
+                            <td>
+                                <ul class="coupon">
+                                    <li class="{$coupon_display|display}">쿠폰 복원 금액 : {$total.price_unit_head}<strong>{$coupon_price}</strong>{$total.price_unit_tail}</li>
+                                    <li class="{$addsale_display|display}">할인 복원 금액 : {$total.price_unit_head}<strong>{$addsale_price}</strong>{$total.price_unit_tail}</li>
+                                    <li class="{$mileage_display|display}">적립금 복원 : {$total.price_unit_head}<strong>{$mileage_price}</strong>{$total.price_unit_tail}</li>
+                                    <li class="{$deposit_display|display}">예치금 복원 : {$total.price_unit_head}<strong>{$deposit_price}</strong>{$total.price_unit_tail}</li>
+                                    <li class="{$navermileage_display|display}">네이버마일리지 &amp; 캐시 복원 : {$total.price_unit_head}<strong>{$navermileage_price}</strong>{$total.price_unit_tail} ({$navermieage_detail})</li>
                                 </ul>
-                            </li>
-                        </ul>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">{$display_date_title} (처리상태)</th>
-                    <td>{$display_date} <strong>({$status})</strong></td>
-                </tr>
-                <tr class="{$cancel_form_display|display}">
-                    <th scope="row">{$refund_amount_title}</th>
-                    <td class="total">상품금액 {$product_amount_org} {$additional_amount} = 합계 : <strong>{$payment_amount_front_head}{$payment_amount_front}{$payment_amount_front_tail}<span class="{$payment_amount_ref_display|display}">{$payment_amount_back_head}{$payment_amount_back}{$payment_amount_back_tail}</span></strong></td>
-                </tr>
-                <tr class="{$hold_show_ord_detail|display}">
-                    <th scope="row">보류 사유</th>
-                    <td>{$hold_reason_customer_display|nl2br}</td>
-                </tr>
-                <tr>
-                    <th scope="row">환불수단</th>
-                    <td>{$refund_paymethod}</td>
-                </tr>
-                <tr class="{$bank_display|display}">
-                    <th scope="row">환불계좌</th>
-                    <td>
-                        [{$bank_name}] {$bank_acc_no} 예금주 : {$bank_acc_owner}
-                        <a href="#none" onclick="{$action_bank_acc_change}" class="{$bank_acc_change_display|display}"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/myshop/btn_order_account.gif" alt="환불계좌변경" /></a>
-                    </td>
-                </tr>
-                <tr class="{$additional_display|display}">
-                    <th scope="row">할인 및 부가결제<br />복원 내역</th>
-                    <td>
-                        <ul class="coupon">
-                            <li class="{$coupon_display|display}">쿠폰 복원 금액 : {$total.price_unit_head}<strong>{$coupon_price}</strong>{$total.price_unit_tail}</li>
-                            <li class="{$addsale_display|display}">할인 복원 금액 : {$total.price_unit_head}<strong>{$addsale_price}</strong>{$total.price_unit_tail}</li>
-                            <li class="{$mileage_display|display}">적립금 복원 : {$total.price_unit_head}<strong>{$mileage_price}</strong>{$total.price_unit_tail}</li>
-                            <li class="{$deposit_display|display}">예치금 복원 : {$total.price_unit_head}<strong>{$deposit_price}</strong>{$total.price_unit_tail}</li>
-                            <li class="{$navermileage_display|display}">네이버마일리지 &amp; 캐시 복원 : {$total.price_unit_head}<strong>{$navermileage_price}</strong>{$total.price_unit_tail} ({$navermieage_detail})</li>
-                        </ul>
-                    </td>
-                </tr>
-            </tbody>
-            </table>
-        </div>
-    </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                    </table>
+                </div>
+            </div>
 
-    <div class="btnWrap text-right m45">
-        <a href="#none" onclick="{$action_issue_tax}" class="btnGray btn3 ml-2 {$issue_tax_display|display}">세금계산서 신청</a>
-        <a href="#none" onclick="{$action_print_tax}" class="btnGray btn3 ml-2 {$print_tax_display|display}">세금계산서 인쇄</a>
-        <a href="#none" onclick="{$action_issue_cash}" class="btnGray btn3 ml-2 {$issue_cash_display|display}">현금영수증 신청</a>
-        <a href="#none" onclick="{$action_print_pg_cash}" class="btnGray btn3 ml-2 {$print_pg_cash_display|display}">현금영수증전표 인쇄</a>
-        <a href="#none" onclick="{$action_print_spec}" class="btnGray btn3 ml-2 {$print_spec_display|display}">거래명세서 인쇄</a>
-        <a href="#none" onclick="{$action_print_pg_card}" class="btnGray btn3 ml-2 {$print_pg_card_display|display}">카드매출전표 인쇄</a>
-        <a href="#none" onclick="{$action_select_gift}" class="btnGray btn3 ml-2 {$select_gift_display|display}">사은품 선택</a>
-        <a  href="/myshop/order/list.html{$param_list}" class="btnBasic btn3 ml-2 ">돌아가기</a>
+            <div class="btnWrap text-right m45">
+                <a href="#none" onclick="{$action_issue_tax}" class="btnGray btn3 ml-2 {$issue_tax_display|display}">세금계산서 신청</a>
+                <a href="#none" onclick="{$action_print_tax}" class="btnGray btn3 ml-2 {$print_tax_display|display}">세금계산서 인쇄</a>
+                <a href="#none" onclick="{$action_issue_cash}" class="btnGray btn3 ml-2 {$issue_cash_display|display}">현금영수증 신청</a>
+                <a href="#none" onclick="{$action_print_pg_cash}" class="btnGray btn3 ml-2 {$print_pg_cash_display|display}">현금영수증전표 인쇄</a>
+                <a href="#none" onclick="{$action_print_spec}" class="btnGray btn3 ml-2 {$print_spec_display|display}">거래명세서 인쇄</a>
+                <a href="#none" onclick="{$action_print_pg_card}" class="btnGray btn3 ml-2 {$print_pg_card_display|display}">카드매출전표 인쇄</a>
+                <a href="#none" onclick="{$action_select_gift}" class="btnGray btn3 ml-2 {$select_gift_display|display}">사은품 선택</a>
+                <a  href="/myshop/order/list.html{$param_list}" class="btnBasic btn3 ml-2 ">돌아가기</a>
+            </div>
+        </div>
     </div>
 </div>

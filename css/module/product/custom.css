@@ -26,8 +26,9 @@
 #myTabContent .listWrap .box { background-color: #fff; padding: 12px; box-shadow: 5px 5px 3px #CBCBCB; }
 #myTabContent .listWrap .box img { width: 100%;  }
 #myTabContent .listWrap .box .boxInfo { padding: 20px 0 10px; }
-#myTabContent .listWrap .box .boxInfo p { padding: 10px 0 20px; }
-#myTabContent .listWrap .box .boxInfo span { font-weight: 500; }
+#myTabContent .listWrap .box .boxInfo .clearfix h6:first-child span { display: block; padding: 10px 15px 20px 0; word-break: keep-all; }
+#myTabContent .listWrap .box .boxInfo .clearfix .priceCut span { font-size: 14px !important; color: #7f7f7f !important; font-weight: 400 !important; position: absolute; left: 20px; bottom: 80px; }
+
 
 .endPoint { padding: 120px 0; text-align: center;}
 .endPoint h2 { padding-bottom: 75px; }
@@ -60,8 +61,10 @@
     #myTabContent .listWrap .box .boxInfo { padding: 15px 0 10px; }
     #myTabContent .listWrap .box .boxInfo h6 { padding: 0; }
     #myTabContent .listWrap .box .clearfix { padding-top: 15px; }
-    #myTabContent .listWrap .box .d-md-none a span { font-size: 14px !important; padding-bottom: 10px; }
-    #myTabContent .listWrap .box .d-md-none .float-left span { font-size: 12px !important; color: #7f7f7f !important; }
+    #myTabContent .listWrap .box .boxInfo .clearfix h6:first-child span { display: none; }
+    #myTabContent .listWrap .box .d-md-none a span { font-size: 14px !important; padding-bottom: 10px; font-weight: 500; }
+    #myTabContent .listWrap .box .d-md-none .float-left span { font-size: 12px !important; color: #7f7f7f !important; font-weight: 400 !important; }
+    #myTabContent .listWrap .box .boxInfo .clearfix .priceCut span { font-size: 10px !important; left: 13px; bottom: 50px; }
 
     #myTabContent .listFooter img { padding: 0; }
     .endPoint { padding: 50px 0; text-align: center;}

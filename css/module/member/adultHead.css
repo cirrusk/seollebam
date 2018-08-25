@@ -4,5 +4,7 @@
 p { word-break: keep-all; }
 
 @media screen and (max-width: 768px) {
+    .xans-member-adulthead .titleWrap { margin-top: 0; }
+    #mobileauth p { text-align: center; padding-bottom: 30px; }
     .under19Recommend .icon19 { width: 64%; }
 }
