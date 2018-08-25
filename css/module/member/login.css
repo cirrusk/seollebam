@@ -1,42 +1,32 @@
-.nav-pills { margin-bottom: 35px; }
-.nav-pills .nav-link { background-color: #f0f0f0; color: #8c8c8c; border-radius: 0; padding: 10px 0; font-size: 16px; font-weight: 500; }
-.nav-pills .nav-link.active { background-color: #fff; color: #333; }
+.xans-layout-login .form-group input { height: 44px; width: 100%; margin-bottom: 20px; border-radius: 0; }
+.xans-layout-login .btnWrap .row { margin-top: 20px; }
 
-#pills-login input { height: 44px; margin-bottom: 20px; border-radius: 0; width: 100%; }
-#pills-login .btnWrap { padding: 15px 0; }
-#pills-login .btnWrap .row { margin-top: 20px; }
-
-.snsLogin a { font-size: 12px; color: #7f7f7f; line-height: 28px; }
-.snsLogin figure { display: block; overflow: hidden; height: 30px; width: 35px; margin-right: 20px; float: left; }
-.snsLogin figure img {
+.xans-layout-login .snsLogin a { font-size: 12px; color: #7f7f7f; line-height: 28px; }
+.xans-layout-login .snsLogin figure { display: block; overflow: hidden; height: 30px; width: 35px; margin-right: 20px; float: left; }
+.xans-layout-login .snsLogin figure img {
     display: block; /* Otherwise it keeps some space around baseline */
     min-width: 100%; /* Scale up to fill container width */
     min-height: 100%; /* Scale up to fill container height */
     -ms-interpolation-mode: bicubic; /* Scaled images look a bit better in IE now */
 }
 
-#pills-login .btnLine { border: 2px solid #ccc; }
-#pills-login .form-group { margin-bottom: 0; }
-#pills-login input#order_id1 { width: calc(50% - 7px); margin-bottom: 0; margin-right: 5px; }
-#pills-login input#order_id2 { width: calc(50% - 8px); margin-bottom: 0; margin-left: 5px; }
-#pills-login button.w-100 { border: 1px solid #d6254a; cursor: pointer; }
+.xans-layout-login .btnLine { border: 2px solid #ccc; }
+.xans-layout-login .form-group { margin-bottom: 0; }
+.xans-layout-login input#order_id1 { width: calc(50% - 7px); margin-bottom: 0; margin-right: 5px; }
+.xans-layout-login input#order_id2 { width: calc(50% - 8px); margin-bottom: 0; margin-left: 5px; }
+.xans-layout-login button.w-100 { border: 1px solid #d6254a; cursor: pointer; }
 
 
 @media screen and (max-width: 768px) {
-    h2 { padding: 30px 0; }
+    #sub_contents .xans-layout-login { padding-top: 15px; }
+    .xans-layout-login .form-group input { height: 36px; margin-bottom: 12px; }
+    .xans-layout-login .btnWrap { padding: 15px 0; }
+    .xans-layout-login .btnWrap .row { margin-top: 20px; }
 
-    .nav-pills { margin: 15px 0 35px; }
-    .nav-pills .nav-link { background-color: #f0f0f0; color: #8c8c8c; border-radius: 0; padding: 10px 0; font-size: 16px; font-weight: 500; }
-    .nav-pills .nav-link.active { background-color: #fff; color: #333; }
+    .xans-layout-login .btnWrap .row { padding: 0 5px; }
+    .xans-layout-login .btnWrap .row .col-6 { padding: 0 10px; }
 
-    #pills-login input { height: 36px; margin-bottom: 12px; }
-    #pills-login .btnWrap { padding: 15px 0; }
-    #pills-login .btnWrap .row { margin-top: 20px; }
-
-    #pills-login .btnWrap .row { padding: 0 5px; }
-    #pills-login .btnWrap .row .col-6 { padding: 0 10px; }
-
-    #pills-login .snsLogin { margin: 30px 0; }
-    #pills-login .snsLogin .col-6 { padding: 0; }
-    #pills-login .snsLogin .col-6:nth-child(2n) { padding-left: 15px; }
+    .xans-layout-login .snsLogin { margin: 0; }
+    .xans-layout-login .snsLogin .col-6 { padding: 0; }
+    .xans-layout-login .snsLogin .col-6:nth-child(2n) { padding-left: 15px; }
 }

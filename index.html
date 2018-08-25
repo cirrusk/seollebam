@@ -197,6 +197,18 @@
                     </svg>
                 </a>
             </div>
+
+            <script>
+                $(".carousel-inner").swipe({
+                    swipeLeft: function() {
+                        $(this).parent().carousel('next');
+                    },
+                    swipeRight: function() {
+                        $(this).parent().carousel('prev');
+                    },
+                    threshold:0
+                });
+            </script>
         </div>
     </div>
 </div>

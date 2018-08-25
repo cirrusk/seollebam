@@ -57,7 +57,9 @@ ul, li { list-style: none; }
 table { width:100%; border:0; border-spacing:0; border-collapse:collapse; }
 th { font-weight: 500; }
 th,td { border:0; vertical-align:middle; padding: 5px 0; }
-input,select,textarea { font:14px 'Noto Sans KR', sans-serif; vertical-align:middle; cursor: pointer; }
+img { border: none; }
+input,select,textarea { font:14px 'Noto Sans KR', sans-serif; vertical-align:middle; cursor: pointer; -webkit-border-radius: 0; }
+select::-ms-expand { display: none; }
 input:-webkit-autofill { background-color: #fff; }
 h1, h2, h3, h4, h5, h6, p, span { color: #333; line-height: 1.6; letter-spacing: -0.020em; }
 a { text-decoration:none;
