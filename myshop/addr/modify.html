@@ -43,7 +43,7 @@
                 // 우편번호와 주소 정보를 해당 필드에 넣는다.
                 document.getElementById('address_zip1').value = data.zonecode; //5자리 새우편번호 사용
                 document.getElementById('address_addr1').value = fullAddr;
-                document.getElementById('address_addr2').value = data.jibunAddress;
+                document.getElementById('address_addr2').value = '';
 
                 // iframe을 넣은 element를 안보이게 한다.
                 // (autoClose:false 기능을 이용한다면, 아래 코드를 제거해야 화면에서 사라지지 않는다.)
@@ -91,42 +91,43 @@
     <!--
         $return_url = /myshop/addr/list.html
     -->
-    <div class="formWrap col-lg-8 col-md-10 col-12">
-        <div class="titleWrap brBlack clearfix d-none d-sm-block">
-            <h3 class="float-left">배송지 정보</h3>
-            <div class="float-right d-none d-sm-block">
+    <div class="col-lg-7 col-md-10 col-12">
+        <div class="formWrap">
+            <div class="titleWrap brBlack clearfix d-none d-sm-block">
+                <h3 class="float-left">배송지 정보</h3>
+                <div class="float-right d-none d-sm-block">
 
+                </div>
+            </div>
+
+            <div class="form-group mt-3">
+                <label>배송지명</label>
+                {$form.ma_rcv_title}
+            </div>
+            <div class="form-group">
+                <label>성명</label>
+                {$form.ma_rcv_name}
+            </div>
+            <div class="form-group">
+                <label>주소</label>
+
+                {$form.address_zip1} {$form.address_zip2}
+                <a class="btnGray btn3" href="#" onclick="sample4_execDaumPostcode()">우편번호</a><br>
+                {$form.address_addr1}<br>
+                {$form.address_addr2}
+            </div>
+            <div class="form-group">
+                <label>휴대전화</label>
+                {$form.ma_rcv_mobile_no}
+            </div>
+            <div class="form-group">
+                <label>일반전화</label>
+                {$form.ma_rcv_phone}
             </div>
         </div>
-
-        <div class="form-group mt-3">
-            <label>배송지명</label>
-            {$form.ma_rcv_title}
-        </div>
-        <div class="form-group">
-            <label>성명</label>
-            {$form.ma_rcv_name}
-        </div>
-        <div class="form-group">
-            <label>주소</label>
-
-            {$form.address_zip1} {$form.address_zip2}
-            <a class="btnGray btn3" href="#" onclick="sample4_execDaumPostcode()">우편번호</a>
-            {$form.address_addr1}<br />
-            {$form.address_addr2}
-        </div>
-        <div class="form-group">
-            <label>휴대전화</label>
-            {$form.ma_rcv_mobile_no}
-        </div>
-        <div class="form-group">
-            <label>일반전화</label>
-            {$form.ma_rcv_phone}
-        </div>
-
-        <div class="btnWrap row mt-4">
-            <div class="col-6"><a href="list.html" class="btnGray btn100">취소하기</a></div>
-            <div class="col-6"><a href="#none" onclick="{$action_check}" class="btnBasic btn100">등록하기</a></div>
+        <div class="btnWrap text-right mt-4">
+            <a href="list.html" class="btnGray btn2">취소하기</a>
+            <a href="#none" onclick="{$action_check}" class="btnBasic btn2 ml-3">등록하기</a>
         </div>
     </div>
 </div>

@@ -26,6 +26,7 @@
 #prdDetail .mDetail { display: none; }
 #prdDetail .fullBG { width: 100%; background-size: cover; background-repeat: no-repeat; }
 #prdQnA { padding-top: 0; }
+.subject h5 img { width: 20px; margin-left: 15px; }
 
 /* MODAL */
 .modal-dialog { margin: auto; }
@@ -41,7 +42,7 @@
     .detailArea { display: none; }
     .subNav img { width: 18px; margin-top: 3px; }
     .subNav .basketCount { float: right; background-color: #d6254a; color: #fff; top: -3px; left: 28px; padding-bottom: 2px; }
-    
+
     /* PRODUCT AREA */
     .totalArea { margin-bottom: 0px; }
     #prdDetail { margin-top: 0px; }

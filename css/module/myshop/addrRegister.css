@@ -9,6 +9,8 @@
 .xans-myshop-addrregister #ma_rcv_mobile_no3,
 .xans-myshop-addrregister #ma_rcv_phone3 { width: 22%; margin:0 5px; text-align: center; }
 
+.xans-myshop-addrregister .formWrap { padding-bottom: 15px; border-bottom: 1px solid #8c8c8c; }
+.xans-myshop-addrregister .btnGray { position: relative; top: 3px; left: 5px; }
 
 @media screen and (max-width: 768px) {
     .p120 { padding-top: 30px !important; }
