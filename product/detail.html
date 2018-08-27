@@ -176,16 +176,38 @@
                 <h2 class="float-left">상품 후기</h2>
                 <a class="btnBasic btn2 float-right" href="{$review_write}">후기쓰기</a>
             </div>
-            <div class="boardWrap" module="product_review">
+            <div id="use_review" class="boardWrap" module="product_review">
                 <table class="{$list_display}">
                     <tbody>
                         <tr>
-                            <td class="subject"><a href="/product/provider/review_read.xml{$param_read}"><h5>{$writer|cut:2,****} {$icon_file}</h5></a></td>
+                            <td class="subject">
+                                <a href="/product/provider/review_read.xml{$param_read}"><h5 class="d-inline">
+                                    {$writer|cut:2,****} {$icon_file} <p class="textRed d-inline ml-3">상세보기</p>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20">
+                                        <defs><style>.cls-1 { fill: #d6254a; }.cls-2 { fill: none; }</style></defs>
+                                        <g id="그룹_1099" data-name="그룹 1099" transform="translate(-867.5 -146)">
+                                            <path id="패스_36" data-name="패스 36" class="cls-1" d="M8,10.383l-8-8L2.383,0,8,5.617,13.617,0,16,2.383Z" transform="translate(872.5 164) rotate(-90)"></path>
+                                            <rect id="사각형_1465" data-name="사각형 1465" class="cls-2" width="20" height="20" transform="translate(867.5 146)"></rect>
+                                        </g>
+                                    </svg>
+                                </h5></a>
+                            </td>
                             <td></td>
                             <td class="text-right {$use_point_display|display}"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/board/ico_point{$point_count}.gif" alt="{$point_count}점"></td>
                         </tr>
                         <tr>
-                            <td class="subject"><a href="/product/provider/review_read.xml{$param_read}"><h5>{$writer|cut:2,****} {$icon_file}</h5></a></td>
+                            <td class="subject">
+                                <a href="/product/provider/review_read.xml{$param_read}"><h5 class="d-inline">
+                                    {$writer|cut:2,****} {$icon_file} <p class="textRed d-inline ml-3">상세보기</p>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20">
+                                        <defs><style>.cls-1 { fill: #d6254a; }.cls-2 { fill: none; }</style></defs>
+                                        <g id="그룹_1099" data-name="그룹 1099" transform="translate(-867.5 -146)">
+                                            <path id="패스_36" data-name="패스 36" class="cls-1" d="M8,10.383l-8-8L2.383,0,8,5.617,13.617,0,16,2.383Z" transform="translate(872.5 164) rotate(-90)"></path>
+                                            <rect id="사각형_1465" data-name="사각형 1465" class="cls-2" width="20" height="20" transform="translate(867.5 146)"></rect>
+                                        </g>
+                                    </svg>
+                                </h5></a>
+                            </td>
                             <td></td>
                             <td class="text-right {$use_point_display|display}"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/board/ico_point{$point_count}.gif" alt="{$point_count}점"></td>
                         </tr>
@@ -211,7 +233,7 @@
                 <h2 class="float-left">상품 문의</h2>
                 <a class="btnBasic btn2 float-right" href="{$qna_write}">문의하기</a>
             </div>
-            <div class="boardWrap" module="product_qna">
+            <div id="use_qna" class="boardWrap" module="product_qna">
                 <table border="1" summary="" class="{$list_display|display}">
                     <tbody>
                         <tr>

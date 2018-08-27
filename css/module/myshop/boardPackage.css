@@ -3,6 +3,7 @@
 .xans-myshop-boardpackage .tableWrap th { width: 15%; }
 .container .xans-myshop-boardpackage .tableWrap td { padding: 15px 0; }
 .xans-myshop-boardpackage .tableWrap .subject { width: 40%; }
+.xans-myshop-boardpackage .tableWrap .subject svg { position: relative; top: 3px; }
 
 .xans-myshop-boardlist .noData { text-align: center; }
 #boardSearchForm .xans-myshop-boardlistsearch { text-align: right; }

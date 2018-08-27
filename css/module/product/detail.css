@@ -27,6 +27,7 @@
 #prdDetail .fullBG { width: 100%; background-size: cover; background-repeat: no-repeat; }
 #prdQnA { padding-top: 0; }
 .subject h5 img { width: 20px; margin-left: 15px; }
+.subject a svg { position: relative; top: 3px; left: 3px; }
 
 /* MODAL */
 .modal-dialog { margin: auto; }
@@ -50,6 +51,7 @@
     #prdDetail .mDetail { display: block; width: 100%; }
     .xans-product-additional .titleWrap h2 { font-size: 28px; }
     .xans-product-additional .titleWrap .btn2 { border: 1px solid #d6254a; padding: 6px 28px; background: #fff; color: #333; font-weight: 500; }
+    .subject a svg { top: 4px; }
 
     /* MODAL */
     .modal-dialog { margin: 0; }
