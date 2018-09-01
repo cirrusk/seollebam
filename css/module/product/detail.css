@@ -3,15 +3,13 @@
 .detailArea { margin-top: 96px; padding: 120px 0; }
 .detailArea .imgArea img { width: 100%; margin-top: 15px; }
 
-.totalArea { display: flex; flex-direction: column; margin-bottom: 50px; }
-.totalArea .clearfix { order: 1; }
-.totalArea #totalProducts { order: 2; margin-bottom: 15px; }
-.totalArea .xans-product-option { color: #7f7f7f; order: 3; margin-bottom: 15px; }
-.totalArea .xans-product-action { order: 4; margin-top: 15px; }
-.totalArea .moreInfo { order: 5; }
+.totalArea { margin-bottom: 30px; }
+.totalArea #totalProducts { margin: 15px 0; }
+.totalArea #totalProducts h5.total strong em { color: #333; font-weight: 500; font-style: normal; }
+.totalArea .xans-product-option { color: #7f7f7f; margin-bottom: 15px; }
+.totalArea .xans-product-action { margin-top: 30px; }
 
-.totalArea .clearfix h3 { padding-bottom: 30px; }
-.totalArea .xans-product-option select { width: 100%; height: 36px; font-weight: 500; }
+.totalArea .xans-product-option select { width: 100%; height: 36px; font-weight: 500; padding-left: 0; }
 .totalArea .option_products .option_product td .product { display: none; }
 .totalArea .option_products .option_product td { float: right; }
 .totalArea .option_products .option_product td.right { float: left; }
@@ -46,6 +44,7 @@
 
     /* PRODUCT AREA */
     .totalArea { margin-bottom: 0px; }
+    .totalArea h3 { padding-top: 15px; padding-left: 15px; }
     #prdDetail { margin-top: 0px; }
     #prdDetail .wDetail { display: none; }
     #prdDetail .mDetail { display: block; width: 100%; }
@@ -61,11 +60,9 @@
     #totalModal .modal-dialog .modal-body .clearfix { margin-top: 18px; padding: 0 18px; }
     #totalModal .modal-dialog .modal-body #totalProducts { padding: 0 18px; }
     #totalModal .modal-dialog .modal-body .xans-product-option { padding: 0 9px; }
-    #cartModal .modal-dialog { padding: 0 30px; }
-    #cartModal .modal-dialog .modal-body { padding: 16px; padding-bottom: 35px; }
-    #cartModal .modal-dialog .modal-body .closeImg { width: 16px; }
+    #totalModal .modal-dialog .modal-body .btn100 { padding: 10px 0; }
 
     /* PRODUCT MODAL */
     .floatArea { position: fixed; bottom: 0; width: 100%; z-index: 1; }
-    .floatArea .btn1 { display: block; padding: 8px 0px; font-size: 14px; }
+    .floatArea .btn1 { display: block; padding: 10px 0px; font-size: 14px; }
 }

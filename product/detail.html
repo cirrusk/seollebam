@@ -54,25 +54,18 @@
             <div class="col-md-4">
                 <div class="totalArea">
                     <h3>{$name}</h3>
-                    <div class="row mt-4">
-                        <div class="col-6">
-                            <span class="textGray">가격</span>
-                        </div>
-                        <div class="col-6 text-right">
-                            <span class="textGray">수량</span>
-                        </div>
-                    </div>
-                    <div module="product_option">
-                        <div module="product_option">
-                            {$option_name}
-                            {$form.option}
-                        </div>
-                    </div>
-                    <div id="{$total.total_id}" class="{$total.total_display|display}">
+
+                    <div id="{$total.total_id}" class="clearfix {$total.total_display|display}">
+                        <span class="textGray float-left">가격</span>
+                        <span class="textGray float-right">수량</span>
+
                         <table>
                             <tbody class="{$quantity_display|display}">
                                 <tr>
-                                    <td><h4 class="{$total.quantity_price}">{$product_price}원</h4></td>
+                                    <td>
+                                        <h5 class="{$total.quantity_price} displaynone">{$product_price}원</h5>
+                                        <h5 class="textWhite {$total.total_cnt}"></h5>
+                                    </td>
                                     <td>
                                         <span class="quantity">
                                             {$quantity}
@@ -86,11 +79,18 @@
                             </tbody>
                         </table>
                     </div>
-                    <!-- //상품옵션 영역 -->
+
+                    <div module="product_option">
+                        <div module="product_option">
+                            {$option_name}
+                            {$form.option}
+                        </div>
+                    </div>
+
                     <div module="product_action">
-                    <a href="#none" class="btnBasic btn100 buyA {$basket_display}" data-dismiss="modal" onclick="{$action_basket}">박스에 담기</a>
-                    <span class="btn btn-secondary disabled btn100 {$soldout_display|display}">SOLD OUT</span>
-                </div>
+                        <a href="#none" class="btnBasic btn100 buyA {$basket_display}" data-dismiss="modal" onclick="{$action_basket}">박스에 담기</a>
+                        <span class="btn btn-secondary disabled btn100 {$soldout_display|display}">SOLD OUT</span>
+                    </div>
                 </div>
                 <div class="moreInfo">
                     <div class="clearfix infoHeader">
@@ -121,8 +121,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="moreInfo">
+
                     <div class="clearfix infoHeader">
                         <h5 class="float-left">환불 슬퍼요</h5>
                         <a class="float-right" data-toggle="collapse" data-target="#collapse2">펼쳐보기</a>
