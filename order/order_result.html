@@ -21,8 +21,8 @@
 
             <div class="orderInfo"><!-- 주문완료 -->
                 <ul>
-                    <li><h5>주문번호 <p class="textGray">{$order_id}</p></h5></li>
-                    <li><h5>주문일자 <p class="textGray">{$order_date}</p></h5></li>
+                    <li class="pb-1"><h5>주문번호 <p class="textGray">{$order_id}</p></h5></li>
+                    <li class="pb-1"><h5>주문일자 <p class="textGray">{$order_date}</p></h5></li>
                 </ul>
             </div>
             <table>
@@ -74,7 +74,7 @@
                             <td class="product">
                                 <h6>{$product_name}</h6>
                                 <h6 class="textGray pt-1 pb-2"><span class="textGray">{$product_price}원</span> / 1EA</h6>
-                                <span class="option textGray {$option_display|display}">{$option_str|replace:], } 사이즈]</span>
+                                <span class="option textGray {$option_display|display}">{$option_str}</span>
                             </td>
                             <td><h6 class="textGray">{$product_quantity}EA</h6></td>
                         </tr>
@@ -83,7 +83,7 @@
                             <td class="product">
                                 <h6>{$product_name}</h6>
                                 <h6 class="textGray pt-1 pb-2"><span class="textGray">{$product_price}원</span> / 1EA</h6>
-                                <span class="option textGray {$option_display|display}">{$option_str|replace:], } 사이즈]</span>
+                                <span class="option textGray {$option_display|display}">{$option_str}</span>
                             </td>
                             <td><h6 class="textGray">{$product_quantity}EA</h6></td>
                         </tr>
